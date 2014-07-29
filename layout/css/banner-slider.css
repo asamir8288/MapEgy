@@ -1,0 +1,64 @@
+.jssorb21 div, .jssorb21 div:hover, .jssorb21 .av
+{
+    background: url(../images/b21.png) no-repeat;
+    overflow:hidden;
+    cursor: pointer;
+}
+.jssorb21 div { background-position: -5px -5px; }
+.jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
+.jssorb21 .av { background-position: -65px -5px; }
+.jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
+
+.jssora21l, .jssora21r, .jssora21ldn, .jssora21rdn
+{
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    background: url(../images/a21.png) center center no-repeat;
+    overflow: hidden;
+}
+.jssora21l { background-position: -3px -33px; }
+.jssora21r { background-position: -63px -33px; }
+.jssora21l:hover { background-position: -123px -33px; }
+.jssora21r:hover { background-position: -183px -33px; }
+.jssora21ldn { background-position: -243px -33px; }
+.jssora21rdn { background-position: -303px -33px; }
+.jssort04 .w, .jssort04 .pav:hover .w
+{
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    border: #FFF 2px solid;
+}
+* html .jssort04 .w
+{
+    width: /**/ 62px;
+    height: /**/ 32px;
+}
+.jssort04 .pdn .w, .jssort04 .pav .w
+{
+    border-style: solid;
+}
+.jssort04 .c
+{
+    width: 62px;
+    height: 32px;
+    filter: alpha(opacity=45);
+    opacity: .45;
+    transition: opacity .6s;
+    -moz-transition: opacity .6s;
+    -webkit-transition: opacity .6s;
+    -o-transition: opacity .6s;
+}
+.jssort04 .p:hover .c, .jssort04 .pav .c
+{
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.jssort04 .p:hover .c
+{
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
