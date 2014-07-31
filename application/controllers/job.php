@@ -17,7 +17,7 @@ class Job extends CI_Controller {
     }
 
     public function index() {
-        $this->data['page_title'] = 'About Us';
+        $this->data['page_title'] = 'Careers';
         $this->data['inside_banner'] = static_url() . 'layout/images/inside-banner.png';
 
         $this->data['jobs'] = CareersTable::getAllActiveJobs();

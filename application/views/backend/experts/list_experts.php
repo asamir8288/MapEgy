@@ -1,3 +1,5 @@
+<a href="<?php echo base_url();?>admin/our_experts/add_edit_expert" class="new-link"><?php echo lang('expert_add_new_expert');?></a>
+
 <table cellpadding="0" cellspacing="0">
     <tr>
         <th style="width: 100px;"><?php echo lang('expert_photo'); ?></th>

@@ -16,7 +16,10 @@ class Dashboard extends My_Controller{
     }
     
     public function index() {
+        $this->data['page_title'] = 'Welcome To Dashboard';
         
+        $this->template->write_view('content', 'backend/dashboard', $this->data);
+        $this->template->render();
     }
 }
 

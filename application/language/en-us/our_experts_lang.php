@@ -8,6 +8,9 @@ $lang['expert_twitter'] = 'Twitter';
 $lang['expert_facebook'] = 'Facebook';
 $lang['expert_germany_social'] = 'Unknown';
 
+$lang['experts_cancel'] = 'Cancel';
+$lang['expert_add_new_expert'] = 'Add New Expert';
+
 $lang['expert_social_networks'] = 'Online Presences';
 
 $lang['expert_add'] = 'Add Expert';

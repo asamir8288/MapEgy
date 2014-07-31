@@ -20,7 +20,8 @@
         <input type="checkbox" <?php echo (isset($data['set_in_homepage'])) ? 'checked="checked"' : ''; ?> name="set_in_homepage" id="set_in_homepage" class="chkbox" />
     </li>
     <li>
-        <input type="submit" name="submit" value="Add News" class="form-submit-btn" />  
+        <input type="submit" name="submit" value="<?php echo $submit_btn;?>" class="form-submit-btn" />  
+        <a href="<?php echo base_url();?>admin/manage_news"><?php echo lang('news_cancel');?></a>
     </li>
 </ul>
 <?php echo form_close(); ?>

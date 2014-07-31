@@ -17,7 +17,7 @@
         <div id="header">
             <a href="" class="lang-link">Deutch</a>
 
-            <a href="" class="logo"></a>       
+            <a href="<?php echo base_url();?>" class="logo"></a>       
 
             <div id="already-customer">
                 Already a customer?
@@ -38,13 +38,13 @@
                 <li class="menu-separator">|</li>
                 <li><a href="">Consulting</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="">About</a></li>
+                <li><a href="<?php echo base_url();?>about-us">About</a></li>
                 <li class="menu-separator">|</li>
                 <li><a href="">Press</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="">Career</a></li>
+                <li><a href="<?php echo base_url();?>career">Career</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="">News</a></li>
+                <li><a href="<?php echo base_url();?>news">News</a></li>
             </ul>
         </div>
 

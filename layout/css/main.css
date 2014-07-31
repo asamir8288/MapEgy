@@ -654,3 +654,55 @@
     display: block;
     margin-top: 20px;
 }
+
+/*
+   News Page -------------------------------------------------------------------
+*/
+.news_blog_box {
+    width: 414px;
+    display: inline-block;
+    margin: 35px 10px;
+    vertical-align: top;
+}
+
+.news_blog_box .news-title{
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.news_blog_box .more-link{
+    color: #006fc7;
+    font-size: 13px;
+    float: right;
+    position: relative;
+    top: 30px;
+    right: 0px;
+}
+
+.recent-blog-main-title {
+    color: #006fc7;
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.older-posts-link {
+    color: #006fc7;
+    font-size: 15px;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    border-top: 1px dashed #006fc7;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.news-meet-us{
+    padding-top: 20px;
+}

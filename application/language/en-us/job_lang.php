@@ -13,6 +13,9 @@ $lang['job_edit'] = 'Edit';
 $lang['job_delete'] = 'Delete';
 $lang['job_activate'] = 'Activate';
 
+$lang['job_add_new_job'] = 'Add New Job';
+$lang['job_cancel'] = 'Cancel';
+
 $lang['job_delete_msg'] = 'Your job data has been deleted successfully.';
 $lang['job_added_msg'] = 'Your job data has been added successfully.';
 $lang['job_updated_msg'] = 'Your job data has been updated successfully.';

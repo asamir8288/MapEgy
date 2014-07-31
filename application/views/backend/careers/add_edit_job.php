@@ -22,6 +22,7 @@
 
     <li>
         <input type="submit" name="submit" value="<?php echo $submit_btn; ?>" class="form-submit-btn" />  
+        <a href="<?php echo base_url();?>admin/job"><?php echo lang('job_cancel');?></a>
     </li>
 </ul>
 <?php echo form_close(); ?>

@@ -1,3 +1,5 @@
+<a href="<?php echo base_url();?>admin/job/add_edit_job" class="new-link"><?php echo lang('job_add_new_job');?></a>
+
 <table cellpadding="0" cellspacing="0">
     <tr>
         <th style="width: 100px;"><?php echo lang('job_title'); ?></th>

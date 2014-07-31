@@ -23,7 +23,7 @@
                     <li>|</li>
                     <li><a href="<?php echo site_url(''); ?>">Consulting</a></li>
                     <li>|</li>
-                    <li><a href="<?php echo site_url(''); ?>">About</a></li>
+                    <li><a href="<?php echo site_url('admin/our_experts'); ?>">About</a></li>
                     <li>|</li>
                     <li><a href="<?php echo site_url(''); ?>">Press</a></li>
                     <li>|</li>

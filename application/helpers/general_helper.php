@@ -1,7 +1,7 @@
 <?php
 
 function substring($string, $id = '', $page = 'news-details', $wordsNumber = 30) {
-    $strArray = explode(' ', strip_tags($string));
+    $strArray = explode(' ', $string);
     $new_string = '';
     if (count($strArray) > $wordsNumber) {
         for ($i = 0; $i <= $wordsNumber; $i++) {

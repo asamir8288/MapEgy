@@ -17,14 +17,14 @@ class Manage_news extends My_Controller {
     }
 
     public function index() {
+        $this->data['page_title'] = 'List All News';
+        
         $this->data['activeNews'] = NewsTable::getActiveNews();
         $this->template->write_view('content', 'backend/news/list_news', $this->data);
         $this->template->render();
     }
 
     public function add_edit_news($news_id = '') {
-        $this->data['page_title'] = 'Add News';
-
         /*
          * Required Javascript for TinyMCE component
          */
@@ -37,8 +37,13 @@ class Manage_news extends My_Controller {
          */
         $this->data['post_url'] = 'admin/manage_news/add_edit_news';
         if ($news_id) {
+            $this->data['page_title'] = lang('news_update');
+            $this->data['submit_btn'] = lang('news_update');
             $this->data['post_url'] = 'admin/manage_news/add_edit_news/' . $news_id;
             $this->data['data'] = NewsTable::getOne($news_id);
+        }else{
+            $this->data['page_title'] = lang('news_add');
+            $this->data['submit_btn'] = lang('news_add');
         }
 
         if ($this->input->post('submit')) {
@@ -63,7 +68,7 @@ class Manage_news extends My_Controller {
                 $this->session->set_flashdata('message', array('type' => 'success',
                     'body' => ($news_id) ? 'Your news has been updated successfully.' : 'Your news has been added successfully.')
                 );
-                redirect('admin/manage_news/add_edit_news');
+                redirect('admin/manage_news');
             }
         } else {
             $this->template->write_view('content', 'backend/news/add_edit_news', $this->data);

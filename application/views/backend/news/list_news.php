@@ -1,3 +1,5 @@
+<a href="<?php echo base_url();?>admin/manage_news/add_edit_news" class="new-link"><?php echo lang('news_add_new_news');?></a>
+
 <table cellpadding="0" cellspacing="0">
     <tr>
         <th style="width: 100px;"><?php echo lang('news_image');?></th>
@@ -9,7 +11,7 @@
     <?php foreach($activeNews as $news){ ?>
     <tr>
         <td>
-            <img style="width: 100px; height: 100px;" src="<?php echo static_url() . 'files/news/' . $news['image'];?>" />
+            <img style="width: 100px;" src="<?php echo static_url() . 'files/news/' . $news['image'];?>" />
         </td> 
         <td>
             <?php echo $news['title'];?>

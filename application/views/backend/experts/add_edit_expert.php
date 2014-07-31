@@ -41,6 +41,7 @@
     </li>
     <li>
         <input type="submit" name="submit" value="<?php echo $submit_btn;?>" class="form-submit-btn" />  
+        <a href="<?php echo base_url();?>admin/our_experts"><?php echo lang('experts_cancel');?></a>
     </li>
 </ul>
 <?php echo form_close(); ?>
