@@ -38,11 +38,13 @@ class Manage_news extends My_Controller {
          */
         $this->data['post_url'] = 'admin/manage_news/add_edit_news';
         if ($news_id) {
+            $this->data['navigator'] = 'Home > ' . lang('news_update');
             $this->data['page_title'] = lang('news_update');
             $this->data['submit_btn'] = lang('news_update');
             $this->data['post_url'] = 'admin/manage_news/add_edit_news/' . $news_id;
             $this->data['data'] = NewsTable::getOne($news_id);
         }else{
+            $this->data['navigator'] = 'Home > ' . lang('news_add');
             $this->data['page_title'] = lang('news_add');
             $this->data['submit_btn'] = lang('news_add');
         }

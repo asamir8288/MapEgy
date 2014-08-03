@@ -18,6 +18,7 @@ class job extends My_Controller {
 
     public function index() {
         $this->data['page_title'] = lang('job_manager_page_title');
+        $this->data['navigator'] = 'Home > Careers';
         
         $this->data['jobs'] = CareersTable::getAllActiveJobs(FALSE);
         
@@ -37,11 +38,13 @@ class job extends My_Controller {
          * Declare the variables when updating and adding Experts
          */
         if ($job_id) {
+            $this->data['navigator'] = 'Home > ' . lang('job_update');
             $this->data['page_title'] = lang('job_update_page_title');
             $this->data['post_url'] = 'admin/job/add_edit_job/' . $job_id;
             $this->data['submit_btn'] = lang('job_update');
             $this->data['data'] = CareersTable::getOne($job_id);
         } else {
+            $this->data['navigator'] = 'Home > ' . lang('job_add');
             $this->data['page_title'] = lang('job_add_page_title');
             $this->data['post_url'] = 'admin/job/add_edit_job';
             $this->data['submit_btn'] = lang('job_add');

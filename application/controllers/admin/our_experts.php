@@ -17,6 +17,7 @@ class Our_experts extends My_Controller {
     }
 
     public function index() {
+        $this->data['navigator'] = 'Home > Experts';
         $this->data['page_title'] = 'List All Experts';
         
         $this->data['experts'] = ExpertsTable::getAllActiveExperts(FALSE);
@@ -29,11 +30,13 @@ class Our_experts extends My_Controller {
          * Declare the variables when updating and adding Experts
          */
         if ($expert_id) {
+            $this->data['navigator'] = 'Home > Update Experts';
             $this->data['page_title'] = 'Update Expert';
             $this->data['post_url'] = 'admin/our_experts/add_edit_expert/' . $expert_id;
             $this->data['submit_btn'] = lang('expert_update');
             $this->data['data'] = ExpertsTable::getOne($expert_id);
         } else {
+            $this->data['navigator'] = 'Home > Add Experts';
             $this->data['page_title'] = 'Add Expert';
             $this->data['post_url'] = 'admin/our_experts/add_edit_expert';
             $this->data['submit_btn'] = lang('expert_add');
