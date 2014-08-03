@@ -19,25 +19,11 @@
                 <a href="<?php echo site_url('admin/dashboard'); ?>" class="logo"></a>
 
                 <ul class="menu">
-                    <li><a href="<?php echo site_url(''); ?>">Product</a></li>
-                    <li>|</li>
-                    <li><a href="<?php echo site_url(''); ?>">Consulting</a></li>
-                    <li>|</li>
-                    <li><a href="<?php echo site_url('admin/our_experts'); ?>">About</a></li>
-                    <li>|</li>
-                    <li><a href="<?php echo site_url(''); ?>">Press</a></li>
-                    <li>|</li>
-                    <li><a href="<?php echo site_url('admin/job'); ?>">Career</a></li>
-                    <li>|</li>
-                    <li><a href="<?php echo site_url('admin/manage_news'); ?>">News</a></li>
-
-
                     <?php
                     $loggedin = $this->session->userdata('is_login');
 
                     if ($loggedin) {
                         ?>
-                        <li>|</li>
                         <li><a href="<?php echo site_url('admin/login/logout'); ?>"><?php echo lang('logout'); ?></a></li>
                     <?php } ?>
                 </ul>
@@ -57,22 +43,39 @@
             }
             ?>
 
+            <!-- Here we are going to set the icons of the top Menu if the current page is not the Dashboard -->
+            <?php if (!isset($is_dashboard)) { ?>
+                <div id="inside-menu">
+                    <a href="" class="home"></a>
+                    <a href="" class="product"></a>
+                    <a href="<?php echo site_url('admin/our_experts'); ?>" class="about"></a>
+                    <a href="" class="press"></a>
+                    <a href="<?php echo site_url('admin/job'); ?>" class="careers"></a>
+                    <a href="<?php echo site_url('admin/manage_news'); ?>" class="blog"></a>
+                    <a href="" class="events"></a>
+                    <a href="" class="contacts"></a>
+                    <a href="" class="analytics"></a>
+                </div>
+            <?php } ?>
+
+
+            <?php
+            if (isset($navigator)) {
+                echo '<div class="navigator">' . $navigator . '</div>';
+            }
+            ?>
+
             <?php
             if (isset($page_title)) {
                 echo '<div class="page_title">' . $page_title . '</div>';
             }
             ?>
+
             <?php echo $content; ?>
         </div>
         <!-- End Wrapper  -->
 
-        <div class="clear" style="height: 40px;"></div>
-
-        <div id="footer">
-            <div class="footer-wrapper">
-
-            </div>
-        </div>
+        <div class="clear" style="height: 40px;"></div>        
 
     </body>
 </html>

@@ -12,18 +12,13 @@
 }
 
 body {
-    background-color: #f0fbff;
+    background-color: #f4f4f4;
 }
 
 #header {
-    background-color:  #FFF;
-    height: 74px;
+    background-image: URL(../images/admin/header_bg.png);
+    height: 70px;
     width: 100%;
-}
-
-#header .header-wrapper {
-    width: 968px;
-    margin: 0 auto;
 }
 
 #header .header-wrapper .logo {
@@ -67,18 +62,6 @@ body {
     margin-top: 20px;
 }
 
-
-#footer {
-    min-height: 30px;
-    background-color: #414141;
-    display: block;
-}
-
-#footer .footer-wrapper {
-    width: 968px;
-    margin: 0 auto;
-}
-
 .clear {
     clear: both;
     height: 10px;
@@ -106,8 +89,100 @@ body {
 }
 
 .page_title {
-    color: #0397d6;
+    color: #000;
     font-size:  20px;
-    padding-bottom: 3px;
-    border-bottom:  1px dashed #CCC;
+    padding-top: 20px;
+    margin-left: 5px;
+}
+
+#dashboard-menu {
+    display: block;
+}
+
+#dashboard-menu a{
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 165px;
+    height: 165px;
+    margin: 5px;
+}
+
+#dashboard-menu a.home{
+    background-image: url(../images/admin/home-icon.png);
+}
+#dashboard-menu a.product{
+    background-image: url(../images/admin/product-icon.png);
+}
+#dashboard-menu a.about{
+    background-image: url(../images/admin/about-icon.png);
+}
+#dashboard-menu a.press{
+    background-image: url(../images/admin/press-icon.png);
+}
+#dashboard-menu a.careers{
+    background-image: url(../images/admin/careers-icon.png);
+}
+#dashboard-menu a.blog{
+    background-image: url(../images/admin/blog-icon.png);
+}
+#dashboard-menu a.events{
+    background-image: url(../images/admin/events-icon.png);
+}
+#dashboard-menu a.contacts{
+    background-image: url(../images/admin/contacts-icon.png);
+}
+#dashboard-menu a.analytics{
+    background-image: url(../images/admin/analytics-icon.png);
+}
+
+.navigator{
+    color: #7a7a7a;
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+#inside-menu{
+    display: block;
+}
+
+#inside-menu a{
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 93px;
+    height: 93px;
+    margin: 5px;
+    background-position: 0px 0px;
+}
+#inside-menu a:hover{
+    background-position: 0px -93px;
+}
+
+#inside-menu a.home{
+    background-image: url(../images/admin/s-home-icon.png);
+}
+#inside-menu a.product{
+    background-image: url(../images/admin/s-product-icon.png);
+}
+#inside-menu a.about{
+    background-image: url(../images/admin/s-about-icon.png);
+}
+#inside-menu a.press{
+    background-image: url(../images/admin/s-press-icon.png);
+}
+#inside-menu a.careers{
+    background-image: url(../images/admin/s-careers-icon.png);
+}
+#inside-menu a.blog{
+    background-image: url(../images/admin/s-blog-icon.png);
+}
+#inside-menu a.events{
+    background-image: url(../images/admin/s-events-icon.png);
+}
+#inside-menu a.contacts{
+    background-image: url(../images/admin/s-contacts-icon.png);
+}
+#inside-menu a.analytics{
+    background-image: url(../images/admin/s-analytics-icon.png);
 }

@@ -16,7 +16,8 @@ class Dashboard extends My_Controller{
     }
     
     public function index() {
-        $this->data['page_title'] = 'Welcome To Dashboard';
+        $this->data['navigator'] = 'Home > ...';
+        $this->data['is_dashboard'] = TRUE;
         
         $this->template->write_view('content', 'backend/dashboard', $this->data);
         $this->template->render();

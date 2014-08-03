@@ -17,7 +17,8 @@ class Manage_news extends My_Controller {
     }
 
     public function index() {
-        $this->data['page_title'] = 'List All News';
+        $this->data['navigator'] = 'Home > Blogs';
+        $this->data['page_title'] = 'List All Blogs';
         
         $this->data['activeNews'] = NewsTable::getActiveNews();
         $this->template->write_view('content', 'backend/news/list_news', $this->data);
