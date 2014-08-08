@@ -5,7 +5,7 @@
     <a href="" class="press"></a>
     <a href="<?php echo site_url('admin/job');?>" class="careers"></a>
     <a href="<?php echo site_url('admin/manage_news');?>" class="blog"></a>
-    <a href="" class="events"></a>
+    <a href="<?php echo site_url('admin/event'); ?>" class="events"></a>
     <a href="" class="contacts"></a>
     <a href="" class="analytics"></a>
 </div>
