@@ -1,6 +1,6 @@
 <div id="dashboard-menu">
     <a href="" class="home"></a>
-    <a href="" class="product"></a>
+    <a href="<?php echo site_url('admin/product'); ?>" class="product"></a>
     <a href="<?php echo site_url('admin/our_experts');?>" class="about"></a>
     <a href="" class="press"></a>
     <a href="<?php echo site_url('admin/job');?>" class="careers"></a>

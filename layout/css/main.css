@@ -706,3 +706,76 @@
 .news-meet-us{
     padding-top: 20px;
 }
+
+/*
+    Product Page CSS -----------------------------------------------------------
+*/
+
+.who-use_mapegy, .mapegy-offers{
+    color: #006fc7;
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+.who-uses-box{
+    width: 225px;
+    float: left;
+    margin-right: 100px;
+    margin-top: 40px;
+    height: 220px;
+    display: block;
+}
+
+.folder-icon {
+    background-image: URL(../images/user-folder.png);
+    background-repeat: no-repeat;
+    width: 116px;
+    height: 109px;
+    display: block;
+    margin: 0 auto;
+}
+
+.who-uses-box span{
+    font-size: 20px;
+    color: #000;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.feature-box {
+    width: 278px;
+    height: 350px;
+    display: block;
+    float: left;
+    padding: 20px 9px;
+}
+
+.feature-box p {
+    color: #000;
+    font-size: 15px;
+    text-align: justify;
+    display: block;
+    padding-top: 20px;
+}
+
+.product-brief {
+    color: #000;
+    font-size: 30px;
+    text-align: justify;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.offer-item{
+    background-image: URL(../images/main-arrow.png);
+    background-repeat: no-repeat;
+    min-height: 49px;
+    display: block;
+    padding-left: 50px;
+    font-size: 30px;
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

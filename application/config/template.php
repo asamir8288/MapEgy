@@ -79,6 +79,19 @@ $template['home_template']['parser'] = 'parser';
 $template['home_template']['parser_method'] = 'parse';
 $template['home_template']['parse_template'] = FALSE;
 
+/*
+ * Product Template
+ */
+$template['product_template']['template'] = 'frontend/templates/product_template';
+$template['product_template']['regions'] = array(
+   'header',
+   'content',
+   'footer',
+);
+$template['product_template']['parser'] = 'parser';
+$template['product_template']['parser_method'] = 'parse';
+$template['product_template']['parse_template'] = FALSE;
+
 // Admin Template
 $template['admin']['template'] = 'backend/template';
 $template['admin']['regions'] = array(
