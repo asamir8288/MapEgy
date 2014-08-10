@@ -34,7 +34,7 @@
             </div>
 
             <ul id="top-menu">
-                <li><a href="">Product</a></li>
+                <li><a href="<?php echo base_url();?>product">Product</a></li>
                 <li class="menu-separator">|</li>
                 <li><a href="">Consulting</a></li>
                 <li class="menu-separator">|</li>
