@@ -704,7 +704,60 @@
 }
 
 .news-meet-us{
-    padding-top: 20px;
+    margin-top: 40px;
+    float: left;
+    width: 535px;
+}
+.news-meet-us .meet-us-title {
+    text-transform: uppercase;
+    color: #006fc7;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.news-meet-us .event_box {
+    border-bottom: #e1e1e1 solid 1px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.news-meet-us .event_box .img-box{
+    width: 100px;
+    display: inline-block;
+}
+.news-meet-us .event_box .img-box img {
+    max-height: 65px;
+    margin-right: 20px;
+}
+.news-meet-us .event_box .event-content{
+    width: 430px;
+    display: inline-block;
+    vertical-align: top;
+}
+.news-meet-us .event_box .event-date{
+    font-size: 16px;
+    color: #000;
+    display: block;
+    vertical-align: top;
+    font-weight: bold;
+}
+.news-meet-us .event_box .event-desc{
+    display: block;
+    vertical-align: top;
+}
+
+.news-follow-us{
+    margin-top: 40px;
+    float: left;
+    width: 280px;
+}
+.news-follow-us .follow-us-title {
+    text-transform: uppercase;
+    color: #006fc7;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /*
@@ -778,4 +831,76 @@
     color: #000;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+/*
+    Press Page -----------------------------------------------------------------
+*/
+.press_top_left{
+    width: 635px;
+    float: left;
+    position: relative;
+    top: 40px;
+}
+
+.press_top_left .section-title{
+    color: #1075c9;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.press_top_left .section-desc, .press_top_left .section-desc > *, .press_top_left .section-desc p > *{
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.press_top_right{
+    width: 2018px;
+    float: left;
+    position: relative;
+}
+
+.press-clipping-box{
+    width: 280px;
+    height: 380px;
+    display: block;
+    float: left;
+    margin-right: 20px;
+    margin-top: 25px;
+}
+.press-clipping-box .logo-bg{
+    background-image: URL(../images/press-frame-bg.png);
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 182px;
+    display: block;
+    position:relative;
+}
+
+.press-clipping-box .logo-bg img {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+}
+.press-clipping-box .clipping-date{
+    font-size: 16px;
+    color: #000;
+    margin-top: 20px;
+}
+.press-clipping-box .clipping-title{
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
+.press-clipping-box .clipping-desc{
+    font-size: 15px;
+    color: #656565;
+    margin-top: 15px;
 }

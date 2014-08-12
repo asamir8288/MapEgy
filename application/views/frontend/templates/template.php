@@ -45,7 +45,7 @@
                 <li class="menu-separator">|</li>
                 <li><a href="<?php echo base_url();?>about-us">About</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="">Press</a></li>
+                <li><a href="<?php echo base_url();?>press">Press</a></li>
                 <li class="menu-separator">|</li>
                 <li><a href="<?php echo base_url();?>career">Career</a></li>
                 <li class="menu-separator">|</li>
@@ -73,17 +73,17 @@
         <div id="footer">
             <div class="wrapper">
                 <ul class="menu">
-                    <li><a href="">Product</a></li>
+                    <li><a href="<?php echo base_url();?>product">Product</a></li>
                     <li class="footer-menu-separator">|</li>
                     <li><a href="">Consulting</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="">About</a></li>
+                    <li><a href="<?php echo base_url();?>about-us">About</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="">Press</a></li>
+                    <li><a href="<?php echo base_url();?>press">Press</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="">Career</a></li>
+                    <li><a href="<?php echo base_url();?>career">Career</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="">News</a></li>
+                    <li><a href="<?php echo base_url();?>news">News</a></li>
                 </ul>
 
                 <div style="clear: left;height: 20px;"></div>

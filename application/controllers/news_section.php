@@ -22,6 +22,9 @@ class News_section extends CI_Controller {
         $this->data['active_news'] = NewsTable::getActiveNews(4);
         $this->data['news_count'] = NewsTable::getNewsCount();
 
+        $this->data['active_events'] = EventsTable::getActiveEvents(5);
+        $this->data['events_count'] = EventsTable::getEventsCount();
+
         $this->template->write_view('content', 'frontend/list_news', $this->data);
         $this->template->render();
     }
