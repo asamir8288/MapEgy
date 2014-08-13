@@ -4,7 +4,7 @@
     <div class="news_blog_box">
         <img src="<?php echo static_url() . 'files/news/' . $news['image']; ?>" style="width: 271px; height: 176px;" />
         <div class="news-title"><?php echo $news['title']; ?></div>
-        <div><?php echo substring(nl2br($news['description']), $news['id'], 'news_details', 25); ?></div>
+        <div><?php echo substring(nl2br($news['description']), $news['id'], 'news/blog/details', 25); ?></div>
     </div>
 <?php } ?>
 

@@ -37,6 +37,16 @@ class News_section extends CI_Controller {
         $this->template->write_view('content', 'frontend/list_blogs', $this->data);
         $this->template->render();
     }
+    
+    public function blog_details($blog_id) {
+        $this->data['page_title'] = 'Blogs';
+
+        $this->data['active_news'] = NewsTable::getActiveNews(6);
+        $this->data['blog_details'] = NewsTable::getOne($blog_id);
+
+        $this->template->write_view('content', 'frontend/blog_details', $this->data);
+        $this->template->render();
+    }
 }
 
 ?>

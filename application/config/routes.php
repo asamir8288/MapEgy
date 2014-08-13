@@ -45,6 +45,7 @@ $route['about-us'] = 'about_us/index';
 $route['career'] = 'job/index';
 $route['news'] = 'news_section/index';
 $route['news/blogs'] = 'news_section/blogs';
+$route['news/blog/details/(:any)'] = 'news_section/blog_details/$1';
 
 
 /* End of file routes.php */

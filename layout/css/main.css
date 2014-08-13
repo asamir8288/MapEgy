@@ -374,6 +374,34 @@
     display: block;
 }
 
+.blog-details-left {
+    float: left;
+    width: 570px;
+    display: block;
+    position: relative;
+    top: 60px;
+}
+.blog-details-left .blog-details-title {
+    font-size: 39px;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.blog-details-left .blog-details-desc {
+    font-size: 15px;
+    color: #656565;
+    font-weight: lighter;
+    text-align: justify;
+}
+
+.blog-details-right {
+    float: left;
+    width: 271px;
+    position: relative;
+    top: 25px;
+    margin-left: 20px;
+}
+
 .contact-us-box {
     width: 768px;
     display: block;
