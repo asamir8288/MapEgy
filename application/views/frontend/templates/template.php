@@ -22,7 +22,7 @@
         <div id="header">
             <a href="" class="lang-link">Deutch</a>
 
-            <a href="<?php echo base_url();?>" class="logo"></a>       
+            <a href="<?php echo base_url(); ?>" class="logo"></a>       
 
             <div id="already-customer">
                 Already a customer?
@@ -39,29 +39,31 @@
             </div>
 
             <ul id="top-menu">
-                <li><a href="<?php echo base_url();?>product">Product</a></li>
+                <li><a href="<?php echo base_url(); ?>product">Product</a></li>
                 <li class="menu-separator">|</li>
                 <li><a href="">Consulting</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url();?>about-us">About</a></li>
+                <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url();?>press">Press</a></li>
+                <li><a href="<?php echo base_url(); ?>press">Press</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url();?>career">Career</a></li>
+                <li><a href="<?php echo base_url(); ?>career">Career</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url();?>news">News</a></li>
+                <li><a href="<?php echo base_url(); ?>news">News</a></li>
             </ul>
         </div>
 
         <a href="" id="left-contact-us-link"></a>
 
-        <div id="inside-banner">
+        <?php if (isset($inside_banner)) { ?>
+            <div id="inside-banner">
 
-        </div>
+            </div>
 
 
-        <div class="wide-dashed-separator"></div>
-
+            <div class="wide-dashed-separator"></div>
+        <?php } ?>
+            
         <div id="container">
             <div id="wrapper">
                 <?php echo $content; ?>	
@@ -73,17 +75,17 @@
         <div id="footer">
             <div class="wrapper">
                 <ul class="menu">
-                    <li><a href="<?php echo base_url();?>product">Product</a></li>
+                    <li><a href="<?php echo base_url(); ?>product">Product</a></li>
                     <li class="footer-menu-separator">|</li>
                     <li><a href="">Consulting</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url();?>about-us">About</a></li>
+                    <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url();?>press">Press</a></li>
+                    <li><a href="<?php echo base_url(); ?>press">Press</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url();?>career">Career</a></li>
+                    <li><a href="<?php echo base_url(); ?>career">Career</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url();?>news">News</a></li>
+                    <li><a href="<?php echo base_url(); ?>news">News</a></li>
                 </ul>
 
                 <div style="clear: left;height: 20px;"></div>

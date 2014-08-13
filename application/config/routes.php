@@ -44,6 +44,7 @@ $route['404_override'] = '';
 $route['about-us'] = 'about_us/index';
 $route['career'] = 'job/index';
 $route['news'] = 'news_section/index';
+$route['news/blogs'] = 'news_section/blogs';
 
 
 /* End of file routes.php */
