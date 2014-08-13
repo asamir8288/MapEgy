@@ -14,6 +14,9 @@
     height: 66px;
     width: 100%;
     display: block;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2000;
 }
 
 #header .logo {
@@ -931,4 +934,55 @@
     font-size: 15px;
     color: #656565;
     margin-top: 15px;
+}
+
+/*
+    Contact Us Page ------------------------------------------------------------
+*/
+.contact-left {
+    float: left;
+    width: 500px;
+    position: relative;
+    top: 40px;
+}
+
+.contact-left #contact-form{
+    list-style: none;
+}
+
+.contact-left #contact-form li  {
+    margin-bottom: 10px;
+}
+.contact-left #contact-form li label{
+    width: 70px;
+    display: inline-block;
+    text-align: left;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+.contact-left #contact-form li .txt {
+    width: 350px;
+    border: solid 1px #efefef;
+    color: #000;
+    font-size: 15px;
+    height: 36px;
+    display: inline-block;
+    padding: 0 5px;
+}
+.contact-left #contact-form li .select {
+    width: 350px;
+    border: solid 1px #efefef;
+    color: #000;
+    font-size: 15px;
+    height: 36px;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.contact-right {
+    float: left;
+    width: 320px;
+    position: relative;
+    top: 40px;
 }
