@@ -53,7 +53,7 @@
             </ul>
         </div>
 
-        <a href="" id="left-contact-us-link"></a>
+        <a href="<?php echo base_url(); ?>contact" id="left-contact-us-link"></a>
 
         <?php if (isset($inside_banner)) { ?>
             <div id="inside-banner">

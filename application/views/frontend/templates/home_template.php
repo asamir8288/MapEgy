@@ -48,7 +48,7 @@
             </ul>
         </div>
 
-        <a href="" id="left-contact-us-link"></a>
+        <a href="<?php echo base_url(); ?>contact" id="left-contact-us-link"></a>
 
 
         <div id="banner">

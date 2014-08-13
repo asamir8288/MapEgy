@@ -121,6 +121,7 @@
     width: 33px;
     height: 127px;
     display: block;
+    z-index: 2001;
 }
 
 #home-benefits-section {
@@ -960,6 +961,8 @@
     color: #000;
     font-size: 16px;
     font-weight: bold;
+    vertical-align: top;
+    padding-top: 8px;
 }
 .contact-left #contact-form li .txt {
     width: 350px;
@@ -971,7 +974,7 @@
     padding: 0 5px;
 }
 .contact-left #contact-form li .select {
-    width: 350px;
+    width: 360px;
     border: solid 1px #efefef;
     color: #000;
     font-size: 15px;
@@ -979,10 +982,40 @@
     display: inline-block;
     padding: 0 5px;
 }
+.contact-left #contact-form li textarea{
+    width: 350px;
+    padding: 5px;
+    height: 150px;
+}
 
 .contact-right {
     float: left;
     width: 320px;
     position: relative;
     top: 40px;
+    margin-left: 20px;
+}
+.contact-right .contact-right-title{
+    color: #000;
+    font-size: 25px;
+    display: block;
+    font-weight: bold;
+}
+.contact-right a{
+    color: #0e76c9;
+    text-decoration: none;
+}
+
+.submit-btn {
+    border: none;
+    background-image: URL(../images/submit-btn.png);
+    background-repeat: no-repeat;
+    width: 89px;
+    height: 29px;
+    display: block;
+    position: relative;
+    right: 95px;
+    float: right;
+    top: 25px;
+    cursor: pointer;
 }
