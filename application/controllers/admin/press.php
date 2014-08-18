@@ -19,7 +19,10 @@ class Press extends My_Controller {
     }
 
     public function index() {
+        $this->data['navigator'] = 'Home > Press';
         
+        $this->template->write_view('content', 'backend/presses/list_presses_links', $this->data);
+        $this->template->render();
     }
 
     public function media_contact() {
