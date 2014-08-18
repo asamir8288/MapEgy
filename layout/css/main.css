@@ -410,7 +410,6 @@
     width: 768px;
     display: block;
     background-color: #f0f0f0;
-    color: 0e76c9;
     margin: 0 auto;
     text-align: center;
     font-size: 38px;
@@ -1018,4 +1017,187 @@
     float: right;
     top: 25px;
     cursor: pointer;
+}
+
+/*
+    Consulting page ------------------------------------------------------------
+*/
+
+.consulting-desc {
+    width: 400px;
+    display: block;
+    margin-right: 80px;
+    float: left;
+    text-align: justify;
+    font-size: 20px;
+    color: #000;
+    position: relative;
+    top: 40px;
+}
+
+.consulting-contact {
+    position: relative;
+    top: 40px;
+    width: 400px;
+    display: block;
+    float: left;
+}
+.consulting-contact .expert_contact-details {
+    width: 215px;
+    float: left;
+    display: block;
+    margin-left: 20px;
+}
+.consulting-contact .contact-name {
+    color: #000;
+    font-size: 21px;
+}
+.consulting-contact .contact-job-title {
+    color: #969696;
+    font-size: 15px;
+}
+.consulting-contact .contact-tel {
+    color: #000;
+    font-size: 21px;
+    margin-top: 20px;
+}
+.consulting-contact .contact-link {
+    color: #FFF;
+    background-color: #ffc000;
+    font-size: 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 0px 37px 3px 37px;
+    position: relative;
+    top: 18px;
+}
+
+.consulting-title-decoration {
+    font-weight: bold;
+    font-size: 28px;
+    text-transform: uppercase;
+    width: 150px!important;
+}
+
+.consulting {
+    padding-bottom: 50px;
+}
+
+.consulting > p {
+    font-size: 20px;
+    color: #000;
+    margin: 20px 0px;
+}
+
+.consulting .case-study-box{
+    display: block;
+    float: left;
+    margin-right: 64px;
+    position: relative;
+    width: 250px;
+}
+.consulting .case-study-box .img{
+    display: block;    
+    height: 120px;
+    margin-top: 20px;
+}
+.consulting .case-study-box .img.img1{
+    height: 115px;
+    margin: 0 auto;
+    position: relative;
+    top: 23px;
+}
+.consulting .case-study-box .img.img2{
+    margin: 0 auto;
+    position: relative;
+    top: 25px;
+    width: 155px;
+}
+.consulting .case-study-box .img.img3{
+    width: 126px;
+    margin: 0 auto;
+    width: 126px;
+}
+.consulting .case-study-box > .title{
+    font-size: 22px;
+    color: #000;
+    width: 125px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+.consulting .case-study-box > .slogan{
+    font-size: 18px;
+    color: #000;
+    width: 205px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.case-study-link {
+    color: #FFF;
+    background-color: #ffc000;
+    font-size: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 0px 30px 3px 30px;
+    position: relative;
+    width: 200px;
+}
+
+.our_consulting_experts {
+    text-transform: uppercase;
+    color: #1075c9;
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+.consulting > ul li{
+    list-style: none;
+    color: #000;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.consulting .contact-us-box {
+    width: 768px;
+    display: block;
+    background-color: #f0f0f0;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 38px;
+    border: 1px solid #e6e6e6;
+    padding: 5px;
+    color: #0e76c9;
+    margin-top: 60px;
+}
+
+.consulting .contact-us-box > p {
+    width: 500px;
+    display: block;
+    font-size: 28px;
+    color: #0e76c9;
+    margin-left: 20px;
+}
+
+.consulting .contact-us-box strong{
+    font-weight: bold;
+    color: #0e76c9;
+    font-size: 28px;
+}
+
+.consulting .consulting-contact-link {
+    background-color: #ffc000;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    font-size: 30px;
+    margin-left: 35px;
+    padding: 0 30px 2px;
+    position: relative;
+    right: 20px;
+    text-decoration: none;
+    top: -56px;
 }

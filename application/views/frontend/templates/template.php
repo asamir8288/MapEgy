@@ -41,7 +41,7 @@
             <ul id="top-menu">
                 <li><a href="<?php echo base_url(); ?>product">Product</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="">Consulting</a></li>
+                <li><a href="<?php echo base_url(); ?>consulting">Consulting</a></li>
                 <li class="menu-separator">|</li>
                 <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
                 <li class="menu-separator">|</li>
