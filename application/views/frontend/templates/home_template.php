@@ -209,7 +209,7 @@
 
                 <!------ END News --------------------------------->
 
-                <div class="small-dashed-separator"></div>
+<!--                <div class="small-dashed-separator"></div>
 
                 <div class="infiniteCarousel">
                     <div class="wrapper">
@@ -225,7 +225,7 @@
                             <li><a href="http://www.flickr.com/photos/remysharp/3047034451/" title="Leaves of Fall"><img src="http://farm4.static.flickr.com/3199/3047034451_121c93386f_s.jpg" height="75" width="75" alt="Leaves of Fall" /></a></li>
                         </ul>        
                     </div>
-                </div>
+                </div>-->
 
                 <div class="contact-us-box">
                     Did we <strong>arouse</strong> your <strong>interest</strong>?
