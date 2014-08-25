@@ -19,6 +19,7 @@ class Product extends CI_Controller {
     }
     
     public function index() {
+        $this->data['activeBanners'] = BannersTable::getActiveBanners(2, TRUE);
         $this->data['activeFeatures'] = ProductFeatureTable::getActiveFeature();
         $this->template->write_view('content', 'frontend/_product_features', $this->data);
         $this->template->render();

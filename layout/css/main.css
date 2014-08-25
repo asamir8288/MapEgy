@@ -39,6 +39,13 @@
     width: 450px;
 }
 
+@media all and (max-width: 1160px) {
+    #top-menu {
+        right:50px !important; 
+        float: right !important;
+    }
+}
+
 #header #top-menu li {
     float: left;
     display: block;

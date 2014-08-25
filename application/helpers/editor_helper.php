@@ -68,7 +68,7 @@ function load_file_finder($path) {
         }
 
     </script>
-    <?
+    <?php
 }
 
 function page_thumb($path) {

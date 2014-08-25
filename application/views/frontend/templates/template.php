@@ -20,7 +20,7 @@
 
     <body>
         <div id="header">
-            <a href="" class="lang-link">Deutch</a>
+            <a href="" class="lang-link">Deutsch</a>
 
             <a href="<?php echo base_url(); ?>" class="logo"></a>       
 

@@ -15,7 +15,7 @@
 
     <body>
         <div id="header">
-            <a href="" class="lang-link">Deutch</a>
+            <a href="" class="lang-link">Deutsch</a>
 
             <a href="<?php echo base_url(); ?>" class="logo"></a>       
 
@@ -66,18 +66,11 @@
                 <!-- Slides Container -->
                 <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
                      height: 500px; overflow: hidden;">
-                    <div>
-                        <img u="image" src="<?php echo static_url(); ?>layout/images/banner.png" />
-                        <img u="thumb" src="<?php echo static_url(); ?>layout/images/s2t.jpg" />
-                    </div>
-                    <div>
-                        <img u="image" src="<?php echo static_url(); ?>layout/images/purple.jpg" />
-                        <img u="thumb" src="<?php echo static_url(); ?>layout/images/s3t.jpg" />
-                    </div>
-                    <div>
-                        <img u="image" src="<?php echo static_url(); ?>layout/images/blue.jpg" />
-                        <img u="thumb" src="<?php echo static_url(); ?>layout/images/s4t.jpg" />
-                    </div>           
+                    <?php foreach ($activeBanners as $banner) { ?>
+                        <div>
+                            <img u="image" src="<?php echo static_url(); ?>files/banners/<?php echo $banner['file_name'];?>" />
+                        </div>
+                    <?php } ?>      
                 </div>
 
                 <!-- bullet navigator container -->
@@ -90,20 +83,7 @@
                 <span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;"></span>
                 <!-- Arrow Right -->
                 <span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px"></span>
-                <!-- ThumbnailNavigator Skin Begin -->
-                <div u="thumbnavigator" class="jssort04" style="position: absolute; width: 600px;
-                     height: 60px; right: 0px; bottom: 0px;">
-                    <div u="slides" style="bottom: 25px; right: 30px;">
-                        <div u="prototype" class="p" style="position: absolute; width: 62px; height: 32px; top: 0; left: 0;">
-                            <div class="w">
-                                <thumbnailtemplate style="width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"></thumbnailtemplate>
-                            </div>
-                            <div class="c" style="position: absolute; background-color: #000; top: 0; left: 0">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+    
             </div>
         </div>       
 

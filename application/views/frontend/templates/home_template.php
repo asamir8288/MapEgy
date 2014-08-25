@@ -5,19 +5,22 @@
         <title>Homepage</title>
         <link rel="stylesheet" type="text/css" href="<?php echo static_url(); ?>layout/css/main.css"/>
         <link rel="stylesheet" type="text/css" href="<?php echo static_url(); ?>layout/css/banner-slider.css"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo static_url(); ?>layout/css/home_scroll_plugin.css"/>
 
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/jssor.core.js"></script>
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/jssor.utils.js"></script>
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/jssor.slider.js"></script>
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/banner-slider.js"></script>
+        <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/scrolling_logos.js"></script>
+        <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/home-scroll.js"></script>
     </head>
 
     <body>
         <div id="header">
-            <a href="" class="lang-link">Deutch</a>
+            <a href="" class="lang-link">Deutsch</a>
 
-            <a href="<?php echo base_url();?>" class="logo"></a>       
+            <a href="<?php echo base_url(); ?>" class="logo"></a>       
 
             <div id="already-customer">
                 Already a customer?
@@ -34,17 +37,17 @@
             </div>
 
             <ul id="top-menu">
-                <li><a href="<?php echo base_url();?>product">Product</a></li>
+                <li><a href="<?php echo base_url(); ?>product">Product</a></li>
                 <li class="menu-separator">|</li>
                 <li><a href="<?php echo base_url(); ?>consulting">Consulting</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url();?>about-us">About</a></li>
+                <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url();?>press">Press</a></li>
+                <li><a href="<?php echo base_url(); ?>press">Press</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url();?>career">Career</a></li>
+                <li><a href="<?php echo base_url(); ?>career">Career</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url();?>news">News</a></li>
+                <li><a href="<?php echo base_url(); ?>news">News</a></li>
             </ul>
         </div>
 
@@ -53,58 +56,53 @@
 
         <div id="banner">
             <div id="slider1_container" style="position: relative; margin: 0 auto;
-             top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
-            <!-- Loading Screen -->
-            <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
-                     top: 0px; left: 0px; width: 100%; height: 100%;">
-                </div>
-                <div style="position: absolute; display: block; background: url(<?php echo static_url(); ?>layout/images/loading.gif) no-repeat center center;
-                     top: 0px; left: 0px; width: 100%; height: 100%;">
-                </div>
-            </div>
-            <!-- Slides Container -->
-            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
-                 height: 500px; overflow: hidden;">
-                <div>
-                    <img u="image" src="<?php echo static_url(); ?>layout/images/banner.png" />
-                    <img u="thumb" src="<?php echo static_url(); ?>layout/images/s2t.jpg" />
-                </div>
-                <div>
-                    <img u="image" src="<?php echo static_url(); ?>layout/images/purple.jpg" />
-                    <img u="thumb" src="<?php echo static_url(); ?>layout/images/s3t.jpg" />
-                </div>
-                <div>
-                    <img u="image" src="<?php echo static_url(); ?>layout/images/blue.jpg" />
-                    <img u="thumb" src="<?php echo static_url(); ?>layout/images/s4t.jpg" />
-                </div>           
-            </div>
-
-            <!-- bullet navigator container -->
-            <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
-                <!-- bullet navigator item prototype -->
-                <div u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"></div>
-            </div>
-
-            <!-- Arrow Left -->
-            <span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;"></span>
-            <!-- Arrow Right -->
-            <span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px"></span>
-            <!-- ThumbnailNavigator Skin Begin -->
-            <div u="thumbnavigator" class="jssort04" style="position: absolute; width: 600px;
-                 height: 60px; right: 0px; bottom: 0px;">
-                <div u="slides" style="bottom: 25px; right: 30px;">
-                    <div u="prototype" class="p" style="position: absolute; width: 62px; height: 32px; top: 0; left: 0;">
-                        <div class="w">
-                            <thumbnailtemplate style="width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"></thumbnailtemplate>
-                        </div>
-                        <div class="c" style="position: absolute; background-color: #000; top: 0; left: 0">
-                        </div>
+                 top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+                <!-- Loading Screen -->
+                <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
+                         top: 0px; left: 0px; width: 100%; height: 100%;">
+                    </div>
+                    <div style="position: absolute; display: block; background: url(<?php echo static_url(); ?>layout/images/loading.gif) no-repeat center center;
+                         top: 0px; left: 0px; width: 100%; height: 100%;">
                     </div>
                 </div>
-            </div>
+                <!-- Slides Container -->
+                <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
+                     height: 500px; overflow: hidden;">
 
-        </div>
+                    <?php foreach ($activeBanners as $banner) { ?>
+                        <div>
+                            <img u="image" src="<?php echo static_url(); ?>files/banners/<?php echo $banner['file_name'];?>" />
+                        </div>
+                    <?php } ?>
+
+                </div>
+
+                <!-- bullet navigator container -->
+                <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
+                    <!-- bullet navigator item prototype -->
+                    <div u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"></div>
+                </div>
+
+                <!-- Arrow Left -->
+                <span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;"></span>
+                <!-- Arrow Right -->
+                <span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px"></span>
+                <!-- ThumbnailNavigator Skin Begin -->
+<!--                <div u="thumbnavigator" class="jssort04" style="position: absolute; width: 600px;
+                     height: 60px; right: 0px; bottom: 0px;">
+                    <div u="slides" style="bottom: 25px; right: 30px;">
+                        <div u="prototype" class="p" style="position: absolute; width: 62px; height: 32px; top: 0; left: 0;">
+                            <div class="w">
+                                <thumbnailtemplate style="width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"></thumbnailtemplate>
+                            </div>
+                            <div class="c" style="position: absolute; background-color: #000; top: 0; left: 0">
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+            </div>
         </div>
 
         <div id="home-benefits-section">
@@ -260,6 +258,22 @@
 
                 <div class="small-dashed-separator"></div>
 
+                <div class="infiniteCarousel">
+                    <div class="wrapper">
+                        <ul>
+                            <li><a href="http://www.flickr.com/photos/remysharp/3047035327/" title="Tall Glow"><img src="http://farm4.static.flickr.com/3011/3047035327_ca12fb2397_s.jpg" height="75" width="75" alt="Tall Glow" /></a></li>
+                            <li><a href="http://www.flickr.com/photos/remysharp/3047872076/" title="Wet Cab"><img src="http://farm4.static.flickr.com/3184/3047872076_61a511a04b_s.jpg" height="75" width="75" alt="Wet Cab" /></a></li>
+                            <li><a href="http://www.flickr.com/photos/remysharp/3047871878/" title="Rockefella"><img src="http://farm4.static.flickr.com/3048/3047871878_84bfacbd35_s.jpg" height="75" width="75" alt="Rockefella" /></a></li>
+                            <li><a href="http://www.flickr.com/photos/remysharp/3047034929/" title="Chrysler Reflect"><img src="http://farm4.static.flickr.com/3220/3047034929_97eaf50ea3_s.jpg" height="75" width="75" alt="Chrysler Reflect" /></a></li>
+
+                            <li><a href="http://www.flickr.com/photos/remysharp/3047871624/" title="Chrysler Up"><img src="http://farm4.static.flickr.com/3164/3047871624_2cacca4684_s.jpg" height="75" width="75" alt="Chrysler Up" /></a></li>
+                            <li><a href="http://www.flickr.com/photos/remysharp/3047034661/" title="Time Square Awe"><img src="http://farm4.static.flickr.com/3212/3047034661_f96548965e_s.jpg" height="75" width="75" alt="Time Square Awe" /></a></li>
+                            <li><a href="http://www.flickr.com/photos/remysharp/3047034531/" title="Wonky Buildings"><img src="http://farm4.static.flickr.com/3022/3047034531_9c74359401_s.jpg" height="75" width="75" alt="Wonky Buildings" /></a></li>
+                            <li><a href="http://www.flickr.com/photos/remysharp/3047034451/" title="Leaves of Fall"><img src="http://farm4.static.flickr.com/3199/3047034451_121c93386f_s.jpg" height="75" width="75" alt="Leaves of Fall" /></a></li>
+                        </ul>        
+                    </div>
+                </div>
+
                 <div class="contact-us-box">
                     Did we <strong>arouse</strong> your <strong>interest</strong>?
                     <a href="" class="contact-us-link">Contact us</a>
@@ -275,17 +289,17 @@
         <div id="footer">
             <div class="wrapper">
                 <ul class="menu">
-                    <li><a href="<?php echo base_url();?>product">Product</a></li>
+                    <li><a href="<?php echo base_url(); ?>product">Product</a></li>
                     <li class="footer-menu-separator">|</li>
                     <li><a href="">Consulting</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url();?>about-us">About</a></li>
+                    <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url();?>press">Press</a></li>
+                    <li><a href="<?php echo base_url(); ?>press">Press</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url();?>career">Career</a></li>
+                    <li><a href="<?php echo base_url(); ?>career">Career</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url();?>news">News</a></li>
+                    <li><a href="<?php echo base_url(); ?>news">News</a></li>
                 </ul>
 
                 <div style="clear: left;height: 20px;"></div>
@@ -337,6 +351,6 @@
             </div>
 
         </div>
-        <div id="copyright"><span>Copyright &copy; mapegy <?php echo date('Y') . ' / ' . (date('Y') + 1)?>. All Rights Reserved</span></div>
+        <div id="copyright"><span>Copyright &copy; mapegy <?php echo date('Y') . ' / ' . (date('Y') + 1) ?>. All Rights Reserved</span></div>
     </body>
 </html>

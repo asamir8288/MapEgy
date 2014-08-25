@@ -19,7 +19,9 @@ class Home extends CI_Controller {
 
     public function index() {
         $this->template->set_template('home_template');
-        $this->template->write_view('content', 'frontend/homepage/index');
+        $this->data['activeBanners'] = BannersTable::getActiveBanners(1, TRUE);
+        
+        $this->template->write_view('content', 'frontend/homepage/index', $this->data);
         $this->template->render();
     }       
 
