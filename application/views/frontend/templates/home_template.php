@@ -72,7 +72,7 @@
 
                     <?php foreach ($activeBanners as $banner) { ?>
                         <div>
-                            <img u="image" src="<?php echo static_url(); ?>files/banners/<?php echo $banner['file_name'];?>" />
+                            <img u="image" src="<?php echo static_url(); ?>files/banners/<?php echo $banner['file_name']; ?>" />
                         </div>
                     <?php } ?>
 
@@ -89,18 +89,18 @@
                 <!-- Arrow Right -->
                 <span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px"></span>
                 <!-- ThumbnailNavigator Skin Begin -->
-<!--                <div u="thumbnavigator" class="jssort04" style="position: absolute; width: 600px;
-                     height: 60px; right: 0px; bottom: 0px;">
-                    <div u="slides" style="bottom: 25px; right: 30px;">
-                        <div u="prototype" class="p" style="position: absolute; width: 62px; height: 32px; top: 0; left: 0;">
-                            <div class="w">
-                                <thumbnailtemplate style="width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"></thumbnailtemplate>
-                            </div>
-                            <div class="c" style="position: absolute; background-color: #000; top: 0; left: 0">
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
+                <!--                <div u="thumbnavigator" class="jssort04" style="position: absolute; width: 600px;
+                                     height: 60px; right: 0px; bottom: 0px;">
+                                    <div u="slides" style="bottom: 25px; right: 30px;">
+                                        <div u="prototype" class="p" style="position: absolute; width: 62px; height: 32px; top: 0; left: 0;">
+                                            <div class="w">
+                                                <thumbnailtemplate style="width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"></thumbnailtemplate>
+                                            </div>
+                                            <div class="c" style="position: absolute; background-color: #000; top: 0; left: 0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
 
             </div>
         </div>
@@ -173,81 +173,34 @@
 
                 <div class="news-section">
                     <div class="recent-blog-posts">
-                        <div class="box">
-                            <img src="<?php echo static_url(); ?>layout/images/recent-blog-post-img.png" width="110" height="103" />
+                        <?php foreach ($activeNews as $news) { ?>
+                            <div class="box">
+                                <img src="<?php echo static_url(); ?>files/news/<?php echo $news['image']; ?>" width="110" height="103" />
 
-                            <p class="blog-short-brief">	
-                                <a href="" class="blog-article-title">The pilot to certainty - it maps the landscape...</a>                    
-                                pilot to certainty - it maps the landscape of technology companies like no other pilot to certainty - it maps the landscape of technology companies like no other.
-                            </p>
-                        </div>
+                                <p class="blog-short-brief">	
+                                    <a href="<?php echo base_url() . 'news/blog/details/' . $news['id']; ?>" class="blog-article-title"><?php echo substring(nl2br($news['title']), '', '', 7); ?></a>                    
+                                    <?php echo substring(nl2br($news['description']), $news['id'], 'news/blog/details', 30); ?>
+                                </p>
+                            </div>
 
-                        <div class="separator-between-boxes"></div>
+                            <div class="separator-between-boxes"></div>
 
-                        <div class="box">
-                            <img src="<?php echo static_url(); ?>layout/images/recent-blog-post-img.png" width="110" height="103" />
-
-                            <p class="blog-short-brief">	
-                                <a href="" class="blog-article-title">The pilot to certainty - it maps the landscape...</a>                    
-                                pilot to certainty - it maps the landscape of technology companies like no other pilot to certainty - it maps the landscape of technology companies like no other.
-                            </p>
-                        </div>
-
-                        <div class="separator-between-boxes"></div>
-
-                        <div class="box">
-                            <img src="<?php echo static_url(); ?>layout/images/recent-blog-post-img.png" width="110" height="103" />
-
-                            <p class="blog-short-brief">	
-                                <a href="" class="blog-article-title">The pilot to certainty - it maps the landscape...</a>                    
-                                pilot to certainty - it maps the landscape of technology companies like no other pilot to certainty - it maps the landscape of technology companies like no other.
-                            </p>
-                        </div>
-
-                        <div class="separator-between-boxes"></div>
-
-                        <div class="box">
-                            <img src="<?php echo static_url(); ?>layout/images/recent-blog-post-img.png" width="110" height="103" />
-
-                            <p class="blog-short-brief">	
-                                <a href="" class="blog-article-title">The pilot to certainty - it maps the landscape...</a>                    
-                                pilot to certainty - it maps the landscape of technology companies like no other pilot to certainty - it maps the landscape of technology companies like no other.
-                            </p>
-                        </div>
-
-
+                        <?php } ?>
                     </div>
+
                     <div class="meet-us">
-                        <div class="meet-us-box">
-                            <img src="<?php echo static_url(); ?>layout/images/logo1.png" width="77" height="65" />
+                        <?php foreach ($active_events as $event) { ?>
+                            <div class="meet-us-box">
+                                <img src="<?php echo static_url(); ?>files/events/<?php echo $event['image'];?>" width="77" />
 
-                            <p class="meet-us-short-brief">	
-                                <a href="" class="meet-us-title">5 July, 2014</a>                    
-                                pilot to certainty - it maps the landscape of technology companies like no other...
-                            </p>
-                        </div>
+                                <p class="meet-us-short-brief">	
+                                    <a href="" class="meet-us-title"><?php echo date('d M, Y', strtotime($event['date']));?></a>                    
+                                    <?php echo (strlen($event['description']) > 80) ? substr($event['description'], 0, 80) . '...' : $event['description']; ?>
+                                </p>
+                            </div>
 
-                        <div class="separator-between-boxes"></div>
-
-                        <div class="meet-us-box">
-                            <img src="<?php echo static_url(); ?>layout/images/berlin-logo.png" width="82" height="62" />
-
-                            <p class="meet-us-short-brief">	
-                                <a href="" class="meet-us-title">5 July, 2014</a>                    
-                                pilot to certainty - it maps the landscape of technology companies like no other...
-                            </p>
-                        </div>
-
-                        <div class="separator-between-boxes"></div>
-
-                        <div class="meet-us-box">
-                            <img src="<?php echo static_url(); ?>layout/images/volix.png" width="63" height="62" />
-
-                            <p class="meet-us-short-brief">	
-                                <a href="" class="meet-us-title">5 July, 2014</a>                    
-                                pilot to certainty - it maps the landscape of technology companies like no other...
-                            </p>
-                        </div>
+                            <div class="separator-between-boxes"></div>
+                        <?php } ?>
 
                     </div>
 

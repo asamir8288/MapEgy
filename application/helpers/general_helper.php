@@ -18,7 +18,7 @@ function substring($string, $id = '', $page = 'news-details', $wordsNumber = 30)
         } else if ($id) {
             $new_string .= '<a href="' . base_url($page . '/' . $id) . '" class="more-link">' . lang('frontend_more_link') . '</a>';
         } else {
-            $new_string .= '';
+            $new_string .= '...';
         }
     } else {
         $new_string = $string;
