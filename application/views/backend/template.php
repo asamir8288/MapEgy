@@ -47,6 +47,8 @@
             <?php if (!isset($is_dashboard)) { ?>
                 <div id="inside-menu">
                     <a href="<?php echo site_url('admin/dashboard');?>" class="home"></a>
+                    <a href="<?php echo site_url('admin/banner/home_banners');?>" class="home"></a>
+                    <a href="<?php echo site_url('admin/banner/product_banners');?>" class="home"></a>
                     <a href="<?php echo site_url('admin/product'); ?>" class="product"></a>
                     <a href="<?php echo site_url('admin/our_experts'); ?>" class="about"></a>
                     <a href="<?php echo site_url('admin/press');?>" class="press"></a>
