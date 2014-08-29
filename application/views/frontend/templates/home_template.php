@@ -12,8 +12,24 @@
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/jssor.utils.js"></script>
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/jssor.slider.js"></script>
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/banner-slider.js"></script>
-        <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/scrolling_logos.js"></script>
-        <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/home-scroll.js"></script>
+        <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/jquery.carouFredSel-6.2.1.js"></script>
+
+        <script type="text/javascript" language="javascript">
+            $(function() {
+                $('#foo2').carouFredSel({
+//                    auto: true,
+                    prev: '#prev2',
+                    next: '#next2',
+                    scroll: 4,
+                });
+                $('#foo3').carouFredSel({
+//                    auto: true,
+                    prev: '#prev3',
+                    next: '#next3',
+                    scroll: 1,
+                });
+            });
+        </script>
     </head>
 
     <body>
@@ -135,9 +151,25 @@
 
                 <div class="small-dashed-separator"></div>
                 <div class="home-title small-width">Clients</div>
-                <p class="home-section">
-                    <img src="<?php echo static_url(); ?>layout/images/home-client-placeholder.png" width="872" height="129" />
-                </p>
+                <div class="list_carousel">
+                    <ul id="foo2">
+                        <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px;padding-top: 5px;vertical-align: middle;" /></li>
+                        <li><img src="<?php echo static_url(); ?>layout/images/client2.png" style="width:173px;vertical-align: middle;" /></li>
+                        <li><img src="<?php echo static_url(); ?>layout/images/client3.png" style="width:173px;vertical-align: middle;" /></li>
+                        <li><img src="<?php echo static_url(); ?>layout/images/client4.png" style="width:173px;vertical-align: middle;" /></li>
+                        <li><img src="<?php echo static_url(); ?>layout/images/client4.png" style="width:173px" /></li>
+                        <li><img src="<?php echo static_url(); ?>layout/images/client3.png" style="width:173px" /></li>
+                        <li><img src="<?php echo static_url(); ?>layout/images/client2.png" style="width:173px" /></li>
+                        <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px" /></li>
+                        <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px" /></li>
+                        <li><img src="<?php echo static_url(); ?>layout/images/client2.png" style="width:173px" /></li>
+                        <li><img src="<?php echo static_url(); ?>layout/images/client3.png" style="width:173px" /></li>
+                        <li><img src="<?php echo static_url(); ?>layout/images/client4.png" style="width:173px" /></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                    <a id="prev2" class="prev" href="#"></a>
+                    <a id="next2" class="next" href="#"></a>
+                </div>
 
                 <!------ END Clients --------------------------------->
 
@@ -146,22 +178,45 @@
                 <div class="small-dashed-separator"></div>
                 <div class="home-title small-width">Quotes</div>
                 <div class="home-section">
-                    <div class="left-arrow"></div>
-                    <div class="quotes">
-                        <img src="<?php echo static_url(); ?>layout/images/frankfurter_allgemeine_logo.png" width="250" height="53" />
-                        <div class="quote-words">
-                            “The pilot to certainty - it maps the landscape of technology companies like no other.”
+                    <div class="list_carousel1">
+                        <ul id="foo3">
+                            <li>
+                                <div class="quotes">
+                                    <img src="<?php echo static_url(); ?>layout/images/frankfurter_allgemeine_logo.png" width="250" height="53" />
+                                    <div class="quote-words">
+                                        “The pilot to certainty - it maps the landscape of technology companies like no other.”
 
-                            <span class="author">
-                                Jens Twiehaus
-                                <br />
-                                Frankfurter Allgemeine Zeitung    
-                            </span>
-                        </div>
+                                        <span class="author">
+                                            Jens Twiehaus
+                                            <br />
+                                            Frankfurter Allgemeine Zeitung    
+                                        </span>
+                                    </div>
 
+                                </div>
+                            </li>
+                            <li>
+                                <div class="quotes">
+                                    <img src="<?php echo static_url(); ?>layout/images/frankfurter_allgemeine_logo.png" width="250" height="53" />
+                                    <div class="quote-words">
+                                        “The pilot to certainty - it maps the landscape of technology companies like no other.”
+
+                                        <span class="author">
+                                            Jens Twiehaus
+                                            <br />
+                                            Frankfurter Allgemeine Zeitung    
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                        </ul>
+                        <div class="clearfix"></div>
+                        <a id="prev3" class="prev1" href="#"></a>
+                        <a id="next3" class="next1" href="#"></a>
                     </div>
 
-                    <div class="right-arrow"></div>
                 </div>
 
                 <!------ END Quotes --------------------------------->
@@ -191,10 +246,10 @@
                     <div class="meet-us">
                         <?php foreach ($active_events as $event) { ?>
                             <div class="meet-us-box">
-                                <img src="<?php echo static_url(); ?>files/events/<?php echo $event['image'];?>" width="77" />
+                                <img src="<?php echo static_url(); ?>files/events/<?php echo $event['image']; ?>" width="77" />
 
                                 <p class="meet-us-short-brief">	
-                                    <a href="" class="meet-us-title"><?php echo date('d M, Y', strtotime($event['date']));?></a>                    
+                                    <a href="" class="meet-us-title"><?php echo date('d M, Y', strtotime($event['date'])); ?></a>                    
                                     <?php echo (strlen($event['description']) > 80) ? substr($event['description'], 0, 80) . '...' : $event['description']; ?>
                                 </p>
                             </div>
@@ -209,23 +264,8 @@
 
                 <!------ END News --------------------------------->
 
-<!--                <div class="small-dashed-separator"></div>
 
-                <div class="infiniteCarousel">
-                    <div class="wrapper">
-                        <ul>
-                            <li><a href="http://www.flickr.com/photos/remysharp/3047035327/" title="Tall Glow"><img src="http://farm4.static.flickr.com/3011/3047035327_ca12fb2397_s.jpg" height="75" width="75" alt="Tall Glow" /></a></li>
-                            <li><a href="http://www.flickr.com/photos/remysharp/3047872076/" title="Wet Cab"><img src="http://farm4.static.flickr.com/3184/3047872076_61a511a04b_s.jpg" height="75" width="75" alt="Wet Cab" /></a></li>
-                            <li><a href="http://www.flickr.com/photos/remysharp/3047871878/" title="Rockefella"><img src="http://farm4.static.flickr.com/3048/3047871878_84bfacbd35_s.jpg" height="75" width="75" alt="Rockefella" /></a></li>
-                            <li><a href="http://www.flickr.com/photos/remysharp/3047034929/" title="Chrysler Reflect"><img src="http://farm4.static.flickr.com/3220/3047034929_97eaf50ea3_s.jpg" height="75" width="75" alt="Chrysler Reflect" /></a></li>
-
-                            <li><a href="http://www.flickr.com/photos/remysharp/3047871624/" title="Chrysler Up"><img src="http://farm4.static.flickr.com/3164/3047871624_2cacca4684_s.jpg" height="75" width="75" alt="Chrysler Up" /></a></li>
-                            <li><a href="http://www.flickr.com/photos/remysharp/3047034661/" title="Time Square Awe"><img src="http://farm4.static.flickr.com/3212/3047034661_f96548965e_s.jpg" height="75" width="75" alt="Time Square Awe" /></a></li>
-                            <li><a href="http://www.flickr.com/photos/remysharp/3047034531/" title="Wonky Buildings"><img src="http://farm4.static.flickr.com/3022/3047034531_9c74359401_s.jpg" height="75" width="75" alt="Wonky Buildings" /></a></li>
-                            <li><a href="http://www.flickr.com/photos/remysharp/3047034451/" title="Leaves of Fall"><img src="http://farm4.static.flickr.com/3199/3047034451_121c93386f_s.jpg" height="75" width="75" alt="Leaves of Fall" /></a></li>
-                        </ul>        
-                    </div>
-                </div>-->
+                <div style="clear: both; height: 100px;"></div>
 
                 <div class="contact-us-box">
                     Did we <strong>arouse</strong> your <strong>interest</strong>?

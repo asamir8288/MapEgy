@@ -1,84 +1,115 @@
-.infiniteCarousel {
-    width: 395px;
-    position: relative;
+.list_carousel {
+    margin-left: 20px;
+    width: 850px;
 }
-
-.infiniteCarousel .wrapper {
-    width: 315px; /* .infiniteCarousel width - (.wrapper margin-left + .wrapper margin-right) */
-    overflow: auto;
-    height: 105px;
-    margin: 0 40px;
-    position: absolute;
-    top: 0;
-}
-
-.infiniteCarousel ul a img {
-    border: 5px solid #000;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-}
-
-.infiniteCarousel .wrapper ul {
-    width: 840px; /* single item * n */
-    list-style-image:none;
-    list-style-position:outside;
-    list-style-type:none;
-    margin:0;
-    padding:0;
-    position: absolute;
-    top: 0;
-}
-
-.infiniteCarousel ul li {
-    display:block;
-    float:left;
-    padding: 10px;
-    height: 85px;
-    width: 85px;
-}
-
-.infiniteCarousel ul li img {
-    -webkit-transition: border-color 400ms;
-}
-
-.infiniteCarousel ul:hover li img {
-    border-color: #000;
-}
-
-.infiniteCarousel ul:hover li:hover img {
-    border-color: #333;
-}
-
-.infiniteCarousel ul li a img {
-    display:block;
-}
-
-.infiniteCarousel .arrow {
+.list_carousel ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     display: block;
-    height: 36px;
-    width: 37px;
-    background: url(images/arrow.png) no-repeat 0 0;
-    text-indent: -999px;
-    position: absolute;
-    top: 37px;
-    cursor: pointer;
-    outline: 0;
 }
-
-.infiniteCarousel .forward {
-    background-position: 0 0;
-    right: 0;
+.list_carousel li {
+    font-size: 40px;				
+    text-align: center;				
+    width: 180px;
+    height: 170px;
+    padding: 0;
+    margin: 15px;
+    display: block;
+    float: left;
+    position:relative;
 }
-
-.infiniteCarousel .back {
-    background-position: 0 -72px;
+.list_carousel li img{
+    position:absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
     left: 0;
+    right: 0px;
+}
+.list_carousel.responsive {
+    width: auto;
+    margin-left: 0;
+}
+.clearfix {
+    float: none;
+    clear: both;
+}
+.prev {
+    float: left;
+    background-image: URL(../images/left-arrow.png);
+    width: 15px;
+    height: 21px;
+    display: block;
+    margin-left: 10px;
+    text-decoration: none;
+    position: relative;
+    left: -32px;
+    top: -100px;
+}
+.next {
+    float: right;
+    background-image: URL(../images/right-arrow.png);
+    width: 15px;
+    height: 21px;
+    display: block;
+    margin-right: 10px;
+    text-decoration: none;
+    position: relative;
+    right: -32px;
+    top: -100px;
+}  
+
+// ------------------------------------------------------------------------------------------------------------
+
+
+.list_carousel1 {
+    margin-left: 20px;
+    width: 850px;
+}
+.list_carousel1 ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+.list_carousel1 li {
+    font-size: 40px;				
+    text-align: center;				
+    width: 830px;
+    height: 100px;
+    padding: 0;
+    margin: 15px;
+    display: block;
+    float: left;
+    position:relative;
+}
+.list_carousel1.responsive {
+    width: auto;
+    margin-left: 0;
 }
 
-.infiniteCarousel .forward:hover {
-    background-position: 0 -36px;
+.prev1 {
+    float: left;
+    background-image: URL(../images/left-arrow.png);
+    width: 15px;
+    height: 21px;
+    display: block;
+    margin-left: 10px;
+    text-decoration: none;
+    position: relative;
+    left: -13px;
+    top: -100px;
 }
-
-.infiniteCarousel .back:hover {
-    background-position: 0 -108px;
-}
+.next1 {
+    float: right;
+    background-image: URL(../images/right-arrow.png);
+    width: 15px;
+    height: 21px;
+    display: block;
+    margin-right: 10px;
+    text-decoration: none;
+    position: relative;
+    right: -21px;
+    top: -100px;
+}  
