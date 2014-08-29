@@ -56,6 +56,8 @@
         </div>
 
         <a href="<?php echo base_url(); ?>contact" id="left-contact-us-link"></a>
+        
+        <div style="clear: both;height: 66px;"></div>
 
         <?php if (isset($inside_banner)) { ?>
             <div id="inside-banner">

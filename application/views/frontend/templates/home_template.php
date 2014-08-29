@@ -69,7 +69,7 @@
 
         <a href="<?php echo base_url(); ?>contact" id="left-contact-us-link"></a>
 
-
+        <div style="clear: both;height: 66px;"></div>
         <div id="banner">
             <div id="slider1_container" style="position: relative; margin: 0 auto;
                  top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">

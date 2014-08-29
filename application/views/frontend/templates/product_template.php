@@ -34,13 +34,13 @@
             </div>
 
             <ul id="top-menu">
-                <li><a href="<?php echo base_url();?>product">Product</a></li>
+                <li><a href="<?php echo base_url(); ?>product">Product</a></li>
                 <li class="menu-separator">|</li>
                 <li><a href="<?php echo base_url(); ?>consulting">Consulting</a></li>
                 <li class="menu-separator">|</li>
                 <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url();?>press">Press</a></li>
+                <li><a href="<?php echo base_url(); ?>press">Press</a></li>
                 <li class="menu-separator">|</li>
                 <li><a href="<?php echo base_url(); ?>career">Career</a></li>
                 <li class="menu-separator">|</li>
@@ -49,7 +49,8 @@
         </div>
 
         <a href="<?php echo base_url(); ?>contact" id="left-contact-us-link"></a>
-
+        
+        <div style="clear: both;height: 66px;"></div>
 
         <div id="banner">
             <div id="slider1_container" style="position: relative; margin: 0 auto;
@@ -66,9 +67,9 @@
                 <!-- Slides Container -->
                 <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
                      height: 500px; overflow: hidden;">
-                    <?php foreach ($activeBanners as $banner) { ?>
+                     <?php foreach ($activeBanners as $banner) { ?>
                         <div>
-                            <img u="image" src="<?php echo static_url(); ?>files/banners/<?php echo $banner['file_name'];?>" />
+                            <img u="image" src="<?php echo static_url(); ?>files/banners/<?php echo $banner['file_name']; ?>" />
                         </div>
                     <?php } ?>      
                 </div>
@@ -83,7 +84,7 @@
                 <span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;"></span>
                 <!-- Arrow Right -->
                 <span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px"></span>
-    
+
             </div>
         </div>       
 
@@ -138,7 +139,7 @@
                 <div class="small-dashed-separator"></div>
                 <div class="home-title small-width">Features</div>
 
-                <?php echo $content;?>
+                <?php echo $content; ?>
 
                 <div style="clear: left;height: 1px;"></div>
 
@@ -154,7 +155,7 @@
                 <div class="small-dashed-separator"></div>
 
                 <div class="mapegy-offers">mapegy offers you:</div>
-                
+
                 <div class="offer-item">
                     360° data perspective: Integration of  various text data (patents, standards, science, press and social media data)
                 </div>
@@ -164,7 +165,7 @@
                 <div class="offer-item">
                     Simplizität und Benutzerfreundlichkeit durch intuitive Informations-visualisierung
                 </div>
-                
+
                 <div class="small-dashed-separator"></div>
 
                 <div class="contact-us-box">
@@ -181,17 +182,17 @@
         <div id="footer">
             <div class="wrapper">
                 <ul class="menu">
-                    <li><a href="<?php echo base_url();?>product">Product</a></li>
+                    <li><a href="<?php echo base_url(); ?>product">Product</a></li>
                     <li class="footer-menu-separator">|</li>
                     <li><a href="<?php echo base_url(); ?>consulting">Consulting</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url();?>about-us">About</a></li>
+                    <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url();?>press">Press</a></li>
+                    <li><a href="<?php echo base_url(); ?>press">Press</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url();?>career">Career</a></li>
+                    <li><a href="<?php echo base_url(); ?>career">Career</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url();?>news">News</a></li>
+                    <li><a href="<?php echo base_url(); ?>news">News</a></li>
                 </ul>
 
                 <div style="clear: left;height: 20px;"></div>
