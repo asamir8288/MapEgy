@@ -128,8 +128,8 @@
             <div class="benefit" style="margin-right:0px;"><span>Efficient</span></div>
 
             <div class="home-section-navigation">
+                <a href="#banner" class="nav-item"></a>
                 <a href="#About-Mapegy" class="nav-item"></a>
-                <a href="#Clients" class="nav-item"></a>
                 <a href="#News" class="nav-item"></a>
             </div>
         </div>
