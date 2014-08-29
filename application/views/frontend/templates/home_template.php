@@ -128,9 +128,9 @@
             <div class="benefit" style="margin-right:0px;"><span>Efficient</span></div>
 
             <div class="home-section-navigation">
-                <a href="" class="nav-item"></a>
-                <a href="" class="nav-item"></a>
-                <a href="" class="nav-item"></a>
+                <a href="#About-Mapegy" class="nav-item"></a>
+                <a href="#Clients" class="nav-item"></a>
+                <a href="#News" class="nav-item"></a>
             </div>
         </div>
 
@@ -140,7 +140,7 @@
             <div id="wrapper">
 
                 <!------ START About Mapegy --------------------------------->
-                <div class="home-title">About Mapegy</div>
+                <div id="About-Mapegy" class="home-title">About Mapegy</div>
                 <p class="home-section">
                     Challenged by the current information overload and dynamic global markets, you need crucial facts and figures on technology push and market pull fast and efficiently.
                 </p>
@@ -150,7 +150,7 @@
                 <!------ START Clients --------------------------------->
 
                 <div class="small-dashed-separator"></div>
-                <div class="home-title small-width">Clients</div>
+                <div id="Clients" class="home-title small-width">Clients</div>
                 <div class="list_carousel">
                     <ul id="foo2">
                         <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px;padding-top: 5px;vertical-align: middle;" /></li>
@@ -224,7 +224,7 @@
                 <!------ START News --------------------------------->
 
                 <div class="small-dashed-separator"></div>
-                <div class="home-title small-width">News</div>
+                <div id="News" class="home-title small-width">News</div>
 
                 <div class="news-section">
                     <div class="recent-blog-posts">
