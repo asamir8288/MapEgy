@@ -4,8 +4,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>MapEgy :: <?php echo (isset($page_title)) ? $page_title : ''; ?></title>
         <link rel="stylesheet" type="text/css" href="<?php echo static_url(); ?>layout/css/main.css"/>
+        <?php echo $_styles;?>        
 
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/jquery-1.9.1.min.js"></script>
+        <?php echo $_scripts;?>
 
         <?php if (isset($inside_banner)) { ?>
             <style type="text/css">

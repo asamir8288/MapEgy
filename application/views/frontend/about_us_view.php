@@ -47,9 +47,25 @@
 
 <div class="small-dashed-separator"></div>
 <div class="inside-main-title">Clients</div>
-<p class="inside-horizontal-section">
-    <img src="<?php echo static_url(); ?>layout/images/home-client-placeholder.png" width="872" height="129" />
-</p>
+<div class="list_carousel">
+    <ul id="foo1">
+        <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px;padding-top: 5px;vertical-align: middle;" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client2.png" style="width:173px;vertical-align: middle;" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client3.png" style="width:173px;vertical-align: middle;" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client4.png" style="width:173px;vertical-align: middle;" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client4.png" style="width:173px" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client3.png" style="width:173px" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client2.png" style="width:173px" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client2.png" style="width:173px" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client3.png" style="width:173px" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client4.png" style="width:173px" /></li>
+    </ul>
+    <div class="clearfix"></div>
+    <a id="prev2" class="prev" href="#"></a>
+    <a id="next2" class="next" href="#"></a>
+</div>
 
 <!------ END Clients --------------------------------->
 
@@ -57,9 +73,25 @@
 
 <div class="small-dashed-separator"></div>
 <div class="inside-main-title">Partners</div>
-<p class="inside-horizontal-section">
-    <img src="<?php echo static_url(); ?>layout/images/home-client-placeholder.png" width="872" height="129" />
-</p>
+<div class="list_carousel">
+    <ul id="foo2">
+        <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px;padding-top: 5px;vertical-align: middle;" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client2.png" style="width:173px;vertical-align: middle;" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client3.png" style="width:173px;vertical-align: middle;" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client4.png" style="width:173px;vertical-align: middle;" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client4.png" style="width:173px" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client3.png" style="width:173px" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client2.png" style="width:173px" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client2.png" style="width:173px" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client3.png" style="width:173px" /></li>
+        <li><img src="<?php echo static_url(); ?>layout/images/client4.png" style="width:173px" /></li>
+    </ul>
+    <div class="clearfix"></div>
+    <a id="prev2" class="prev" href="#"></a>
+    <a id="next2" class="next" href="#"></a>
+</div>
 
 <!------ END Clients --------------------------------->
 
@@ -68,22 +100,44 @@
 <div class="small-dashed-separator"></div>
 <div class="inside-main-title">Quotes</div>
 <div class="inside-horizontal-section">
-    <div class="left-arrow"></div>
-    <div class="quotes">
-        <img src="<?php echo static_url(); ?>layout/images/frankfurter_allgemeine_logo.png" width="250" height="53" />
-        <div class="quote-words">
-            “The pilot to certainty - it maps the landscape of technology companies like no other.”
+    <div class="list_carousel1">
+                        <ul id="foo3">
+                            <li>
+                                <div class="quotes">
+                                    <img src="<?php echo static_url(); ?>layout/images/frankfurter_allgemeine_logo.png" width="250" height="53" />
+                                    <div class="quote-words">
+                                        “The pilot to certainty - it maps the landscape of technology companies like no other.”
 
-            <span class="author">
-                Jens Twiehaus
-                <br />
-                Frankfurter Allgemeine Zeitung    
-            </span>
-        </div>
+                                        <span class="author">
+                                            Jens Twiehaus
+                                            <br />
+                                            Frankfurter Allgemeine Zeitung    
+                                        </span>
+                                    </div>
 
-    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="quotes">
+                                    <img src="<?php echo static_url(); ?>layout/images/frankfurter_allgemeine_logo.png" width="250" height="53" />
+                                    <div class="quote-words">
+                                        “The pilot to certainty - it maps the landscape of technology companies like no other.”
 
-    <div class="right-arrow"></div>
+                                        <span class="author">
+                                            Jens Twiehaus
+                                            <br />
+                                            Frankfurter Allgemeine Zeitung    
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                        </ul>
+                        <div class="clearfix"></div>
+                        <a id="prev3" class="prev1" href="#"></a>
+                        <a id="next3" class="next1" href="#"></a>
+                    </div>
 </div>
 
 <!------ END Quotes --------------------------------->                

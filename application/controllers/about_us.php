@@ -23,6 +23,31 @@ class About_us extends CI_Controller {
         
         $this->data['experts'] = ExpertsTable::getAllActiveExperts();
         
+        $this->template->add_js('layout/js/jquery.carouFredSel-6.2.1.js');
+        $this->template->add_css('layout/css/home_scroll_plugin.css');
+        $this->template->write('_scripts', "<script type='text/javascript' language='javascript'>
+            $(function() {
+                $('#foo1').carouFredSel({
+                    auto: true,
+                    prev: '#prev2',
+                    next: '#next2',
+                    scroll: 4,
+                });
+                $('#foo2').carouFredSel({
+                    auto: true,
+                    prev: '#prev2',
+                    next: '#next2',
+                    scroll: 4,
+                });
+                $('#foo3').carouFredSel({
+                    auto: true,
+                    prev: '#prev3',
+                    next: '#next3',
+                    scroll: 1,
+                });
+            });
+        </script>");
+        
         $this->template->write_view('content', 'frontend/about_us_view', $this->data);
         $this->template->render();
     }
