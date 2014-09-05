@@ -17,7 +17,7 @@ class Contact extends CI_Controller {
     
     public function index() {
         $this->data['page_title'] = 'Contact Us';
-        $this->data['inside_banner'] = static_url() . 'layout/images/contact-us-banner.png';
+        $this->data['map_banner'] = TRUE;
 
         $this->template->write_view('content', 'frontend/contact_us', $this->data);
         $this->template->render();

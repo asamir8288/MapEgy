@@ -64,7 +64,9 @@
 
             </div>
 
-
+            <div class="wide-dashed-separator"></div>
+        <?php }elseif(isset($map_banner)){ ?>
+            <div id="map_canvas"></div>
             <div class="wide-dashed-separator"></div>
         <?php } ?>
 

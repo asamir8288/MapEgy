@@ -1001,6 +1001,9 @@
     width: 350px;
     padding: 5px;
     height: 150px;
+    border: solid 1px #efefef;
+    color: #000;
+    font-size: 15px;
 }
 
 .contact-right {
