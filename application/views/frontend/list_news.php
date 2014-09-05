@@ -42,7 +42,7 @@
 
     <?php if ($events_count > 5) { ?>
         <a href="" class="older-posts-link">Older Events</a>
-<?php } ?>
+    <?php } ?>
 
 </div>
 
@@ -50,6 +50,17 @@
 
 <div class="news-follow-us">
     <div class="follow-us-title">Follow mapegy</div>
+
+    <a class="twitter-timeline" href="https://twitter.com/mapegy" data-widget-id="507883837108391936">Tweets by @mapegy</a>
+    <script>!function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = p + "://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, "script", "twitter-wjs");</script>
 </div>
 
 <div style="clear: left;height: 50px;"></div>
