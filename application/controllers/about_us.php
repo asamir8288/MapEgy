@@ -29,8 +29,8 @@ class About_us extends CI_Controller {
             $(function() {
                 $('#foo1').carouFredSel({
                     auto: true,
-                    prev: '#prev2',
-                    next: '#next2',
+                    prev: '#prev1',
+                    next: '#next1',
                     scroll: 4,
                 });
                 $('#foo2').carouFredSel({

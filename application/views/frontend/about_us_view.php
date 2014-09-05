@@ -63,8 +63,8 @@
         <li><img src="<?php echo static_url(); ?>layout/images/client4.png" style="width:173px" /></li>
     </ul>
     <div class="clearfix"></div>
-    <a id="prev2" class="prev" href="#"></a>
-    <a id="next2" class="next" href="#"></a>
+    <a id="prev1" class="prev" href="#"></a>
+    <a id="next1" class="next" href="#"></a>
 </div>
 
 <!------ END Clients --------------------------------->
