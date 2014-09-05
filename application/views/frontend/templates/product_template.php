@@ -27,10 +27,10 @@
             <div class="top-small-separator">|</div>
 
             <div id="social-links">
-                <a href=""><img src="<?php echo static_url(); ?>layout/images/social1.png" width="15" height="15" /></a>
-                <a href=""><img src="<?php echo static_url(); ?>layout/images/linkedin.png" width="18" height="17" /></a>
-                <a href=""><img src="<?php echo static_url(); ?>layout/images/twitter.png" width="18" height="14" /></a>
-                <a href=""><img src="<?php echo static_url(); ?>layout/images/facebook.png" width="10" height="17" /></a>                
+                <a href="https://www.xing.com/companies/mapegy.com"><img src="<?php echo static_url(); ?>layout/images/social1.png" width="15" height="15" /></a>
+                <a href="https://www.linkedin.com/company/mapegy"><img src="<?php echo static_url(); ?>layout/images/linkedin.png" width="18" height="17" /></a>
+                <a href="https://twitter.com/mapegy"><img src="<?php echo static_url(); ?>layout/images/twitter.png" width="18" height="14" /></a>
+                <a href="https://www.facebook.com/mapegy"><img src="<?php echo static_url(); ?>layout/images/facebook.png" width="10" height="17" /></a>                
             </div>
 
             <ul id="top-menu">
