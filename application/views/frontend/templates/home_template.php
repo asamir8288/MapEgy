@@ -265,7 +265,7 @@
                 <!------ END News --------------------------------->
 
 
-                <div style="clear: both; height: 100px;"></div>
+                <div style="clear: both; height: 34px;"></div>
 
                 <div class="contact-us-box">
                     Did we <strong>arouse</strong> your <strong>interest</strong>?
