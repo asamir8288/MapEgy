@@ -711,6 +711,11 @@
     font-size: 20px;
     font-weight: bold;
     margin-top: 8px;
+    display: block;
+    text-decoration: none;
+}
+.news_blog_box .news-title:hover{
+    color: #646464;
 }
 
 .news_blog_box .more-link{
