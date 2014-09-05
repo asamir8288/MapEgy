@@ -140,7 +140,7 @@
             <div id="wrapper">
 
                 <!------ START About Mapegy --------------------------------->
-                <div id="About-Mapegy" class="home-title">About Mapegy</div>
+                <div id="About-Mapegy" class="home-title">About mapegy</div>
                 <p class="home-section">
                     Challenged by the current information overload and dynamic global markets, you need crucial facts and figures on technology push and market pull fast and efficiently.
                 </p>
