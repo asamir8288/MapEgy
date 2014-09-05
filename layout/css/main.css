@@ -462,7 +462,7 @@
 
 #footer .menu{
     list-style: none;
-    width: 500px;
+    width: 700px;
     margin: 0 auto;
     padding-top: 15px;
 }
@@ -514,7 +514,7 @@
     background-image:url(../images/footer-dash-link-1.png);
     width: 167px;
     height: 58px;
-    margin-left: 48px;
+    margin-left: 20px;
 }
 .dashed-link-2{
     background-image: url(../images/footer-dash-link-2.png);
@@ -544,7 +544,7 @@
     background-image: url(../images/footer-dash-link-6.png);
     width: 165px;
     height: 57px;
-    margin-left: -63px!important;
+    margin-left: -52px!important;
 }
 
 .footer-legal-policy-link {

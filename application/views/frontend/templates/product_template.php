@@ -49,7 +49,7 @@
         </div>
 
         <a href="<?php echo base_url(); ?>contact" id="left-contact-us-link"></a>
-        
+
         <div style="clear: both;height: 66px;"></div>
 
         <div id="banner">
@@ -182,6 +182,8 @@
         <div id="footer">
             <div class="wrapper">
                 <ul class="menu">
+                    <li><a href="<?php echo base_url(); ?>">Home</a></li>
+                    <li class="footer-menu-separator">|</li>
                     <li><a href="<?php echo base_url(); ?>product">Product</a></li>
                     <li class="footer-menu-separator">|</li>
                     <li><a href="<?php echo base_url(); ?>consulting">Consulting</a></li>
@@ -193,6 +195,10 @@
                     <li><a href="<?php echo base_url(); ?>career">Career</a></li>
                     <li class="footer-menu-separator">|</li>
                     <li><a href="<?php echo base_url(); ?>news">News</a></li>
+                    <li class="footer-menu-separator">|</li>
+                    <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
+                    <li class="footer-menu-separator">|</li>
+                    <li><a href="<?php echo base_url(); ?>legal-policy">Legal Policy</a></li>                    
                 </ul>
 
                 <div style="clear: left;height: 20px;"></div>
@@ -206,41 +212,36 @@
 
                 <div style="clear: left;height: 15px;"></div>
 
-                <ul class="sub-menu-box" style="margin-left: 48px;">
-                    <li><a href="">Packshot / Visuals</a></li>
-                    <li><a href="">Oneliner</a></li>
-                    <li><a href="">3 Benefits</a></li>
-                    <li><a href="">Clients</a></li>
-                    <li><a href="">Quotes</a></li>
-                    <li><a href="">CTA - Contact</a></li>
+                <ul class="sub-menu-box" style="margin-left: 20px;">
+                    <li><a href="">Target Groups</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Benefits</a></li>
                 </ul>
                 <ul class="sub-menu-box">
-                    <li><a href="">Target Groups</a></li>
-                    <li><a href="">Products</a></li>
-                    <li><a href="">Features & Benefits</a></li>
-                    <li><a href="">Use-Cases</a></li>
-                    <li><a href="">CTA - Contact</a></li>
+                    <li><a href="">Download Case Studies</a></li>                    
                 </ul>
                 <ul class="sub-menu-box" style="margin-left: 44px;">
-                    <li><a href="">Consulting</a></li>
-                    <li><a href="">CTA - Contact</a></li>
+                    <li><a href="">Our Experts</a></li>
+                    <li><a href="">Clients</a></li>
+                    <li><a href="">Partners</a></li>
                 </ul>
                 <ul class="sub-menu-box" style="margin-left: 18px;">
-                    <li><a href="">Company Pic</a></li>
-                    <li><a href="">Approach</a></li>
-                    <li><a href="">Our Experts</a></li>
-                    <li><a href="">Biographies</a></li>
+                    <li><a href="">Company Profile</a></li>
+                    <li><a href="">Management Biographies</a></li>
+                    <li><a href="">Press Clipping</a></li>
                 </ul>
                 <ul class="sub-menu-box" style="width: 100px;">
-                    <li><a href="">Offerings</a></li>
+                    <li><a href="">Open Vacancies</a></li>
                 </ul>
-                <ul class="sub-menu-box"  style="width: 100px;">
+                <ul class="sub-menu-box"  style="width: 100px;margin-left: 15px;">
                     <li><a href="">Blog</a></li>
+                    <li><a href="">Meet us</a></li>
+                    <li><a href="">Follow mapegy</a></li>
                 </ul>
 
                 <div style="clear: left;height: 20px;"></div>
 
-                <a href="" class="footer-legal-policy-link">Legal Policy</a>
+                <!--<a href="" class="footer-legal-policy-link">Legal Policy</a>-->
             </div>
 
         </div>
