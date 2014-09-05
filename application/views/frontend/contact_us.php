@@ -24,33 +24,33 @@
     <?php echo form_open();?>
     <ul id="contact-form">
         <li>
-            <label for="iam">I'm</label>
+            <label for="iam">I'm <span class="star">*</span></label>
             <select name="iam" class="select">
                 <option value="">a Customer / interested in a Project / Product</option>
             </select>
         </li>
         <li>
-            <label for="name">Name</label>
+            <label for="name">Name <span class="star">*</span></label>
             <input type="text" name="name" id="name" class="txt" >
         </li>
         <li>
-            <label for="email">Email</label>
+            <label for="email">Email <span class="star">*</span></label>
             <input type="text" name="email" id="email" class="txt" >
         </li>
         <li>
-            <label for="phone">Phone</label>
+            <label for="phone">Phone <span class="star">*</span></label>
             <input type="text" name="phone" id="phone" class="txt">
         </li>
         <li>
-            <label for="company">I'm</label>
+            <label for="company">Company <span class="star">*</span></label>
             <input type="text" name="company" id="company" class="txt">
         </li>
         <li>
-            <label for="function">Function</label>
+            <label for="function">Function <span class="star">*</span></label>
             <input type="text" name="function" id="function" class="txt" >
         </li>
         <li>
-            <label for="message">Message</label>
+            <label for="message">Message <span class="star">*</span></label>
             <textarea name="message" id="message" cols="50" rows="6" class="textarea"></textarea>            
         </li>
         <li>

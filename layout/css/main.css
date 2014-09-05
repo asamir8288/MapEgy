@@ -970,7 +970,7 @@
     margin-bottom: 10px;
 }
 .contact-left #contact-form li label{
-    width: 70px;
+    width: 80px;
     display: inline-block;
     text-align: left;
     color: #000;
@@ -1267,3 +1267,9 @@ Back to top button
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
+
+.star{
+    color: #ff0000;
+    vertical-align: top;
+    padding-top: 3px;
+}
