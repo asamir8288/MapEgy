@@ -42,6 +42,7 @@ $route['default_controller'] = "home";
 $route['404_override'] = '';
 
 $route['about-us'] = 'about_us/index';
+$route['legal-policy'] = 'legal_policy/index';
 $route['career'] = 'job/index';
 $route['news'] = 'news_section/index';
 $route['news/blogs'] = 'news_section/blogs';

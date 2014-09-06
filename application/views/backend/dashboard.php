@@ -7,6 +7,7 @@
     <a href="<?php echo site_url('admin/job');?>" class="careers"></a>
     <a href="<?php echo site_url('admin/manage_news');?>" class="blog"></a>
     <a href="<?php echo site_url('admin/event'); ?>" class="events"></a>
+    <a href="<?php echo site_url('admin/legal_policy'); ?>" class="events"></a>
     <a href="" class="contacts"></a>
     <a href="<?php echo site_url('admin/consulting'); ?>" class="analytics"></a>
 </div>
