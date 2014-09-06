@@ -14,7 +14,21 @@
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/banner-slider.js"></script>
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/jquery.carouFredSel-6.2.1.js"></script>
 
+        <style type="text/css">
+            .fixed{
+                position: fixed;
+                top: 400px;
+            }
+        </style>
         <script type="text/javascript" language="javascript">
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 135) {
+                    $('.home-section-navigation').addClass('fixed');
+                } else {
+                    $('.home-section-navigation').removeClass('fixed');
+                }
+            });
+
             $(function() {
                 $('#foo2').carouFredSel({
 //                    auto: true,
