@@ -28,7 +28,7 @@
 
             <div id="already-customer">
                 Already a customer?
-                <a href="" class="blue-link">Login</a>
+                <a href="http://tsb.mapegy.org" target="_blank" class="blue-link">Login</a>
             </div>
 
             <div class="top-small-separator">|</div>
