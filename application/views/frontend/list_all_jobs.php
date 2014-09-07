@@ -11,7 +11,7 @@
         Do you want to be a part of a growing dynamic startup and work in a fast-paced environment? Do you work independently, flexibly and efficiently?
     </p>
     <p>
-        Get to know Berlin´s hottest Technology Intelligence Startup and
+        Get to know Berlin's hottest Technology Intelligence Startup and
         JOIN OUR TEAM!
     </p>
 
