@@ -945,6 +945,7 @@
     font-size: 20px;
     color: #000;
     font-weight: bold;
+    text-decoration: none;
 }
 .press-clipping-box .clipping-desc{
     font-size: 15px;
