@@ -3,7 +3,7 @@
     <span class="adviosr-title">Dr. rer. nat. Matthias</span>
     <span class="adviosr-job-title">Data Analysis and Visualization</span>
 
-    <a href="" class="apply-now"></a>
+    <a href="mailto:start@mapegy.com" class="apply-now"></a>
 </div>
 
 <div class="job-main-brief">

@@ -283,7 +283,7 @@
 
                 <div class="contact-us-box">
                     Did we <strong>arouse</strong> your <strong>interest</strong>?
-                    <a href="" class="contact-us-link">Contact us</a>
+                    <a href="<?php echo site_url('contact');?>" class="contact-us-link">Contact us</a>
                 </div>
 
                 <div style="height: 100px;display: block;"></div>

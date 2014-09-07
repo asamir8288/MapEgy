@@ -23,7 +23,7 @@
 
 <div class="contact-us-box">
     Did we <strong>arouse</strong> your <strong>interest</strong>?
-    <a href="" class="contact-us-link">Contact us</a>
+    <a href="mailto:wagner@mapegy.com" class="contact-us-link">Contact us</a>
 </div>
 
 <div style="height: 70px;display: block;"></div>

@@ -170,7 +170,7 @@
 
                 <div class="contact-us-box">
                     Do you want to <strong>know more</strong>?
-                    <a href="" class="contact-us-link">Contact us</a>
+                    <a href="<?php echo site_url('contact');?>" class="contact-us-link">Contact us</a>
                 </div>
 
                 <div style="height: 70px;display: block;"></div>

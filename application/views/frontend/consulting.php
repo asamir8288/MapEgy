@@ -69,6 +69,6 @@
 
     <div class="contact-us-box">
         <p>Do you want to know <strong>how</strong> we can <strong>help</strong> your <strong>business</strong>?</p>    
-        <a href="" class="consulting-contact-link">Contact us</a>
+        <a href="mailto:sperr@mapegy.com" class="consulting-contact-link">Contact us</a>
     </div>
 </div>
