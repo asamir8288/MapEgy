@@ -2,18 +2,17 @@
     <div class="consulting-desc">
         We provide software and consulting for technology decision makers – no matter which line of business or field of technology you deal with provide software and consulting for technology decision makers – no matter which line of business or field of technology.
     </div>
-    <div class="consulting-contact">
-        <img src="<?php echo static_url() . 'files/consulting/' . $consulting['photo']; ?>" style="width: 160px;float: left;" />
-        <div class="expert_contact-details">
-            <div class="contact-name"><?php echo $consulting['name']; ?></div>
-            <div class="contact-job-title"><?php echo $consulting['job_title']; ?></div>
-            <div class="contact-tel"><?php echo $consulting['tel']; ?></div>
 
-            <a href="" class="contact-link">Contact me</a>
-        </div>
+    <div class="contact-person">
+        <img src="<?php echo static_url() . 'files/consulting/' . $consulting['photo']; ?>" style="float: left;" />
+        <span class="adviosr-title"><?php echo $consulting['name']; ?></span>
+        <span class="adviosr-job-title"><?php echo $consulting['job_title']; ?></span>
+
+        <a href="" class="contact-link">Contact me</a>
     </div>
+    
 
-    <div style="clear: left;height: 100px;"></div>
+    <div style="clear: left;height: 200px;"></div>
 
     <div class="small-dashed-separator"></div>
     <div class="home-title small-width consulting-title-decoration">Consulting</div>
@@ -64,7 +63,7 @@
     </ul>
 
     <div style="clear: left;height: 50px;"></div>
-    
+
     <div class="small-dashed-separator"></div>
 
     <div class="contact-us-box">
