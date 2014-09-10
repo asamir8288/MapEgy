@@ -12,7 +12,7 @@
 <!------ START Our Experts --------------------------------->
 
 <div class="small-dashed-separator"></div>
-    <div class="home-title small-width consulting-title-decoration">Our Experts</div>
+<div class="home-title small-width consulting-title-decoration">Our Experts</div>
 <div class="inside-horizontal-section">
 
     <?php foreach ($experts as $expert) { ?>
@@ -23,7 +23,7 @@
 
             <div class="expert-social-links">
                 <?php if ($expert['germany_social']) { ?>
-                <a target="_blank" href="<?php echo $expert['germany_social']; ?>"><img src="<?php echo static_url(); ?>layout/images/social1.png" width="15" height="15" /></a>
+                    <a target="_blank" href="<?php echo $expert['germany_social']; ?>"><img src="<?php echo static_url(); ?>layout/images/social1.png" width="15" height="15" /></a>
                 <?php } ?>
                 <?php if ($expert['linkedin']) { ?>
                     <a target="_blank" href="<?php echo $expert['linkedin']; ?>"><img src="<?php echo static_url(); ?>layout/images/linkedin.png" width="18" height="17" /></a>
@@ -46,7 +46,7 @@
 <!------ START Clients --------------------------------->
 
 <div class="small-dashed-separator"></div>
-    <div class="home-title small-width consulting-title-decoration">Clients</div>
+<div class="home-title small-width">Clients</div>
 <div class="list_carousel">
     <ul id="foo1">
         <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px;padding-top: 5px;vertical-align: middle;" /></li>
@@ -72,7 +72,7 @@
 <!------ START Clients --------------------------------->
 
 <div class="small-dashed-separator"></div>
-<div class="home-title small-width consulting-title-decoration">Partners</div>
+<div class="home-title small-width">Partners</div>
 <div class="list_carousel">
     <ul id="foo2">
         <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px;padding-top: 5px;vertical-align: middle;" /></li>
@@ -98,46 +98,46 @@
 <!------ START Quotes --------------------------------->
 
 <div class="small-dashed-separator"></div>
-<div class="home-title small-width consulting-title-decoration">Quotes</div
+<div class="home-title small-width">Quotes</div
 <div class="inside-horizontal-section">
     <div class="list_carousel1">
-                        <ul id="foo3">
-                            <li>
-                                <div class="quotes">
-                                    <img src="<?php echo static_url(); ?>layout/images/frankfurter_allgemeine_logo.png" width="250" height="53" />
-                                    <div class="quote-words">
-                                        “The pilot to certainty - it maps the landscape of technology companies like no other.”
+        <ul id="foo3">
+            <li>
+                <div class="quotes">
+                    <img src="<?php echo static_url(); ?>layout/images/frankfurter_allgemeine_logo.png" width="250" height="53" />
+                    <div class="quote-words">
+                        “The pilot to certainty - it maps the landscape of technology companies like no other.”
 
-                                        <span class="author">
-                                            Jens Twiehaus
-                                            <br />
-                                            Frankfurter Allgemeine Zeitung    
-                                        </span>
-                                    </div>
-
-                                </div>
-                            </li>
-                            <li>
-                                <div class="quotes">
-                                    <img src="<?php echo static_url(); ?>layout/images/frankfurter_allgemeine_logo.png" width="250" height="53" />
-                                    <div class="quote-words">
-                                        “The pilot to certainty - it maps the landscape of technology companies like no other.”
-
-                                        <span class="author">
-                                            Jens Twiehaus
-                                            <br />
-                                            Frankfurter Allgemeine Zeitung    
-                                        </span>
-                                    </div>
-
-                                </div>
-                            </li>
-
-                        </ul>
-                        <div class="clearfix"></div>
-                        <a id="prev3" class="prev1" href="#"></a>
-                        <a id="next3" class="next1" href="#"></a>
+                        <span class="author">
+                            Jens Twiehaus
+                            <br />
+                            Frankfurter Allgemeine Zeitung    
+                        </span>
                     </div>
+
+                </div>
+            </li>
+            <li>
+                <div class="quotes">
+                    <img src="<?php echo static_url(); ?>layout/images/frankfurter_allgemeine_logo.png" width="250" height="53" />
+                    <div class="quote-words">
+                        “The pilot to certainty - it maps the landscape of technology companies like no other.”
+
+                        <span class="author">
+                            Jens Twiehaus
+                            <br />
+                            Frankfurter Allgemeine Zeitung    
+                        </span>
+                    </div>
+
+                </div>
+            </li>
+
+        </ul>
+        <div class="clearfix"></div>
+        <a id="prev3" class="prev1" href="#"></a>
+        <a id="next3" class="next1" href="#"></a>
+    </div>
 </div>
 
 <!------ END Quotes --------------------------------->                
@@ -146,7 +146,7 @@
 
 <div class="contact-us-box">
     Did we <strong>arouse</strong> your <strong>interest</strong>?
-    <a href="<?php echo site_url('contact');?>" class="contact-us-link">Contact us</a>
+    <a href="<?php echo site_url('contact'); ?>" class="contact-us-link">Contact us</a>
 </div>
 
 <div style="height: 100px;display: block;"></div>
