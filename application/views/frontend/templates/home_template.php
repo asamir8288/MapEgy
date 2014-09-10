@@ -255,8 +255,9 @@
                 <div class="small-dashed-separator"></div>
                 <div id="News" class="home-title small-width">News</div>
 
-                <div class="news-section">
+                <div class="news-section">                    
                     <div class="recent-blog-posts">
+                        <div class="home-news-titles">Recent Blog Posts</div>
                         <?php
                         $i = 1;
                         foreach ($activeNews as $news) {
@@ -281,6 +282,7 @@
                     </div>
 
                     <div class="meet-us">
+                        <div class="home-news-titles">Meet us</div>
                         <?php
                         $i = 1;
                         foreach ($active_events as $event) {
@@ -300,6 +302,19 @@
                             $i++;
                         }
                         ?>
+
+                        <div class="home-follow-mapegy">Follow mapegy</div>
+
+                        <a class="twitter-timeline" href="https://twitter.com/mapegy" data-widget-id="509814902874054656">Tweets by @mapegy</a>
+                        <script>!function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = p + "://platform.twitter.com/widgets.js";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, "script", "twitter-wjs");</script>
 
                     </div>
 
@@ -357,30 +372,30 @@
                 <div style="clear: left;height: 15px;"></div>
 
                 <ul class="sub-menu-box" style="margin-left: 20px;">
-                    <li><a href="<?php echo base_url();?>product#Target-Group">Target Groups</a></li>
-                    <li><a href="<?php echo base_url();?>product#Features">Features</a></li>
-                    <li><a href="<?php echo base_url();?>product#Benefits">Benefits</a></li>
+                    <li><a href="<?php echo base_url(); ?>product#Target-Group">Target Groups</a></li>
+                    <li><a href="<?php echo base_url(); ?>product#Features">Features</a></li>
+                    <li><a href="<?php echo base_url(); ?>product#Benefits">Benefits</a></li>
                 </ul>
                 <ul class="sub-menu-box">
                     <li><a href="">Download Case Studies</a></li>                    
                 </ul>
                 <ul class="sub-menu-box" style="margin-left: 44px;">
-                    <li><a href="<?php echo base_url();?>about-us#Our-Experts">Our Experts</a></li>
-                    <li><a href="<?php echo base_url();?>about-us#Clients">Clients</a></li>
-                    <li><a href="<?php echo base_url();?>about-us#Partners">Partners</a></li>
+                    <li><a href="<?php echo base_url(); ?>about-us#Our-Experts">Our Experts</a></li>
+                    <li><a href="<?php echo base_url(); ?>about-us#Clients">Clients</a></li>
+                    <li><a href="<?php echo base_url(); ?>about-us#Partners">Partners</a></li>
                 </ul>
                 <ul class="sub-menu-box" style="margin-left: 18px;">
-                    <li><a href="<?php echo base_url();?>press#Company-Profile">Company Profile</a></li>
-                    <li><a href="<?php echo base_url();?>press#Management-Biographies">Management Biographies</a></li>
-                    <li><a href="<?php echo base_url();?>press#Press-Clipping">Press Clipping</a></li>
+                    <li><a href="<?php echo base_url(); ?>press#Company-Profile">Company Profile</a></li>
+                    <li><a href="<?php echo base_url(); ?>press#Management-Biographies">Management Biographies</a></li>
+                    <li><a href="<?php echo base_url(); ?>press#Press-Clipping">Press Clipping</a></li>
                 </ul>
                 <ul class="sub-menu-box" style="width: 100px;">
-                    <li><a href="<?php echo base_url();?>career#Open-Vacancies">Open Vacancies</a></li>
+                    <li><a href="<?php echo base_url(); ?>career#Open-Vacancies">Open Vacancies</a></li>
                 </ul>
                 <ul class="sub-menu-box"  style="width: 100px;margin-left: 15px;">
-                    <li><a href="<?php echo base_url();?>news#Blog">Blog</a></li>
-                    <li><a href="<?php echo base_url();?>news#Meet-us">Meet us</a></li>
-                    <li><a href="<?php echo base_url();?>news#Follow-mapegy">Follow mapegy</a></li>
+                    <li><a href="<?php echo base_url(); ?>news#Blog">Blog</a></li>
+                    <li><a href="<?php echo base_url(); ?>news#Meet-us">Meet us</a></li>
+                    <li><a href="<?php echo base_url(); ?>news#Follow-mapegy">Follow mapegy</a></li>
                 </ul>
 
                 <div style="clear: left;height: 20px;"></div>
