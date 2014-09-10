@@ -402,7 +402,7 @@
     top: 60px;
 }
 .blog-details-left .blog-details-title {
-    font-size: 39px;
+    font-size: 26px;
     color: #000;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -418,7 +418,7 @@
     float: left;
     width: 271px;
     position: relative;
-    top: 25px;
+    top: 49px;
     margin-left: 20px;
 }
 
@@ -721,14 +721,13 @@
 .news_blog_box {
     width: 271px;
     display: inline-block;
-    margin: 35px 10px;
+    margin: 10px 10px;
     vertical-align: top;
 }
 
 .news_blog_box .news-title{
     color: #000;
     font-size: 20px;
-    font-weight: bold;
     margin-top: 8px;
     display: block;
     text-decoration: none;
