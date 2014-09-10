@@ -105,18 +105,21 @@
     font-size: 12px;
     text-decoration: none;
     margin-left: 5px;
+    position: relative;
+    top: -1px;
 }
 
 .lang-link {
     background-color: #ff0000;
     padding: 2px 5px;
     color: #FFF;
-    font-size: 12px;
+    font-size: 13px;
     text-decoration: none;
     float: right;
     top: 0px;
     right: 20px;
     position: absolute;
+    font-weight: bold;
 }
 
 #banner {
