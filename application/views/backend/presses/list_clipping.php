@@ -2,9 +2,9 @@
 
 <table cellpadding="0" cellspacing="0">
     <tr>
-        <th style="width: 200px;"><?php echo lang('clipping_date'); ?></th> 
-        <th style="width: 20px;"></th> 
         <th style="width: 200px;"><?php echo lang('clipping_logo'); ?></th> 
+        <th style="width: 20px;"></th> 
+        <th style="width: 200px;"><?php echo lang('clipping_date'); ?></th> 
         <th style="width: 100px;"><?php echo lang('clipping_title'); ?></th>                              
         <th style="width: 400px;"><?php echo lang('clipping_description'); ?></th>
         <th></th>
