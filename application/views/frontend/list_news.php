@@ -1,4 +1,4 @@
-<div class="recent-blog-main-title">Recent Blog Posts</div>
+<div id="Blog" class="recent-blog-main-title">Recent Blog Posts</div>
 
 <?php foreach ($active_news as $news) { ?>
     <div class="news_blog_box">
@@ -17,7 +17,7 @@
 <?php } ?>
 
 <div class="small-dashed-separator"></div>
-<div class="news-meet-us">
+<div id="Meet-us" class="news-meet-us">
     <div class="meet-us-title">Meet us</div>
     <?php
     $i = 1;
@@ -48,7 +48,7 @@
 
 
 
-<div class="news-follow-us">
+<div id="Follow-mapegy" class="news-follow-us">
     <div class="follow-us-title">Follow mapegy</div>
 
     <a class="twitter-timeline" href="https://twitter.com/mapegy" data-widget-id="507883837108391936">Tweets by @mapegy</a>

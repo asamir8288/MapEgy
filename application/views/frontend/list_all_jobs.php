@@ -31,7 +31,7 @@
         JOIN OUR TEAM!
     </p>
 
-    <div class="our-open-vacancies">Our open vacancies:</div>
+    <div id="Open-Vacancies" class="our-open-vacancies">Our open vacancies:</div>
     <ul class="job-list">
         <?php foreach ($jobs as $job) { ?>
             <li><a href="#<?php echo $job['id']; ?>">- <?php echo $job['title']; ?></a></li>

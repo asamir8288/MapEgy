@@ -12,7 +12,7 @@
 <!------ START Our Experts --------------------------------->
 
 <div class="small-dashed-separator"></div>
-<div class="inside-main-title" style="width: 40%;">Our Experts</div>
+<div id="Our-Experts" class="inside-main-title" style="width: 40%;">Our Experts</div>
 <div class="inside-horizontal-section">
 
     <?php foreach ($experts as $expert) { ?>
@@ -46,7 +46,7 @@
 <!------ START Clients --------------------------------->
 
 <div class="small-dashed-separator"></div>
-<div class="inside-main-title">Clients</div>
+<div id="Clients" class="inside-main-title">Clients</div>
 <div class="list_carousel">
     <ul id="foo1">
         <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px;padding-top: 5px;vertical-align: middle;" /></li>
@@ -72,7 +72,7 @@
 <!------ START Clients --------------------------------->
 
 <div class="small-dashed-separator"></div>
-<div class="inside-main-title">Partners</div>
+<div id="Partners" class="inside-main-title">Partners</div>
 <div class="list_carousel">
     <ul id="foo2">
         <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px;padding-top: 5px;vertical-align: middle;" /></li>
