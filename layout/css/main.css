@@ -243,7 +243,7 @@
 
 .home-section, .inside-horizontal-section {
     color: #000;
-    font-size: 30px;
+    font-size: 20px;
     text-align: justify;
     margin-top: 25px;
     margin-bottom: 60px;
@@ -818,8 +818,7 @@
 
 .who-use_mapegy, .mapegy-offers{
     color: #006fc7;
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 26px;
     padding-top: 40px;
 }
 
@@ -867,7 +866,7 @@
 
 .product-brief {
     color: #000;
-    font-size: 30px;
+    font-size: 20px;
     text-align: justify;
     margin-top: 60px;
     margin-bottom: 60px;
@@ -879,10 +878,11 @@
     min-height: 49px;
     display: block;
     padding-left: 50px;
-    font-size: 30px;
+    font-size: 20px;
     color: #000;
     margin-top: 30px;
     margin-bottom: 30px;
+    padding-top: 10px;
 }
 
 /*
@@ -1098,9 +1098,7 @@
 }
 
 .consulting-title-decoration {
-    font-weight: bold;
-    font-size: 28px;
-    text-transform: uppercase;
+    font-size: 26px;
     width: 150px!important;
 }
 
@@ -1172,10 +1170,9 @@
 }
 
 .our_consulting_experts {
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #1075c9;
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 26px;
     display: block;
     margin-bottom: 20px;
 }
