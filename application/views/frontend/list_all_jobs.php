@@ -49,7 +49,7 @@
         <div class="download-job-offer">Read the full offer here: <a href="<?php echo site_url('job/download_file/' . $job['id']); ?>">Download this job offer</a></div>
     <?php } ?>
 <?php } ?>
-
+        
 <script>
     $(document).ready(function() {
 
@@ -88,3 +88,4 @@
     <a href="#top"><span></span>Back to Top</a>
 </p>
 
+<div style="clear: left;height: 50px;"></div>
