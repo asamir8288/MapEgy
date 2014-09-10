@@ -917,9 +917,13 @@
 }
 
 .press_top_right{
-    width: 2018px;
+    width: 218px;
     float: left;
     position: relative;
+    margin-left: 25px;
+    vertical-align: top;
+    position: relative;
+    top: 10px;
 }
 
 .press-clipping-box{
