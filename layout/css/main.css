@@ -58,6 +58,9 @@
     font-size: 16px;
     text-decoration: none;
 }
+#header #top-menu li a:hover {
+    color: #006fc7;
+}
 #header #top-menu .menu-separator{
     font-size: 16px;
     color: #e3e3e3;
@@ -505,6 +508,9 @@
     color: #99b9d3;
     font-size: 14px;
     text-decoration: none;
+}
+#footer .sub-menu-box li a:hover{
+    color: #FFF;
 }
 
 #footer .footer-dashed-link{
