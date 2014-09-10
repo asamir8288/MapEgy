@@ -695,13 +695,23 @@
     display: block;
 }
 
-.apply-now {
+.apply-now-old {
     background-image: URL(../images/apply-now-link.png);
     background-repeat: no-repeat;
     width: 217px;
     height: 43px;
     display: block;
     margin-top: 20px;
+}
+.apply-now {
+    color: #FFF;
+    background-color: #ffc000;
+    font-size: 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 0px 42px 3px 42px;
+    position: relative;
+    top: 18px;
 }
 
 /*
@@ -1045,7 +1055,7 @@
 */
 
 .consulting-desc {
-    width: 550px;
+    width: 580px;
     display: block;
     margin-right: 80px;
     float: left;
