@@ -1286,11 +1286,9 @@ Back to top button
     padding-top: 3px;
 }
 
-.home-news-titles{
+.news-titles{
     color: #006fc7;
     font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
 }
 
 .home-follow-mapegy{

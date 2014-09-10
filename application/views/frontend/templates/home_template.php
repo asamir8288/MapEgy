@@ -257,7 +257,7 @@
 
                 <div class="news-section">                    
                     <div class="recent-blog-posts">
-                        <div class="home-news-titles">Recent Blog Posts</div>
+                        <div class="news-titles">Recent Blog Posts</div>
                         <?php
                         $i = 1;
                         foreach ($activeNews as $news) {
@@ -282,7 +282,7 @@
                     </div>
 
                     <div class="meet-us">
-                        <div class="home-news-titles">Meet us</div>
+                        <div class="news-titles">Meet us</div>
                         <?php
                         $i = 1;
                         foreach ($active_events as $event) {
