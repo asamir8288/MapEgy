@@ -766,12 +766,9 @@
     width: 535px;
 }
 .news-meet-us .meet-us-title {
-    text-transform: uppercase;
     color: #006fc7;
-    font-size: 35px;
-    font-weight: bold;
+    font-size: 20px;
     margin-bottom: 20px;
-    text-align: center;
 }
 .news-meet-us .event_box {
     border-bottom: #e1e1e1 solid 1px;
@@ -810,12 +807,9 @@
     margin-left: 55px;
 }
 .news-follow-us .follow-us-title {
-    text-transform: uppercase;
     color: #006fc7;
-    font-size: 35px;
-    font-weight: bold;
+    font-size: 20px;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 /*
