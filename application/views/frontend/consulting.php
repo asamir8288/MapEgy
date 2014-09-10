@@ -4,7 +4,7 @@
     </div>
 
     <div class="contact-person">
-        <img src="<?php echo static_url() . 'files/consulting/' . $consulting['photo']; ?>" style="float: left;" />
+        <img src="<?php echo static_url() . 'files/consulting/' . $consulting['photo']; ?>" style="float: left;margin-bottom: 3px;" />
         <span class="adviosr-title"><?php echo $consulting['name']; ?></span>
         <span class="adviosr-job-title"><?php echo $consulting['job_title']; ?></span>
 
