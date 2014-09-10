@@ -1,3 +1,19 @@
+<script type="text/javascript" language="javascript">
+    $(document).ready(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>
 <div class="contact-person">
     <img src="<?php echo static_url(); ?>layout/images/career-advisor.png" />
     <span class="adviosr-title">Dr. rer. nat. Matthias</span>
@@ -64,7 +80,7 @@
 
 <style type="text/css">
 
-    
+
 </style>
 
 
