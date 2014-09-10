@@ -242,7 +242,10 @@
 
                 <div class="news-section">
                     <div class="recent-blog-posts">
-                        <?php foreach ($activeNews as $news) { ?>
+                        <?php
+                        $i = 1;
+                        foreach ($activeNews as $news) {
+                            ?>
                             <div class="box">
                                 <img src="<?php echo static_url(); ?>files/news/<?php echo $news['image']; ?>" width="110" height="103" />
 
@@ -252,13 +255,21 @@
                                 </p>
                             </div>
 
-                            <div class="separator-between-boxes"></div>
+                            <?php if (count($activeNews) != $i) { ?>
+                                <div class="separator-between-boxes"></div>
 
-                        <?php } ?>
+                                <?php
+                            }
+                            $i++;
+                        }
+                        ?>
                     </div>
 
                     <div class="meet-us">
-                        <?php foreach ($active_events as $event) { ?>
+                        <?php
+                        $i = 1;
+                        foreach ($active_events as $event) {
+                            ?>
                             <div class="meet-us-box">
                                 <img src="<?php echo static_url(); ?>files/events/<?php echo $event['image']; ?>" width="77" />
 
@@ -267,9 +278,13 @@
                                     <?php echo (strlen($event['description']) > 80) ? substr($event['description'], 0, 80) . '...' : $event['description']; ?>
                                 </p>
                             </div>
-
-                            <div class="separator-between-boxes"></div>
-                        <?php } ?>
+                            <?php if (count($active_events) != $i) { ?>
+                                <div class="separator-between-boxes"></div>
+                                <?php
+                            }
+                            $i++;
+                        }
+                        ?>
 
                     </div>
 
@@ -283,7 +298,7 @@
 
                 <div class="contact-us-box">
                     Did we <strong>arouse</strong> your <strong>interest</strong>?
-                    <a href="<?php echo site_url('contact');?>" class="contact-us-link">Contact us</a>
+                    <a href="<?php echo site_url('contact'); ?>" class="contact-us-link">Contact us</a>
                 </div>
 
                 <div style="height: 100px;display: block;"></div>
