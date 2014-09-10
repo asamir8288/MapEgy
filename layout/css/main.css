@@ -1056,7 +1056,7 @@
 */
 
 .consulting-desc {
-    width: 580px;
+    width: 570px;
     display: block;
     margin-right: 80px;
     float: left;
@@ -1096,12 +1096,13 @@
 .contact-link {
     color: #FFF;
     background-color: #ffc000;
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 20px;
     text-decoration: none;
-    padding: 0px 37px 3px 37px;
+    padding: 4px 53px 7px 53px;
     position: relative;
-    top: 18px;
+    top: 0px;
+    display: block;
 }
 
 .consulting-title-decoration {
