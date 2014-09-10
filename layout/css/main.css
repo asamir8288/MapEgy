@@ -231,14 +231,13 @@
 
 .inside-main-title {
     display: block;	
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 26px;
     color: #1075c9;
     text-align: center;
     width: 24%;
     margin: 0 auto;
     padding-top: 40px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .home-section, .inside-horizontal-section {
