@@ -26,7 +26,7 @@
         <li>
             <label for="iam">I'm <span class="star">*</span></label>
             <select name="iam" class="select">
-                <option value="">a Customer / interested in a Project / Product</option>
+                <option value="a Customer / interested in a Project / Product">a Customer / interested in a Project / Product</option>
             </select>
         </li>
         <li>
