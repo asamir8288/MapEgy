@@ -57,7 +57,9 @@
                     <a href="<?php echo site_url('admin/event'); ?>" class="events"></a>
                     <a href="<?php echo site_url('admin/legal_policy'); ?>" class="events"></a>
                     <a href="" class="contacts"></a>
-                    <a href="<?php echo site_url('admin/consulting'); ?>" class="analytics"></a>
+                    <a href="<?php echo site_url('admin/consulting'); ?>" class="contacts"></a>
+                    <a href="<?php echo site_url('admin/home/clients'); ?>" class="contacts"></a>
+                    <a href="<?php echo site_url('admin/home/partners'); ?>" class="contacts"></a>
                 </div>
             <?php } ?>
 
