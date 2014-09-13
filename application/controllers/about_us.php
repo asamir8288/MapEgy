@@ -23,6 +23,9 @@ class About_us extends CI_Controller {
         
         $this->data['experts'] = ExpertsTable::getAllActiveExperts();
         
+        $this->data['activeClients'] = BannersTable::getActiveBanners(3, TRUE, 'ASC');
+        $this->data['activePartners'] = BannersTable::getActiveBanners(4, TRUE, 'ASC');
+        
         $this->template->add_js('layout/js/jquery.carouFredSel-6.2.1.js');
         $this->template->add_css('layout/css/home_scroll_plugin.css');
         $this->template->write('_scripts', "<script type='text/javascript' language='javascript'>

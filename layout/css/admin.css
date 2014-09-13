@@ -186,3 +186,15 @@ body {
 #inside-menu a.analytics{
     background-image: url(../images/admin/s-analytics-icon.png);
 }
+
+.logos-box{
+    margin-bottom: 50px;display: inline-block;width: 220px;border: 1px solid #CCC;height: 160px;float: left;margin-left: 10px;padding: 5px;
+}
+
+.delete_logo {
+    float: right;
+    top: 0px;
+    right: 0px;
+    background: #FFF;
+    padding: 5px;
+}

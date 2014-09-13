@@ -182,18 +182,9 @@
                 <div id="Clients" class="home-title small-width">Clients</div>
                 <div class="list_carousel">
                     <ul id="foo2">
-                        <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px;padding-top: 5px;vertical-align: middle;" /></li>
-                        <li><img src="<?php echo static_url(); ?>layout/images/client2.png" style="width:173px;vertical-align: middle;" /></li>
-                        <li><img src="<?php echo static_url(); ?>layout/images/client3.png" style="width:173px;vertical-align: middle;" /></li>
-                        <li><img src="<?php echo static_url(); ?>layout/images/client4.png" style="width:173px;vertical-align: middle;" /></li>
-                        <li><img src="<?php echo static_url(); ?>layout/images/client4.png" style="width:173px" /></li>
-                        <li><img src="<?php echo static_url(); ?>layout/images/client3.png" style="width:173px" /></li>
-                        <li><img src="<?php echo static_url(); ?>layout/images/client2.png" style="width:173px" /></li>
-                        <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px" /></li>
-                        <li><img src="<?php echo static_url(); ?>layout/images/client1.png" style="width:173px" /></li>
-                        <li><img src="<?php echo static_url(); ?>layout/images/client2.png" style="width:173px" /></li>
-                        <li><img src="<?php echo static_url(); ?>layout/images/client3.png" style="width:173px" /></li>
-                        <li><img src="<?php echo static_url(); ?>layout/images/client4.png" style="width:173px" /></li>
+                        <?php foreach ($activeClients as $client) { ?>
+                            <li><img src="<?php echo static_url(); ?>files/banners/<?php echo $client['file_name']; ?>" style="width:173px" /></li>
+                        <?php } ?>                        
                     </ul>
                     <div class="clearfix"></div>
                     <a id="prev2" class="prev" href="#"></a>

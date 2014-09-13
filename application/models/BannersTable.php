@@ -25,7 +25,7 @@ class BannersTable extends Doctrine_Table {
                         ->fetchOne();
     }
 
-    public static function getActiveBanners($banner_place = 1 , $is_active = TRUE) {
+    public static function getActiveBanners($banner_place = 1 , $is_active = TRUE, $order = 'DESC') {
         $q = Doctrine_Query::create()
                 ->select('b.*')
                 ->from('Banners b')
@@ -34,7 +34,7 @@ class BannersTable extends Doctrine_Table {
             $q = $q->andWhere('b.is_active=?', $is_active);
         }
         $q = $q->setHydrationMode(Doctrine::HYDRATE_ARRAY)
-                ->orderBy('b.created_at DESC')
+                ->orderBy('b.created_at '. $order)
                 ->execute();
 
         return $q;
