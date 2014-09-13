@@ -18,6 +18,10 @@ class Contact extends CI_Controller {
     public function index() {
         $this->data['page_title'] = 'Contact Us';
         $this->data['map_banner'] = TRUE;
+        
+        if($this->input->post('submit')){
+            send_email('ahmed@dominosmedia.com', 'Test', 'test');
+        }
 
         $this->template->write_view('content', 'frontend/contact_us', $this->data);
         $this->template->render();

@@ -21,7 +21,7 @@
     
 
 <div class="contact-left">
-    <?php echo form_open();?>
+    <?php echo form_open('contact/index');?>
     <ul id="contact-form">
         <li>
             <label for="iam">I'm <span class="star">*</span></label>
@@ -38,15 +38,15 @@
             <input type="text" name="email" id="email" class="txt" >
         </li>
         <li>
-            <label for="phone">Phone <span class="star">*</span></label>
+            <label for="phone">Phone</label>
             <input type="text" name="phone" id="phone" class="txt">
         </li>
         <li>
-            <label for="company">Company <span class="star">*</span></label>
+            <label for="company">Company</label>
             <input type="text" name="company" id="company" class="txt">
         </li>
         <li>
-            <label for="function">Function <span class="star">*</span></label>
+            <label for="function">Function</label>
             <input type="text" name="function" id="function" class="txt" >
         </li>
         <li>
