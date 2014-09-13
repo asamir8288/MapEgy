@@ -21,7 +21,7 @@ class Contact extends CI_Controller {
         
         if($this->input->post('submit')){
             $newsletter = 'No';
-            if(isset($this->input->post('newsletter'))) {
+            if($this->input->post('newsletter')) {
                $newsletter = 'Yes'; 
             }
             
