@@ -24,6 +24,7 @@ class Home extends CI_Controller {
         $this->data['active_events'] = EventsTable::getActiveEvents(3);
         $this->data['activeBanners'] = BannersTable::getActiveBanners(1, TRUE);
         $this->data['activeClients'] = BannersTable::getActiveBanners(3, TRUE, 'ASC');
+        $this->data['activeQuotes'] = QuotesTable::getActiveQuotes(TRUE);
         
         $this->template->write_view('content', 'frontend/homepage/index', $this->data);
         $this->template->render();

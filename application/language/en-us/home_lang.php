@@ -7,5 +7,17 @@ $lang['client_edit'] = 'Edit';
 $lang['client_delete'] = 'Delete';
 $lang['client_cancel'] = 'Cancel';
 
+$lang['quote_update'] = 'Update Quote';
+$lang['quote_add'] = 'Add Quote';
+$lang['quote_logo'] = 'Quote Logo';
+$lang['is_active'] = 'Is Active';
+$lang['quote_brief'] = 'Brief';
+$lang['quote_author'] = 'Author';
+$lang['quote_title'] = 'Title';
+
+$lang['_edit'] = 'Edit';
+$lang['_delete'] = 'Delete';
+$lang['_add_new_quote'] = 'Add New Quote';
+
 $lang['logout'] = 'Logout';
 ?>

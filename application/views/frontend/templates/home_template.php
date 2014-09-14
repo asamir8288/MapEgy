@@ -200,37 +200,23 @@
                 <div class="home-section">
                     <div class="list_carousel1">
                         <ul id="foo3">
+                            <?php foreach($activeQuotes as $quote) { ?>
                             <li>
                                 <div class="quotes">
-                                    <img src="<?php echo static_url(); ?>layout/images/frankfurter_allgemeine_logo.png" width="250" height="53" />
+                                    <img src="<?php echo static_url(); ?>files/quotes/<?php echo $quote['logo'];?>" width="250" height="53" />
                                     <div class="quote-words">
-                                        “The pilot to certainty - it maps the landscape of technology companies like no other.”
+                                        “<?php echo $quote['description'];?>”
 
                                         <span class="author">
-                                            Jens Twiehaus
+                                            <?php echo $quote['author'];?>
                                             <br />
-                                            Frankfurter Allgemeine Zeitung    
+                                            <?php echo $quote['title'];?>
                                         </span>
                                     </div>
 
                                 </div>
                             </li>
-                            <li>
-                                <div class="quotes">
-                                    <img src="<?php echo static_url(); ?>layout/images/frankfurter_allgemeine_logo.png" width="250" height="53" />
-                                    <div class="quote-words">
-                                        “The pilot to certainty - it maps the landscape of technology companies like no other.”
-
-                                        <span class="author">
-                                            Jens Twiehaus
-                                            <br />
-                                            Frankfurter Allgemeine Zeitung    
-                                        </span>
-                                    </div>
-
-                                </div>
-                            </li>
-
+                            <?php } ?>
                         </ul>
                         <div class="clearfix"></div>
                         <a id="prev3" class="prev1" href="#"></a>
