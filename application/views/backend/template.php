@@ -60,6 +60,7 @@
                     <a href="<?php echo site_url('admin/consulting'); ?>" class="contacts"></a>
                     <a href="<?php echo site_url('admin/home/clients'); ?>" class="contacts"></a>
                     <a href="<?php echo site_url('admin/home/partners'); ?>" class="contacts"></a>
+                    <a href="<?php echo site_url('admin/home/quotes'); ?>" class="contacts"></a>
                 </div>
             <?php } ?>
 
