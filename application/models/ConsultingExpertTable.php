@@ -17,10 +17,11 @@ class ConsultingExpertTable extends Doctrine_Table
         return Doctrine_Core::getTable('ConsultingExpert');
     }
     
-    public static function getOne() {
+    public static function getOne($id= 1) { // ID #1 for consulting and #2 for contact person in press page
         return Doctrine_Query::create()
                 ->select('e.*')
                 ->from('ConsultingExpert e')
+                ->where('id=?', $id)
                 ->limit(1)
                 ->orderBy('e.created_at DESC')
                 ->setHydrationMode(Doctrine::HYDRATE_ARRAY)

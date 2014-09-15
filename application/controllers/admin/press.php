@@ -187,12 +187,12 @@ class Press extends My_Controller {
 
         if ($this->input->post('submit')) {
             $e = new ConsultingExpert();
-            $e->updateConsultingExpert($_POST);
+            $e->updateConsultingExpert($_POST, 2);
 
             redirect('admin/press/contact_person');
         }
 
-        $this->data['data'] = ConsultingExpertTable::getOne();
+        $this->data['data'] = ConsultingExpertTable::getOne(2);
 
         $this->template->write_view('content', 'backend/presses/add_edit_contact_person', $this->data);
         $this->template->render();

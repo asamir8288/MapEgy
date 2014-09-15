@@ -12,8 +12,8 @@
  */
 class ConsultingExpert extends BaseConsultingExpert
 {
-    public function updateConsultingExpert(array $data) {
-        $contact = ConsultingExpertTable::getOne();
+    public function updateConsultingExpert(array $data, $id = 1) { // ID #1 for consulting and #2 for contact person in press page
+        $contact = ConsultingExpertTable::getOne($id);
         
         $errors = $this->__validateContact($data);
         if ($errors['error_flag']) {

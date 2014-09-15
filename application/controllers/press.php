@@ -30,6 +30,8 @@ class Press extends CI_Controller {
             'management_biographies' => StaticPagesTable::getOne('management_biographies')
         );
         $this->data['press_clippings'] = PressClippingTable::getAllActivePressClippings(TRUE);
+        
+        $this->data['contact_person'] = ConsultingExpertTable::getOne(2);
 
         $this->template->write_view('content', 'frontend/press_view', $this->data);
         $this->template->render();

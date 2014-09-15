@@ -14,9 +14,10 @@
 </div>
 <div class="press_top_right">
     <div class="contact-person">
-        <img src="<?php echo static_url(); ?>layout/images/career-advisor.png" />
-        <span class="adviosr-title">Dr. rer. nat. Matthias</span>
-        <span class="adviosr-job-title">Data Analysis and Visualization</span>
+        <img src="<?php echo static_url() . 'files/consulting/' . $contact_person['photo']; ?>" style="width: 217px;height: 145px;" />
+        <span class="adviosr-title"><?php echo $contact_person['name']; ?></span>
+        <span class="adviosr-job-title"><?php echo $contact_person['job_title']; ?></span>
+        <div class="contact-tel"><?php echo $contact_person['tel']; ?></div>
 
         <a href="mailto:start@mapegy.com" class="contact-link">Contact Me</a>
     </div>
