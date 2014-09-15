@@ -20,7 +20,7 @@ class Press extends My_Controller {
 
     public function index() {
         $this->data['navigator'] = 'Home > Press';
-        
+
         $this->template->write_view('content', 'backend/presses/list_presses_links', $this->data);
         $this->template->render();
     }
@@ -116,7 +116,7 @@ class Press extends My_Controller {
     public function list_clipping() {
         $this->data['navigator'] = 'Home > Press Clipping';
         $this->data['page_title'] = 'List Press Clipping';
-        
+
         $this->data['activeClipping'] = PressClippingTable::getAllActivePressClippings(FALSE);
         $this->template->write_view('content', 'backend/presses/list_clipping', $this->data);
         $this->template->render();
@@ -177,6 +177,25 @@ class Press extends My_Controller {
             $this->template->write_view('content', 'backend/presses/add_edit_press_clipping', $this->data);
             $this->template->render();
         }
+    }
+
+    public function contact_person() {
+        $this->data['navigator'] = lang('contact_person_page_navigator');
+        $this->data['page_title'] = lang('contact_person_page_title');
+
+        $this->data['post_url'] = 'admin/press/contact_person';
+
+        if ($this->input->post('submit')) {
+            $e = new ConsultingExpert();
+            $e->updateConsultingExpert($_POST);
+
+            redirect('admin/press/contact_person');
+        }
+
+        $this->data['data'] = ConsultingExpertTable::getOne();
+
+        $this->template->write_view('content', 'backend/presses/add_edit_contact_person', $this->data);
+        $this->template->render();
     }
 
 }

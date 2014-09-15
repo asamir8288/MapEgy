@@ -24,6 +24,15 @@ $lang['clipping_article_url'] = 'Article URL';
 
 $lang['clipping_add_new_one'] = 'Add Press Clipping';
 
+$lang['contact_person_page_title'] = 'Contact Person';
+$lang['contact_person_page_navigator'] = 'Home > Press > Contact Person';
+
+$lang['contact_person_name'] = 'Name';
+$lang['contact_person_job_title'] = 'Job Title';
+$lang['contact_person_photo'] = 'Photo';
+$lang['contact_person_tel'] = 'Phone';
+$lang['contact_person_update'] = 'Update Contact';
+
 $lang['_edit'] = 'Edit';
 $lang['_delete'] = 'Delete';
 $lang['_cancel'] = 'Cancel';
