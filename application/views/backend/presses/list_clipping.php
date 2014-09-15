@@ -35,7 +35,7 @@
                 <a href="<?php echo site_url('admin/press/add_edit_clipping/' . $clipping['id']); ?>"><?php echo lang('_edit'); ?></a>
             </td>
             <td>
-                <a href="<?php echo site_url('admin/press/add_edit_clipping/' . $clipping['id']); ?>"><?php echo lang('_delete'); ?></a>
+                <a href="<?php echo site_url('admin/press/delete_press_clipping/' . $clipping['id']); ?>"><?php echo lang('_delete'); ?></a>
             </td>
         </tr>
     <?php } ?>

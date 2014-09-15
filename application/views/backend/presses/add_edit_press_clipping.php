@@ -31,7 +31,7 @@
     <?php } ?>
     <li>
         <label for="clipping_logo"><?php echo lang('clipping_logo'); ?>:</label>
-        <input type="file" name="userfile" id="clipping_logo" />
+        <input type="file" name="userfile" id="clipping_logo" /> Image Dim: 280px * 182px
         <?php echo (isset($errors['logo'])) ? generate_error_message(strip_tags($errors['logo'])) : ''; ?>
     </li>
     <li>

@@ -178,6 +178,14 @@ class Press extends My_Controller {
             $this->template->render();
         }
     }
+    
+    public function delete_press_clipping($id){
+        $p = new PressClipping();
+        
+        $p->deletePressClipping($id);
+        
+        redirect('admin/press/list_clipping');
+    }
 
     public function contact_person() {
         $this->data['navigator'] = lang('contact_person_page_navigator');
