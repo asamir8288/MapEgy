@@ -94,37 +94,37 @@
                 <!------ START About Mapegy --------------------------------->
                 <div id="Target-Group" class="who-use_mapegy">Who uses mapegy?</div>
                 <div class="who-uses-box">
-                    <div class="folder-icon"></div>
+                    <div class="technology-inovation-icon"></div>
                     <span>
                         Technology, Innovation & Portfolio Managers
                     </span>
                 </div>
                 <div class="who-uses-box">
-                    <div class="folder-icon"></div>
+                    <div class="researchers-icon"></div>
                     <span>
                         Researchers, Developers & Analysts
                     </span>
                 </div>
                 <div class="who-uses-box" style="margin-right: 0px;">
-                    <div class="folder-icon"></div>
+                    <div class="product_investors-icon"></div>
                     <span>
                         Investors, M&A Experts
                     </span>
                 </div>
                 <div class="who-uses-box">
-                    <div class="folder-icon"></div>
+                    <div class="ip-icon"></div>
                     <span>
                         IP Professionals
                     </span>
                 </div>
                 <div class="who-uses-box">
-                    <div class="folder-icon"></div>
+                    <div class="government-icon"></div>
                     <span>
                         Government & Authorities
                     </span>
                 </div>
                 <div class="who-uses-box" style="margin-right: 0px;">
-                    <div class="folder-icon"></div>
+                    <div class="hr-managers-icon"></div>
                     <span>
                         HR Managers
                     </span>

@@ -837,11 +837,51 @@
     display: block;
 }
 
-.folder-icon {
-    background-image: URL(../images/user-folder.png);
+.technology-inovation-icon {
+    background-image: URL(../images/technology-inovation.png);
     background-repeat: no-repeat;
-    width: 116px;
-    height: 109px;
+    width: 132px;
+    height: 132px;
+    display: block;
+    margin: 0 auto;
+}
+.researchers-icon {
+    background-image: URL(../images/researchers.png);
+    background-repeat: no-repeat;
+    width: 132px;
+    height: 132px;
+    display: block;
+    margin: 0 auto;
+}
+.product_investors-icon {
+    background-image: URL(../images/product_investors.png);
+    background-repeat: no-repeat;
+    width: 132px;
+    height: 132px;
+    display: block;
+    margin: 0 auto;
+}
+.ip-icon {
+    background-image: URL(../images/ip.png);
+    background-repeat: no-repeat;
+    width: 132px;
+    height: 132px;
+    display: block;
+    margin: 0 auto;
+}
+.government-icon {
+    background-image: URL(../images/government.png);
+    background-repeat: no-repeat;
+    width: 132px;
+    height: 132px;
+    display: block;
+    margin: 0 auto;
+}
+.hr-managers-icon {
+    background-image: URL(../images/hr-managers.png);
+    background-repeat: no-repeat;
+    width: 132px;
+    height: 132px;
     display: block;
     margin: 0 auto;
 }
