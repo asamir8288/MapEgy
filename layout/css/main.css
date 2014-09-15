@@ -1232,8 +1232,9 @@
     font-size: 26px;
     display: block;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
-.consulting > ul li{
+.consulting .consulting-desc > ul li{
     list-style: none;
     color: #000;
     font-size: 20px;

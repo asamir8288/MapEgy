@@ -1,6 +1,16 @@
 <div class="consulting">
     <div class="consulting-desc">
         We provide software and consulting for technology decision makers – no matter which line of business or field of technology you deal with provide software and consulting for technology decision makers – no matter which line of business or field of technology.
+
+        <div class="our_consulting_experts">Our consulting experts</div>
+        <ul>
+            <li>- evaluate the results you discovered with the mapegy software</li>
+            <li>- prepare presentations for top management </li>
+            <li>- provide ratings of patents with additional indicators such as</li>
+            <li>- Technology Trading</li>
+            <li>- Technology Sourcing</li>
+        </ul>
+
     </div>
 
     <div class="contact-person">
@@ -11,9 +21,9 @@
 
         <a href="" class="contact-link">Contact me</a>
     </div>
-    
 
-    <div style="clear: left;height: 230px;margin-bottom: 50px;"></div>
+
+    <div style="clear: left;margin-bottom: 100px;"></div>
 
     <div class="small-dashed-separator"></div>
     <div class="home-title small-width consulting-title-decoration">Consulting</div>
@@ -53,17 +63,6 @@
     </div>
 
     <div style="clear: left;height: 100px;"></div>
-
-    <div class="our_consulting_experts">Our consulting experts</div>
-    <ul>
-        <li>- evaluate the results you discovered with the mapegy software</li>
-        <li>- prepare presentations for top management </li>
-        <li>- provide ratings of patents with additional indicators such as</li>
-        <li>- Technology Trading</li>
-        <li>- Technology Sourcing</li>
-    </ul>
-
-    <div style="clear: left;height: 50px;"></div>
 
     <div class="small-dashed-separator"></div>
 
