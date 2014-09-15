@@ -33,7 +33,7 @@ class Contact extends CI_Controller {
             $body .= '<p><strong>Function:</strong> ' .$this->input->post('function'). '</p>';
             $body .= '<p><strong>Message:</strong> ' .$this->input->post('message'). '</p>';
             $body .= '<p><strong>I want to sign up for mapegy\'s newsletter!:</strong> ' .$newsletter. '</p>';
-            send_email('amro@dominosmedia.com', 'Test', $body);
+            send_email('wagner@mapegy.com', 'Test', $body);
         }
 
         $this->template->write_view('content', 'frontend/contact_us', $this->data);
