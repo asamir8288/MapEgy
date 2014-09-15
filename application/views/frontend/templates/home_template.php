@@ -25,8 +25,8 @@
             }
         </style>
         <script type="text/javascript" language="javascript">
-            $(document).ready(function() {
-                $('a[href*=#]:not([href=#])').click(function() {
+            $(document).ready(function () {
+                $('a[href*=#]:not([href=#])').click(function () {
                     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                         var target = $(this.hash);
                         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -40,20 +40,21 @@
                 });
             });
 
-            $(window).scroll(function() {
-                if ($(this).scrollTop() > 135 && $(this).scrollTop() < 800) {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 135 && $(this).scrollTop() < 1500) {
                     $('.home-section-navigation').removeClass('fixed-footer');
                     $('.home-section-navigation').addClass('fixed');
-                } else if($(this).scrollTop() > 500){
+                } else if ($(this).scrollTop() > 1500) {
                     $('.home-section-navigation').removeClass('fixed');
                     $('.home-section-navigation').addClass('fixed-footer');
+                    
                 } else {
                     $('.home-section-navigation').removeClass('fixed-footer');
                     $('.home-section-navigation').removeClass('fixed');
                 }
             });
 
-            $(function() {
+            $(function () {
                 $('#foo2').carouFredSel({
 //                    auto: true,
                     prev: '#prev2',
@@ -209,22 +210,22 @@
                 <div class="home-section">
                     <div class="list_carousel1">
                         <ul id="foo3">
-                            <?php foreach($activeQuotes as $quote) { ?>
-                            <li>
-                                <div class="quotes">
-                                    <img src="<?php echo static_url(); ?>files/quotes/<?php echo $quote['logo'];?>" width="250" height="53" />
-                                    <div class="quote-words">
-                                        “<?php echo $quote['description'];?>”
+                            <?php foreach ($activeQuotes as $quote) { ?>
+                                <li>
+                                    <div class="quotes">
+                                        <img src="<?php echo static_url(); ?>files/quotes/<?php echo $quote['logo']; ?>" width="250" height="53" />
+                                        <div class="quote-words">
+                                            “<?php echo $quote['description']; ?>”
 
-                                        <span class="author">
-                                            <?php echo $quote['author'];?>
-                                            <br />
-                                            <?php echo $quote['title'];?>
-                                        </span>
+                                            <span class="author">
+                                                <?php echo $quote['author']; ?>
+                                                <br />
+                                                <?php echo $quote['title']; ?>
+                                            </span>
+                                        </div>
+
                                     </div>
-
-                                </div>
-                            </li>
+                                </li>
                             <?php } ?>
                         </ul>
                         <div class="clearfix"></div>
@@ -292,7 +293,7 @@
                         <div class="home-follow-mapegy">Follow mapegy</div>
 
                         <a class="twitter-timeline" href="https://twitter.com/mapegy" data-widget-id="509814902874054656">Tweets by @mapegy</a>
-                        <script>!function(d, s, id) {
+                        <script>!function (d, s, id) {
                                 var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
                                 if (!d.getElementById(id)) {
                                     js = d.createElement(s);
