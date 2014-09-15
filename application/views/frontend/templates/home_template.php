@@ -41,12 +41,12 @@
             });
 
             $(window).scroll(function () {
-                if ($(this).scrollTop() > 135 && $(this).scrollTop() < 1500) {
+                if ($(this).scrollTop() > 135 && $(this).scrollTop() < 2100) {
                     $('.home-section-navigation').removeClass('fixed-footer');
                     $('.home-section-navigation').addClass('fixed');
-                } else if ($(this).scrollTop() > 1500) {
+                } else if ($(this).scrollTop() > 2100) {
                     $('.home-section-navigation').removeClass('fixed');
-                    $('.home-section-navigation').addClass('fixed-footer');
+                    $('.home-section-navigation').addClass('fixed-footer');                                      
                     
                 } else {
                     $('.home-section-navigation').removeClass('fixed-footer');
