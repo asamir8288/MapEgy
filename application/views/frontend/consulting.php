@@ -7,12 +7,13 @@
         <img src="<?php echo static_url() . 'files/consulting/' . $consulting['photo']; ?>" style="float: left;margin-bottom: 3px;" />
         <span class="adviosr-title"><?php echo $consulting['name']; ?></span>
         <span class="adviosr-job-title"><?php echo $consulting['job_title']; ?></span>
+        <div class="contact-tel"><?php echo $consulting['tel']; ?></div>
 
         <a href="" class="contact-link">Contact me</a>
     </div>
     
 
-    <div style="clear: left;height: 230px;"></div>
+    <div style="clear: left;height: 230px;margin-bottom: 20px;"></div>
 
     <div class="small-dashed-separator"></div>
     <div class="home-title small-width consulting-title-decoration">Consulting</div>
