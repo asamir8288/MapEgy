@@ -685,7 +685,7 @@
 .contact-person .adviosr-title{
     color: #000;
     font-size: 20px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     display: block;
     margin-top: 3px;
 }
