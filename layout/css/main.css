@@ -974,8 +974,8 @@
     margin-top: 25px;
 }
 .press-clipping-box .logo-bg{
-    background-image: URL(../images/press-frame-bg.png);
-    background-repeat: no-repeat;
+/*    background-image: URL(../images/press-frame-bg.png);
+    background-repeat: no-repeat;*/
     width: 280px;
     height: 182px;
     display: block;

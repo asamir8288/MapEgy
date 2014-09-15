@@ -13,7 +13,7 @@ foreach ($press_clippings as $clipping) {
     ?>
     <div class="press-clipping-box" <?php echo $style;?>>
         <a href="<?php echo $clipping['link_url'];?>" target="_blank" class="logo-bg">
-            <img src="<?php echo static_url() . 'files/press_clipping_logos/' . $clipping['logo'];?>" />
+            <img style="width: 280px;height: 182px;" src="<?php echo static_url() . 'files/press_clipping_logos/' . $clipping['logo'];?>" />
         </a>
         <div class="clipping-date"><?php echo date('Y M', strtotime($clipping['date']));?></div>
         <a href="<?php echo $clipping['link_url'];?>" target="_blank" class="clipping-title"><?php echo $clipping['title'];?></a>
