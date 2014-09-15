@@ -13,7 +13,7 @@
     </div>
     
 
-    <div style="clear: left;height: 230px;margin-bottom: 35px;"></div>
+    <div style="clear: left;height: 230px;margin-bottom: 50px;"></div>
 
     <div class="small-dashed-separator"></div>
     <div class="home-title small-width consulting-title-decoration">Consulting</div>
