@@ -19,6 +19,10 @@
                 position: fixed;
                 top: 400px;
             }
+            .fixed-footer{
+                position: fixed;
+                top: 200px;
+            }
         </style>
         <script type="text/javascript" language="javascript">
             $(document).ready(function() {
@@ -37,9 +41,14 @@
             });
 
             $(window).scroll(function() {
-                if ($(this).scrollTop() > 135) {
+                if ($(this).scrollTop() > 135 && $(this).scrollTop() < 800) {
+                    $('.home-section-navigation').removeClass('fixed-footer');
                     $('.home-section-navigation').addClass('fixed');
+                } else if($(this).scrollTop() > 500){
+                    $('.home-section-navigation').removeClass('fixed');
+                    $('.home-section-navigation').addClass('fixed-footer');
                 } else {
+                    $('.home-section-navigation').removeClass('fixed-footer');
                     $('.home-section-navigation').removeClass('fixed');
                 }
             });
