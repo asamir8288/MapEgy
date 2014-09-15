@@ -5,6 +5,12 @@
         <textarea id="news_description" name="description"><?php echo (isset($data['description'])) ? $data['description'] : ''; ?></textarea>        
         <?php echo (isset($errors['description'])) ? generate_error_message($errors['description']) : ''; ?>
     </li>
+    <?php if (isset($data)) { ?>
+        <li style="margin-left: 154px;">
+            <input type="hidden" name="same_image" value="<?php echo $data['logo']; ?>" >
+            <img style="width: 100px;" src="<?php echo static_url() . 'files/quotes/' . $data['logo']; ?>" />
+        </li>
+    <?php } ?>
     <li>
         <label for="quote_logo"><?php echo lang('quote_logo');?>:</label>
         <input type="file" name="userfile" id="quote_logo" />

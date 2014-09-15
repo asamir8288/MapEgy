@@ -134,6 +134,27 @@ body {
 #dashboard-menu a.analytics{
     background-image: url(../images/admin/analytics-icon.png);
 }
+#dashboard-menu a.dashboard{
+    background-image: url(../images/admin/dashboard.png);
+}
+#dashboard-menu a.home-banners{
+    background-image: url(../images/admin/home_banners.png);
+}
+#dashboard-menu a.legal_plicy{
+    background-image: url(../images/admin/legal_plicy.png);
+}
+#dashboard-menu a.partners{
+    background-image: url(../images/admin/partners.png);
+}
+#dashboard-menu a.clients{
+    background-image: url(../images/admin/clients.png);
+}
+#dashboard-menu a.consulting{
+    background-image: url(../images/admin/consulting.png);
+}
+#dashboard-menu a.quotes{
+    background-image: url(../images/admin/quotes.png);
+}
 
 .navigator{
     color: #7a7a7a;
@@ -184,7 +205,28 @@ body {
     background-image: url(../images/admin/s-contacts-icon.png);
 }
 #inside-menu a.analytics{
-    background-image: url(../images/admin/s-analytics-icon.png);
+    background-image: url(../images/admin/s-nalytics-icon.png);
+}
+#inside-menu a.dashboard{
+    background-image: url(../images/admin/s_dashboard.png);
+}
+#inside-menu a.clients{
+    background-image: url(../images/admin/s_clients.png);
+}
+#inside-menu a.consulting{
+    background-image: url(../images/admin/s_consulting.png);
+}
+#inside-menu a.home-banners{
+    background-image: url(../images/admin/s_home-banners.png);
+}
+#inside-menu a.legal_plicy{
+    background-image: url(../images/admin/s_legal_plicy.png);
+}
+#inside-menu a.partners{
+    background-image: url(../images/admin/s_partners.png);
+}
+#inside-menu a.quotes{
+    background-image: url(../images/admin/s_quotes.png);
 }
 
 .logos-box{

@@ -17,9 +17,10 @@
     </li>
 
     <?php if (isset($data['photo'])) { ?>
-    <li style="margin-left: 154px;">
-        <input type="hidden" name="same_photo" value="<?php echo $data['photo']; ?>" >
-        <img style="width: 100px;" src="<?php echo static_url() . 'files/consulting/' . $data['photo']; ?>" /></li>
+        <li style="margin-left: 154px;">
+            <input type="hidden" name="same_photo" value="<?php echo $data['photo']; ?>" >
+            <img style="width: 100px;" src="<?php echo static_url() . 'files/consulting/' . $data['photo']; ?>" />
+        </li>
         <?php
     }
     ?>

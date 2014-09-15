@@ -10,9 +10,9 @@
  * @author     ##NAME## <##EMAIL##>
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
-class ProductFeature extends BaseProductFeature
-{
-     public function addFeature(array $data) {
+class ProductFeature extends BaseProductFeature {
+
+    public function addFeature(array $data) {
         $errors = $this->__validateFeature($data);
         if ($errors['error_flag']) {
             return $errors;
@@ -33,7 +33,7 @@ class ProductFeature extends BaseProductFeature
         if ($errors['error_flag']) {
             return $errors;
         } else {
-           
+
             Doctrine_Query::create()
                     ->update('ProductFeature f')
                     ->set('f.description', '?', $data['description'])
@@ -57,12 +57,13 @@ class ProductFeature extends BaseProductFeature
     private function __validateFeature($feature_data) {
         $errors = array();
         $error_flag = false;
-        
+
         if (!required($feature_data['description'])) {
             $errors['description'] = 'Please write in feature brief';
             $error_flag = true;
         }
-        if (!$error_flag) {
+
+        if (!$error_flag && (isset($_FILES['userfile']) && !empty($_FILES['userfile']['name']))) {
             $upload_data = upload_file('products', array('jpg|png|jpeg|gif'), '2028');
             if ($upload_data['error_flag']) {
                 $errors['image'] = $upload_data['errors'];
@@ -70,9 +71,13 @@ class ProductFeature extends BaseProductFeature
             } else {
                 $errors['feature_image'] = $upload_data['upload_data']['file_name'];
             }
+        }else{
+            $errors['feature_image'] = $feature_data['same_image'];
         }
+
         $errors['error_flag'] = $error_flag;
 
         return $errors;
     }
+
 }

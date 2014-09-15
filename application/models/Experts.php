@@ -102,7 +102,7 @@ class Experts extends BaseExperts
 //            $error_flag = true;
 //        }
 
-        if (!$error_flag) {
+        if (!$error_flag && (isset($_FILES['userfile']) && !empty($_FILES['userfile']['name']))) {
             $upload_data = upload_file('experts', array('jpg|png|jpeg|gif'), '2028');
             if ($upload_data['error_flag']) {
                 $errors['photo'] = $upload_data['errors'];
@@ -110,6 +110,8 @@ class Experts extends BaseExperts
             } else {
                 $errors['photo'] = $upload_data['upload_data']['file_name'];
             }
+        }else{
+            $errors['photo'] = $expert_data['same_image'];
         }
         $errors['error_flag'] = $error_flag;
 

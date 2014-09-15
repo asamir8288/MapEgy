@@ -83,7 +83,7 @@ class Events extends BaseEvents {
             $error_flag = true;
         }
 
-        if (!$error_flag) {
+        if (!$error_flag && (isset($_FILES['userfile']) && !empty($_FILES['userfile']['name']))) {
             $upload_data = upload_file('events', array('jpg|png|jpeg|gif'), '2028');
             if ($upload_data['error_flag']) {
                 $errors['image'] = $upload_data['errors'];
@@ -91,6 +91,8 @@ class Events extends BaseEvents {
             } else {
                 $errors['event_image'] = $upload_data['upload_data']['file_name'];
             }
+        }else{
+            $errors['event_image'] = $event_data['same_image'];
         }
         $errors['error_flag'] = $error_flag;
 

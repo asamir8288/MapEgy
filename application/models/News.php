@@ -82,7 +82,7 @@ class News extends BaseNews {
             $error_flag = true;
         }
 
-        if (!$error_flag) {
+        if (!$error_flag && (isset($_FILES['userfile']) && !empty($_FILES['userfile']['name']))) {
             $upload_data = upload_file('news', array('jpg|png|jpeg|gif'), '2028');
             if ($upload_data['error_flag']) {
                 $errors['image'] = $upload_data['errors'];
@@ -90,6 +90,8 @@ class News extends BaseNews {
             } else {
                 $errors['news_image'] = $upload_data['upload_data']['file_name'];
             }
+        }else{
+            $errors['news_image'] = $news_data['same_image'];
         }
         $errors['error_flag'] = $error_flag;
 

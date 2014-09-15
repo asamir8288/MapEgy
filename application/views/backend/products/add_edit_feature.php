@@ -1,5 +1,11 @@
 <?php echo form_open_multipart($post_url); ?>
 <ul id="form_list">    
+    <?php if (isset($data)) { ?>
+        <li style="margin-left: 154px;">
+            <input type="hidden" name="same_image" value="<?php echo $data['image']; ?>" >
+            <img style="width: 100px;" src="<?php echo static_url() . 'files/products/' . $data['image']; ?>" />
+        </li>
+    <?php } ?>
     <li>
         <label for="feature_image"><?php echo lang('feature_image'); ?>:</label>
         <input type="file" name="userfile" id="feature_image" />

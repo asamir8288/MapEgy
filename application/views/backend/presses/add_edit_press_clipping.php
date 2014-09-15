@@ -23,6 +23,12 @@
         <textarea id="clipping_description" name="description"><?php echo (isset($data['description'])) ? $data['description'] : ''; ?></textarea>        
         <?php echo (isset($errors['description'])) ? generate_error_message($errors['description']) : ''; ?>
     </li>
+    <?php if (isset($data)) { ?>
+        <li style="margin-left: 154px;">
+            <input type="hidden" name="same_image" value="<?php echo $data['logo']; ?>" >
+            <img style="width: 100px;" src="<?php echo static_url() . 'files/press_clipping_logos/' . $data['logo']; ?>" />
+        </li>
+    <?php } ?>
     <li>
         <label for="clipping_logo"><?php echo lang('clipping_logo'); ?>:</label>
         <input type="file" name="userfile" id="clipping_logo" />

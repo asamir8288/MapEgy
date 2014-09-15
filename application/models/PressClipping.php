@@ -91,7 +91,7 @@ class PressClipping extends BasePressClipping {
             $error_flag = true;
         }
 
-        if (!$error_flag) {
+        if (!$error_flag && (isset($_FILES['userfile']) && !empty($_FILES['userfile']['name']))) {
             $upload_data = upload_file('press_clipping_logos', array('jpg|png|jpeg|gif'), '2028');
             if ($upload_data['error_flag']) {
                 $errors['image'] = $upload_data['errors'];
@@ -99,6 +99,8 @@ class PressClipping extends BasePressClipping {
             } else {
                 $errors['clipping_logo'] = $upload_data['upload_data']['file_name'];
             }
+        } else {
+            $errors['clipping_logo'] = $clipping_data['same_image'];
         }
         $errors['error_flag'] = $error_flag;
 
