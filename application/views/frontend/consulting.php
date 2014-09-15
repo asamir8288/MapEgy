@@ -24,7 +24,7 @@
     <div>
         <div class="case-study-box">
             <div class="img img1">
-                <img src="<?php echo static_url() . 'layout/images/case-study-1.png'; ?>" />
+                <img src="<?php echo static_url() . 'layout/images/innovation-management.png'; ?>" />
             </div>
             <div class="title">Innovation Management</div>
             <div class="slogan">Making your company more innovative.</div>
@@ -33,7 +33,7 @@
         </div>
         <div class="case-study-box">
             <div class="img img2">
-                <img src="<?php echo static_url() . 'layout/images/case-study-2.png'; ?>" />
+                <img src="<?php echo static_url() . 'layout/images/human-resources.png'; ?>" />
             </div>
             <div class="title">Human Resources</div>
             <div class="slogan" style="width: 250px;">Finding the experts you need.</div>
@@ -42,7 +42,7 @@
         </div>
         <div class="case-study-box" style="margin-right: 0px;">
             <div class="img img3">
-                <img src="<?php echo static_url() . 'layout/images/case-study-3.png'; ?>" />
+                <img src="<?php echo static_url() . 'layout/images/product_investors.png'; ?>" />
             </div>
             <div class="title" style="width: 280px;">Future & Trend Studies Research Funding Investments</div>
             <div class="slogan" style="width: 280px;">Providing you with customized insights into today's vast world of information.</div>

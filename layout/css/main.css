@@ -1135,21 +1135,28 @@
     margin-top: 20px;
 }
 .consulting .case-study-box .img.img1{
-    height: 115px;
+    height: 132px;
     margin: 0 auto;
     position: relative;
     top: 23px;
+    margin-bottom: 40px;
+    margin-left: 57px;
 }
 .consulting .case-study-box .img.img2{
     margin: 0 auto;
     position: relative;
     top: 25px;
-    width: 155px;
+    width: 132px;
+    height: 132px;
+    margin-bottom: 40px;
 }
 .consulting .case-study-box .img.img3{
-    width: 126px;
+    width: 132px;
     margin: 0 auto;
-    width: 126px;
+    height: 132px;
+    margin-bottom: 40px;
+    top: 26px;
+    position: relative;
 }
 .consulting .case-study-box > .title{
     font-size: 22px;
