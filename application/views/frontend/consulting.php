@@ -19,7 +19,7 @@
         <span class="adviosr-job-title"><?php echo $consulting['job_title']; ?></span>
         <div class="contact-tel"><?php echo $consulting['tel']; ?></div>
 
-        <a href="" class="contact-link">Contact me</a>
+        <a href="mailto:sperr@mapegy.com" class="contact-link">Contact me</a>
     </div>
 
 
