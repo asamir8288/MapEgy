@@ -3,4 +3,5 @@
     <a href="<?php echo site_url('admin/press/company_profile');?>" class="careers"></a>
     <a href="<?php echo site_url('admin/press/management_biographies');?>" class="contacts"></a>
     <a href="<?php echo site_url('admin/press/list_clipping');?>" class="analytics"></a>
+    <a href="<?php echo site_url('admin/press/contact_person');?>" class="analytics"></a>
 </div>
