@@ -75,7 +75,7 @@
 </div>
 
 <div class="contact-right">
-    <div class="contact-right-title">Mapegy GMBH</div>
+    <div class="contact-right-title">mapegy GmbH</div>
     <div>
         <br />
         Rotherstr. 16 <br />
