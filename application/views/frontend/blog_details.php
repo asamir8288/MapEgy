@@ -14,7 +14,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="fb-comments" data-href="<?php echo base_url();?>news/blog/details/<?php echo $blog_details['id'];?>" data-numposts="5" data-colorscheme="light"></div>
+<div class="fb-comments" data-width="570" data-href="<?php echo base_url();?>news/blog/details/<?php echo $blog_details['id'];?>" data-numposts="5" data-colorscheme="light"></div>
 </div>
 
 <div class="blog-details-right">
