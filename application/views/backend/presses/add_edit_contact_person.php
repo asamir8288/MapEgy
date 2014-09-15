@@ -27,7 +27,7 @@
 
     <li>        
         <label for="contact_person_photo"><?php echo lang('contact_person_photo'); ?>:</label>
-        <input type="file" name="userfile" id="contact_person_photo" />
+        <input type="file" name="userfile" id="contact_person_photo" /> Photo Dim: 217px * 145px
         <?php echo (isset($errors['photo'])) ? generate_error_message(strip_tags($errors['photo'])) : ''; ?>
     </li>
     <li>

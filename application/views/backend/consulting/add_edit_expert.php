@@ -18,7 +18,7 @@
 
     <?php if (isset($data['photo'])) { ?>
         <li style="margin-left: 154px;">
-            <input type="hidden" name="same_photo" value="<?php echo $data['photo']; ?>" >
+            <input type="hidden" name="same_photo" value="<?php echo $data['photo']; ?>" > Photo Dim: 217px * 145px
             <img style="width: 100px;" src="<?php echo static_url() . 'files/consulting/' . $data['photo']; ?>" />
         </li>
         <?php
