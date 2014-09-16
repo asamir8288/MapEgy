@@ -1,7 +1,7 @@
 <div id="Blog" class="recent-blog-main-title">Recent Blog Posts</div>
 
 <?php foreach ($active_news as $news) { ?>
-    <div class="news_blog_box">
+<div class="news_blog_box" style="height: 360px;">
         <a href="<?php echo site_url('news/blog/details/' . $news['id']); ?>">
             <img src="<?php echo static_url() . 'files/news/' . $news['image']; ?>" style="width: 271px; height: 176px;" />
         </a>
