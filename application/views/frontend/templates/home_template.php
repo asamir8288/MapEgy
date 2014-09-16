@@ -26,6 +26,17 @@
         </style>
         <script type="text/javascript" language="javascript">
             $(document).ready(function () {
+//                if (window.location.hash) {                    
+//                    var target = $(this.hash);                    
+//                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+//                    
+//                    if (target.length) {
+//                        $('html,body').animate({
+//                            scrollTop: (target.offset().top) - 30
+//                        }, 1000);
+//                        return false;
+//                    }
+//                }
                 $('a[href*=#]:not([href=#])').click(function () {
                     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                         var target = $(this.hash);
@@ -46,8 +57,8 @@
                     $('.home-section-navigation').addClass('fixed');
                 } else if ($(this).scrollTop() > 2100) {
                     $('.home-section-navigation').removeClass('fixed');
-                    $('.home-section-navigation').addClass('fixed-footer');                                      
-                    
+                    $('.home-section-navigation').addClass('fixed-footer');
+
                 } else {
                     $('.home-section-navigation').removeClass('fixed-footer');
                     $('.home-section-navigation').removeClass('fixed');

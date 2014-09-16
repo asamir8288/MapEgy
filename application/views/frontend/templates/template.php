@@ -18,6 +18,24 @@
                 }
             </style>
         <?php } ?>
+
+        <script type="text/javascript" language="javascript">
+            $(document).ready(function () {
+                $('a[href*=#]:not([href=#])').click(function () {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+
+            });
+        </script>
     </head>
 
     <body>
@@ -66,7 +84,7 @@
         <?php } elseif (isset($map_banner)) { ?>
             <!--<div id="map_canvas"></div>-->
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2428.619994812634!2d13.449374!3d52.504118!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e508c927b8f%3A0x706f72ab069c5642!2sRotherstra%C3%9Fe+16%2C+10245+Berlin!5e0!3m2!1sde!2sde!4v1410822929009" width="100%" height="285" frameborder="0" style="border:0"></iframe>        <?php } ?>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2428.619994812634!2d13.449374!3d52.504118!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e508c927b8f%3A0x706f72ab069c5642!2sRotherstra%C3%9Fe+16%2C+10245+Berlin!5e0!3m2!1sde!2sde!4v1410822929009" width="100%" height="285" frameborder="0" style="border:0"></iframe>        <?php } ?>
 
         <div id="container">
             <div id="wrapper">
