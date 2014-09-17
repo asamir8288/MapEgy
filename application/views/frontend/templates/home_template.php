@@ -216,7 +216,7 @@
 
                 <!------ START Quotes --------------------------------->
 
-                <div class="small-dashed-separator"></div>
+                <div class="small-dashed-separator" style="margin-top: 30px;"></div>
                 <div class="home-title small-width">Quotes</div>
                 <div class="home-section">
                     <div class="list_carousel1">
