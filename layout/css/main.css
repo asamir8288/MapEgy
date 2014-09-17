@@ -790,9 +790,10 @@
     margin-right: 20px;
 }
 .news-meet-us .event_box .event-content{
-    width: 430px;
+    width: 420px;
     display: inline-block;
     vertical-align: top;
+    margin-left: 5px;
 }
 .news-meet-us .event_box .event-date{
     font-size: 16px;
@@ -974,8 +975,8 @@
     margin-top: 25px;
 }
 .press-clipping-box .logo-bg{
-/*    background-image: URL(../images/press-frame-bg.png);
-    background-repeat: no-repeat;*/
+    /*    background-image: URL(../images/press-frame-bg.png);
+        background-repeat: no-repeat;*/
     width: 280px;
     height: 182px;
     display: block;
@@ -1130,7 +1131,7 @@
     color: #969696;
     font-size: 15px;
 }
- .contact-tel {
+.contact-tel {
     color: #000;
     font-size: 21px;
     margin-top: 5px;

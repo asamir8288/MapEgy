@@ -261,7 +261,7 @@
                         foreach ($activeNews as $news) {
                             ?>
                             <div class="box">
-                                <img src="<?php echo static_url(); ?>files/news/<?php echo $news['image']; ?>" width="110" height="103" />
+                                <img src="<?php echo static_url(); ?>files/news/<?php echo $news['image']; ?>" width="110" />
 
                                 <p class="blog-short-brief">	
                                     <a href="<?php echo base_url() . 'news/blog/details/' . $news['id']; ?>" class="blog-article-title"><?php echo substring(nl2br($news['title']), '', '', 7); ?></a>                    
