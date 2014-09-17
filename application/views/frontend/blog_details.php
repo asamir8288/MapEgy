@@ -81,7 +81,7 @@
 
 <div class="blog-details-right">
     <?php foreach ($active_news as $news) { ?>
-        <div class="news_blog_box">
+    <div class="news_blog_box" style="margin: -5px 10px;">
             <a href="<?php echo base_url() . 'news/blog/details/' . $news['id'];?>" style="text-decoration: none;">
                 <div class="news_date"><?php echo date('d M Y', strtotime($news['news_date'])); ?></div>
                 <img src="<?php echo static_url() . 'files/news/' . $news['image']; ?>" style="width: 271px; height: 176px;" />
