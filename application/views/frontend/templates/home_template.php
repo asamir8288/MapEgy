@@ -255,7 +255,7 @@
 
                 <div class="news-section">                    
                     <div class="recent-blog-posts">
-                        <a href="<?php echo base_url();?>news" class="news-titles">Recent Blog Posts</a>
+                        <a href="<?php echo base_url();?>news/blogs" class="news-titles">Recent Blog Posts</a>
                         <?php
                         $i = 1;
                         foreach ($activeNews as $news) {
