@@ -25,7 +25,11 @@
 </script>-->
 
 
-
+<style type="text/css">
+    #left-contact-us-link{
+        display: none;
+    }
+</style>
 
 
 <div class="contact-left">
