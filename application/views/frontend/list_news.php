@@ -27,7 +27,7 @@ foreach ($active_news as $news) {
     <div style="display: block; height: 40px;"></div>
 <?php } ?>
 
-<div class="small-dashed-separator"></div>
+    <div class="small-dashed-separator" style="margin-top: 20px;"></div>
 <div id="Meet-us" class="news-meet-us">
     <div class="meet-us-title">Meet us</div>
     <?php
