@@ -1349,3 +1349,8 @@ Back to top button
     top: 15px;
     font-size: 20px;
 }
+
+#social-sharing-plugins{
+    position: relative;
+    margin-bottom: 20px;
+}
