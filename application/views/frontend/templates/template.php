@@ -59,17 +59,17 @@
             </div>
 
             <ul id="top-menu">
-                <li><a href="<?php echo base_url(); ?>product">Product</a></li>
+                <li><a <?php echo (isset($menu) && $menu[0]) ? 'class="active"' : '';?> href="<?php echo base_url(); ?>product">Product</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url(); ?>consulting">Consulting</a></li>
+                <li><a <?php echo (isset($menu) && $menu[1]) ? 'class="active"' : '';?> href="<?php echo base_url(); ?>consulting">Consulting</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
+                <li><a <?php echo (isset($menu) && $menu[2]) ? 'class="active"' : '';?> href="<?php echo base_url(); ?>about-us">About</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url(); ?>press">Press</a></li>
+                <li><a <?php echo (isset($menu) && $menu[3]) ? 'class="active"' : '';?> href="<?php echo base_url(); ?>press">Press</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url(); ?>career">Career</a></li>
+                <li><a <?php echo (isset($menu) && $menu[4]) ? 'class="active"' : '';?> href="<?php echo base_url(); ?>career">Career</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url(); ?>news">News</a></li>
+                <li><a <?php echo (isset($menu) && $menu[5]) ? 'class="active"' : '';?> href="<?php echo base_url(); ?>news">News</a></li>
             </ul>
         </div>
 

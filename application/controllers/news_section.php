@@ -17,6 +17,7 @@ class News_section extends CI_Controller {
     }
 
     public function index() {
+        $this->data['menu'] = array(0,0,0,0,0,1);
         $this->data['page_title'] = 'News';
         $this->data['inside_banner'] = static_url() . 'layout/images/inside-banner.png';
 
@@ -31,6 +32,7 @@ class News_section extends CI_Controller {
     }
 
     public function blogs() {
+        $this->data['menu'] = array(0,0,0,0,0,1);
         $this->data['page_title'] = 'Blogs';
 
         $this->data['active_news'] = NewsTable::getActiveNews();
@@ -40,6 +42,7 @@ class News_section extends CI_Controller {
     }
 
     public function blog_details($blog_id) {
+        $this->data['menu'] = array(0,0,0,0,0,1);
         $this->data['page_title'] = 'Blogs';
 
         $this->data['active_news'] = NewsTable::getActiveNews(6, $blog_id);
@@ -59,6 +62,7 @@ class News_section extends CI_Controller {
     }
     
     public function list_all_events() {
+        $this->data['menu'] = array(0,0,0,0,0,1);
         $this->data['page_title'] = 'All Events';
 
         $this->data['active_events'] = EventsTable::getActiveEvents();
