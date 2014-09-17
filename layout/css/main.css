@@ -116,6 +116,9 @@
     position: relative;
     top: -1px;
 }
+.blue-link:hover{
+    background-color: #ffc000;
+}
 
 .lang-link {
     background-color: #ff0000;
@@ -128,6 +131,9 @@
     right: 20px;
     position: absolute;
     font-weight: bold;
+}
+.lang-link:hover{
+    background-color: #006fc7;
 }
 
 #banner {
