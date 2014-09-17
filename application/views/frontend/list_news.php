@@ -3,7 +3,7 @@
 <?php
 $i = 0;
 foreach ($active_news as $news) {
-    if ($i % 3 == 0) {
+    if ($i !=0 && $i % 3 == 0) {
         ?>
         <div style="clear: left;height: 40px;"></div>
         <?php
