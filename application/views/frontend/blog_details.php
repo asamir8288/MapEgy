@@ -18,7 +18,7 @@
                 js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1458587444431028&version=v2.0";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
-        <div class="fb-share-button" data-href="http://www.mazengar.com/mapegy/" data-layout="button_count"></div>
+        <div class="fb-share-button" data-href="<?php echo base_url(); ?>news/blog/details/<?php echo $blog_details['id']; ?>" data-layout="button_count"></div>
 
         <div class="linkedin" style="position: relative;display: inline-block;top: 5px;left: 3px;">
             <script src="//platform.linkedin.com/in.js" type="text/javascript">
@@ -27,8 +27,8 @@
             <script type="IN/Share" data-url="<?php echo base_url(); ?>news/blog/details/<?php echo $blog_details['id']; ?>" data-counter="right"></script>
         </div>
 
-        <div class="linkedin" style="position: relative;display: inline-block;left: 3px;">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo base_url(); ?>news/blog/details/<?php echo $blog_details['id']; ?>" data-via="mapegy">Tweet</a>
+        <div class="twitter" style="position: relative;display: inline-block;left: 3px;">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo base_url(); ?>news/blog/details/<?php echo $blog_details['id']; ?>" data-text="the data you want to tweet using it" data-via="mapegy">Tweet</a>
             <script>!function (d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
                     if (!d.getElementById(id)) {
