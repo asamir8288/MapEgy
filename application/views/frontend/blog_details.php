@@ -5,7 +5,7 @@
     .linkedin{
         position: relative;display: inline-block;top: 5px;left: 3px;
     }
-    body:first-of-type .linkedin {position: relative;display: inline-block;left: 3px;}
+    
 </style>
 <div class="blog-details-left">    
     <img src="<?php echo static_url() . 'files/news/' . $blog_details['image']; ?>" style="width: 569px;height: 370px;" />
