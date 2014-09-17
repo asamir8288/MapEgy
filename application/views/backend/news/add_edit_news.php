@@ -1,3 +1,11 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#datepicker").datepicker({
+            dateFormat: "yy-mm-dd"
+        });
+    });
+</script>
+
 <?php echo form_open_multipart($post_url); ?>
 <ul id="form_list">
     <li>
@@ -9,6 +17,11 @@
         <label for="news_description"><?php echo lang('news_description');?>:</label>
         <textarea id="news_description" name="description"><?php echo (isset($data['description'])) ? $data['description'] : ''; ?></textarea>        
         <?php echo (isset($errors['description'])) ? generate_error_message($errors['description']) : ''; ?>
+    </li>
+    <li>
+        <label for="datepicker"><?php echo lang('news_date'); ?>:</label>
+        <input type="text" value="<?php echo (isset($data['news_date'])) ? $data['news_date'] : ''; ?>" name="news_date" id="datepicker" class="txtbox" >
+        <?php echo (isset($errors['news_date'])) ? generate_error_message($errors['news_date']) : ''; ?>
     </li>
     <?php if (isset($data)) { ?>
         <li style="margin-left: 154px;">

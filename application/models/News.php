@@ -27,6 +27,7 @@ class News extends BaseNews {
             $n->description = $data['description'];
             $n->image = $errors['news_image'];
             $n->set_in_homepage = $set_in_homepage;
+            $n->news_date = date('ymdHis', strtotime($data['news_date']));
             $n->created_at = date('ymdHis');
             $n->save();
 
@@ -50,6 +51,7 @@ class News extends BaseNews {
                     ->set('n.description', '?', $data['description'])
                     ->set('n.image', '?', $errors['news_image'])
                     ->set('n.set_in_homepage', '?', $set_in_homepage)
+                    ->set('n.news_date', '?', date('ymdHis', strtotime($data['news_date'])))
                     ->set('n.updated_at', '?', date('ymdHis'))
                     ->where('n.id =?', $data['id'])
                     ->execute();
