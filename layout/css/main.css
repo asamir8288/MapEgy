@@ -597,7 +597,7 @@
 .expert-name {
     font-size: 20px;
     color: #000;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-decoration: none;
     margin-top: 7px;
 }
