@@ -475,7 +475,8 @@
 
 #footer {
     display: block;
-    background-image: url(../images/footer-bg.png);
+    background-color: #0d4d81;
+    /*background-image: url(../images/footer-bg.png);*/
     height: 300px;
     display: block;
     background-repeat: repeat;
@@ -585,7 +586,8 @@
 }
 
 #copyright{
-    background-image: url(../images/copyright-bg.png);
+    background-color: #093d67;
+    /*background-image: url(../images/copyright-bg.png);*/
     background-repeat: repeat-x;
     height: 30px;
     display: block;
