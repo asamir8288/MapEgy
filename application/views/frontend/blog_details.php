@@ -3,8 +3,7 @@
         top: -6px!important;
     }
 </style>
-<div class="blog-details-left">
-    <div class="news_date"><?php echo date('d M Y', strtotime($blog_details['news_date'])); ?></div>
+<div class="blog-details-left">    
     <img src="<?php echo static_url() . 'files/news/' . $blog_details['image']; ?>" style="width: 569px;height: 370px;" />
     
     <div class="blog-details-title"><?php echo $blog_details['title']; ?></div>
@@ -62,6 +61,7 @@
             </script>
         </div>
     </div>
+    <div style="float: right;top: -40px;position: relative;" class="news_date"><?php echo date('d M Y', strtotime($blog_details['news_date'])); ?></div>
     <div class="blog-details-desc"><?php echo $blog_details['description']; ?></div>
 
 
