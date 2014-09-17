@@ -1,3 +1,5 @@
+<div id="Blog" class="recent-blog-main-title">All Blogs</div>
+
 <?php foreach ($active_news as $news) { ?>
     <div class="news_blog_box" style="height: 360px;">
         <img src="<?php echo static_url() . 'files/news/' . $news['image']; ?>" style="width: 271px; height: 176px;" />
