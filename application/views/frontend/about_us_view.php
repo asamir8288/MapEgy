@@ -62,7 +62,7 @@
 
 <!------ START Clients --------------------------------->
 
-<div class="small-dashed-separator"></div>
+<div class="small-dashed-separator" style="margin-top: 30px;"></div>
 <div class="home-title small-width">Partners</div>
 <div class="list_carousel">
     <ul id="foo2">
@@ -79,7 +79,7 @@
 
 <!------ START Quotes --------------------------------->
 
-<div class="small-dashed-separator"></div>
+<div class="small-dashed-separator" style="margin-top: 30px;"></div>
 <div class="home-title small-width">Quotes</div
 <div class="inside-horizontal-section">
     <div class="list_carousel1">
@@ -110,7 +110,9 @@
 
 <!------ END Quotes --------------------------------->                
 
-<div class="small-dashed-separator"></div>
+<div style="clear: both; height: 34px;"></div>
+
+<div class="small-dashed-separator" style="width: 50%;"></div>
 
 <div class="contact-us-box">
     Did we <strong>arouse</strong> your <strong>interest</strong>?
