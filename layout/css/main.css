@@ -1094,6 +1094,7 @@
     border: none;
     background-image: URL(../images/submit-btn.png);
     background-repeat: no-repeat;
+    background-position: 0px 0px;
     width: 89px;
     height: 29px;
     display: block;
@@ -1102,6 +1103,9 @@
     float: right;
     top: 25px;
     cursor: pointer;
+}
+.submit-btn:hover{
+    background-position: 0px -29px;
 }
 
 /*
@@ -1238,6 +1242,9 @@
     padding: 3px 30px 8px 30px;
     position: relative;
     width: 200px;
+}
+.case-study-link:hover{
+    background-color: #006fc7;
 }
 
 .our_consulting_experts {
