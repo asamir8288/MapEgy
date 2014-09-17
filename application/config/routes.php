@@ -45,6 +45,7 @@ $route['about-us'] = 'about_us/index';
 $route['legal-policy'] = 'legal_policy/index';
 $route['career'] = 'job/index';
 $route['news'] = 'news_section/index';
+$route['events'] = 'news_section/list_all_events';
 $route['news/blogs'] = 'news_section/blogs';
 $route['news/blog/details/(:any)'] = 'news_section/blog_details/$1';
 

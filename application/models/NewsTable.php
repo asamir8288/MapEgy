@@ -25,11 +25,14 @@ class NewsTable extends Doctrine_Table {
                         ->fetchOne();
     }
 
-    public static function getActiveNews($limit = FALSE) {
+    public static function getActiveNews($limit = FALSE, $excepted_id = '') {
         $q = Doctrine_Query::create()
                 ->select('n.*')
                 ->from('News n')
                 ->where('n.deleted =?', FALSE);
+        if ($excepted_id) {
+            $q = $q->andWhere('n.id !=?', intval($excepted_id));
+        }
         if ($limit) {
             $q = $q->limit($limit);
         }

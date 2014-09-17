@@ -42,7 +42,7 @@ class News_section extends CI_Controller {
     public function blog_details($blog_id) {
         $this->data['page_title'] = 'Blogs';
 
-        $this->data['active_news'] = NewsTable::getActiveNews(6);
+        $this->data['active_news'] = NewsTable::getActiveNews(6, $blog_id);
         $this->data['blog_details'] = NewsTable::getOne($blog_id);
 
         $this->template->write('_scripts', '<meta property="og:type" content="Blog Details" />
@@ -55,6 +55,15 @@ class News_section extends CI_Controller {
             <meta property="og:medium" content="mult" />');
 
         $this->template->write_view('content', 'frontend/blog_details', $this->data);
+        $this->template->render();
+    }
+    
+    public function list_all_events() {
+        $this->data['page_title'] = 'All Events';
+
+        $this->data['active_events'] = EventsTable::getActiveEvents();
+
+        $this->template->write_view('content', 'frontend/all_events', $this->data);
         $this->template->render();
     }
 
