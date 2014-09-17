@@ -9,7 +9,7 @@ foreach ($active_events as $event) {
     }
     ?>
     <div class="news_blog_box" style="min-height: 150px;margin-bottom: 20px;">
-        <img src="<?php echo static_url() . 'files/events/' . $event['image']; ?>" />        
+        <img style="width: 170px;height: 110px;" src="<?php echo static_url() . 'files/events/' . $event['image']; ?>" />        
         <div>
             <?php echo date('d M Y', strtotime($event['date'])); ?> <br />
             <?php echo $event['description']; ?></div>
