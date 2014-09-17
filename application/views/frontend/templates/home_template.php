@@ -265,7 +265,7 @@
 
                                 <p class="blog-short-brief">	
                                     <a href="<?php echo base_url() . 'news/blog/details/' . $news['id']; ?>" class="blog-article-title"><?php echo substring(nl2br($news['title']), '', '', 7); ?></a>                    
-                                    <?php echo substring(nl2br($news['description']), $news['id'], 'news/blog/details', 30); ?>
+                                    <?php echo substring(nl2br($news['description']), $news['id'], 'news/blog/details', 25); ?>
                                 </p>
                             </div>
 
@@ -290,7 +290,7 @@
 
                                 <p class="meet-us-short-brief">	
                                     <a href="" class="meet-us-title"><?php echo date('d M, Y', strtotime($event['date'])); ?></a>                    
-                                    <?php echo (strlen($event['description']) > 80) ? substr($event['description'], 0, 80) . '...' : $event['description']; ?>
+                                    <?php echo (strlen($event['description']) > 80) ? substr($event['description'], 0, 40) . '...' : $event['description']; ?>
                                 </p>
                             </div>
                             <?php if (count($active_events) != $i) { ?>
