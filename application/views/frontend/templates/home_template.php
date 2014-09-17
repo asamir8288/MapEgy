@@ -52,10 +52,10 @@
             });
 
             $(window).scroll(function () {
-                if ($(this).scrollTop() > 135 && $(this).scrollTop() < 2100) {
+                if ($(this).scrollTop() > 135 && $(this).scrollTop() < 2000) {
                     $('.home-section-navigation').removeClass('fixed-footer');
                     $('.home-section-navigation').addClass('fixed');
-                } else if ($(this).scrollTop() > 2100) {
+                } else if ($(this).scrollTop() > 2000) {
                     $('.home-section-navigation').removeClass('fixed');
                     $('.home-section-navigation').addClass('fixed-footer');
 
