@@ -261,7 +261,7 @@
                         foreach ($activeNews as $news) {
                             ?>
                             <div class="box">
-                                <img src="<?php echo static_url(); ?>files/news/<?php echo $news['image']; ?>" width="110" />
+                                <a href="<?php echo base_url() . 'news/blog/details/' . $news['id']; ?>"><img src="<?php echo static_url(); ?>files/news/<?php echo $news['image']; ?>" width="110" /></a>
 
                                 <p class="blog-short-brief">	
                                     <a href="<?php echo base_url() . 'news/blog/details/' . $news['id']; ?>" class="blog-article-title"><?php echo substring(nl2br($news['title']), '', '', 7); ?></a>                    
@@ -286,10 +286,10 @@
                         foreach ($active_events as $event) {
                             ?>
                             <div class="meet-us-box">
-                                <img src="<?php echo static_url(); ?>files/events/<?php echo $event['image']; ?>" width="77" />
+                                <a href="<?php echo base_url();?>events"><img src="<?php echo static_url(); ?>files/events/<?php echo $event['image']; ?>" width="77" /></a>
 
                                 <p class="meet-us-short-brief">	
-                                    <a href="" class="meet-us-title"><?php echo date('d M, Y', strtotime($event['date'])); ?></a>                    
+                                    <a href="<?php echo base_url();?>events" class="meet-us-title"><?php echo date('d M, Y', strtotime($event['date'])); ?></a>                    
                                     <?php echo (strlen($event['description']) > 80) ? substr($event['description'], 0, 40) . '...' : $event['description']; ?>
                                 </p>
                             </div>
