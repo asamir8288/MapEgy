@@ -2,6 +2,10 @@
     #li_ui_li_gen_1410982266208_1-container.IN-right{
         top: -6px!important;
     }
+    .linkedin{
+        position: relative;display: inline-block;top: 5px;left: 3px;
+    }
+    body:first-of-type .linkedin {position: relative;display: inline-block;left: 3px;}
 </style>
 <div class="blog-details-left">    
     <img src="<?php echo static_url() . 'files/news/' . $blog_details['image']; ?>" style="width: 569px;height: 370px;" />
@@ -20,7 +24,7 @@
             }(document, 'script', 'facebook-jssdk'));</script>
         <div class="fb-share-button" data-href="<?php echo base_url(); ?>news/blog/details/<?php echo $blog_details['id']; ?>" data-layout="button_count"></div>
 
-        <div class="linkedin" style="position: relative;display: inline-block;top: 5px;left: 3px;">
+        <div class="linkedin" style="">
             <script src="//platform.linkedin.com/in.js" type="text/javascript">
             lang: en_US
             </script>
