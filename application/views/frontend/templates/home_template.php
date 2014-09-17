@@ -251,11 +251,11 @@
                 <!------ START News --------------------------------->
 
                 <div class="small-dashed-separator"></div>
-                <div id="News" class="home-title small-width">News</div>
+                <a href="<?php echo base_url();?>news" id="News" class="home-title small-width">News</a>
 
                 <div class="news-section">                    
                     <div class="recent-blog-posts">
-                        <div class="news-titles">Recent Blog Posts</div>
+                        <a href="<?php echo base_url();?>news" class="news-titles">Recent Blog Posts</a>
                         <?php
                         $i = 1;
                         foreach ($activeNews as $news) {
@@ -280,7 +280,7 @@
                     </div>
 
                     <div class="meet-us">
-                        <div class="news-titles">Meet us</div>
+                        <a href="<?php echo base_url();?>events" class="news-titles">Meet us</a>
                         <?php
                         $i = 1;
                         foreach ($active_events as $event) {
@@ -321,8 +321,10 @@
 
                 <!------ END News --------------------------------->
 
-
                 <div style="clear: both; height: 34px;"></div>
+                
+                <div class="small-dashed-separator"></div>
+
 
                 <div class="contact-us-box">
                     Did we <strong>arouse</strong> your <strong>interest</strong>?

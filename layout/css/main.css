@@ -223,6 +223,7 @@
     width: 20%;
     margin: 0 auto;
     padding-top: 10px;
+    text-decoration: none;
 }
 
 .home-title.small-width{
@@ -1339,6 +1340,7 @@ Back to top button
 .news-titles{
     color: #006fc7;
     font-size: 20px;
+    text-decoration: none;
 }
 
 .home-follow-mapegy{
