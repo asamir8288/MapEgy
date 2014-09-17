@@ -458,6 +458,9 @@
     top: -3px;
     margin-left: 35px;
 }
+.contact-us-box .contact-us-link:hover {
+    background-color: #006fc7;    
+}
 
 #footer {
     display: block;
@@ -719,7 +722,9 @@
     top: 0px;
     display: block;
 }
-
+.apply-now:hover {
+    background-color: #006fc7;
+}
 /*
    News Page -------------------------------------------------------------------
 */
@@ -1152,6 +1157,9 @@
     top: 0px;
     display: block;
 }
+.contact-link:hover {
+    background-color: #006fc7;
+}
 
 .consulting-title-decoration {
     font-size: 26px;
@@ -1286,6 +1294,9 @@
     right: 20px;
     text-decoration: none;
     top: -56px;
+}
+.consulting .consulting-contact-link:hover {
+    background-color: #006fc7;
 }
 
 /*
