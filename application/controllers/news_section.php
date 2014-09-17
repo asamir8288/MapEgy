@@ -47,7 +47,7 @@ class News_section extends CI_Controller {
 
         $this->template->write('_scripts', '<meta property="og:type" content="Blog Details" />
             <meta property="og:title" content="'.$this->data['blog_details']['title'].'" />
-            <meta property="og:description" content="'.substr($this->data['blog_details']['title'], 0, 200).'..." />
+            <meta property="og:description" content="'.substr($this->data['blog_details']['title'], 0, 100).'..." />
             <meta property="og:image" content="'.static_url() . 'files/news/' . $this->data['blog_details']['image'] .'" />
             <meta property="og:image:type" content="image/png" />
             <meta property="og:url" content="'. base_url() . 'news/blog/details/'. $this->data['blog_details']['id'] .'" />
