@@ -45,13 +45,13 @@ class News_section extends CI_Controller {
         $this->data['active_news'] = NewsTable::getActiveNews(6);
         $this->data['blog_details'] = NewsTable::getOne($blog_id);
 
-        $this->template->write('_scripts', '<meta property="og:type" content="landing page" />
-            <meta property="og:title" content="Social Media Test Page" />
-            <meta property="og:description" content="This is a page for testing the behavior of social media buttons." />
-            <meta property="og:image" content="/images/logo_white_150px.png" />
+        $this->template->write('_scripts', '<meta property="og:type" content="Blog Details" />
+            <meta property="og:title" content="'.$this->data['blog_details']['title'].'" />
+            <meta property="og:description" content="'.substr($this->data['blog_details']['title'], 0, 200).'..." />
+            <meta property="og:image" content="'.static_url() . 'files/news/' . $blog_details['image'] .'" />
             <meta property="og:image:type" content="image/png" />
-            <meta property="og:url" content="www.mywebsite.test.jsp" />
-            <meta property="og:site_name" content="Website Publications" />
+            <meta property="og:url" content="'. base_url() . 'news/blog/details/'. $blog_details['id'] .'" />
+            <meta property="og:site_name" content="mapegy" />
             <meta property="og:medium" content="mult" />');
 
         $this->template->write_view('content', 'frontend/blog_details', $this->data);
