@@ -1,4 +1,4 @@
-<div id="Blog" class="recent-blog-main-title">Meet Us</div>
+<div id="Blog" class="recent-blog-main-title" style="margin-bottom: 20px;">Meet Us</div>
 <?php
 $i = 0;
 foreach ($active_events as $event) {
@@ -18,3 +18,5 @@ foreach ($active_events as $event) {
 
     <?php $i++;
 } ?>
+
+<div style="clear: left;height: 40px;width: 100%;"></div>

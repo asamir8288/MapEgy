@@ -1,4 +1,4 @@
-<div id="Blog" class="recent-blog-main-title">All Blogs</div>
+<div id="Blog" class="recent-blog-main-title" style="margin-bottom: 20px;">All Blogs</div>
 
 <?php foreach ($active_news as $news) { ?>
     <div class="news_blog_box" style="height: 360px;">
