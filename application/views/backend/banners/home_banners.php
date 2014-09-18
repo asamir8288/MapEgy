@@ -36,9 +36,9 @@
                     </td>   
                     <td>
                         <?php if ($banner['is_active']) { ?>
-                            <a href="<?php echo base_url() . 'admin/banner/change_status/' . $banner['id']; ?>"><img title="Active Job" src="<?php echo static_url(); ?>layout/images/active.png" /></a>
+                            <a href="<?php echo base_url() . 'admin/banner/change_status/' . $banner['id'] . '/' . $banner_page; ?>"><img title="Active Job" src="<?php echo static_url(); ?>layout/images/active.png" /></a>
                         <?php } else { ?>
-                            <a href="<?php echo base_url() . 'admin/banner/change_status/' . $banner['id']; ?>"><img title="Inactive Job" src="<?php echo static_url(); ?>layout/images/inactive.png" /></a>
+                            <a href="<?php echo base_url() . 'admin/banner/change_status/' . $banner['id'] . '/' . $banner_page;; ?>"><img title="Inactive Job" src="<?php echo static_url(); ?>layout/images/inactive.png" /></a>
                         <?php } ?>
                     </td>
                     <td>

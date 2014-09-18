@@ -32,6 +32,7 @@ class Banner extends My_Controller {
         $this->data['post_url'] = 'admin/banner/home_banners';
         $this->data['submit_btn'] = lang('banner_add_banner');
         $this->data['submit_url'] = 'admin/banner/apply_sorting';
+        $this->data['banner_page'] = 'home';
         
         $this->template->add_js('layout/js/admin/jquery-sortable.js');
         $this->template->add_js('layout/js/admin/sorting_items.js');
@@ -62,6 +63,7 @@ class Banner extends My_Controller {
         $this->data['page_title'] = 'Add New Banner';
         $this->data['post_url'] = 'admin/banner/product_banners';
         $this->data['submit_btn'] = lang('banner_add_banner');
+        $this->data['banner_page'] = 'product';
         
         $this->data['submit_url'] = 'admin/banner/sorting_product';
         $this->template->add_js('layout/js/admin/jquery-sortable.js');
@@ -79,7 +81,7 @@ class Banner extends My_Controller {
         redirect('admin/banner/product_banners');
     }
 
-    public function change_status($banner_id) {
+    public function change_status($banner_id, $page = 'home') {
         $b = new Banners();
         $b->activateDeactivateBanner($banner_id);
         
@@ -87,7 +89,11 @@ class Banner extends My_Controller {
             'body' => 'The banner status has been updated successfully.')
         );
 
-        redirect('admin/banner/home_banners');
+        if($page == 'home'){
+            redirect('admin/banner/home_banners');
+        }else{
+            redirect('admin/banner/product_banners');
+        }
     }
 
     public function delete_banner($banner_id) {
