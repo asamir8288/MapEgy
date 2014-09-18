@@ -119,6 +119,18 @@ body {
 #dashboard-menu a.press{
     background-image: url(../images/admin/press-icon.png);
 }
+#dashboard-menu a.press_management-biographies{
+    background-image: url(../images/admin/press_management-biographies.jpg);
+}
+#dashboard-menu a.press_list-clipping{
+    background-image: url(../images/admin/press_list-clipping.jpg);
+}
+#dashboard-menu a.press_contact-person{
+    background-image: url(../images/admin/press_contact-person.jpg);
+}
+#dashboard-menu a.press_company-profile{
+    background-image: url(../images/admin/press_company-profile.jpg);
+}
 #dashboard-menu a.careers{
     background-image: url(../images/admin/careers-icon.png);
 }
