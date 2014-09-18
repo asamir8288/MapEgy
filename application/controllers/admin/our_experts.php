@@ -20,9 +20,20 @@ class Our_experts extends My_Controller {
         $this->data['navigator'] = 'Home > Experts';
         $this->data['page_title'] = 'List All Experts';
         
+        $this->data['submit_url'] = 'admin/our_experts/sorting_experts';
+        $this->template->add_js('layout/js/admin/jquery-sortable.js');
+        $this->template->add_js('layout/js/admin/sorting_items.js');
+        
         $this->data['experts'] = ExpertsTable::getAllActiveExperts(FALSE);
         $this->template->write_view('content', 'backend/experts/list_experts', $this->data);
         $this->template->render();
+    }
+    
+    public function sorting_experts() {
+        $e = new Experts();
+        $e->experts_sorting($_POST);
+        
+        redirect('admin/our_experts');
     }
 
     public function add_edit_expert($expert_id = '') {               

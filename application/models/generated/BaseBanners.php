@@ -13,6 +13,7 @@ Doctrine_Manager::getInstance()->bindComponent('Banners', 'default');
  * @property integer $is_active
  * @property timestamp $created_at
  * @property timestamp $updated_at
+ * @property integer $order_flag
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -74,6 +75,15 @@ abstract class BaseBanners extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('order_flag', 'integer', 4, array(
+             'type' => 'integer',
+             'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
     }

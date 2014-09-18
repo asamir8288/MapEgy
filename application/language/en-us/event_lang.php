@@ -13,5 +13,7 @@ $lang['event_cancel'] = 'Cancel';
 
 $lang['logout'] = 'Logout';
 
+$lang['items_order'] = 'Apply Sorting';
+
 $lang['event_add_new_event'] = 'Add New Event';
 ?>

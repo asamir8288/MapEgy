@@ -98,5 +98,15 @@ class Events extends BaseEvents {
 
         return $errors;
     }
+    
+    public function events_sorting(array $data) {
+        for ($i = 0; $i < count($data['order_flag']); $i++) {
+            Doctrine_Query::create()
+                    ->update('Events e')
+                    ->set('e.order_flag', '?', $i)
+                    ->where('e.id =?', $data['order_flag'][$i])
+                    ->execute();
+        }
+    }
 
 }

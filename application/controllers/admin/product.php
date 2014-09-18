@@ -19,9 +19,20 @@ class Product extends My_Controller {
         $this->data['navigator'] = 'Home > Product Features';
         $this->data['page_title'] = 'List All Features';
         
+        $this->data['submit_url'] = 'admin/product/sort_product';        
+        $this->template->add_js('layout/js/admin/jquery-sortable.js');
+        $this->template->add_js('layout/js/admin/sorting_items.js');
+        
         $this->data['activeFeatures'] = ProductFeatureTable::getActiveFeature();
         $this->template->write_view('content', 'backend/products/list_features', $this->data);
         $this->template->render();
+    }
+    
+    public function sort_product() {
+        $p = new ProductFeature();
+        $p->product_sorting($_POST);
+        
+        redirect('admin/product');
     }
 
     public function add_edit_feature($feature_id = '') {

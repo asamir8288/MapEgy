@@ -34,7 +34,7 @@ class BannersTable extends Doctrine_Table {
             $q = $q->andWhere('b.is_active=?', $is_active);
         }
         $q = $q->setHydrationMode(Doctrine::HYDRATE_ARRAY)
-                ->orderBy('b.created_at '. $order)
+                ->orderBy('b.order_flag '. $order)
                 ->execute();
 
         return $q;

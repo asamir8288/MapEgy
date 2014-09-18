@@ -13,5 +13,7 @@ $lang['news_date'] = 'Date';
 
 $lang['logout'] = 'Logout';
 
+$lang['items_order'] = 'Apply Sorting';
+
 $lang['news_add_new_news'] = 'Add New Post';
 ?>

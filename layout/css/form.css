@@ -59,6 +59,25 @@
     cursor: pointer;
 }
 
+.items-order-btn {
+    background: none;
+    border: none;
+    background-image: URL(../images/admin/btn-bg.png);
+    background-repeat: no-repeat;
+    width: 189px;
+    height: 34px;
+    display: inline-block;
+    color: #0397d6;
+    font-family: Arial;
+    font-size: 16px;
+    margin-left: 153px;
+    cursor: pointer;
+    float: right;
+    position: relative;
+    right: 50px;
+    top: 20px;
+}
+
 .new-link {
     background: none;
     border: none;

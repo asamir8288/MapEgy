@@ -17,6 +17,7 @@ Doctrine_Manager::getInstance()->bindComponent('PressClipping', 'default');
  * @property timestamp $created_at
  * @property timestamp $updated_at
  * @property integer $deleted
+ * @property integer $order_flag
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -113,6 +114,15 @@ abstract class BasePressClipping extends Doctrine_Record
              'primary' => false,
              'default' => '0',
              'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('order_flag', 'integer', 4, array(
+             'type' => 'integer',
+             'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
     }

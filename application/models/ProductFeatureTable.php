@@ -35,7 +35,7 @@ class ProductFeatureTable extends Doctrine_Table
             $q = $q->limit($limit);
         }
         $q = $q->setHydrationMode(Doctrine::HYDRATE_ARRAY)
-                ->orderBy('f.created_at ASC')
+                ->orderBy('f.order_flag ASC')
                 ->execute();
 
         return $q;

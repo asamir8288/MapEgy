@@ -56,7 +56,7 @@ class Banners extends BaseBanners {
 
         return $errors;
     }
-    
+
     public function activateDeactivateBanner($banner_id) {
         $currentBannerStatus = $this->getCurrentBannerStatus($banner_id);
         $new_status = TRUE;
@@ -69,7 +69,17 @@ class Banners extends BaseBanners {
                 ->where('b.id =?', $banner_id)
                 ->execute();
     }
-    
+
+    public function banner_sorting(array $data) {
+        for ($i = 0; $i < count($data['order_flag']); $i++) {
+            Doctrine_Query::create()
+                    ->update('Banners b')
+                    ->set('b.order_flag', '?', $i)
+                    ->where('b.id =?', $data['order_flag'][$i])
+                    ->execute();
+        }
+    }
+
     private function getCurrentBannerStatus($banner_id) {
         return Doctrine_Query::create()
                         ->select('b.is_active')

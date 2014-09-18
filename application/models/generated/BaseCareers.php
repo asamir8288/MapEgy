@@ -16,6 +16,7 @@ Doctrine_Manager::getInstance()->bindComponent('Careers', 'default');
  * @property timestamp $create_at
  * @property timestamp $updated_at
  * @property integer $deleted
+ * @property integer $order_flag
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -103,6 +104,15 @@ abstract class BaseCareers extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('order_flag', 'integer', 4, array(
+             'type' => 'integer',
+             'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
     }

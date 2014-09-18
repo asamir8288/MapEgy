@@ -20,9 +20,20 @@ class Manage_news extends My_Controller {
         $this->data['navigator'] = 'Home > Blogs';
         $this->data['page_title'] = 'List All Blogs';
         
+        $this->data['submit_url'] = 'admin/manage_news/sorting_news';
+        $this->template->add_js('layout/js/admin/jquery-sortable.js');
+        $this->template->add_js('layout/js/admin/sorting_items.js');
+        
         $this->data['activeNews'] = NewsTable::getActiveNews();
         $this->template->write_view('content', 'backend/news/list_news', $this->data);
         $this->template->render();
+    }
+    
+    public function sorting_news() {
+        $n = new News(); 
+        $n->news_sorting($_POST);
+        
+        redirect('admin/manage_news');
     }
 
     public function add_edit_news($news_id = '') {

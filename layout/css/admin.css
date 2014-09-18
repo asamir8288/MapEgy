@@ -240,3 +240,6 @@ body {
     background: #FFF;
     padding: 5px;
 }
+.simple_with_animation li{
+    cursor: move;
+}

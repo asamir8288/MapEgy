@@ -106,5 +106,15 @@ class PressClipping extends BasePressClipping {
 
         return $errors;
     }
+    
+    public function clipping_sorting(array $data) {
+        for ($i = 0; $i < count($data['order_flag']); $i++) {
+            Doctrine_Query::create()
+                    ->update('PressClipping c')
+                    ->set('c.order_flag', '?', $i)
+                    ->where('c.id =?', $data['order_flag'][$i])
+                    ->execute();
+        }
+    }
 
 }

@@ -34,6 +34,7 @@ class PressClippingTable extends Doctrine_Table {
             $q = $q->andWhere('c.is_active=?', TRUE);
         }
         $q = $q->setHydrationMode(Doctrine::HYDRATE_ARRAY)
+                ->orderBy('c.order_flag ASC')
                 ->execute();
 
         return $q;

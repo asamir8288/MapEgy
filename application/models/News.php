@@ -99,5 +99,15 @@ class News extends BaseNews {
 
         return $errors;
     }
+    
+    public function news_sorting(array $data) {
+        for ($i = 0; $i < count($data['order_flag']); $i++) {
+            Doctrine_Query::create()
+                    ->update('News n')
+                    ->set('n.order_flag', '?', $i)
+                    ->where('n.id =?', $data['order_flag'][$i])
+                    ->execute();
+        }
+    }
 
 }

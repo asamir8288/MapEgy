@@ -31,10 +31,21 @@ class Banner extends My_Controller {
         $this->data['page_title'] = 'Add New Banner';
         $this->data['post_url'] = 'admin/banner/home_banners';
         $this->data['submit_btn'] = lang('banner_add_banner');
+        $this->data['submit_url'] = 'admin/banner/apply_sorting';
+        
+        $this->template->add_js('layout/js/admin/jquery-sortable.js');
+        $this->template->add_js('layout/js/admin/sorting_items.js');
 
-        $this->data['activeBanners'] = BannersTable::getActiveBanners(1, FALSE);
+        $this->data['activeBanners'] = BannersTable::getActiveBanners(1, FALSE, 'ASC');
         $this->template->write_view('content', 'backend/banners/home_banners', $this->data);
         $this->template->render();
+    }
+    
+    public function apply_sorting() {
+        $b = new Banners();
+        $b->banner_sorting($_POST);
+        
+        redirect('admin/banner/home_banners');
     }
     
     public function product_banners() {
@@ -51,10 +62,21 @@ class Banner extends My_Controller {
         $this->data['page_title'] = 'Add New Banner';
         $this->data['post_url'] = 'admin/banner/product_banners';
         $this->data['submit_btn'] = lang('banner_add_banner');
+        
+        $this->data['submit_url'] = 'admin/banner/sorting_product';
+        $this->template->add_js('layout/js/admin/jquery-sortable.js');
+        $this->template->add_js('layout/js/admin/sorting_items.js');
 
-        $this->data['activeBanners'] = BannersTable::getActiveBanners(2, FALSE);
+        $this->data['activeBanners'] = BannersTable::getActiveBanners(2, FALSE, 'ASC');
         $this->template->write_view('content', 'backend/banners/home_banners', $this->data);
         $this->template->render();
+    }
+    
+    public function sorting_product() {
+        $b = new Banners();
+        $b->banner_sorting($_POST);
+        
+        redirect('admin/banner/product_banners');
     }
 
     public function change_status($banner_id) {

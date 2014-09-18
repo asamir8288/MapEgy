@@ -37,5 +37,7 @@ $lang['_edit'] = 'Edit';
 $lang['_delete'] = 'Delete';
 $lang['_cancel'] = 'Cancel';
 
+$lang['items_order'] = 'Apply Sorting';
+
 $lang['logout'] = 'Logout';
 ?>

@@ -19,9 +19,20 @@ class Event extends My_Controller {
         $this->data['navigator'] = 'Home > Events';
         $this->data['page_title'] = 'List All Events';
         
+        $this->data['submit_url'] = 'admin/event/sorting_events';
+        $this->template->add_js('layout/js/admin/jquery-sortable.js');
+        $this->template->add_js('layout/js/admin/sorting_items.js');
+        
         $this->data['activeEvents'] = EventsTable::getActiveEvents();
         $this->template->write_view('content', 'backend/events/list_events', $this->data);
         $this->template->render();
+    }
+    
+    public function sorting_events() {
+        $e = new Events(); 
+        $e->events_sorting($_POST);
+        
+        redirect('admin/event');
     }
 
     public function add_edit_event($event_id = '') {

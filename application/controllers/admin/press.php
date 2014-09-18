@@ -117,9 +117,20 @@ class Press extends My_Controller {
         $this->data['navigator'] = 'Home > Press Clipping';
         $this->data['page_title'] = 'List Press Clipping';
 
+        $this->data['submit_url'] = 'admin/press/sorting_press_clipping';
+        $this->template->add_js('layout/js/admin/jquery-sortable.js');
+        $this->template->add_js('layout/js/admin/sorting_items.js');
+
         $this->data['activeClipping'] = PressClippingTable::getAllActivePressClippings(FALSE);
         $this->template->write_view('content', 'backend/presses/list_clipping', $this->data);
         $this->template->render();
+    }
+
+    public function sorting_press_clipping() {
+        $c = new PressClipping();
+        $c->clipping_sorting($_POST);
+
+        redirect('admin/press/list_clipping');
     }
 
     public function add_edit_clipping($clipping_id = '') {
@@ -178,12 +189,12 @@ class Press extends My_Controller {
             $this->template->render();
         }
     }
-    
-    public function delete_press_clipping($id){
+
+    public function delete_press_clipping($id) {
         $p = new PressClipping();
-        
+
         $p->deletePressClipping($id);
-        
+
         redirect('admin/press/list_clipping');
     }
 

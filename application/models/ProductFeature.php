@@ -71,13 +71,23 @@ class ProductFeature extends BaseProductFeature {
             } else {
                 $errors['feature_image'] = $upload_data['upload_data']['file_name'];
             }
-        }else{
+        } else {
             $errors['feature_image'] = $feature_data['same_image'];
         }
 
         $errors['error_flag'] = $error_flag;
 
         return $errors;
+    }
+
+    public function product_sorting(array $data) {
+        for ($i = 0; $i < count($data['order_flag']); $i++) {
+            Doctrine_Query::create()
+                    ->update('ProductFeature p')
+                    ->set('p.order_flag', '?', $i)
+                    ->where('p.id =?', $data['order_flag'][$i])
+                    ->execute();
+        }
     }
 
 }

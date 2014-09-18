@@ -117,4 +117,14 @@ class Experts extends BaseExperts
 
         return $errors;
     }
+    
+    public function experts_sorting(array $data) {
+        for ($i = 0; $i < count($data['order_flag']); $i++) {
+            Doctrine_Query::create()
+                    ->update('Experts e')
+                    ->set('e.order_flag', '?', $i)
+                    ->where('e.id =?', $data['order_flag'][$i])
+                    ->execute();
+        }
+    }
 }

@@ -23,5 +23,7 @@ $lang['expert_delete_msg'] = 'Your expert data has been deleted successfully.';
 $lang['expert_added_msg'] = 'Your expert data has been added successfully.';
 $lang['expert_updated_msg'] = 'Your expert data has been updated successfully.';
 
+$lang['items_order'] = 'Apply Sorting';
+
 $lang['logout'] = 'Logout';
 ?>

@@ -34,6 +34,7 @@ class ExpertsTable extends Doctrine_Table {
             $q = $q->andWhere('e.hide=?', FALSE);
         }
         $q = $q->setHydrationMode(Doctrine::HYDRATE_ARRAY)
+                ->orderBy('e.order_flag ASC')
                 ->execute();
         
         return $q;

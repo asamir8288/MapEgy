@@ -20,10 +20,21 @@ class job extends My_Controller {
         $this->data['page_title'] = lang('job_manager_page_title');
         $this->data['navigator'] = 'Home > Careers';
         
+        $this->data['submit_url'] = 'admin/job/sorting_jobs';
+        $this->template->add_js('layout/js/admin/jquery-sortable.js');
+        $this->template->add_js('layout/js/admin/sorting_items.js');
+        
         $this->data['jobs'] = CareersTable::getAllActiveJobs(FALSE);
         
         $this->template->write_view('content', 'backend/careers/list_jobs', $this->data);
         $this->template->render();
+    }
+    
+    public function sorting_jobs() {
+        $c = new Careers(); 
+        $c->jobs_sorting($_POST);
+        
+        redirect('admin/job');
     }
 
     public function add_edit_job($job_id = '') {

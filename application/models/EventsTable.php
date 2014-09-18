@@ -35,7 +35,7 @@ class EventsTable extends Doctrine_Table
             $q = $q->limit($limit);
         }
         $q = $q->setHydrationMode(Doctrine::HYDRATE_ARRAY)
-                ->orderBy('e.date DESC')
+                ->orderBy('e.order_flag ASC')
                 ->execute();
 
         return $q;

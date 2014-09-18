@@ -20,5 +20,7 @@ $lang['job_delete_msg'] = 'Your job data has been deleted successfully.';
 $lang['job_added_msg'] = 'Your job data has been added successfully.';
 $lang['job_updated_msg'] = 'Your job data has been updated successfully.';
 
+$lang['items_order'] = 'Apply Sorting';
+
 $lang['logout'] = 'Logout';
 ?>

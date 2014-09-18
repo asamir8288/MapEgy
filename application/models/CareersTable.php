@@ -35,6 +35,7 @@ class CareersTable extends Doctrine_Table
             $q = $q->andWhere('c.active_flag=?', $active_only);
         }
         $q = $q->setHydrationMode(Doctrine::HYDRATE_ARRAY)
+                ->orderBy('c.order_flag ASC')
                 ->execute();
         
         return $q;

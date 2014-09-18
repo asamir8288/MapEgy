@@ -107,5 +107,15 @@ class Careers extends BaseCareers {
 
         return $errors;
     }
+    
+    public function jobs_sorting(array $data) {
+        for ($i = 0; $i < count($data['order_flag']); $i++) {
+            Doctrine_Query::create()
+                    ->update('Careers c')
+                    ->set('c.order_flag', '?', $i)
+                    ->where('c.id =?', $data['order_flag'][$i])
+                    ->execute();
+        }
+    }
 
 }
