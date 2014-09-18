@@ -29,10 +29,22 @@ class Home extends My_Controller{
         $this->data['navigator'] = 'Home > Clients';
         $this->data['page_title'] = 'List All Clients';
         $this->data['post_url'] = 'admin/home/clients';
+        
+        $this->data['submit_url'] = 'admin/sliding/sorting_clients';
+        $this->template->add_js('layout/js/admin/jquery-sortable.js');
+        $this->template->add_js('layout/js/admin/sorting_items.js');
+        
         $this->data['clients'] = BannersTable::getActiveBanners(3, FALSE, 'ASC');
         
         $this->template->write_view('content', 'backend/sliding/sliding', $this->data);
         $this->template->render();
+    }
+    
+    public function sorting_clients() {
+        $b = new Banners();
+        $b->banner_sorting($_POST);
+        
+        redirect('admin/home/clients');
     }
     
     public function partners() {       

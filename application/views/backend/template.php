@@ -24,7 +24,7 @@
 
                     if ($loggedin) {
                         ?>
-                        <li><a href="<?php echo site_url('admin/login/logout'); ?>"><?php echo lang('logout'); ?></a></li>
+                    <li><a style="position: relative;right: 20px;" href="<?php echo site_url('admin/login/logout'); ?>"><?php echo lang('logout'); ?></a></li>
                     <?php } ?>
                 </ul>
             </div>
