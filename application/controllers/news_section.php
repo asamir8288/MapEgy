@@ -19,7 +19,7 @@ class News_section extends CI_Controller {
     public function index() {
         $this->data['menu'] = array(0,0,0,0,0,1);
         $this->data['page_title'] = 'News';
-        $this->data['inside_banner'] = static_url() . 'layout/images/inside-banner.png';
+        $this->data['inside_banner'] = static_url() . 'layout/images/news.jpg';
 
         $this->data['active_news'] = NewsTable::getActiveNews(6);
         $this->data['news_count'] = NewsTable::getNewsCount();
