@@ -93,4 +93,14 @@ class Quotes extends BaseQuotes
 
         return $errors;
     }
+    
+    public function quotes_sorting(array $data) {
+        for ($i = 0; $i < count($data['order_flag']); $i++) {
+            Doctrine_Query::create()
+                    ->update('Quotes q')
+                    ->set('q.order_flag', '?', $i)
+                    ->where('q.id =?', $data['order_flag'][$i])
+                    ->execute();
+        }
+    }
 }

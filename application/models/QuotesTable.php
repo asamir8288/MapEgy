@@ -37,7 +37,7 @@ class QuotesTable extends Doctrine_Table {
             $q = $q->limit($limit);
         }
         $q = $q->setHydrationMode(Doctrine::HYDRATE_ARRAY)
-                ->orderBy('q.created_at DESC')
+                ->orderBy('q.order_flag ASC')
                 ->execute();
 
         return $q;

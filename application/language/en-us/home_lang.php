@@ -19,5 +19,7 @@ $lang['_edit'] = 'Edit';
 $lang['_delete'] = 'Delete';
 $lang['_add_new_quote'] = 'Add New Quote';
 
+$lang['items_order'] = 'Apply Sorting';
+
 $lang['logout'] = 'Logout';
 ?>

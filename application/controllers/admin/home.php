@@ -30,9 +30,8 @@ class Home extends My_Controller{
         $this->data['page_title'] = 'List All Clients';
         $this->data['post_url'] = 'admin/home/clients';
         
-        $this->data['submit_url'] = 'admin/sliding/sorting_clients';
+        $this->data['submit_url'] = 'admin/home/sorting_clients';
         $this->template->add_js('layout/js/admin/jquery-sortable.js');
-        $this->template->add_js('layout/js/admin/sorting_items.js');
         
         $this->data['clients'] = BannersTable::getActiveBanners(3, FALSE, 'ASC');
         
@@ -60,11 +59,23 @@ class Home extends My_Controller{
         $this->data['navigator'] = 'Home > Partners';
         $this->data['page_title'] = 'List All Partners';
         $this->data['post_url'] = 'admin/home/partners';
+        
+        $this->data['submit_url'] = 'admin/home/sorting_partners';
+        $this->template->add_js('layout/js/admin/jquery-sortable.js');
+        
         $this->data['clients'] = BannersTable::getActiveBanners(4, FALSE, 'ASC');
         
         $this->template->write_view('content', 'backend/sliding/sliding', $this->data);
         $this->template->render();
     }
+    
+    public function sorting_partners() {
+        $b = new Banners();
+        $b->banner_sorting($_POST);
+        
+        redirect('admin/home/partners');
+    }
+    
     
      public function delete_logo($logo_id) {
         $b = new Banners();
@@ -81,9 +92,20 @@ class Home extends My_Controller{
         $this->data['navigator'] = 'Home > quotes';
         $this->data['page_title'] = 'List All quotes';
         
+        $this->data['submit_url'] = 'admin/home/sorting_quotes';
+        $this->template->add_js('layout/js/admin/jquery-sortable.js');
+        $this->template->add_js('layout/js/admin/sorting_items.js');
+        
         $this->data['activeQuotes'] = QuotesTable::getActiveQuotes();
         $this->template->write_view('content', 'backend/quotes/list_quotes', $this->data);
         $this->template->render();
+    }
+    
+    public function sorting_quotes(){
+        $q = new Quotes();
+        $q->quotes_sorting($_POST);
+        
+        redirect('admin/home/quotes');
     }
     
     public function add_edit_quote($quote_id = '') {

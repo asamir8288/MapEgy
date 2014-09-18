@@ -16,19 +16,59 @@
 </ul>
 <?php echo form_close(); ?>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        var group = $("ol.limited_drop_targets").sortable({
+            group: 'limited_drop_targets',
+            isValidTarget: function (item, container) {
+                if (item.is(".highlight"))
+                    return true
+                else {
+                    return item.parent("ol")[0] == container.el[0]
+                }
+            },
+            onDrop: function (item, container, _super) {
+                $('#serialize_output').text(group.sortable("serialize").get().join("\n"))
+                _super(item, container)
+            },
+            serialize: function (parent, children, isContainer) {
+                return isContainer ? children.join() : parent.text()
+            },
+            tolerance: 6,
+            distance: 10
+        })
+    });
+</script>
+
 <style type="text/css">
     #clients{
         margin-top: 60px;
     }
+    .limited_drop_targets{
+        cursor: move;
+    }
 </style>
 <div id="clients">
     <?php echo form_open($submit_url); ?>
-    <ol class="simple_with_animation vertical">
-        <?php foreach ($clients as $client) { ?>
-            <li class="logos-box">
+    <ol class="limited_drop_targets vertical">
+        <?php
+        $i = 0;
+        foreach ($clients as $client) {
+            $style = '';
+            if ($i != 0 && $i % 2 == 0) {
+                $style = ' highlight';
+            }
+            ?>
+            <li class="logos-box<?php echo $style; ?>">
+                <input type="hidden" name="order_flag[]" value="<?php echo $client['id'];?>" />
                 <a href="<?php echo base_url(); ?>admin/home/delete_logo/<?php echo $client['id']; ?>" class="delete_logo">Delete</a>
                 <img src="<?php echo base_url(); ?>files/banners/<?php echo $client['file_name']; ?>" style="max-width: 210px;" />
             </li>
-        <?php } ?>
+            <?php
+            $i++;
+        }
+        ?>
     </ol>
+    <input type="submit" name="submit" value="<?php echo lang('items_order'); ?>" class="items-order-btn" />
+    <?php echo form_close(); ?>
 </div>
