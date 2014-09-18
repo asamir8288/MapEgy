@@ -41,8 +41,6 @@ class Manage_news extends My_Controller {
          * Required Javascript for TinyMCE component
          */
         $this->template->add_js('layout/js/jquery-1.9.1.min.js');
-        $this->template->add_js('layout/js/admin/tiny_mce.js');
-        $this->template->add_js('layout/js/admin/render-tiny-mce.js');
         
         $this->template->add_css('layout/css/jquery-ui.css');
         $this->template->add_js('layout/js/admin/jquery-ui.js');
