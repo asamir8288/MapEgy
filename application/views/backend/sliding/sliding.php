@@ -60,7 +60,12 @@
             }
             ?>
             <li class="logos-box<?php echo $style; ?>">
-                <input type="hidden" name="order_flag[]" value="<?php echo $client['id'];?>" />
+                <input type="hidden" name="order_flag[]" value="<?php echo $client['id']; ?>" />
+                <?php if ($client['is_active']) { ?>
+                <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/change_status/' . $client['id'] . '/' . $banner_page; ?>"><img title="Active Job" src="<?php echo static_url(); ?>layout/images/active.png" /></a>
+                <?php } else { ?>
+                    <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/change_status/' . $client['id'] . '/' . $banner_page; ?>"><img title="Inactive Job" src="<?php echo static_url(); ?>layout/images/inactive.png" /></a>
+                <?php } ?>
                 <a href="<?php echo base_url(); ?>admin/home/delete_logo/<?php echo $client['id']; ?>" class="delete_logo">Delete</a>
                 <img src="<?php echo base_url(); ?>files/banners/<?php echo $client['file_name']; ?>" style="max-width: 210px;" />
             </li>
@@ -70,5 +75,5 @@
         ?>
     </ol>
     <input type="submit" name="submit" value="<?php echo lang('items_order'); ?>" class="items-order-btn" />
-    <?php echo form_close(); ?>
+<?php echo form_close(); ?>
 </div>

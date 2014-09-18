@@ -103,4 +103,27 @@ class Quotes extends BaseQuotes
                     ->execute();
         }
     }
+    
+    public function activateDeactivateQuote($quote_id) {
+        $currentQuotetatus = $this->getCurrentQuoteStatus($quote_id);
+        $new_status = TRUE;
+        if ($currentQuotetatus)
+            $new_status = FALSE;
+
+        Doctrine_Query::create()
+                ->update('Quotes q')
+                ->set('q.is_active', '?', $new_status)
+                ->where('q.id =?', $quote_id)
+                ->execute();
+    }
+
+    private function getCurrentQuoteStatus($quote_id) {
+        return Doctrine_Query::create()
+                        ->select('q.is_active')
+                        ->from('Quotes q')
+                        ->where('q.id =?', $quote_id)
+                        ->setHydrationMode(Doctrine::HYDRATE_SINGLE_SCALAR)
+                        ->fetchOne();
+    }
+    
 }

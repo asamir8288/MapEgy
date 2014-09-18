@@ -7,6 +7,7 @@
         <th style="width: 200px;"><?php echo lang('quote_author'); ?></th> 
         <th></th>
         <th></th>
+        <th></th>
     </tr>
 </table>
 <?php echo form_open($submit_url); ?>
@@ -16,7 +17,7 @@
             <table cellpadding="0" cellspacing="0">
                 <tr>
                     <td>
-                        <input type="hidden" name="order_flag[]" value="<?php echo $quote['id'];?>" />
+                        <input type="hidden" name="order_flag[]" value="<?php echo $quote['id']; ?>" />
                         <img style="width: 100px;" src="<?php echo static_url() . 'files/quotes/' . $quote['logo']; ?>" />
                     </td>                              
                     <td>
@@ -24,7 +25,14 @@
                     </td>  
                     <td>
                         <?php echo $quote['author']; ?>
-                    </td>  
+                    </td> 
+                    <td>
+                        <?php if ($quote['is_active']) { ?>
+                            <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/change_quote_status/' . $quote['id'];?>"><img title="Active Job" src="<?php echo static_url(); ?>layout/images/active.png" /></a>
+                        <?php } else { ?>
+                            <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/change_quote_status/' . $quote['id'];?>"><img title="Inactive Job" src="<?php echo static_url(); ?>layout/images/inactive.png" /></a>
+                        <?php } ?>
+                    </td>
                     <td>
                         <a href="<?php echo site_url('admin/home/add_edit_quote/' . $quote['id']); ?>"><?php echo lang('_edit'); ?></a>
                     </td>
