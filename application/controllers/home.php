@@ -22,7 +22,7 @@ class Home extends CI_Controller {
         
         $this->data['activeNews'] = NewsTable::getActiveNews(5);
         $this->data['active_events'] = EventsTable::getActiveEvents(3);
-        $this->data['activeBanners'] = BannersTable::getActiveBanners(1, TRUE);
+        $this->data['activeBanners'] = BannersTable::getActiveBanners(1, TRUE, 'ASC');
         $this->data['activeClients'] = BannersTable::getActiveBanners(3, TRUE, 'ASC');
         $this->data['activeQuotes'] = QuotesTable::getActiveQuotes(TRUE);                
         
