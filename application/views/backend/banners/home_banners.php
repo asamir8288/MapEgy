@@ -1,7 +1,7 @@
 <?php echo form_open_multipart($post_url); ?>
 <ul id="form_list">
     <li>
-        <label for="banner_file"><?php echo lang('banner_file'); ?>:</label>
+        <label for="banner_file"><?php echo lang('banner_file'); ?>:</label> Dim.: 1300px * 620px
         <input type="file" name="userfile" id="banner_file" />
         <?php echo (isset($errors['image'])) ? generate_error_message(strip_tags($errors['image'])) : ''; ?>
     </li>
