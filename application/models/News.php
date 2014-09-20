@@ -29,10 +29,21 @@ class News extends BaseNews {
             $n->set_in_homepage = $set_in_homepage;
             $n->news_date = date('ymdHis', strtotime($data['news_date']));
             $n->created_at = date('ymdHis');
+            $n->order_flag = intval($this->getMaxOrder()) + 1;
             $n->save();
 
             return $errors;
         }
+    }
+    
+    private function getMaxOrder() {
+        $q = Doctrine_Query::create()
+                ->select('MAX(n.order_flag) as max_order')
+                ->from('News n')
+                ->setHydrationMode(Doctrine::HYDRATE_SCALAR)
+                ->fetchOne();
+        
+        return $q['n_max_order'];
     }
 
     public function updateNews(array $data) {
@@ -92,16 +103,16 @@ class News extends BaseNews {
             } else {
                 $errors['news_image'] = $upload_data['upload_data']['file_name'];
             }
-        }else{
+        } else {
             $errors['news_image'] = $news_data['same_image'];
         }
         $errors['error_flag'] = $error_flag;
 
         return $errors;
     }
-    
+
     public function news_sorting(array $data) {
-        for ($i = 0; $i < count($data['order_flag']); $i++) {
+        for ($i = count($data['order_flag']); $i >=  0; $i--) {
             Doctrine_Query::create()
                     ->update('News n')
                     ->set('n.order_flag', '?', $i)

@@ -37,7 +37,7 @@ class NewsTable extends Doctrine_Table {
             $q = $q->limit($limit);
         }
         $q = $q->setHydrationMode(Doctrine::HYDRATE_ARRAY)
-                ->orderBy('n.order_flag ASC')
+                ->orderBy('n.order_flag DESC')
                 ->execute();
 
         return $q;
