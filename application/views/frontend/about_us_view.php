@@ -12,6 +12,7 @@
 <!------ START Our Experts --------------------------------->
 
 <div class="small-dashed-separator"></div>
+<a id="Our-Experts" class="anchor" id="top"></a>
 <div class="home-title small-width consulting-title-decoration">Our Experts</div>
 <div class="inside-horizontal-section">
 
@@ -44,9 +45,10 @@
 <!------ END Our Experts --------------------------------->
 
 <!------ START Clients --------------------------------->
+<a id="Clients" class="anchor" id="top"></a>
 
 <div class="small-dashed-separator"></div>
-<div class="home-title small-width">Clients</div>
+<div id="" class="home-title small-width">Clients</div>
 <div class="list_carousel">
     <ul id="foo1">
         <?php foreach ($activeClients as $client) { ?>
@@ -63,6 +65,7 @@
 <!------ START Clients --------------------------------->
 
 <div class="small-dashed-separator" style="margin-top: 30px;"></div>
+<a id="Partners" class="anchor" id="top"></a>
 <div class="home-title small-width">Partners</div>
 <div class="list_carousel">
     <ul id="foo2">

@@ -1,4 +1,5 @@
-<div id="Blog" style="text-align: left;margin-left: 10px;margin-bottom: 20px;" class="recent-blog-main-title">Recent Blog Posts</div>
+<a id="Blog" style="clear: left;" class="anchor" id="top"></a>
+<div id="" style="text-align: left;margin-left: 10px;margin-bottom: 20px;" class="recent-blog-main-title">Recent Blog Posts</div>
 
 <?php
 $i = 0;
@@ -29,8 +30,9 @@ foreach ($active_news as $news) {
 <?php } ?>
 
     <div class="small-dashed-separator" style="margin-top: 30px;"></div>
-<div id="Meet-us" class="news-meet-us">
-    <div class="meet-us-title">Meet us</div>
+    <a id="Meet-us" style="clear: left;" class="anchor" id="top"></a>
+<div id="" class="news-meet-us">
+    <a href="<?php echo base_url();?>events" class="meet-us-title" style="text-decoration: none;display: block;">Meet us</a>
     <?php
     $i = 1;
     foreach ($active_events as $event) {
@@ -40,9 +42,9 @@ foreach ($active_news as $news) {
         }
         ?>
         <div class="event_box" <?php echo $style; ?>>
-            <div class="img-box"><img src="<?php echo static_url() . 'files/events/' . $event['image']; ?>" /></div>
+            <div class="img-box"><a href="<?php echo base_url();?>events"><img src="<?php echo static_url() . 'files/events/' . $event['image']; ?>" /></a></div>
             <div class="event-content">
-                <div class="event-date"><?php echo date('d M Y', strtotime($event['date'])); ?></div>
+                <div class="event-date"><a href="<?php echo base_url();?>events" style="text-decoration: none;"><?php echo date('d M Y', strtotime($event['date'])); ?></a></div>
                 <div class="event-desc"><?php echo (strlen($event['description']) > 100) ? substr($event['description'], 0, 100) . '...' : $event['description']; ?></div>
             </div>
 
@@ -60,7 +62,8 @@ foreach ($active_news as $news) {
 
 
 
-<div id="Follow-mapegy" class="news-follow-us">
+ <a id="Follow-mapegy" class="anchor" id="top"></a>  
+<div id="" class="news-follow-us">
     <div class="follow-us-title">Follow mapegy</div>
 
     <a class="twitter-timeline" href="https://twitter.com/mapegy" data-widget-id="507883837108391936">Tweets by @mapegy</a>

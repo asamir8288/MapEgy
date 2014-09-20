@@ -94,7 +94,8 @@
             <div id="wrapper">
 
                 <!------ START About Mapegy --------------------------------->
-                <div id="Target-Group" class="who-use_mapegy">Who uses mapegy?</div>
+                <a id="Target-Group" class="anchor" id="top"></a>
+                <div class="who-use_mapegy">Who uses mapegy?</div>
                 <div class="who-uses-box">
                     <div class="technology-inovation-icon"></div>
                     <span>
@@ -138,7 +139,8 @@
 
                 <!------ START Features --------------------------------->
 
-                <div id="Features" class="small-dashed-separator"></div>
+                <a id="Features" class="anchor" id="top"></a>
+                <div class="small-dashed-separator"></div>
                 <div class="home-title small-width">Features</div>
 
                 <?php echo $content; ?>
@@ -150,13 +152,14 @@
 
 
                 <div class="small-dashed-separator"></div>
-
+                
                 <div class="product-brief">
                     With mapegy you have access to crucial facts and figures from millions of documents containing global technology information. Mapegy has therefore developed a unique procedure for data exploration that analyzes patents, scientific publications, press, social media and search engines. Deduct and substantiate your strategic decisions with this 360° digital information radar, by evaluating and visualizing the dynamics of technology push and market pull.
                 </div>
                 <div class="small-dashed-separator"></div>
 
-                <div id="Benefits" class="mapegy-offers">mapegy offers you:</div>
+                <a id="Benefits" class="anchor" id="top"></a>
+                <div class="mapegy-offers">mapegy offers you:</div>
 
                 <div class="offer-item">
                     360° data perspective: Integration of  various text data (patents, standards, science, press and social media data)

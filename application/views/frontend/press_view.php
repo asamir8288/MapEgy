@@ -3,11 +3,14 @@
         <div class="section-title"><?php echo $press['media_contact']['title']; ?></div>
         <div class="section-desc"><?php echo $press['media_contact']['description']; ?></div>
     </div>
+    
+    <a id="Company-Profile" style="clear: left;" class="anchor" id="top"></a>
     <div id="Company-Profile" class="press_top_left">
         <div class="section-title"><?php echo $press['company_profile']['title']; ?></div>
         <div class="section-desc"><?php echo $press['company_profile']['description']; ?></div>
     </div>
-    <div id="Management-Biographies" class="press_top_left">
+    <a id="Management-Biographies" style="clear: left;" class="anchor" id="top"></a>
+    <div id="" class="press_top_left">
         <div class="section-title"><?php echo $press['management_biographies']['title']; ?></div>
         <div class="section-desc"><?php echo $press['management_biographies']['description']; ?></div>
     </div>
@@ -23,7 +26,8 @@
     </div>
 </div>
 
-<div id="Press-Clipping" style="height: 10px;clear: left;"></div>
+<a id="Press-Clipping" style="clear: left;" class="anchor" id="top"></a>
+<div id="" style="height: 10px;clear: left;"></div>
 
 <?php $this->load->view('frontend/_press_clipping', $press_clippings); ?>
 
