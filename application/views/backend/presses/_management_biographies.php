@@ -7,7 +7,10 @@
     </li>
     <li>
         <label for="management_biographies_description"><?php echo lang('management_biographies_description');?>:</label>
-        <textarea id="management_biographies_description" name="description"><?php echo (isset($data['description'])) ? $data['description'] : ''; ?></textarea>        
+        <?php
+            $val = (isset($data['description'])) ? $data['description'] : '';
+            load_editor('description', htmlspecialchars_decode($val));
+        ?> 
         <?php echo (isset($errors['description'])) ? generate_error_message($errors['description']) : ''; ?>
     </li>
     <li>

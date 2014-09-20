@@ -7,7 +7,10 @@
     </li>
     <li>
         <label for="legal_policy_description"><?php echo lang('legal_policy_description');?>:</label>
-        <textarea id="legal_policy_description" name="description"><?php echo (isset($data['description'])) ? $data['description'] : ''; ?></textarea>        
+        <?php
+            $val = (isset($data['description'])) ? $data['description'] : '';
+            load_editor('description', htmlspecialchars_decode($val));
+        ?> 
         <?php echo (isset($errors['description'])) ? generate_error_message($errors['description']) : ''; ?>
     </li>
     <li>

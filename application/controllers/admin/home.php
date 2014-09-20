@@ -119,8 +119,6 @@ class Home extends My_Controller {
          * Required Javascript for TinyMCE component
          */
         $this->template->add_js('layout/js/jquery-1.9.1.min.js');
-        $this->template->add_js('layout/js/admin/tiny_mce.js');
-        $this->template->add_js('layout/js/admin/render-tiny-mce.js');
 
         /*
          * Set the Post URL in Add and Edit Modes
