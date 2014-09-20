@@ -20,7 +20,7 @@
         <div class="expert">
             <img src="<?php echo static_url() . 'files/experts/' . $expert['photo']; ?>" width="288" height="191" />
             <div class="expert-name"><?php echo $expert['name']; ?></div>
-            <?php $expert['title']; ?>
+            <?php echo $expert['title']; ?>
 
             <div class="expert-social-links">
                 <?php if ($expert['germany_social']) { ?>
