@@ -265,10 +265,10 @@
                             <div class="box">
                                 <a href="<?php echo base_url() . 'news/blog/details/' . $news['id']; ?>"><img src="<?php echo static_url(); ?>files/news/<?php echo $news['image']; ?>" width="110" /></a>
 
-                                <p class="blog-short-brief">	
+                                <d class="blog-short-brief">	
                                     <a href="<?php echo base_url() . 'news/blog/details/' . $news['id']; ?>" class="blog-article-title"><?php echo substring(nl2br($news['title']), '', '', 7); ?></a>                    
                                     <?php echo substring(nl2br($news['description']), $news['id'], 'news/blog/details', 25); ?>
-                                </p>
+                                </d>
                             </div>
 
                             <?php if (count($activeNews) != $i) { ?>
