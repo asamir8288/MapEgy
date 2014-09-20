@@ -53,7 +53,7 @@ foreach ($active_news as $news) {
     ?>
 
     <?php if ($events_count > 5) { ?>
-        <a href="<?php echo base_url(); ?>events" class="older-posts-link">Older Events</a>
+        <a href="<?php echo base_url(); ?>events" class="older-posts-link">More Events</a>
     <?php } ?>
 
 </div>
