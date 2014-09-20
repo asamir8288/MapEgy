@@ -6,7 +6,7 @@ $lang['expert_title'] = 'Title';
 $lang['expert_linkedin'] = 'Linkedin';
 $lang['expert_twitter'] = 'Twitter';
 $lang['expert_facebook'] = 'Facebook';
-$lang['expert_germany_social'] = 'Unknown';
+$lang['expert_germany_social'] = 'Xing';
 
 $lang['experts_cancel'] = 'Cancel';
 $lang['expert_add_new_expert'] = 'Add New Expert';
