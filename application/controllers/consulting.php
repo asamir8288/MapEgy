@@ -17,7 +17,7 @@ class Consulting extends CI_Controller{
     
     public function index() {
         $this->data['menu'] = array(0,1,0,0,0,0);
-        $this->data['page_title'] = 'Careers';
+        $this->data['page_title'] = 'Consulting';
         $this->data['inside_banner'] = static_url() . 'layout/images/inside-banner.png';
 
         $this->data['consulting'] = ConsultingExpertTable::getOne();
