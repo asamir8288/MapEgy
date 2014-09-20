@@ -17,7 +17,7 @@
                 <tr>
                     <td style="width: 100px;">
                         <input type="hidden" name="order_flag[]" value="<?php echo $news['id'];?>" />
-                        <img style="width: 100px;" src="<?php echo static_url() . 'files/news/' . $news['image']; ?>" />
+                        <img style="width: 100px;height: 65px;" src="<?php echo static_url() . 'files/news/' . $news['image']; ?>" />
                     </td> 
                     <td style="width: 200px;">
                         <?php echo $news['title']; ?>

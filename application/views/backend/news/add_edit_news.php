@@ -25,15 +25,15 @@
         <input type="text" value="<?php echo (isset($data['news_date'])) ? $data['news_date'] : ''; ?>" name="news_date" id="datepicker" class="txtbox" >
         <?php echo (isset($errors['news_date'])) ? generate_error_message($errors['news_date']) : ''; ?>
     </li>
-    <?php if (isset($data)) { ?>
+    <?php if (!isset($errors['image']) && isset($data)) { ?>
         <li style="margin-left: 154px;">
             <input type="hidden" name="same_image" value="<?php echo $data['image']; ?>" >
-            <img style="width: 100px;" src="<?php echo static_url() . 'files/news/' . $data['image']; ?>" />
+            <img style="width: 100px;height: 65px" src="<?php echo static_url() . 'files/news/' . $data['image']; ?>" />
         </li>
     <?php } ?>
     <li>
         <label for="news_image"><?php echo lang('news_image');?>:</label>
-        <input type="file" name="userfile" id="news_image" />
+        <input type="file" name="userfile" id="news_image" /> Dim.: 110px * 76px;
         <?php echo (isset($errors['image'])) ? generate_error_message(strip_tags($errors['image'])): ''; ?>
     </li>
     <li>

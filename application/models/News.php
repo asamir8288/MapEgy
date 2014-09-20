@@ -103,8 +103,14 @@ class News extends BaseNews {
             } else {
                 $errors['news_image'] = $upload_data['upload_data']['file_name'];
             }
-        } else {
+        } else if($news_data['same_image']) {
             $errors['news_image'] = $news_data['same_image'];
+        }else{
+            $upload_data = upload_file('news', array('jpg|png|jpeg|gif'), '2028');
+            if ($upload_data['error_flag']) {
+                $errors['image'] = $upload_data['errors'];
+                $error_flag = true;
+            }
         }
         $errors['error_flag'] = $error_flag;
 

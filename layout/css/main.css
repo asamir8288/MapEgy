@@ -356,6 +356,7 @@
     float: left;
     max-width: 110px;
     display: block;
+    height: 76px;
 }
 
 .news-section .recent-blog-posts .box .blog-short-brief {
