@@ -3,6 +3,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>mapegy :: <?php echo (isset($page_title)) ? $page_title : ''; ?></title>
+        
+        <link rel="shortcut icon" type="image/png" href="<?php echo static_url(); ?>layout/images/fav-icon.ico"/>
+        
         <link rel="stylesheet" type="text/css" href="<?php echo static_url(); ?>layout/css/main.css"/>
         <?php echo $_styles; ?>        
 
