@@ -279,6 +279,10 @@
                             $i++;
                         }
                         ?>
+                                <?php if($newsCount > 5) {?>
+                                <div style="clear: left;height: 1px;"></div>
+                                <a class="older-posts-link" href="<?php echo site_url('news/blogs'); ?>">Show More</a>
+                                <?php } ?>
                     </div>
 
                     <div class="meet-us">
