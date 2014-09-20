@@ -51,5 +51,13 @@ class NewsTable extends Doctrine_Table {
                         ->setHydrationMode(Doctrine::HYDRATE_SINGLE_SCALAR)
                         ->fetchOne();
     }
+    
+    public static function setInHomepageOrNot($news_id, $status){
+        Doctrine_Query::create()
+                ->update('News n')
+                ->set('n.set_in_homepage', '?', $status)
+                ->where('n.id =?', $news_id)
+                ->execute();
+    }
 
 }

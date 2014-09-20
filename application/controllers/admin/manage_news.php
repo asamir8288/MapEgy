@@ -35,6 +35,11 @@ class Manage_news extends My_Controller {
         
         redirect('admin/manage_news');
     }
+    
+    public function set_in_homepage($news_id, $status) {
+        NewsTable::setInHomepageOrNot($news_id, $status);
+        redirect('admin/manage_news');
+    }
 
     public function add_edit_news($news_id = '') {
         /*

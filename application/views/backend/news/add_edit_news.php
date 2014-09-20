@@ -38,7 +38,7 @@
     </li>
     <li>
         <label for="set_in_homepage"><?php echo lang('news_set_in_homepage');?>:</label>
-        <input type="checkbox" <?php echo (isset($data['set_in_homepage'])) ? 'checked="checked"' : ''; ?> name="set_in_homepage" id="set_in_homepage" class="chkbox" />
+        <input type="checkbox" <?php echo (isset($data['set_in_homepage']) && $data['set_in_homepage']) ? 'checked="checked"' : ''; ?> name="set_in_homepage" id="set_in_homepage" class="chkbox" />
     </li>
     <li>
         <input type="submit" name="submit" value="<?php echo $submit_btn;?>" class="form-submit-btn" />  
