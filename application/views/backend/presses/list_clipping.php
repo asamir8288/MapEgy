@@ -30,7 +30,7 @@
                         <?php } ?>
                     </td>
                     <td style="width: 200px;">
-                        <?php echo date('d M, Y', strtotime($clipping['date'])); ?>
+                        <?php echo $clipping['date']; ?>
                     </td>
                     <td style="width: 100px;">
                         <?php echo $clipping['title']; ?>

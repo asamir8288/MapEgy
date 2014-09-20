@@ -9,7 +9,7 @@ Doctrine_Manager::getInstance()->bindComponent('PressClipping', 'default');
  * 
  * @property integer $id
  * @property string $logo
- * @property timestamp $date
+ * @property string $date
  * @property string $title
  * @property string $description
  * @property string $link_url
@@ -46,8 +46,9 @@ abstract class BasePressClipping extends Doctrine_Record
              'notnull' => false,
              'autoincrement' => false,
              ));
-        $this->hasColumn('date', 'timestamp', null, array(
-             'type' => 'timestamp',
+        $this->hasColumn('date', 'string', 50, array(
+             'type' => 'string',
+             'length' => 50,
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,

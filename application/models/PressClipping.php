@@ -23,7 +23,7 @@ class PressClipping extends BasePressClipping {
             }
 
             $c = new PressClipping();
-            $c->date = date('ymdHis', strtotime($data['date']));
+            $c->date = $data['date'];
             $c->title = $data['title'];
             $c->description = $data['description'];
             $c->logo = $errors['clipping_logo'];
@@ -49,7 +49,7 @@ class PressClipping extends BasePressClipping {
             Doctrine_Query::create()
                     ->update('PressClipping c')
                     ->set('c.title', '?', $data['title'])
-                    ->set('c.date', '?', date('ymdHis', strtotime($data['date'])))
+                    ->set('c.date', '?', $data['date'])
                     ->set('c.description', '?', $data['description'])
                     ->set('c.link_url', '?', $data['link_url'])
                     ->set('c.logo', '?', $errors['clipping_logo'])

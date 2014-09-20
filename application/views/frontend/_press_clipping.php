@@ -15,7 +15,7 @@ foreach ($press_clippings as $clipping) {
         <a href="<?php echo $clipping['link_url'];?>" target="_blank" class="logo-bg">
             <img style="width: 280px;height: 182px;" src="<?php echo static_url() . 'files/press_clipping_logos/' . $clipping['logo'];?>" />
         </a>
-        <div class="clipping-date"><?php echo date('Y M', strtotime($clipping['date']));?></div>
+        <div class="clipping-date"><?php echo $clipping['date'];?></div>
         <a href="<?php echo $clipping['link_url'];?>" target="_blank" class="clipping-title"><?php echo (strlen($clipping['title']) > 90) ? substr($clipping['title'],0,60) . '...' : $clipping['title'];?></a>
         <div class="clipping-desc"><?php echo (strlen($clipping['description']) > 90) ? substr($clipping['description'], 0, 90) . '...' : $clipping['description'];?></div>
     </div>

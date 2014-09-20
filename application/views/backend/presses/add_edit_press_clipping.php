@@ -15,7 +15,7 @@
     </li>
     <li>
         <label for="datepicker"><?php echo lang('clipping_date'); ?>:</label>
-        <input type="text" value="<?php echo (isset($data['date'])) ? substr($data['date'],0,10) : ''; ?>" name="date" id="datepicker" class="txtbox" >
+        <input type="text" value="<?php echo (isset($data['date'])) ? substr($data['date'],0,10) : ''; ?>" name="date" id="__datepicker" class="txtbox" >
         <?php echo (isset($errors['date'])) ? generate_error_message($errors['date']) : ''; ?>
     </li>
     <li>
