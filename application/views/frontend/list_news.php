@@ -24,7 +24,7 @@ foreach ($active_news as $news) {
 ?>
 
 <?php if ($news_count > 6) { ?>
-    <a href="<?php echo site_url('news/blogs'); ?>" class="older-posts-link">Older Posts</a>
+        <a href="<?php echo site_url('news/blogs'); ?>" class="older-posts-link" style="margin-top: 55px;">Older Posts</a>
 <?php } else { ?>
     <div style="display: block; height: 40px;"></div>
 <?php } ?>
