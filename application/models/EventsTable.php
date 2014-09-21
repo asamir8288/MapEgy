@@ -49,4 +49,13 @@ class EventsTable extends Doctrine_Table
                         ->setHydrationMode(Doctrine::HYDRATE_SINGLE_SCALAR)
                         ->fetchOne();
     }
+    
+    public static function makeEventsDeleted() {
+        Doctrine_Query::create()
+                ->update('Events e')
+                ->set('e.deleted', '?', TRUE)
+                ->set('e.updated_at', '?', date('ymdHis'))
+                ->where('e.date <?', date('ymdHis'))
+                ->execute();
+    }
 }
