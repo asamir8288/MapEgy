@@ -7,7 +7,12 @@
 </script>
 
 <?php echo form_open_multipart($post_url); ?>
-<ul id="form_list">    
+<ul id="form_list"> 
+    <li>
+        <label for="title"><?php echo lang('event_title'); ?>:</label>
+        <input type="text" value="<?php echo (isset($data['title'])) ? $data['title'] : ''; ?>" name="title" id="title" class="txtbox" >
+        <?php echo (isset($errors['title'])) ? generate_error_message($errors['title']) : ''; ?>
+    </li>
     <li>
         <label for="datepicker"><?php echo lang('event_date'); ?>:</label>
         <input type="text" value="<?php echo (isset($data['date'])) ? $data['date'] : ''; ?>" name="date" id="datepicker" class="txtbox" >

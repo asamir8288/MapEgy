@@ -23,6 +23,7 @@ class Events extends BaseEvents {
             }
 
             $e = new Events();
+            $e->title = $data['title'];
             $e->date = date('ymdHis', strtotime($data['date']));
             $e->description = $data['description'];
             $e->image = $errors['event_image'];
@@ -46,6 +47,7 @@ class Events extends BaseEvents {
 
             Doctrine_Query::create()
                     ->update('Events e')
+                    ->set('e.title', '?', $data['title'])
                     ->set('e.date', '?', date('ymdHis', strtotime($data['date'])))
                     ->set('e.description', '?', $data['description'])
                     ->set('e.image', '?', $errors['event_image'])                    
@@ -70,6 +72,10 @@ class Events extends BaseEvents {
         $errors = array();
         $error_flag = false;
         
+        if (!required($event_data['title'])) {
+            $errors['title'] = 'Please write in event title';
+            $error_flag = true;
+        }
         if (!required($event_data['date'])) {
             $errors['date'] = 'Please write in event date';
             $error_flag = true;

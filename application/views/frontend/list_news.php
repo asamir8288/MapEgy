@@ -4,7 +4,7 @@
 <?php
 $i = 0;
 foreach ($active_news as $news) {
-    if ($i !=0 && $i % 3 == 0) {
+    if ($i != 0 && $i % 3 == 0) {
         ?>
         <div style="clear: left;height: 40px;"></div>
         <?php
@@ -24,15 +24,15 @@ foreach ($active_news as $news) {
 ?>
 
 <?php if ($news_count > 6) { ?>
-        <a href="<?php echo site_url('news/blogs'); ?>" class="older-posts-link" style="margin-top: 55px;">Older Posts</a>
+    <a href="<?php echo site_url('news/blogs'); ?>" class="older-posts-link" style="margin-top: 55px;">Older Posts</a>
 <?php } else { ?>
     <div style="display: block; height: 40px;"></div>
 <?php } ?>
 
-    <div class="small-dashed-separator" style="margin-top: 30px;"></div>
-    <a id="Meet-us" style="clear: left;" class="anchor" id="top"></a>
-<div id="" class="news-meet-us">
-    <a href="<?php echo base_url();?>events" class="meet-us-title" style="text-decoration: none;display: block;">Meet us</a>
+<div class="small-dashed-separator" style="margin-top: 30px;"></div>
+<a id="Meet-us" style="clear: left;" class="anchor" id="top"></a>
+<div class="news-meet-us">
+    <a href="<?php echo base_url(); ?>events" class="meet-us-title" style="text-decoration: none;display: block;">Meet us</a>
     <?php
     $i = 1;
     foreach ($active_events as $event) {
@@ -42,10 +42,11 @@ foreach ($active_news as $news) {
         }
         ?>
         <div class="event_box" <?php echo $style; ?>>
-            <div class="img-box"><a href="<?php echo base_url();?>events"><img src="<?php echo static_url() . 'files/events/' . $event['image']; ?>" /></a></div>
+            <div class="img-box"><a href="<?php echo base_url(); ?>events"><img src="<?php echo static_url() . 'files/events/' . $event['image']; ?>" /></a></div>
             <div class="event-content">
-                <div class="event-date"><a href="<?php echo base_url();?>events" style="text-decoration: none;"><?php echo date('d M Y', strtotime($event['date'])); ?></a></div>
-                <div class="event-desc"><?php echo (strlen($event['description']) > 100) ? substr($event['description'], 0, 100) . '...' : $event['description']; ?></div>
+                <div class="event-date"><a href="<?php echo base_url(); ?>events" style="text-decoration: none;"><?php echo date('d M Y', strtotime($event['date'])); ?></a></div>
+                <div class="event-date"><a href="<?php echo base_url(); ?>events" style="text-decoration: none;"><?php echo $event['title']; ?></a></div>
+                <div class="event-desc"><?php echo (strlen($event['description']) > 120) ? substr($event['description'],0,120) : $event['description']; ?></div>
             </div>
 
         </div>
@@ -62,7 +63,7 @@ foreach ($active_news as $news) {
 
 
 
- <a id="Follow-mapegy" class="anchor" id="top"></a>  
+<a id="Follow-mapegy" class="anchor" id="top"></a>  
 <div id="" class="news-follow-us">
     <div class="follow-us-title">Follow mapegy</div>
 

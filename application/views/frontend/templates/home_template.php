@@ -296,7 +296,7 @@
 
                                 <p class="meet-us-short-brief">	
                                     <a href="<?php echo base_url();?>events" class="meet-us-title"><?php echo date('d M, Y', strtotime($event['date'])); ?></a>                    
-                                    <?php echo (strlen($event['description']) > 80) ? substr($event['description'], 0, 40) . '...' : $event['description']; ?>
+                                    <span style="font-weight: bold;"><?php echo (strlen($event['title']) > 60) ? substr($event['title'], 0, 60) . '...' : $event['title']; ?></span>
                                 </p>
                             </div>
                             <?php if (count($active_events) != $i) { ?>

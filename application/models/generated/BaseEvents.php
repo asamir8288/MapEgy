@@ -9,6 +9,7 @@ Doctrine_Manager::getInstance()->bindComponent('Events', 'default');
  * 
  * @property integer $id
  * @property integer $lang_id
+ * @property string $title
  * @property string $image
  * @property timestamp $date
  * @property string $description
@@ -43,6 +44,15 @@ abstract class BaseEvents extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'default' => '1',
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('title', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
              ));
