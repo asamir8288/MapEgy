@@ -34,7 +34,7 @@ class NewsTable extends Doctrine_Table {
             $q = $q->andWhere('n.id !=?', intval($excepted_id));
         }
         if ($show_in_homepage) {
-            $q = $q->andWhere('n.set_in_homepage !=?', true);
+            $q = $q->andWhere('n.set_in_homepage =?', true);
         }
         if ($limit) {
             $q = $q->limit($limit);
