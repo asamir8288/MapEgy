@@ -8,7 +8,7 @@
     <?php } ?>
     <li>
         <label for="feature_image"><?php echo lang('feature_image'); ?>:</label>
-        <input type="file" name="userfile" id="feature_image" />
+        <input type="file" name="userfile" id="feature_image" /> Dim.: 278px * 181px
         <?php echo (isset($errors['image'])) ? generate_error_message(strip_tags($errors['image'])) : ''; ?>
     </li>
     <li>

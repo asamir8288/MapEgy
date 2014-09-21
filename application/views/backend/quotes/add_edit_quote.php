@@ -16,7 +16,7 @@
     <?php } ?>
     <li>
         <label for="quote_logo"><?php echo lang('quote_logo');?>:</label>
-        <input type="file" name="userfile" id="quote_logo" />
+        <input type="file" name="userfile" id="quote_logo" /> width: 250px
         <?php echo (isset($errors['image'])) ? generate_error_message(strip_tags($errors['image'])): ''; ?>
     </li>
     <li>

@@ -2,7 +2,7 @@
 <ul id="form_list">
     <li>
         <label for="client_logo"><?php echo lang('client_logo'); ?></label>
-        <input type="file" name="userfile" id="client_logo" />
+        <input type="file" name="userfile" id="client_logo" /> Width: 173px;
     </li>
     <li>
         <label for="logo_is_active"><?php echo lang('logo_is_active'); ?>:</label>

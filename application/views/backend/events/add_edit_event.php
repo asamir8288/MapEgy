@@ -34,7 +34,7 @@
     <?php } ?>
     <li>
         <label for="event_image"><?php echo lang('event_image'); ?>:</label>
-        <input type="file" name="userfile" id="event_image" />
+        <input type="file" name="userfile" id="event_image" /> Dim.: 270px * 176px
         <?php echo (isset($errors['image'])) ? generate_error_message(strip_tags($errors['image'])) : ''; ?>
     </li>
     <li>

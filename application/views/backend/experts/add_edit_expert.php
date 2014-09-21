@@ -18,7 +18,7 @@
     <?php } ?>
     <li>
         <label for="expert_photo"><?php echo lang('expert_photo'); ?>:</label>
-        <input type="file" name="userfile" id="expert_photo" />
+        <input type="file" name="userfile" id="expert_photo" /> Dim.: 288px * 191px
         <?php echo (isset($errors['photo'])) ? generate_error_message(strip_tags($errors['photo'])) : ''; ?>
     </li>
     <li>

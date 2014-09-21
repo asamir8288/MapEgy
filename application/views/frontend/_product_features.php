@@ -8,7 +8,7 @@ foreach ($activeFeatures as $feature) {
     ?>
 
     <div class="feature-box" <?php echo $style;?>>
-        <img src="<?php echo static_url() . 'files/products/' . $feature['image']; ?>" />
+        <img style="width: 278px;height: 181px;" src="<?php echo static_url() . 'files/products/' . $feature['image']; ?>" />
         <p>
             <?php echo $feature['description']; ?>
         </p>

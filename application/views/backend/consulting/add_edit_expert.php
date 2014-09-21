@@ -18,8 +18,8 @@
 
     <?php if (isset($data['photo'])) { ?>
         <li style="margin-left: 154px;">
-            <input type="hidden" name="same_photo" value="<?php echo $data['photo']; ?>" > Photo Dim: 217px * 145px
-            <img style="width: 100px;" src="<?php echo static_url() . 'files/consulting/' . $data['photo']; ?>" />
+            <input type="hidden" name="same_photo" value="<?php echo $data['photo']; ?>" > 
+            <img style="width: 100px;" src="<?php echo static_url() . 'files/consulting/' . $data['photo']; ?>" /> 
         </li>
         <?php
     }
@@ -27,7 +27,7 @@
 
     <li>        
         <label for="consulting_photo"><?php echo lang('consulting_photo'); ?>:</label>
-        <input type="file" name="userfile" id="consulting_photo" />
+        <input type="file" name="userfile" id="consulting_photo" /> Dim: 217px * 145px
         <?php echo (isset($errors['photo'])) ? generate_error_message(strip_tags($errors['photo'])) : ''; ?>
     </li>
     <li>
