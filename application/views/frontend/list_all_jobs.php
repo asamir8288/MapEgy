@@ -41,7 +41,8 @@
 
 <?php foreach ($jobs as $job) { ?>
     <div class="small-dashed-separator job-separator-aligment"></div>
-    <div id="<?php echo $job['id']; ?>" class="job-title"><?php echo $job['title']; ?></div>
+    <a style="top: -70px;" id="<?php echo $job['id']; ?>" class="anchor" id="top"></a>
+    <div id="" class="job-title"><?php echo $job['title']; ?></div>
     <div class="job-description"><?php echo nl2br($job['description']); ?></div>
 
     <?php if ($job['pdf']) {
