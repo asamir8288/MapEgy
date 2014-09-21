@@ -19,6 +19,8 @@ class Contact extends CI_Controller {
     public function index() {
         $this->data['page_title'] = 'Contact Us';
         $this->data['map_banner'] = TRUE;
+        
+        $this->data['options'] = ContactListTable::getAllOptions();
 
         if ($this->input->post('submit')) {
             $newsletter = 'No';

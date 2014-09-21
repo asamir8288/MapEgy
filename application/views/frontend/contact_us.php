@@ -38,7 +38,9 @@
         <li>
             <label for="iam">I'm <span class="star">*</span></label>
             <select name="iam" class="select">
-                <option value="a Customer / interested in a Project / Product">a Customer / interested in a Project / Product</option>
+                <?php foreach($options as $option) { ?>
+                <option value="<?php echo $option['contact_option'];?>"><?php echo $option['contact_option'];?></option>
+                <?php }?>
             </select>
         </li>
         <li>
