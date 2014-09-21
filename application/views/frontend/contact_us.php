@@ -42,6 +42,13 @@
             </select>
         </li>
         <li>
+            <label for="title">Title <span class="star">*</span></label>
+            <select name="title" class="select" style="width: 100px;">
+                <option value="Mr.">Mr.</option>
+                <option value="Mrs.">Mrs.</option>
+            </select>
+        </li>
+        <li>
             <label for="name">Name <span class="star">*</span></label>
             <input type="text" name="name" id="name" class="txt" >
         </li>
