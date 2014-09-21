@@ -1400,3 +1400,10 @@ Back to top button
 }
 
 a.anchor{display: block; position: relative; top: -50px; visibility: hidden;}
+
+.success{
+    background-color: #48E948;
+    padding: 10px;
+    color: #FFF;
+    margin-top: 30px;
+}

@@ -3,9 +3,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>mapegy :: <?php echo (isset($page_title)) ? $page_title : ''; ?></title>
-        
+
         <link rel="shortcut icon" type="image/png" href="<?php echo static_url(); ?>layout/images/fav-icon.ico"/>
-        
+
         <link rel="stylesheet" type="text/css" href="<?php echo static_url(); ?>layout/css/main.css"/>
         <?php echo $_styles; ?>        
 
@@ -62,17 +62,17 @@
             </div>
 
             <ul id="top-menu">
-                <li><a <?php echo (isset($menu) && $menu[0]) ? 'class="active"' : '';?> href="<?php echo base_url(); ?>product">Product</a></li>
+                <li><a <?php echo (isset($menu) && $menu[0]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>product">Product</a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[1]) ? 'class="active"' : '';?> href="<?php echo base_url(); ?>consulting">Consulting</a></li>
+                <li><a <?php echo (isset($menu) && $menu[1]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>consulting">Consulting</a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[2]) ? 'class="active"' : '';?> href="<?php echo base_url(); ?>about-us">About</a></li>
+                <li><a <?php echo (isset($menu) && $menu[2]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>about-us">About</a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[3]) ? 'class="active"' : '';?> href="<?php echo base_url(); ?>press">Press</a></li>
+                <li><a <?php echo (isset($menu) && $menu[3]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>press">Press</a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[4]) ? 'class="active"' : '';?> href="<?php echo base_url(); ?>career">Career</a></li>
+                <li><a <?php echo (isset($menu) && $menu[4]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>career">Career</a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[5]) ? 'class="active"' : '';?> href="<?php echo base_url(); ?>news">News</a></li>
+                <li><a <?php echo (isset($menu) && $menu[5]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>news">News</a></li>
             </ul>
         </div>
 
@@ -91,6 +91,16 @@
 
         <div id="container">
             <div id="wrapper">
+                <?php
+                if ($this->session->flashdata('message')) {
+                    $message = $this->session->flashdata('message');
+                    ?>
+                    <div class="<?php echo $message['type'] ?>">
+                        <?php echo $message['body']; ?>
+                    </div>
+                    <?php
+                }
+                ?>
                 <?php echo $content; ?>	
             </div>
         </div>
