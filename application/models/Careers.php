@@ -25,6 +25,7 @@ class Careers extends BaseCareers {
             $j = new Careers();
             $j->title = $data['title'];
             $j->description = $data['description'];
+            $j->pdf_title = $data['pdf_title'];
             $j->pdf = $errors['pdf'];
             $j->active_flag = $activate;
             $j->created_at = date('ymdHis');
@@ -47,6 +48,7 @@ class Careers extends BaseCareers {
             Doctrine_Query::create()
                     ->update('Careers c')
                     ->set('c.title', '?', $data['title'])
+                    ->set('c.pdf_title', '?', $data['pdf_title'])
                     ->set('c.pdf', '?', $errors['pdf'])
                     ->set('c.description', '?', $data['description'])
                     ->set('c.active_flag', '?', $activate)
@@ -85,6 +87,10 @@ class Careers extends BaseCareers {
         $error_flag = false;
         if (!required($job_data['title'])) {
             $errors['title'] = 'Please write in job title';
+            $error_flag = true;
+        }
+        if (!required($job_data['pdf_title'])) {
+            $errors['pdf_title'] = 'Please write in pdf title';
             $error_flag = true;
         }
         if (!required($job_data['description'])) {

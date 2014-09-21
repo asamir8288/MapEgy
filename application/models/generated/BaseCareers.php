@@ -11,6 +11,7 @@ Doctrine_Manager::getInstance()->bindComponent('Careers', 'default');
  * @property integer $lang_id
  * @property string $title
  * @property string $description
+ * @property string $pdf_title
  * @property string $pdf
  * @property integer $active_flag
  * @property timestamp $create_at
@@ -61,6 +62,15 @@ abstract class BaseCareers extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('pdf_title', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
         $this->hasColumn('pdf', 'string', 255, array(

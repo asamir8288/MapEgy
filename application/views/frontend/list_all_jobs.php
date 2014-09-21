@@ -46,7 +46,7 @@
 
     <?php if ($job['pdf']) {
         ?>
-        <div class="download-job-offer">Read the full offer here: <a href="<?php echo site_url('job/download_file/' . $job['id']); ?>">Download this job offer</a></div>
+    <div class="download-job-offer"><?php echo $job['pdf_title'];?>: <a href="<?php echo site_url('job/download_file/' . $job['id']); ?>"><img style="position: relative;top: 6px;" src="<?php echo base_url()?>layout/images/pdf-icon.png" /></a></div>
     <?php } ?>
 <?php } ?>
         

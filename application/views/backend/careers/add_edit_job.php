@@ -14,6 +14,11 @@
         <?php echo (isset($errors['description'])) ? generate_error_message($errors['description']) : ''; ?>
     </li>
     <li>
+        <label for="job_pdf_title"><?php echo lang('job_pdf_title'); ?>:</label>
+        <input type="text" value="<?php echo (isset($data['pdf_title'])) ? $data['pdf_title'] : ''; ?>" name="pdf_title" id="job_pdf_title" class="txtbox" >
+        <?php echo (isset($errors['pdf_title'])) ? generate_error_message($errors['pdf_title']) : ''; ?>
+    </li>
+    <li>
         <label for="job_pdf"><?php echo lang('job_pdf'); ?>:</label>
         <input type="file" name="userfile" id="job_pdf" />
         <?php echo (isset($errors['pdf'])) ? generate_error_message(strip_tags($errors['pdf'])) : ''; ?>

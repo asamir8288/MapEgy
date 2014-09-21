@@ -6,6 +6,7 @@ $lang['job_manager_page_title'] = 'List All Jobs';
 $lang['job_title'] = 'Job Title';
 $lang['job_brief'] = 'Job Description';
 $lang['job_pdf'] = 'Job PDF';
+$lang['job_pdf_title'] = 'PDF title';
 
 $lang['job_add'] = 'Add Job';
 $lang['job_update'] = 'Update Job';
