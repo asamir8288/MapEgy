@@ -12,7 +12,7 @@ foreach ($active_events as $event) {
         <img style="width: 270px;max-height: 176px;" src="<?php echo static_url() . 'files/events/' . $event['image']; ?>" />        
         <div>
             <div style="color: #000;margin-top: 20px;font-size: 15px;font-weight: bold;"><?php echo date('d M Y', strtotime($event['date'])); ?></div>
-            <?php echo $event['description']; ?></div>
+            <span style="text-align: justify;"><?php echo $event['description']; ?></span></div>
     </div>
 
 
