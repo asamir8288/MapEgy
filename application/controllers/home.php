@@ -20,7 +20,7 @@ class Home extends CI_Controller {
     public function index() {
         $this->template->set_template('home_template');
         
-        $this->data['activeNews'] = NewsTable::getActiveNews(5);
+        $this->data['activeNews'] = NewsTable::getActiveNews(5, '', TRUE);
         $this->data['newsCount'] = NewsTable::getNewsCount();
         $this->data['active_events'] = EventsTable::getActiveEvents(3);
         $this->data['activeBanners'] = BannersTable::getActiveBanners(1, TRUE, 'ASC');
