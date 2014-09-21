@@ -47,10 +47,14 @@
                 <option value="Mr.">Mr.</option>
                 <option value="Mrs.">Mrs.</option>
             </select>
+        </li>        
+        <li>
+            <label for="surname">Surname <span class="star">*</span></label>
+            <input type="text" name="surname" id="surname" class="txt" >
         </li>
         <li>
-            <label for="name">Name <span class="star">*</span></label>
-            <input type="text" name="name" id="name" class="txt" >
+            <label for="given_name">Given Name <span class="star">*</span></label>
+            <input type="text" name="given_name" id="given_name" class="txt" >
         </li>
         <li>
             <label for="email">Email <span class="star">*</span></label>
