@@ -19,6 +19,7 @@
         <?php echo (isset($errors['pdf_title'])) ? generate_error_message($errors['pdf_title']) : ''; ?>
     </li>
     <li>
+        <input type="hidden" name="same_file" value="<?php echo isset($data) ? $data['pdf'] : ''; ?>" >
         <label for="job_pdf"><?php echo lang('job_pdf'); ?>:</label>
         <input type="file" name="userfile" id="job_pdf" />
         <?php echo (isset($errors['pdf'])) ? generate_error_message(strip_tags($errors['pdf'])) : ''; ?>

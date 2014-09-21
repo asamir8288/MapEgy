@@ -107,7 +107,7 @@ class Careers extends BaseCareers {
                 $errors['pdf'] = $upload_data['upload_data']['file_name'];
             }
         } else {
-            $errors['pdf'] = '';
+            $errors['pdf'] = $job_data['same_file'];
         }
         $errors['error_flag'] = $error_flag;
 
