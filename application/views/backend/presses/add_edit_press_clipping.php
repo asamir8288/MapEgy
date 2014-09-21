@@ -26,7 +26,7 @@
         ?> 
         <?php echo (isset($errors['description'])) ? generate_error_message($errors['description']) : ''; ?>
     </li>
-    <?php if (isset($data)) { ?>
+    <?php if (!isset($errors['image']) && isset($data)) { ?>
         <li style="margin-left: 154px;">
             <input type="hidden" name="same_image" value="<?php echo $data['logo']; ?>" >
             <img style="width: 100px;" src="<?php echo static_url() . 'files/press_clipping_logos/' . $data['logo']; ?>" />
@@ -35,7 +35,7 @@
     <li>
         <label for="clipping_logo"><?php echo lang('clipping_logo'); ?>:</label>
         <input type="file" name="userfile" id="clipping_logo" /> Image Dim: 280px * 182px
-        <?php echo (isset($errors['logo'])) ? generate_error_message(strip_tags($errors['logo'])) : ''; ?>
+        <?php echo (isset($errors['image'])) ? generate_error_message(strip_tags($errors['image'])) : ''; ?>
     </li>
     <li>
         <label for="clipping_article_url"><?php echo lang('clipping_article_url'); ?>:</label>

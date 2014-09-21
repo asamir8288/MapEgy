@@ -10,40 +10,40 @@
  * @author     ##NAME## <##EMAIL##>
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
-class Experts extends BaseExperts
-{
+class Experts extends BaseExperts {
+
     public function addExpert(array $data) {
         $errors = $this->__validateExpert($data);
         if ($errors['error_flag']) {
             return $errors;
         } else {
-            $hide= false;
+            $hide = false;
             if (isset($data['hide'])) {
                 $hide = true;
             }
-            
+
             $e = new Experts();
-            $e->name = $data['name'];            
-            $e->title = $data['title'];            
-            $e->photo = $errors['photo'];            
-            $e->germany_social = $data['germany_social'];            
-            $e->linkedin = $data['linkedin'];            
-            $e->facebook = $data['facebook'];            
-            $e->twitter = $data['twitter'];            
-            $e->hide = $hide;            
-            $e->created_at = date('ymdHis');            
+            $e->name = $data['name'];
+            $e->title = $data['title'];
+            $e->photo = $errors['photo'];
+            $e->germany_social = $data['germany_social'];
+            $e->linkedin = $data['linkedin'];
+            $e->facebook = $data['facebook'];
+            $e->twitter = $data['twitter'];
+            $e->hide = $hide;
+            $e->created_at = date('ymdHis');
             $e->save();
 
             return $errors;
         }
     }
-    
+
     public function updateExpert(array $data) {
         $errors = $this->__validateExpert($data);
         if ($errors['error_flag']) {
             return $errors;
         } else {
-            $hide= false;
+            $hide = false;
             if (isset($data['hide'])) {
                 $hide = true;
             }
@@ -65,7 +65,7 @@ class Experts extends BaseExperts
             return $errors;
         }
     }
-    
+
     public function deleteExpert($expert_id) {
         Doctrine_Query::create()
                 ->update('Experts e')
@@ -73,7 +73,7 @@ class Experts extends BaseExperts
                 ->where('e.id =?', $expert_id)
                 ->execute();
     }
-    
+
     private function __validateExpert(array $expert_data) {
         $errors = array();
         $error_flag = false;
@@ -102,7 +102,19 @@ class Experts extends BaseExperts
 //            $error_flag = true;
 //        }
 
-        if (!$error_flag && (isset($_FILES['userfile']) && !empty($_FILES['userfile']['name']))) {
+        if (isset($expert_data['id'])) {
+            if (isset($_FILES['userfile']) && !empty($_FILES['userfile']['name'])) {
+                $upload_data = upload_file('experts', array('jpg|png|jpeg|gif'), '2028');
+                if ($upload_data['error_flag']) {
+                    $errors['photo'] = $upload_data['errors'];
+                    $error_flag = true;
+                } else {
+                    $errors['photo'] = $upload_data['upload_data']['file_name'];
+                }
+            } else if ($expert_data['same_image']) {
+                $errors['photo'] = $expert_data['same_image'];
+            }
+        } else {
             $upload_data = upload_file('experts', array('jpg|png|jpeg|gif'), '2028');
             if ($upload_data['error_flag']) {
                 $errors['photo'] = $upload_data['errors'];
@@ -110,14 +122,13 @@ class Experts extends BaseExperts
             } else {
                 $errors['photo'] = $upload_data['upload_data']['file_name'];
             }
-        }else{
-            $errors['photo'] = $expert_data['same_image'];
         }
+        
         $errors['error_flag'] = $error_flag;
 
         return $errors;
     }
-    
+
     public function experts_sorting(array $data) {
         for ($i = 0; $i < count($data['order_flag']); $i++) {
             Doctrine_Query::create()
@@ -127,4 +138,5 @@ class Experts extends BaseExperts
                     ->execute();
         }
     }
+
 }

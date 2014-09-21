@@ -27,7 +27,7 @@ class Events extends BaseEvents {
             $e->date = date('ymdHis', strtotime($data['date']));
             $e->description = $data['description'];
             $e->image = $errors['event_image'];
-            $e->set_in_homepage = $set_in_homepage;            
+            $e->set_in_homepage = $set_in_homepage;
             $e->created_at = date('ymdHis');
             $e->save();
 
@@ -50,7 +50,7 @@ class Events extends BaseEvents {
                     ->set('e.title', '?', $data['title'])
                     ->set('e.date', '?', date('ymdHis', strtotime($data['date'])))
                     ->set('e.description', '?', $data['description'])
-                    ->set('e.image', '?', $errors['event_image'])                    
+                    ->set('e.image', '?', $errors['event_image'])
                     ->set('e.set_in_homepage', '?', $set_in_homepage)
                     ->set('e.updated_at', '?', date('ymdHis'))
                     ->where('e.id =?', $data['id'])
@@ -71,7 +71,7 @@ class Events extends BaseEvents {
     private function __validateEvent($event_data) {
         $errors = array();
         $error_flag = false;
-        
+
         if (!required($event_data['title'])) {
             $errors['title'] = 'Please write in event title';
             $error_flag = true;
@@ -89,7 +89,19 @@ class Events extends BaseEvents {
             $error_flag = true;
         }
 
-        if (!$error_flag && (isset($_FILES['userfile']) && !empty($_FILES['userfile']['name']))) {
+        if (isset($event_data['id'])) {
+            if (isset($_FILES['userfile']) && !empty($_FILES['userfile']['name'])) {
+                $upload_data = upload_file('events', array('jpg|png|jpeg|gif'), '2028');
+                if ($upload_data['error_flag']) {
+                    $errors['image'] = $upload_data['errors'];
+                    $error_flag = true;
+                } else {
+                    $errors['event_image'] = $upload_data['upload_data']['file_name'];
+                }
+            } else if ($event_data['same_image']) {
+                $errors['event_image'] = $event_data['same_image'];
+            }
+        } else {
             $upload_data = upload_file('events', array('jpg|png|jpeg|gif'), '2028');
             if ($upload_data['error_flag']) {
                 $errors['image'] = $upload_data['errors'];
@@ -97,14 +109,14 @@ class Events extends BaseEvents {
             } else {
                 $errors['event_image'] = $upload_data['upload_data']['file_name'];
             }
-        }else{
-            $errors['event_image'] = $event_data['same_image'];
         }
+
+        
         $errors['error_flag'] = $error_flag;
 
         return $errors;
     }
-    
+
     public function events_sorting(array $data) {
         for ($i = 0; $i < count($data['order_flag']); $i++) {
             Doctrine_Query::create()

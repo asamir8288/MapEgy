@@ -91,7 +91,19 @@ class PressClipping extends BasePressClipping {
             $error_flag = true;
         }
 
-        if (!$error_flag && (isset($_FILES['userfile']) && !empty($_FILES['userfile']['name']))) {
+        if (isset($clipping_data['id'])) {
+            if (isset($_FILES['userfile']) && !empty($_FILES['userfile']['name'])) {
+                $upload_data = upload_file('press_clipping_logos', array('jpg|png|jpeg|gif'), '2028');
+                if ($upload_data['error_flag']) {
+                    $errors['image'] = $upload_data['errors'];
+                    $error_flag = true;
+                } else {
+                    $errors['clipping_logo'] = $upload_data['upload_data']['file_name'];
+                }
+            } else if ($clipping_data['same_image']) {
+                $errors['clipping_logo'] = $clipping_data['same_image'];
+            }
+        } else {
             $upload_data = upload_file('press_clipping_logos', array('jpg|png|jpeg|gif'), '2028');
             if ($upload_data['error_flag']) {
                 $errors['image'] = $upload_data['errors'];
@@ -99,14 +111,14 @@ class PressClipping extends BasePressClipping {
             } else {
                 $errors['clipping_logo'] = $upload_data['upload_data']['file_name'];
             }
-        } else {
-            $errors['clipping_logo'] = $clipping_data['same_image'];
         }
+
+
         $errors['error_flag'] = $error_flag;
 
         return $errors;
     }
-    
+
     public function clipping_sorting(array $data) {
         for ($i = 0; $i < count($data['order_flag']); $i++) {
             Doctrine_Query::create()

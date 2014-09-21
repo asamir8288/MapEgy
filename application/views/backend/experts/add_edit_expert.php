@@ -10,7 +10,7 @@
         <input type="text" value="<?php echo (isset($data['title'])) ? $data['title'] : ''; ?>" name="title" id="expert_title" class="txtbox" >
         <?php echo (isset($errors['title'])) ? generate_error_message($errors['title']) : ''; ?>
     </li>
-    <?php if (isset($data)) { ?>
+    <?php if (!isset($errors['photo']) && isset($data)) { ?>
         <li style="margin-left: 154px;">
             <input type="hidden" name="same_image" value="<?php echo $data['photo']; ?>" >
             <img style="width: 100px;" src="<?php echo static_url() . 'files/experts/' . $data['photo']; ?>" />

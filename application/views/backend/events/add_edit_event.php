@@ -26,7 +26,7 @@
         ?> 
         <?php echo (isset($errors['description'])) ? generate_error_message($errors['description']) : ''; ?>
     </li>
-    <?php if (isset($data)) { ?>
+    <?php if (!isset($errors['image']) && isset($data)) { ?>
         <li style="margin-left: 154px;">
             <input type="hidden" name="same_image" value="<?php echo $data['image']; ?>" >
             <img style="width: 100px;" src="<?php echo static_url() . 'files/events/' . $data['image']; ?>" />
