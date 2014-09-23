@@ -6,6 +6,11 @@
         <?php echo (isset($errors['title'])) ? generate_error_message($errors['title']) : ''; ?>
     </li>
     <li>
+        <label for="job_anchor_url"><?php echo lang('job_anchor_url'); ?>:</label>
+        <input type="text" value="<?php echo (isset($data['anchor_url'])) ? $data['anchor_url'] : ''; ?>" name="anchor_url" id="job_anchor_url" class="txtbox" >
+        <?php echo (isset($errors['anchor_url'])) ? generate_error_message($errors['anchor_url']) : ''; ?>
+    </li>
+    <li>
         <label for="job_description"><?php echo lang('job_brief'); ?>:</label>
         <?php
             $val = (isset($data['description'])) ? $data['description'] : '';

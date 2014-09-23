@@ -14,6 +14,7 @@ Doctrine_Manager::getInstance()->bindComponent('Careers', 'default');
  * @property string $pdf_title
  * @property string $pdf
  * @property integer $active_flag
+ * @property string $anchor_url
  * @property timestamp $create_at
  * @property timestamp $updated_at
  * @property integer $deleted
@@ -89,6 +90,15 @@ abstract class BaseCareers extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('anchor_url', 'string', 80, array(
+             'type' => 'string',
+             'length' => 80,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
         $this->hasColumn('create_at', 'timestamp', null, array(

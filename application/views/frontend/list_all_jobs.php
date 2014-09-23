@@ -35,14 +35,14 @@
     <div id="" class="our-open-vacancies">Our open vacancies:</div>
     <ul class="job-list">
         <?php foreach ($jobs as $job) { ?>
-            <li><a href="#<?php echo $job['id']; ?>">- <?php echo $job['title']; ?></a></li>
+            <li><a href="#<?php echo $job['anchor_url']; ?>">- <?php echo $job['title']; ?></a></li>
         <?php } ?>
     </ul>
 </div>
 
 <?php foreach ($jobs as $job) { ?>
     <div class="small-dashed-separator job-separator-aligment"></div>
-    <a style="top: -70px;" id="<?php echo $job['id']; ?>" class="anchor" id="top"></a>
+    <a style="top: -70px;" id="<?php echo $job['anchor_url']; ?>" class="anchor" id="top"></a>
     <div id="" class="job-title"><?php echo $job['title']; ?></div>
     <div class="job-description"><?php echo nl2br($job['description']); ?></div>
 

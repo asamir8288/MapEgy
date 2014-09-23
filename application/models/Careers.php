@@ -24,6 +24,7 @@ class Careers extends BaseCareers {
 
             $j = new Careers();
             $j->title = $data['title'];
+            $j->anchor_url = $data['anchor_url'];
             $j->description = $data['description'];
             $j->pdf_title = $data['pdf_title'];
             $j->pdf = $errors['pdf'];
@@ -48,6 +49,7 @@ class Careers extends BaseCareers {
             Doctrine_Query::create()
                     ->update('Careers c')
                     ->set('c.title', '?', $data['title'])
+                    ->set('c.anchor_url', '?', $data['anchor_url'])
                     ->set('c.pdf_title', '?', $data['pdf_title'])
                     ->set('c.pdf', '?', $errors['pdf'])
                     ->set('c.description', '?', $data['description'])
@@ -87,6 +89,10 @@ class Careers extends BaseCareers {
         $error_flag = false;
         if (!required($job_data['title'])) {
             $errors['title'] = 'Please write in job title';
+            $error_flag = true;
+        }
+        if (!required($job_data['anchor_url'])) {
+            $errors['anchor_url'] = 'Please write in anchor URL';
             $error_flag = true;
         }
         if (!required($job_data['pdf_title'])) {

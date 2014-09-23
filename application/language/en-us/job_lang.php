@@ -13,6 +13,7 @@ $lang['job_update'] = 'Update Job';
 $lang['job_edit'] = 'Edit';
 $lang['job_delete'] = 'Delete';
 $lang['job_activate'] = 'Activate';
+$lang['job_anchor_url'] = 'Anchor URL';
 
 $lang['job_add_new_job'] = 'Add New Job';
 $lang['job_cancel'] = 'Cancel';
