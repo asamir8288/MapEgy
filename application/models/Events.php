@@ -26,7 +26,7 @@ class Events extends BaseEvents {
             $e->title = $data['title'];
             $e->date = date('ymdHis', strtotime($data['date']));
             $e->description = $data['description'];
-            $e->image = $errors['event_image'];
+            $e->image = $errors['image'];
             $e->set_in_homepage = $set_in_homepage;
             $e->created_at = date('ymdHis');
             $e->save();
@@ -50,7 +50,7 @@ class Events extends BaseEvents {
                     ->set('e.title', '?', $data['title'])
                     ->set('e.date', '?', date('ymdHis', strtotime($data['date'])))
                     ->set('e.description', '?', $data['description'])
-                    ->set('e.image', '?', $errors['event_image'])
+                    ->set('e.image', '?', $errors['image'])
                     ->set('e.set_in_homepage', '?', $set_in_homepage)
                     ->set('e.updated_at', '?', date('ymdHis'))
                     ->where('e.id =?', $data['id'])
@@ -80,10 +80,10 @@ class Events extends BaseEvents {
             $errors['date'] = 'Please write in event date';
             $error_flag = true;
         }
-        if (!required($event_data['description'])) {
-            $errors['description'] = 'Please write in event brief';
-            $error_flag = true;
-        }
+//        if (!required($event_data['description'])) {
+//            $errors['description'] = 'Please write in event brief';
+//            $error_flag = true;
+//        }
         if (isset($event_data['set_in_homepage']) && !required($event_data['set_in_homepage'])) {
             $errors['set_in_homepage'] = 'Please write in caption header';
             $error_flag = true;
@@ -96,10 +96,10 @@ class Events extends BaseEvents {
                     $errors['image'] = $upload_data['errors'];
                     $error_flag = true;
                 } else {
-                    $errors['event_image'] = $upload_data['upload_data']['file_name'];
+                    $errors['image'] = $upload_data['upload_data']['file_name'];
                 }
-            } else if ($event_data['same_image']) {
-                $errors['event_image'] = $event_data['same_image'];
+            } else if ($event_data['image']) {
+                $errors['image'] = $event_data['image'];
             }
         } else {
             $upload_data = upload_file('events', array('jpg|png|jpeg|gif'), '2028');
@@ -107,7 +107,7 @@ class Events extends BaseEvents {
                 $errors['image'] = $upload_data['errors'];
                 $error_flag = true;
             } else {
-                $errors['event_image'] = $upload_data['upload_data']['file_name'];
+                $errors['image'] = $upload_data['upload_data']['file_name'];
             }
         }
 
