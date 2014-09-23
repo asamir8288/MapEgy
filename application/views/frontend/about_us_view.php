@@ -4,8 +4,7 @@
     As a Big Data and Visual Analytics company, we provide software and consulting to support strategic decisions of high-tech companies.
     <br /><br />
     Our customers need facts on technology push and technology acceptance fast and efficiently. These facts are contained in millions upon millions of globally available documents generated during the technology life-cycle, such as patents, technology news or posts in social networks.
-    <br /><br />
-    Our customers need facts on technology push and technology acceptance fast and efficiently. These facts are contained in millions upon millions of globally available documents generated during the technology life-cycle, such as patents, technology news or posts in social networks.
+    
 </p>                
 <!------ END About Mapegy --------------------------------->
 
