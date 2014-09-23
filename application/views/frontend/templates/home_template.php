@@ -72,13 +72,13 @@
 //                    auto: true,
                     prev: '#prev2',
                     next: '#next2',
-                    scroll: 4,
+                    scroll: {duration : 500},
                 });
                 $('#foo3').carouFredSel({
 //                    auto: true,
                     prev: '#prev3',
                     next: '#next3',
-                    scroll: 1,
+                    scroll: {duration : 800},
                 });
             });
         </script>

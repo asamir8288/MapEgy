@@ -56,7 +56,7 @@
 		FN._init = function(o, setOrig, start)
 		{
 			o = go_getObject($tt0, o);
-
+                        
 			o.items = go_getItemsObject($tt0, o.items);
 			o.scroll = go_getScrollObject($tt0, o.scroll);
 			o.auto = go_getAutoObject($tt0, o.auto);

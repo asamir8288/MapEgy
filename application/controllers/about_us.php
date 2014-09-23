@@ -36,19 +36,19 @@ class About_us extends CI_Controller {
                     auto: true,
                     prev: '#prev1',
                     next: '#next1',
-                    scroll: 4,
+                    scroll: {duration : 500},
                 });
                 $('#foo2').carouFredSel({
                     auto: true,
                     prev: '#prev2',
                     next: '#next2',
-                    scroll: 4,
+                    scroll: {duration : 600},
                 });
                 $('#foo3').carouFredSel({
                     auto: true,
                     prev: '#prev3',
                     next: '#next3',
-                    scroll: 1,
+                    scroll: {duration : 800},
                 });
             });
         </script>");
