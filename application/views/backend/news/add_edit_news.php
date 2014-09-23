@@ -33,7 +33,7 @@
     <?php } ?>
     <li>
         <label for="news_image"><?php echo lang('news_image');?>:</label>
-        <input type="file" name="userfile" id="news_image" /> Dim.: 110px * 76px;
+        <input type="file" name="userfile" id="news_image" /> Dim.: 271px * 176px;
         <?php echo (isset($errors['image'])) ? generate_error_message(strip_tags($errors['image'])): ''; ?>
     </li>
     <li>
