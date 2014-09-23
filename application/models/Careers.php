@@ -95,10 +95,10 @@ class Careers extends BaseCareers {
             $errors['anchor_url'] = 'Please write in anchor URL';
             $error_flag = true;
         }
-        if (!required($job_data['pdf_title'])) {
-            $errors['pdf_title'] = 'Please write in pdf title';
-            $error_flag = true;
-        }
+//        if (!required($job_data['pdf_title'])) {
+//            $errors['pdf_title'] = 'Please write in pdf title';
+//            $error_flag = true;
+//        }
         if (!required($job_data['description'])) {
             $errors['description'] = 'Please write in description';
             $error_flag = true;

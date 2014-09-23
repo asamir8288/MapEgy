@@ -72,6 +72,7 @@ class job extends My_Controller {
             if ($errors['error_flag']) {
                 $this->data['errors'] = $errors;
                 $this->data['data'] = $_POST;
+//                var_dump($this->data['data']);exit;
                 $this->template->write_view('content', 'backend/careers/add_edit_job', $this->data);
                 $this->template->render();
             } else {
