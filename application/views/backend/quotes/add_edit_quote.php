@@ -34,6 +34,10 @@
         <input type="checkbox" <?php echo (isset($data['is_active'])) ? 'checked="checked"' : ''; ?> name="is_active" id="is_active" class="chkbox" />
     </li>
     <li>
+        <label for="set_at_homepage"><?php echo lang('set_at_homepage');?>:</label>
+        <input type="checkbox" <?php echo (isset($data['set_at_homepage']) && $data['set_at_homepage']) ? 'checked="checked"' : ''; ?> name="set_at_homepage" id="set_at_homepage" class="chkbox" />
+    </li>
+    <li>
         <input type="submit" name="submit" value="<?php echo $submit_btn;?>" class="form-submit-btn" />  
         <a href="<?php echo base_url();?>admin/home/quotes"><?php echo lang('news_cancel');?></a>
     </li>

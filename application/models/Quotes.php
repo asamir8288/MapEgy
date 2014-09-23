@@ -21,12 +21,17 @@ class Quotes extends BaseQuotes
             if (isset($data['is_active'])) {
                 $is_active = true;
             }
+            $set_at_homepage = false;
+            if (isset($data['set_at_homepage'])) {
+                $set_at_homepage = true;
+            }
             $b = new Quotes();
             $b->description = $data['description'];
             $b->author = $data['author'];
             $b->logo = $errors['news_image'];
             $b->title = $data['title'];
             $b->is_active = $is_active;
+            $b->set_at_homepage = $set_at_homepage;
             $b->created_at = date('ymdHis');
             $b->save();
 
@@ -43,6 +48,10 @@ class Quotes extends BaseQuotes
             if (isset($data['is_active'])) {
                 $is_active = true;
             }
+            $set_at_homepage = false;
+            if (isset($data['set_at_homepage'])) {
+                $set_at_homepage = true;
+            }
 
             Doctrine_Query::create()
                     ->update('Quotes b')
@@ -50,6 +59,7 @@ class Quotes extends BaseQuotes
                     ->set('b.author', '?', $data['author'])
                     ->set('b.logo', '?', $errors['news_image'])
                     ->set('b.is_active', '?', $is_active)
+                    ->set('b.set_at_homepage', '?', $set_at_homepage)
                     ->set('b.updated_at', '?', date('ymdHis'))
                     ->where('b.id =?', $data['id'])
                     ->execute();
@@ -116,10 +126,32 @@ class Quotes extends BaseQuotes
                 ->where('q.id =?', $quote_id)
                 ->execute();
     }
+    
+    public function SetUnsetQuoteAtHomepage($quote_id) {
+        $currentQuotetatus = $this->getCurrentQuoteHomepageStatus($quote_id);
+        $new_status = TRUE;
+        if ($currentQuotetatus)
+            $new_status = FALSE;
+
+        Doctrine_Query::create()
+                ->update('Quotes q')
+                ->set('q.set_at_homepage', '?', $new_status)
+                ->where('q.id =?', $quote_id)
+                ->execute();
+    }
 
     private function getCurrentQuoteStatus($quote_id) {
         return Doctrine_Query::create()
                         ->select('q.is_active')
+                        ->from('Quotes q')
+                        ->where('q.id =?', $quote_id)
+                        ->setHydrationMode(Doctrine::HYDRATE_SINGLE_SCALAR)
+                        ->fetchOne();
+    }
+
+    private function getCurrentQuoteHomepageStatus($quote_id) {
+        return Doctrine_Query::create()
+                        ->select('q.set_at_homepage')
                         ->from('Quotes q')
                         ->where('q.id =?', $quote_id)
                         ->setHydrationMode(Doctrine::HYDRATE_SINGLE_SCALAR)

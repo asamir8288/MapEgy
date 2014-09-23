@@ -25,13 +25,16 @@ class QuotesTable extends Doctrine_Table {
                         ->fetchOne();
     }
 
-    public static function getActiveQuotes($is_active = false, $limit = FALSE) {
+    public static function getActiveQuotes($is_active = false, $limit = FALSE, $set_at_homepage = false) {
         $q = Doctrine_Query::create()
                 ->select('q.*')
                 ->from('Quotes q')
                 ->where('q.deleted =?', FALSE);
         if ($is_active) {
             $q = $q->andWhere('q.is_active=?', TRUE);
+        }
+        if ($set_at_homepage) {
+            $q = $q->andWhere('q.set_at_homepage=?', TRUE);
         }
         if ($limit) {
             $q = $q->limit($limit);

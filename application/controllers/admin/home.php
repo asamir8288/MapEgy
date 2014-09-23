@@ -207,4 +207,15 @@ class Home extends My_Controller {
         redirect('admin/home/quotes');
     }
 
+    public function convert_quote_status($quote_id) {
+        $q = new Quotes();
+        $q->SetUnsetQuoteAtHomepage($quote_id);
+
+        $this->session->set_flashdata('message', array('type' => 'success',
+            'body' => 'The status has been updated successfully.')
+        );
+
+        redirect('admin/home/quotes');
+    }
+
 }

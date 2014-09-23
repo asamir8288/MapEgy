@@ -8,6 +8,7 @@
         <th></th>
         <th></th>
         <th></th>
+        <th></th>
     </tr>
 </table>
 <?php echo form_open($submit_url); ?>
@@ -28,9 +29,16 @@
                     </td> 
                     <td>
                         <?php if ($quote['is_active']) { ?>
-                            <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/change_quote_status/' . $quote['id'];?>"><img title="Active Job" src="<?php echo static_url(); ?>layout/images/active.png" /></a>
+                            <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/change_quote_status/' . $quote['id'];?>"><img title="Active Quote" src="<?php echo static_url(); ?>layout/images/active.png" /></a>
                         <?php } else { ?>
-                            <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/change_quote_status/' . $quote['id'];?>"><img title="Inactive Job" src="<?php echo static_url(); ?>layout/images/inactive.png" /></a>
+                            <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/change_quote_status/' . $quote['id'];?>"><img title="Inactive Quote" src="<?php echo static_url(); ?>layout/images/inactive.png" /></a>
+                        <?php } ?>
+                    </td>
+                    <td>
+                        <?php if ($quote['set_at_homepage']) { ?>
+                            <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/convert_quote_status/' . $quote['id'];?>"><img title="Unset Quote at homepage" src="<?php echo static_url(); ?>layout/images/active.png" /></a>
+                        <?php } else { ?>
+                            <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/convert_quote_status/' . $quote['id'];?>"><img title="Set Quote at homepage" src="<?php echo static_url(); ?>layout/images/inactive.png" /></a>
                         <?php } ?>
                     </td>
                     <td>
