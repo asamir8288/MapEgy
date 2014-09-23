@@ -181,6 +181,21 @@ class Home extends My_Controller {
         }
     }
 
+    public function convert_status($banner_id, $page = 'clients') {
+        $b = new Banners();
+        $b->setUnsetAtHomepage($banner_id);
+
+        $this->session->set_flashdata('message', array('type' => 'success',
+            'body' => 'The status has been updated successfully.')
+        );
+
+        if ($page == 'clients') {
+            redirect('admin/home/clients');
+        } else {
+            redirect('admin/home/partners');
+        }
+    }
+
     public function change_quote_status($quote_id) {
         $q = new Quotes();
         $q->activateDeactivateQuote($quote_id);

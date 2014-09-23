@@ -21,11 +21,16 @@ class Banners extends BaseBanners {
             if (isset($data['is_active'])) {
                 $is_active = true;
             }
+            $set_at_homepage = false;
+            if (isset($data['set_at_homepage'])) {
+                $set_at_homepage = true;
+            }
 
             $b = new Banners();
             $b->file_name = $errors['file_name'];
             $b->displaying_place = $data['displaying_place'];
             $b->is_active = $is_active;
+            $b->set_at_homepage = $set_at_homepage;
             $b->created_at = date('ymdHis');
             $b->save();
 
@@ -69,6 +74,20 @@ class Banners extends BaseBanners {
                 ->where('b.id =?', $banner_id)
                 ->execute();
     }
+    
+    public function setUnsetAtHomepage($_id) {
+        $currentBannerStatus = $this->getCurrentItemStatus($_id);
+        
+        $new_status = TRUE;
+        if ($currentBannerStatus)
+            $new_status = FALSE;
+        
+        Doctrine_Query::create()
+                ->update('Banners b')
+                ->set('b.set_at_homepage', '?', $new_status)
+                ->where('b.id =?', $_id)
+                ->execute();
+    }
 
     public function banner_sorting(array $data) {
         for ($i = 0; $i < count($data['order_flag']); $i++) {
@@ -83,6 +102,15 @@ class Banners extends BaseBanners {
     private function getCurrentBannerStatus($banner_id) {
         return Doctrine_Query::create()
                         ->select('b.is_active')
+                        ->from('Banners b')
+                        ->where('b.id =?', $banner_id)
+                        ->setHydrationMode(Doctrine::HYDRATE_SINGLE_SCALAR)
+                        ->fetchOne();
+    }
+
+    private function getCurrentItemStatus($banner_id) {
+        return Doctrine_Query::create()
+                        ->select('b.set_at_homepage')
                         ->from('Banners b')
                         ->where('b.id =?', $banner_id)
                         ->setHydrationMode(Doctrine::HYDRATE_SINGLE_SCALAR)

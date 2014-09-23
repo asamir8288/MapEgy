@@ -6,6 +6,7 @@ $lang['client_add'] = 'Add Logo';
 $lang['client_edit'] = 'Edit';
 $lang['client_delete'] = 'Delete';
 $lang['client_cancel'] = 'Cancel';
+$lang['set_at_homepage'] = 'Set at homepage';
 
 $lang['quote_update'] = 'Update Quote';
 $lang['quote_add'] = 'Add Quote';

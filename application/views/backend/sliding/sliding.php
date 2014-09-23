@@ -8,6 +8,10 @@
         <label for="logo_is_active"><?php echo lang('logo_is_active'); ?>:</label>
         <input type="checkbox" <?php echo (isset($data['active_flag']) && $data['active_flag']) ? 'checked="checked"' : ''; ?> name="is_active" id="logo_is_active" class="chkbox" />
     </li>
+    <li>
+        <label for="set_at_homepage"><?php echo lang('set_at_homepage'); ?>:</label>
+        <input type="checkbox" <?php echo (isset($data['set_at_homepage']) && $data['set_at_homepage']) ? 'checked="checked"' : ''; ?> name="set_at_homepage" id="set_at_homepage" class="chkbox" />
+    </li>
 
     <li>
         <input type="submit" name="submit" value="<?php echo lang('client_add'); ?>" class="form-submit-btn" />  
@@ -65,6 +69,11 @@
                 <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/change_status/' . $client['id'] . '/' . $banner_page; ?>"><img title="Active Job" src="<?php echo static_url(); ?>layout/images/active.png" /></a>
                 <?php } else { ?>
                     <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/change_status/' . $client['id'] . '/' . $banner_page; ?>"><img title="Inactive Job" src="<?php echo static_url(); ?>layout/images/inactive.png" /></a>
+                <?php } ?>
+                <?php if ($client['set_at_homepage']) { ?>
+                <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/convert_status/' . $client['id'] . '/' . $banner_page; ?>"><img title="Unset at homepage" src="<?php echo static_url(); ?>layout/images/active.png" /></a>
+                <?php } else { ?>
+                    <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/convert_status/' . $client['id'] . '/' . $banner_page; ?>"><img title="Set at homepage" src="<?php echo static_url(); ?>layout/images/inactive.png" /></a>
                 <?php } ?>
                 <a href="<?php echo base_url(); ?>admin/home/delete_logo/<?php echo $client['id']; ?>" class="delete_logo">Delete</a>
                 <img src="<?php echo base_url(); ?>files/banners/<?php echo $client['file_name']; ?>" style="max-width: 210px;" />

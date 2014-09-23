@@ -14,6 +14,7 @@ Doctrine_Manager::getInstance()->bindComponent('Banners', 'default');
  * @property timestamp $created_at
  * @property timestamp $updated_at
  * @property integer $order_flag
+ * @property integer $set_at_homepage
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -83,6 +84,16 @@ abstract class BaseBanners extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('set_at_homepage', 'integer', 1, array(
+             'type' => 'integer',
+             'length' => 1,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'default' => '0',
              'notnull' => true,
              'autoincrement' => false,
              ));

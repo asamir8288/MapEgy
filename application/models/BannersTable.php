@@ -25,13 +25,16 @@ class BannersTable extends Doctrine_Table {
                         ->fetchOne();
     }
 
-    public static function getActiveBanners($banner_place = 1 , $is_active = TRUE, $order = 'DESC') {
+    public static function getActiveBanners($banner_place = 1 , $is_active = TRUE, $order = 'DESC', $set_at_homepage = false) {
         $q = Doctrine_Query::create()
                 ->select('b.*')
                 ->from('Banners b')
                 ->where('b.displaying_place=?', $banner_place);
         if ($is_active) {
             $q = $q->andWhere('b.is_active=?', $is_active);
+        }
+        if ($set_at_homepage) {
+            $q = $q->andWhere('b.set_at_homepage=?', $set_at_homepage);
         }
         $q = $q->setHydrationMode(Doctrine::HYDRATE_ARRAY)
                 ->orderBy('b.order_flag '. $order)
