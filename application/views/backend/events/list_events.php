@@ -5,7 +5,7 @@
         <th style="width: 120px;"><?php echo lang('event_image'); ?></th>
         <th style="width: 120px;"><?php echo lang('event_date'); ?></th>        
         <th style="width: 120px;"><?php echo lang('event_title'); ?></th>        
-        <th style="width: 350px;"><?php echo lang('event_description'); ?></th>
+        <th style="width: 350px;"><?php echo lang('event_summary'); ?></th>
         <th></th>
         <th></th>
     </tr>
@@ -27,7 +27,7 @@
                         <?php echo $event['title']; ?>
                     </td>                       
                     <td style="width: 350px;padding-right: 50px;">
-                        <?php echo substr($event['description'], 0, 200); ?>
+                        <?php echo substr($event['summary'], 0, 200); ?>
                     </td>        
                     <td>
                         <a href="<?php echo site_url('admin/event/add_edit_event/' . $event['id']); ?>"><?php echo lang('event_edit'); ?></a>

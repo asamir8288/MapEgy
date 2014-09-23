@@ -46,7 +46,7 @@ foreach ($active_news as $news) {
             <div class="event-content">
                 <div class="event-date"><a href="<?php echo base_url(); ?>events" style="text-decoration: none;"><?php echo date('d M Y', strtotime($event['date'])); ?></a></div>
                 <div class="event-date"><a href="<?php echo base_url(); ?>events" style="text-decoration: none;"><?php echo $event['title']; ?></a></div>
-                <div class="event-desc"><?php echo (strlen($event['description']) > 120) ? substr($event['description'],0,120) : $event['description']; ?></div>
+                <div class="event-desc"><?php echo (strlen($event['summary']) > 120) ? substr($event['summary'],0,120) : $event['summary']; ?></div>
             </div>
 
         </div>

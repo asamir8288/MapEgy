@@ -19,6 +19,14 @@
         <?php echo (isset($errors['date'])) ? generate_error_message($errors['date']) : ''; ?>
     </li>
     <li>
+        <label for="event_summary"><?php echo lang('event_summary'); ?>:</label>
+        <?php
+            $val = (isset($data['summary'])) ? $data['summary'] : '';
+            
+        ?> 
+        <textarea class="txtarea" name="summary" style="width: 350px;height: 100px;"><?php echo $val;?></textarea>
+    </li>
+    <li>
         <label for="event_description"><?php echo lang('event_description'); ?>:</label>
         <?php
             $val = (isset($data['description'])) ? $data['description'] : '';

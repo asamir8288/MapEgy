@@ -14,6 +14,7 @@ Doctrine_Manager::getInstance()->bindComponent('Events', 'default');
  * @property timestamp $date
  * @property string $description
  * @property integer $set_in_homepage
+ * @property string $summary
  * @property timestamp $created_at
  * @property timestamp $updated_at
  * @property integer $deleted
@@ -88,6 +89,15 @@ abstract class BaseEvents extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'default' => '0',
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('summary', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
              ));

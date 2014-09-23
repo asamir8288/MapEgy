@@ -25,6 +25,7 @@ class Events extends BaseEvents {
             $e = new Events();
             $e->title = $data['title'];
             $e->date = date('ymdHis', strtotime($data['date']));
+            $e->summary = $data['summary'];
             $e->description = $data['description'];
             $e->image = $errors['image'];
             $e->set_in_homepage = $set_in_homepage;
@@ -49,6 +50,7 @@ class Events extends BaseEvents {
                     ->update('Events e')
                     ->set('e.title', '?', $data['title'])
                     ->set('e.date', '?', date('ymdHis', strtotime($data['date'])))
+                    ->set('e.summary', '?', $data['summary'])
                     ->set('e.description', '?', $data['description'])
                     ->set('e.image', '?', $errors['image'])
                     ->set('e.set_in_homepage', '?', $set_in_homepage)
@@ -80,10 +82,10 @@ class Events extends BaseEvents {
             $errors['date'] = 'Please write in event date';
             $error_flag = true;
         }
-//        if (!required($event_data['description'])) {
-//            $errors['description'] = 'Please write in event brief';
-//            $error_flag = true;
-//        }
+        if (!required($event_data['summary'])) {
+            $errors['summary'] = 'Please write in event summary';
+            $error_flag = true;
+        }
         if (isset($event_data['set_in_homepage']) && !required($event_data['set_in_homepage'])) {
             $errors['set_in_homepage'] = 'Please write in caption header';
             $error_flag = true;
