@@ -383,7 +383,7 @@
                     <li><a href="<?php echo base_url(); ?>product#Benefits">Benefits</a></li>
                 </ul>
                 <ul class="sub-menu-box">
-                    <li><a href="">Download Case Studies</a></li>                    
+                    <li><a href="<?php echo base_url(); ?>consulting#Case-Studies">Download Case Studies</a></li>                    
                 </ul>
                 <ul class="sub-menu-box" style="margin-left: 44px;">
                     <li><a href="<?php echo base_url(); ?>about-us#Our-Experts">Our Experts</a></li>
