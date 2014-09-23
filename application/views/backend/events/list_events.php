@@ -4,7 +4,8 @@
     <tr>
         <th style="width: 120px;"><?php echo lang('event_image'); ?></th>
         <th style="width: 120px;"><?php echo lang('event_date'); ?></th>        
-        <th style="width: 400px;"><?php echo lang('event_description'); ?></th>
+        <th style="width: 120px;"><?php echo lang('event_title'); ?></th>        
+        <th style="width: 350px;"><?php echo lang('event_description'); ?></th>
         <th></th>
         <th></th>
     </tr>
@@ -22,7 +23,10 @@
                     <td style="width: 120px;">
                         <?php echo date('d M, Y', strtotime($event['date'])); ?>
                     </td>                       
-                    <td style="width: 400px;padding-right: 50px;">
+                    <td style="width: 120px;">
+                        <?php echo $event['title']; ?>
+                    </td>                       
+                    <td style="width: 350px;padding-right: 50px;">
                         <?php echo substr($event['description'], 0, 200); ?>
                     </td>        
                     <td>
