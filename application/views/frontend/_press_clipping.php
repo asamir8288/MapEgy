@@ -1,6 +1,6 @@
 <!------ START Press Clipping --------------------------------->
 
-<div class="small-dashed-separator" style="margin-top: 30px;"></div>
+<div class="small-dashed-separator" style="margin-top: 40px;"></div>
 <div class="home-title small-width" style="width: 150px;">Press Clipping</div>
 
 <?php 
