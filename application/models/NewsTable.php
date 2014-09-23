@@ -45,6 +45,15 @@ class NewsTable extends Doctrine_Table {
 
         return $q;
     }
+    
+    public function getBlogIdByBlogAlias($alias_url) {
+        return Doctrine_Query::create()
+                        ->select('n.id')
+                        ->from('News n')
+                        ->where('n.alias_url =?', $alias_url)
+                        ->setHydrationMode(Doctrine::HYDRATE_SINGLE_SCALAR)
+                        ->fetchOne();
+    }
 
     public static function getNewsCount() {
         return Doctrine_Query::create()

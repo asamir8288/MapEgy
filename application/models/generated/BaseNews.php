@@ -18,6 +18,7 @@ Doctrine_Manager::getInstance()->bindComponent('News', 'default');
  * @property timestamp $updated_at
  * @property integer $deleted
  * @property integer $order_flag
+ * @property string $alias_url
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -120,6 +121,15 @@ abstract class BaseNews extends Doctrine_Record
         $this->hasColumn('order_flag', 'integer', 4, array(
              'type' => 'integer',
              'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('alias_url', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,

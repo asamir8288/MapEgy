@@ -24,6 +24,7 @@ class News extends BaseNews {
 
             $n = new News();
             $n->title = $data['title'];
+            $n->alias_url = $data['alias_url'];
             $n->description = $data['description'];
             $n->image = $errors['news_image'];
             $n->set_in_homepage = $set_in_homepage;
@@ -59,6 +60,7 @@ class News extends BaseNews {
             Doctrine_Query::create()
                     ->update('News n')
                     ->set('n.title', '?', $data['title'])
+                    ->set('n.alias_url', '?', $data['alias_url'])
                     ->set('n.description', '?', $data['description'])
                     ->set('n.image', '?', $errors['news_image'])
                     ->set('n.set_in_homepage', '?', $set_in_homepage)
@@ -86,6 +88,10 @@ class News extends BaseNews {
             $errors['title'] = 'Please write in news title';
             $error_flag = true;
         }
+        if (!required($news_data['alias_url'])) {
+            $errors['alias_url'] = 'Please write in blog URL';
+            $error_flag = true;
+        }
         if (!required($news_data['description'])) {
             $errors['description'] = 'Please write in news brief';
             $error_flag = true;
@@ -104,8 +110,8 @@ class News extends BaseNews {
                 } else {
                     $errors['news_image'] = $upload_data['upload_data']['file_name'];
                 }
-            } else if ($news_data['same_image']) {
-                $errors['news_image'] = $news_data['same_image'];
+            } else if ($news_data['image']) {
+                $errors['news_image'] = $news_data['image'];
             }
         } else {
             $upload_data = upload_file('news', array('jpg|png|jpeg|gif'), '2028');

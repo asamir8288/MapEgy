@@ -27,7 +27,7 @@
     </li>
     <?php if (!isset($errors['image']) && isset($data)) { ?>
         <li style="margin-left: 154px;">
-            <input type="hidden" name="same_image" value="<?php echo $data['image']; ?>" >
+            <input type="hidden" name="image" value="<?php echo $data['image']; ?>" >
             <img style="width: 100px;height: 65px" src="<?php echo static_url() . 'files/news/' . $data['image']; ?>" />
         </li>
     <?php } ?>
@@ -39,6 +39,11 @@
     <li>
         <label for="set_in_homepage"><?php echo lang('news_set_in_homepage');?>:</label>
         <input type="checkbox" <?php echo (isset($data['set_in_homepage']) && $data['set_in_homepage']) ? 'checked="checked"' : ''; ?> name="set_in_homepage" id="set_in_homepage" class="chkbox" />
+    </li>
+    <li>
+        <label for="news_url"><?php echo lang('news_url');?>:</label>
+        <input type="text" value="<?php echo (isset($data['alias_url'])) ? $data['alias_url'] : ''; ?>" name="alias_url" id="news_url" class="txtbox" >
+        <?php echo (isset($errors['alias_url'])) ? generate_error_message($errors['alias_url']) : ''; ?>
     </li>
     <li>
         <input type="submit" name="submit" value="<?php echo $submit_btn;?>" class="form-submit-btn" />  

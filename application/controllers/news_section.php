@@ -41,9 +41,11 @@ class News_section extends CI_Controller {
         $this->template->render();
     }
 
-    public function blog_details($blog_id) {
+    public function blog_details($alias_url) {
         $this->data['menu'] = array(0,0,0,0,0,1);
         $this->data['page_title'] = 'Blogs';
+        
+        $blog_id = NewsTable::getBlogIdByBlogAlias($alias_url);
 
         $this->data['active_news'] = NewsTable::getActiveNews(6, $blog_id);
         $this->data['blog_details'] = NewsTable::getOne($blog_id);
