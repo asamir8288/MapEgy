@@ -95,19 +95,8 @@ class News extends BaseNews {
             $error_flag = true;
         }
 
-            if (isset($news_data['id'])) {
-                if (isset($_FILES['userfile']) && !empty($_FILES['userfile']['name'])) {
-                    $upload_data = upload_file('news', array('jpg|png|jpeg|gif'), '2028');
-                    if ($upload_data['error_flag']) {
-                        $errors['image'] = $upload_data['errors'];
-                        $error_flag = true;
-                    } else {
-                        $errors['news_image'] = $upload_data['upload_data']['file_name'];
-                    }
-                } else if ($news_data['same_image']) {
-                    $errors['news_image'] = $news_data['same_image'];
-                }
-            } else {
+        if (isset($news_data['id'])) {
+            if (isset($_FILES['userfile']) && !empty($_FILES['userfile']['name'])) {
                 $upload_data = upload_file('news', array('jpg|png|jpeg|gif'), '2028');
                 if ($upload_data['error_flag']) {
                     $errors['image'] = $upload_data['errors'];
@@ -115,8 +104,19 @@ class News extends BaseNews {
                 } else {
                     $errors['news_image'] = $upload_data['upload_data']['file_name'];
                 }
+            } else if ($news_data['same_image']) {
+                $errors['news_image'] = $news_data['same_image'];
             }
-        
+        } else {
+            $upload_data = upload_file('news', array('jpg|png|jpeg|gif'), '2028');
+            if ($upload_data['error_flag']) {
+                $errors['image'] = $upload_data['errors'];
+                $error_flag = true;
+            } else {
+                $errors['news_image'] = $upload_data['upload_data']['file_name'];
+            }
+        }
+
 
         $errors['error_flag'] = $error_flag;
 
@@ -124,12 +124,14 @@ class News extends BaseNews {
     }
 
     public function news_sorting(array $data) {
-        for ($i = count($data['order_flag']); $i >= 0; $i--) {
+        $n = 0;
+        for ($i = count($data['order_flag'])-1; $i >=0 ; $i--) {
             Doctrine_Query::create()
                     ->update('News n')
-                    ->set('n.order_flag', '?', $i)
+                    ->set('n.order_flag', '?', $n)
                     ->where('n.id =?', $data['order_flag'][$i])
                     ->execute();
+            $n++;
         }
     }
 
