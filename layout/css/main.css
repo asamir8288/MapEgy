@@ -35,8 +35,8 @@
 #header #top-menu {
     float: right;
     display: block;
-    top: 35px;
-    right: 280px;
+    top: 25px;
+    right: 290px;
     list-style: none;
     position: relative;
     width: 450px;
@@ -78,10 +78,9 @@
 #header #social-links {
     float: right;
     position: relative;
-    right: 35px;
-    top: 36px;
+    top: 25px;
     display: block;
-    width: 90px;
+    width: 130px;
 }
 #header #social-links a img {
     position: relative;
@@ -90,12 +89,13 @@
 }
 
 .top-small-separator {
-    font-size: 20px;
+    font-size: 18px;
     color: #e3e3e3;
     display: block;
-    float: right;
-    top: 32px;
-    right: 30px;
+    float: left;
+    top: -4px;
+    margin-left: 5px;
+    margin-right: 5px;
     position: relative;
 }
 
@@ -1406,4 +1406,77 @@ a.anchor{display: block; position: relative; top: -50px; visibility: hidden;}
     padding: 10px;
     color: #FFF;
     margin-top: 30px;
+}
+
+.xing-header{
+    background-image: URL(../images/xing.jpg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: left;
+    background-position: 0 0;
+    position: relative;
+    margin-right: 3px;
+}
+.xing-header:hover{
+    background-position: 0 -16px;
+}
+
+.linkedin-header{
+    background-image: URL(../images/linkedin.jpg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: left;
+    background-position: 0 0;
+    position: relative;
+    margin-right: 3px;
+}
+.linkedin-header:hover{
+    background-position: 0 -16px;
+}
+
+.twitter-header{
+    background-image: URL(../images/twitter.jpg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: left;
+    background-position: 0 0;
+    position: relative;
+    margin-right: 3px;
+}
+.twitter-header:hover{
+    background-position: 0 -16px;
+}
+
+.facebook-header{
+    background-image: URL(../images/facebook.jpg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: left;
+    background-position: 0 0;
+    position: relative;
+}
+.facebook-header:hover{
+    background-position: 0 -16px;
+}
+
+.en-lang-header{
+    background-image: URL(../images/de.jpg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: left;
+    background-position: 0 0;
+    position: relative;
+}
+.facebook-header:hover{
+    background-position: 0 -16px;
 }

@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>mapegy :: Homepage</title>
         <link rel="shortcut icon" type="image/png" href="<?php echo static_url(); ?>layout/images/fav-icon.ico"/>
-        
+
         <link rel="stylesheet" type="text/css" href="<?php echo static_url(); ?>layout/css/main.css"/>
         <link rel="stylesheet" type="text/css" href="<?php echo static_url(); ?>layout/css/banner-slider.css"/>
         <link rel="stylesheet" type="text/css" href="<?php echo static_url(); ?>layout/css/home_scroll_plugin.css"/>
@@ -72,13 +72,13 @@
 //                    auto: true,
                     prev: '#prev2',
                     next: '#next2',
-                    scroll: {duration : 500},
+                    scroll: {duration: 500},
                 });
                 $('#foo3').carouFredSel({
 //                    auto: true,
                     prev: '#prev3',
                     next: '#next3',
-                    scroll: {duration : 800},
+                    scroll: {duration: 800},
                 });
             });
         </script>
@@ -86,22 +86,15 @@
 
     <body>
         <div id="header">
-            <a href="" class="lang-link">Deutsch</a>
-
             <a href="<?php echo base_url(); ?>" class="logo"></a>       
 
-            <div id="already-customer">
-                Already a customer?
-                <a href="http://tsb.mapegy.org" target="_blank" class="blue-link">Login</a>
-            </div>
-
-            <div class="top-small-separator">|</div>
-
             <div id="social-links">
-                <a target="_blank" href="https://www.xing.com/companies/mapegy.com"><img src="<?php echo static_url(); ?>layout/images/social1.png" width="15" height="15" /></a>
-                <a target="_blank" href="https://www.linkedin.com/company/mapegy"><img src="<?php echo static_url(); ?>layout/images/linkedin.png" width="18" height="17" /></a>
-                <a target="_blank" href="https://twitter.com/mapegy"><img src="<?php echo static_url(); ?>layout/images/twitter.png" width="18" height="14" /></a>
-                <a target="_blank" href="https://www.facebook.com/mapegy"><img src="<?php echo static_url(); ?>layout/images/facebook.png" width="10" height="17" /></a>                
+                <a class="xing-header" target="_blank" href="https://www.xing.com/companies/mapegy.com"></a>
+                <a class="linkedin-header" target="_blank" href="https://www.linkedin.com/company/mapegy"></a>
+                <a class="twitter-header" target="_blank" href="https://twitter.com/mapegy"></a>
+                <a class="facebook-header" target="_blank" href="https://www.facebook.com/mapegy"></a> 
+                <div class="top-small-separator">|</div>
+                <a class="en-lang-header" target="_blank" href=""></a>                
             </div>
 
             <ul id="top-menu">
@@ -253,11 +246,11 @@
                 <!------ START News --------------------------------->
 
                 <div class="small-dashed-separator"></div>
-                <a href="<?php echo base_url();?>news" id="News" class="home-title small-width">News</a>
+                <a href="<?php echo base_url(); ?>news" id="News" class="home-title small-width">News</a>
 
                 <div class="news-section">                    
                     <div class="recent-blog-posts">
-                        <a href="<?php echo base_url();?>news/blogs" class="news-titles">Recent Blog Posts</a>
+                        <a href="<?php echo base_url(); ?>news/blogs" class="news-titles">Recent Blog Posts</a>
                         <?php
                         $i = 1;
                         foreach ($activeNews as $news) {
@@ -279,23 +272,23 @@
                             $i++;
                         }
                         ?>
-                                <?php if($newsCount > 5) {?>
-                                <div style="clear: left;height: 1px;"></div>
-                                <a class="older-posts-link" href="<?php echo site_url('news/blogs'); ?>">Show More</a>
-                                <?php } ?>
+                        <?php if ($newsCount > 5) { ?>
+                            <div style="clear: left;height: 1px;"></div>
+                            <a class="older-posts-link" href="<?php echo site_url('news/blogs'); ?>">Show More</a>
+                        <?php } ?>
                     </div>
 
                     <div class="meet-us">
-                        <a href="<?php echo base_url();?>events" class="news-titles">Meet us</a>
+                        <a href="<?php echo base_url(); ?>events" class="news-titles">Meet us</a>
                         <?php
                         $i = 1;
                         foreach ($active_events as $event) {
                             ?>
                             <div class="meet-us-box">
-                                <a href="<?php echo base_url();?>events"><img src="<?php echo static_url(); ?>files/events/<?php echo $event['image']; ?>" width="77" /></a>
+                                <a href="<?php echo base_url(); ?>events"><img src="<?php echo static_url(); ?>files/events/<?php echo $event['image']; ?>" width="77" /></a>
 
                                 <p class="meet-us-short-brief">	
-                                    <a href="<?php echo base_url();?>events" class="meet-us-title"><?php echo date('d M, Y', strtotime($event['date'])); ?></a>                    
+                                    <a href="<?php echo base_url(); ?>events" class="meet-us-title"><?php echo date('d M, Y', strtotime($event['date'])); ?></a>                    
                                     <span style="font-weight: bold;"><?php echo (strlen($event['title']) > 60) ? substr($event['title'], 0, 60) . '...' : $event['title']; ?></span>
                                 </p>
                             </div>
@@ -328,7 +321,7 @@
                 <!------ END News --------------------------------->
 
                 <div style="clear: both; height: 34px;"></div>
-                
+
                 <div class="small-dashed-separator"></div>
 
 
