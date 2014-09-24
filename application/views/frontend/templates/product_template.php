@@ -17,22 +17,15 @@
 
     <body>
         <div id="header">
-            <a href="" class="lang-link">Deutsch</a>
-
             <a href="<?php echo base_url(); ?>" class="logo"></a>       
 
-            <div id="already-customer">
-                Already a customer?
-                <a href="http://tsb.mapegy.org" target="_blank" class="blue-link">Login</a>
-            </div>
-
-            <div class="top-small-separator">|</div>
-
             <div id="social-links">
-                <a target="_blank" href="https://www.xing.com/companies/mapegy.com"><img src="<?php echo static_url(); ?>layout/images/social1.png" width="15" height="15" /></a>
-                <a target="_blank" href="https://www.linkedin.com/company/mapegy"><img src="<?php echo static_url(); ?>layout/images/linkedin.png" width="18" height="17" /></a>
-                <a target="_blank" href="https://twitter.com/mapegy"><img src="<?php echo static_url(); ?>layout/images/twitter.png" width="18" height="14" /></a>
-                <a target="_blank" href="https://www.facebook.com/mapegy"><img src="<?php echo static_url(); ?>layout/images/facebook.png" width="10" height="17" /></a>                
+                <a class="xing-header" target="_blank" href="https://www.xing.com/companies/mapegy.com"></a>
+                <a class="linkedin-header" target="_blank" href="https://www.linkedin.com/company/mapegy"></a>
+                <a class="twitter-header" target="_blank" href="https://twitter.com/mapegy"></a>
+                <a class="facebook-header" target="_blank" href="https://www.facebook.com/mapegy"></a> 
+                <div class="top-small-separator">|</div>
+                <a class="en-lang-header" target="_blank" href=""></a>                
             </div>
 
             <ul id="top-menu">
