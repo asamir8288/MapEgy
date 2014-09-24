@@ -6,18 +6,18 @@
  */
 
 /**
- * Description of consulting
+ * Description of Service
  *
  * @author Ahmed
  */
-class Consulting extends CI_Controller{
+class Service extends CI_Controller{
     function __construct() {
         parent::__construct();
     }
     
     public function index() {
         $this->data['menu'] = array(0,1,0,0,0,0);
-        $this->data['page_title'] = 'Consulting';
+        $this->data['page_title'] = 'Services';
         $this->data['inside_banner'] = static_url() . 'layout/images/inside-banner.png';
 
         $this->data['consulting'] = ConsultingExpertTable::getOne();

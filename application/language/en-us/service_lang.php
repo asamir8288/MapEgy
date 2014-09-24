@@ -1,12 +1,12 @@
 <?php
-$lang['consulting_page_title'] = 'Consulting';
-$lang['consulting_page_navigator'] = 'Home > Consulting';
+$lang['service_page_title'] = 'Service';
+$lang['service_page_navigator'] = 'Home > Service';
 
-$lang['consulting_name'] = 'Name';
-$lang['consulting_job_title'] = 'Job Title';
-$lang['consulting_photo'] = 'Photo';
-$lang['consulting_tel'] = 'Phone';
-$lang['consulting_update'] = 'Update Contact';
+$lang['service_name'] = 'Name';
+$lang['service_job_title'] = 'Job Title';
+$lang['service_photo'] = 'Photo';
+$lang['service_tel'] = 'Phone';
+$lang['service_update'] = 'Update Contact';
 $lang['_edit'] = 'Edit';
 $lang['_delete'] = 'Delete';
 $lang['_cancel'] = 'Cancel';

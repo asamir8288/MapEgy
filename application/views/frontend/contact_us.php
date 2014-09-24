@@ -48,6 +48,8 @@
             <select name="title" class="select" style="width: 100px;">
                 <option value="Mr.">Mr.</option>
                 <option value="Mrs.">Mrs.</option>
+                <option value="Mr.">Dr.</option>
+                <option value="Mrs.">Prof.</option>
             </select>
         </li>        
         <li>

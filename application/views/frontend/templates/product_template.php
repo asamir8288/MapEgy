@@ -31,7 +31,7 @@
             <ul id="top-menu">
                 <li><a class="active" href="<?php echo base_url(); ?>product">Product</a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url(); ?>consulting">Consulting</a></li>
+                <li><a href="<?php echo base_url(); ?>service">Services</a></li>
                 <li class="menu-separator">|</li>
                 <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
                 <li class="menu-separator">|</li>
@@ -184,7 +184,7 @@
                     <li class="footer-menu-separator">|</li>
                     <li><a href="<?php echo base_url(); ?>product">Product</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>consulting">Consulting</a></li>
+                    <li><a href="<?php echo base_url(); ?>service">Services</a></li>
                     <li class="footer-menu-separator">|</li>
                     <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
                     <li class="footer-menu-separator">|</li>
@@ -216,7 +216,7 @@
                     <li><a href="<?php echo base_url();?>product#Benefits">Benefits</a></li>
                 </ul>
                 <ul class="sub-menu-box">
-                    <li><a href="<?php echo base_url(); ?>consulting#Case-Studies">Download Case Studies</a></li>                    
+                    <li><a href="<?php echo base_url(); ?>service#Case-Studies">Download Case Studies</a></li>                    
                 </ul>
                 <ul class="sub-menu-box" style="margin-left: 44px;">
                     <li><a href="<?php echo base_url();?>about-us#Our-Experts">Our Experts</a></li>

@@ -32,7 +32,7 @@
     </li>
     <li>
         <input type="submit" name="submit" value="<?php echo lang('contact_person_update'); ?>" class="form-submit-btn" />  
-        <a href="<?php echo base_url(); ?>admin/consulting"><?php echo lang('_cancel'); ?></a>
+        <a href="<?php echo base_url(); ?>admin/service"><?php echo lang('_cancel'); ?></a>
     </li>
 </ul>
 <?php echo form_close(); ?>

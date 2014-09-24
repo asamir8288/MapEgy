@@ -27,7 +27,7 @@
 
     <div class="small-dashed-separator"></div>
     <a id="Case-Studies" class="anchor" id="top"></a>
-    <div class="home-title small-width consulting-title-decoration">Consulting</div>
+    <div class="home-title small-width consulting-title-decoration">Services</div>
 
     <p>
         We provide software and consulting for technology decision makers – no matter which line of business or field of technology you deal with:

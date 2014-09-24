@@ -6,28 +6,26 @@
  */
 
 /**
- * Description of consulting
+ * Description of Service
  *
  * @author Ahmed
  */
-class consulting extends My_Controller{
+class Service extends My_Controller{
     function __construct() {
         parent::__construct();
     }
     
     public function index() {
-        $this->data['navigator'] = lang('consulting_page_navigator');
-        $this->data['page_title'] = lang('consulting_page_title');
+        $this->data['navigator'] = lang('service_page_navigator');
+        $this->data['page_title'] = lang('service_page_title');
         
-        $this->data['post_url'] = 'admin/consulting';
+        $this->data['post_url'] = 'admin/service';
         
         if($this->input->post('submit')){
             $e = new ConsultingExpert();
             $e->updateConsultingExpert($_POST);
             
-//            var_dump($_POST);exit;
-            
-            redirect('admin/consulting');
+            redirect('admin/service');
         }
         
         $this->data['data'] = ConsultingExpertTable::getOne();
