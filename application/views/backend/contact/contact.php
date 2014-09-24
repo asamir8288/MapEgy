@@ -1,3 +1,8 @@
+<div id="dashboard-menu" style="text-align: center;">
+    <a href="<?php echo site_url('admin/contact/export_contacts'); ?>" class="contacts"></a>
+    <a href="<?php echo site_url('admin/contact/contacts_with_newsletter'); ?>" class="contacts"></a>
+</div>
+
 <?php echo form_open($post_url); ?>
 <ul id="form_list">
     <li>
@@ -7,7 +12,7 @@
     </li>
     <li>
         <input type="submit" name="submit" value="<?php echo $submit_btn; ?>" class="form-submit-btn" />  
-        <a href="<?php echo base_url();?>admin/job"><?php echo lang('job_cancel');?></a>
+        <a href="<?php echo base_url(); ?>admin/job"><?php echo lang('job_cancel'); ?></a>
     </li>
 </ul>
 <?php echo form_close(); ?>
@@ -26,8 +31,8 @@
             <table cellpadding="0" cellspacing="0">
                 <tr>
                     <td style="width: 600px;">
-                        <input type="hidden" name="order_flag[]" value="<?php echo $o['id'];?>" />
-                        <?php echo $o['contact_option'];?>
+                        <input type="hidden" name="order_flag[]" value="<?php echo $o['id']; ?>" />
+                        <?php echo $o['contact_option']; ?>
                     </td>                     
                     <td>
                         <a href="<?php echo site_url('admin/contact/index/' . $o['id']); ?>"><?php echo lang('option_edit'); ?></a>
