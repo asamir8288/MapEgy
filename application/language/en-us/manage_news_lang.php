@@ -10,6 +10,8 @@ $lang['news_edit'] = 'Edit';
 $lang['news_delete'] = 'Delete';
 $lang['news_cancel'] = 'Cancel';
 $lang['news_date'] = 'Date';
+$lang['news_teaser'] = 'Teaser';
+$lang['news_author'] = 'Author';
 $lang['news_url'] = 'Blog Alias URL';
 
 $lang['logout'] = 'Logout';

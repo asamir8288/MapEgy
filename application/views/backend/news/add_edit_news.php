@@ -14,11 +14,25 @@
         <?php echo (isset($errors['title'])) ? generate_error_message($errors['title']) : ''; ?>
     </li>
     <li>
+        <label for="news_author"><?php echo lang('news_author');?>:</label>
+        <input type="text" value="<?php echo (isset($data['author'])) ? $data['author'] : ''; ?>" name="author" id="news_author" class="txtbox" >
+        <?php echo (isset($errors['author'])) ? generate_error_message($errors['author']) : ''; ?>
+    </li>
+    <li>
         <label for="news_description"><?php echo lang('news_description');?>:</label>
         <?php $val = (isset($data['description'])) ? $data['description'] : ''; ?>
         <?php load_editor('description', htmlspecialchars_decode($val)); ?> 
         
         <?php echo (isset($errors['description'])) ? generate_error_message($errors['description']) : ''; ?>
+    </li>
+    <li>
+        <label for="news_teaser"><?php echo lang('news_teaser'); ?>:</label>
+        <?php
+            $val = (isset($data['teaser'])) ? $data['teaser'] : '';
+            
+        ?> 
+        <textarea class="txtarea" name="teaser" style="width: 350px;height: 100px;"><?php echo $val;?></textarea>
+        <?php echo (isset($errors['teaser'])) ? generate_error_message($errors['teaser']) : ''; ?>
     </li>
     <li>
         <label for="datepicker"><?php echo lang('news_date'); ?>:</label>

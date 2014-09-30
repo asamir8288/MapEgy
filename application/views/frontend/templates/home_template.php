@@ -260,7 +260,7 @@
 
                                 <d class="blog-short-brief">	
                                     <a href="<?php echo base_url() . 'news/blog/details/' . $news['alias_url']; ?>" class="blog-article-title"><?php echo substring(nl2br($news['title']), '', '', 7); ?></a>                    
-                                    <?php echo substring(nl2br($news['description']), $news['alias_url'], 'news/blog/details', 25); ?>
+                                    <?php echo substring(nl2br($news['teaser']), $news['alias_url'], 'news/blog/details', 25); ?>
                                 </d>
                             </div>
 

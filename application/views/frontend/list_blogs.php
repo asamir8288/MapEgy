@@ -7,6 +7,6 @@
             <img src="<?php echo static_url() . 'files/news/' . $news['image']; ?>" style="width: 271px; height: 176px;" />
         </a>
         <a href="<?php echo site_url('news/blog/details/' . $news['alias_url']); ?>" class="news-title"><?php echo $news['title']; ?></a>
-        <div><?php echo substring($news['description'], $news['alias_url'], 'news/blog/details', 25); ?></div>
+        <div><?php echo substring($news['teaser'], $news['alias_url'], 'news/blog/details', 25); ?></div>
     </div>
 <?php } ?>

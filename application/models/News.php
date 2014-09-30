@@ -24,6 +24,8 @@ class News extends BaseNews {
 
             $n = new News();
             $n->title = $data['title'];
+            $n->author = $data['author'];
+            $n->teaser = $data['teaser'];
             $n->alias_url = $data['alias_url'];
             $n->description = $data['description'];
             $n->image = $errors['news_image'];
@@ -60,6 +62,8 @@ class News extends BaseNews {
             Doctrine_Query::create()
                     ->update('News n')
                     ->set('n.title', '?', $data['title'])
+                    ->set('n.author', '?', $data['author'])
+                    ->set('n.teaser', '?', $data['teaser'])
                     ->set('n.alias_url', '?', $data['alias_url'])
                     ->set('n.description', '?', $data['description'])
                     ->set('n.image', '?', $errors['news_image'])
@@ -86,6 +90,14 @@ class News extends BaseNews {
         $error_flag = false;
         if (!required($news_data['title'])) {
             $errors['title'] = 'Please write in news title';
+            $error_flag = true;
+        }
+        if (!required($news_data['author'])) {
+            $errors['author'] = 'Please write in news author';
+            $error_flag = true;
+        }
+        if (!required($news_data['teaser'])) {
+            $errors['teaser'] = 'Please write in news teaser';
             $error_flag = true;
         }
         if (!required($news_data['alias_url'])) {

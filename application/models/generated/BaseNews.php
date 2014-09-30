@@ -14,6 +14,8 @@ Doctrine_Manager::getInstance()->bindComponent('News', 'default');
  * @property string $image
  * @property integer $set_in_homepage
  * @property timestamp $news_date
+ * @property string $author
+ * @property string $teaser
  * @property timestamp $created_at
  * @property timestamp $updated_at
  * @property integer $deleted
@@ -86,6 +88,24 @@ abstract class BaseNews extends Doctrine_Record
              ));
         $this->hasColumn('news_date', 'timestamp', null, array(
              'type' => 'timestamp',
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('author', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('teaser', 'string', 500, array(
+             'type' => 'string',
+             'length' => 500,
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
