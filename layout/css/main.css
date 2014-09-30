@@ -33,19 +33,23 @@
 }
 
 #header #top-menu {
-    float: right;
-    display: block;
-    top: 25px;
-    right: 290px;
-    list-style: none;
-    position: relative;
     width: 450px;
+    margin:  0 auto!important;
+    float: none!important;
+    right: 0px!important;
+    top: -25px!important;
+    position: relative;
 }
 
 @media all and (max-width: 1160px) {
     #top-menu {
-        right:50px !important; 
-        float: right !important;
+/*        right:50px !important; 
+        float: right !important;*/
+/*width: 450px;
+margin:  0 auto!important;
+float: none!important;
+right: 0px!important;
+top: -25px!important;*/
     }
 }
 
