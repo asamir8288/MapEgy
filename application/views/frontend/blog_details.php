@@ -10,7 +10,7 @@
 <div class="blog-details-left">    
     <img src="<?php echo static_url() . 'files/news/' . $blog_details['image']; ?>" style="width: 569px;height: 370px;" />
     
-    <div class="blog-details-title"><?php echo $blog_details['title']; ?></div>
+    <div class="blog-details-title"><?php echo $blog_details['title']; ?> <span style="display: block;"><?php echo $blog_details['author'];?></span></div>
     <div id="social-sharing-plugins">
         <div id="fb-root"></div>
         <script>(function (d, s, id) {

@@ -16,7 +16,9 @@ foreach ($active_news as $news) {
             <img src="<?php echo static_url() . 'files/news/' . $news['image']; ?>" style="width: 271px; height: 176px;" />
         </a>
         <a href="<?php echo site_url('news/blog/details/' . $news['alias_url']); ?>" class="news-title"><?php echo $news['title']; ?></a>
-        <div><?php echo substring(nl2br($news['description']), $news['alias_url'], 'news/blog/details', 25); ?></div>
+        <span style="display: block;font-size: 14px;margin-bottom: 5px;"><?php echo $news['author'];?></span>
+        
+        <div><?php echo substring(nl2br($news['teaser']), $news['alias_url'], 'news/blog/details', 25); ?></div>
     </div>
     <?php
     $i++;
