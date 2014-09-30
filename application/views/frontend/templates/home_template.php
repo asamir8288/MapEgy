@@ -25,6 +25,9 @@
                 position: fixed;
                 top: 200px;
             }
+            #foo3{
+                margin-left: 12px;
+            }
         </style>
         <script type="text/javascript" language="javascript">
             $(document).ready(function () {
@@ -214,7 +217,7 @@
                 <div class="small-dashed-separator" style="margin-top: 40px;"></div>
                 <div class="home-title small-width">Quotes</div>
                 <div class="home-section">
-                    <div class="list_carousel1">
+                    <div class="list_carousel1" style="margin-left: 5px;">
                         <ul id="foo3">
                             <?php foreach ($activeQuotes as $quote) { ?>
                                 <li>
