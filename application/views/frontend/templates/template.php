@@ -18,6 +18,9 @@
                     background-image: URL(<?php echo $inside_banner; ?>);
                     display: block;
                     height: 285px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    margin: 0 auto;
                 }
             </style>
         <?php } ?>
