@@ -17,6 +17,7 @@ Doctrine_Manager::getInstance()->bindComponent('Experts', 'default');
  * @property string $facebook
  * @property string $twitter
  * @property integer $hide
+ * @property string $biographies
  * @property timestamp $created_at
  * @property timestamp $updated_at
  * @property integer $deleted
@@ -120,6 +121,15 @@ abstract class BaseExperts extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('biographies', 'string', 500, array(
+             'type' => 'string',
+             'length' => 500,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
         $this->hasColumn('created_at', 'timestamp', null, array(

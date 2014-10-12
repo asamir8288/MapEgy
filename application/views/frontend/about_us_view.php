@@ -23,7 +23,11 @@
 
     <?php foreach ($experts as $expert) { ?>
         <div class="expert">
-            <img src="<?php echo static_url() . 'files/experts/' . $expert['photo']; ?>" width="288" height="191" />
+            <div style="position: relative;">
+                <img src="<?php echo static_url() . 'files/experts/' . $expert['photo']; ?>" width="288" height="191" />
+                <a class="inner-desc"><?php echo $expert['biographies']?></a>
+            </div>
+            
             <div class="expert-name"><?php echo $expert['name']; ?></div>
             <?php echo $expert['title']; ?>
 

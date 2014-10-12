@@ -3,6 +3,7 @@
 $lang['expert_photo'] = 'Photo';
 $lang['expert_name'] = 'Name';
 $lang['expert_title'] = 'Title';
+$lang['expert_biographies'] = 'Biographies';
 $lang['expert_linkedin'] = 'Linkedin';
 $lang['expert_twitter'] = 'Twitter';
 $lang['expert_facebook'] = 'Facebook';

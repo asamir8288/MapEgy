@@ -26,6 +26,7 @@ class Experts extends BaseExperts {
             $e->name = $data['name'];
             $e->title = $data['title'];
             $e->photo = $errors['photo'];
+            $e->biographies = $data['biographies'];
             $e->germany_social = $data['germany_social'];
             $e->linkedin = $data['linkedin'];
             $e->facebook = $data['facebook'];
@@ -53,6 +54,7 @@ class Experts extends BaseExperts {
                     ->set('e.name', '?', $data['name'])
                     ->set('e.title', '?', $data['title'])
                     ->set('e.photo', '?', $errors['photo'])
+                    ->set('e.biographies', '?', $data['biographies'])
                     ->set('e.germany_social', '?', $data['germany_social'])
                     ->set('e.linkedin', '?', $data['linkedin'])
                     ->set('e.twitter', '?', $data['twitter'])
@@ -83,6 +85,10 @@ class Experts extends BaseExperts {
         }
         if (!required($expert_data['name'])) {
             $errors['name'] = 'Please write in expert name';
+            $error_flag = true;
+        }
+        if (!required($expert_data['biographies'])) {
+            $errors['biographies'] = 'Please write in expert biographies';
             $error_flag = true;
         }
 //        if (!required($expert_data['linkedin'])) {

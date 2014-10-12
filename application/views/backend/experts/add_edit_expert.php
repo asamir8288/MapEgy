@@ -22,6 +22,10 @@
         <?php echo (isset($errors['photo'])) ? generate_error_message(strip_tags($errors['photo'])) : ''; ?>
     </li>
     <li>
+        <label for="expert_biographies"><?php echo lang('expert_biographies'); ?>:</label>
+        <textarea name="biographies" class="txtarea"><?php echo (isset($data['biographies'])) ? $data['biographies'] : ''; ?></textarea>
+    </li>
+    <li>
         <label for="expert_germany_social"><?php echo lang('expert_germany_social'); ?>:</label>
         <input type="text" value="<?php echo (isset($data['germany_social'])) ? $data['germany_social'] : ''; ?>" name="germany_social" id="expert_germany_social" class="txtbox" >
         <?php echo (isset($errors['germany_social'])) ? generate_error_message($errors['germany_social']) : ''; ?>
