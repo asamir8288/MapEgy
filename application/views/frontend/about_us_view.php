@@ -25,7 +25,7 @@
         <div class="expert">
             <div style="position: relative;">
                 <img src="<?php echo static_url() . 'files/experts/' . $expert['photo']; ?>" width="288" height="191" />
-                <a class="inner-desc"><?php echo $expert['biographies']?></a>
+                
             </div>
             
             <div class="expert-name"><?php echo $expert['name']; ?></div>
@@ -44,6 +44,11 @@
                 <?php if ($expert['facebook']) { ?>
                     <a target="_blank" href="<?php echo $expert['facebook']; ?>"><img src="<?php echo static_url(); ?>layout/images/facebook.png" width="10" height="17" /></a>                  
                 <?php } ?>
+            </div>
+            
+            <div style="clear: both;margin-top: 30px;padding: 10px;display: block;">
+                
+                <?php echo $expert['biographies']?>
             </div>
         </div>
     <?php } ?>

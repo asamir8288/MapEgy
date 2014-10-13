@@ -614,9 +614,12 @@ top: -25px!important;*/
 
 .expert {
     width: 288px;
-    height: 270px;
+    height: 390px;
     display: inline-block;
     margin-top: 20px;
+    border-bottom: 2px solid #016fc6;
+    vertical-align: top;
+    
 }
 
 .expert-name {
