@@ -54,7 +54,7 @@
         </div>
         <div class="case-study-box" style="margin-right: 0px;">
             <div class="img img3">
-                <img src="<?php echo static_url() . 'layout/images/product_investors.png'; ?>" />
+                <img src="<?php echo static_url() . 'layout/images/product_investors1.png'; ?>" />
             </div>
             <div class="title" style="width: 280px;">Future & Trend Studies Research Funding Investments</div>
             <div class="slogan" style="width: 280px;">Providing you with customized insights into today's vast world of information.</div>
