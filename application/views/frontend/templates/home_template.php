@@ -118,7 +118,8 @@
         <a href="<?php echo base_url(); ?>contact" id="left-contact-us-link"></a>
 
         <div style="clear: both;height: 66px;"></div>
-        <div id="banner">
+        <a id="banner" class="anchor" id="top"></a>
+        <div id="">
             <div id="slider1_container" style="position: relative; margin: 0 auto;
                  top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
                 <!-- Loading Screen -->
@@ -188,7 +189,8 @@
             <div id="wrapper">
 
                 <!------ START About Mapegy --------------------------------->
-                <div id="About-Mapegy" class="home-title">About mapegy</div>
+                <a id="About-Mapegy" class="anchor" id="top"></a>
+                <div id="" class="home-title">About mapegy</div>
                 <p class="home-section">
                     Challenged by the current information overload and dynamic global markets, you need crucial facts and figures on technology push and market pull fast and efficiently.
                 </p>
@@ -249,7 +251,8 @@
                 <!------ START News --------------------------------->
 
                 <div class="small-dashed-separator"></div>
-                <a href="<?php echo base_url(); ?>news" id="News" class="home-title small-width">News</a>
+                <a id="News" class="anchor" id="top"></a>
+                <a href="<?php echo base_url(); ?>news" id="" class="home-title small-width">News</a>
 
                 <div class="news-section">                    
                     <div class="recent-blog-posts">
