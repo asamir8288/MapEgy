@@ -3,12 +3,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>MapEgy | <?php echo (isset($page_title)) ? $page_title : ''; ?></title>
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>layout/css/admin.css"/>
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>layout/css/form.css"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo static_url(); ?>layout/css/admin.css"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo static_url(); ?>layout/css/form.css"/>
         <?php echo $_styles; ?>
 
-        <script src="<?php echo base_url(); ?>layout/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url(); ?>layout/js/jquery.validate.min.en.js" type="text/javascript"></script>
+        <script src="<?php echo static_url(); ?>layout/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="<?php echo static_url(); ?>layout/js/jquery.validate.min.en.js" type="text/javascript"></script>
         <?php echo $_scripts; ?>        
     </head>
 

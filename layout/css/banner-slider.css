@@ -17,12 +17,12 @@
     background: url(../images/a21.png) center center no-repeat;
     overflow: hidden;
 }
-.jssora21l { background-position: -3px -33px; }
-.jssora21r { background-position: -63px -33px; }
-.jssora21l:hover { background-position: -123px -33px; }
-.jssora21r:hover { background-position: -183px -33px; }
-.jssora21ldn { background-position: -243px -33px; }
-.jssora21rdn { background-position: -303px -33px; }
+.jssora21l { background-position: 10px -24px; }
+.jssora21r { background-position: -46px -24px; }
+.jssora21l:hover { background-position: -170px -24px; }
+.jssora21r:hover { background-position: -226px -24px; }
+.jssora21ldn { background-position: -170px -24px; }
+.jssora21rdn { background-position: -226px -24px; }
 .jssort04 .w, .jssort04 .pav:hover .w
 {
     position: absolute;

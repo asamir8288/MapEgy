@@ -96,15 +96,19 @@ class Banner extends My_Controller {
         }
     }
 
-    public function delete_banner($banner_id) {
+    public function delete_banner($banner_id, $page = 'home_banners') {
         $b = new Banners();
         $b->deleteBanner($banner_id);
 
         $this->session->set_flashdata('message', array('type' => 'success',
             'body' => 'The banner has been deleted successfully.')
         );
+        
+        if($page == 'product'){
+            $page = 'product_banners';
+        }
 
-        redirect('admin/banner/home_banners');
+        redirect('admin/banner/'. $page);
     }
 
 }

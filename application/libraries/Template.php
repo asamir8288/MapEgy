@@ -435,12 +435,12 @@ class CI_Template {
       $success = TRUE;
       $js = NULL;
       
-      $this->CI->load->helper('url');
+      $this->CI->load->helper('url', 'general');
       
       switch ($type)
       {
          case 'import':
-            $filepath = base_url() . $script;
+            $filepath = static_url() . $script;
             $js = '<script type="text/javascript" src="'. $filepath .'"';
             if ($defer)
             {
@@ -494,8 +494,8 @@ class CI_Template {
       $success = TRUE;
       $css = NULL;
       
-      $this->CI->load->helper('url');
-      $filepath = base_url() . $style;
+      $this->CI->load->helper('url', 'general');
+      $filepath = static_url() . $style;
       
       switch ($type)
       {

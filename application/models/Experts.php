@@ -14,6 +14,7 @@ class Experts extends BaseExperts {
 
     public function addExpert(array $data) {
         $errors = $this->__validateExpert($data);
+        
         if ($errors['error_flag']) {
             return $errors;
         } else {

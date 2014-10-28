@@ -1,14 +1,13 @@
 <div class="consulting">
     <div class="consulting-desc">
-        We provide software and consulting for technology decision makers – no matter which line of business or field of technology you deal with provide software and consulting for technology decision makers – no matter which line of business or field of technology.
+        We provide software and consulting for technology decision makers – no matter which line of business or field of technology you deal with.
 
-        <div class="our_consulting_experts">Our consulting experts</div>
+        <div class="our_consulting_experts">We and our partners</div>
         <ul>
-            <li>- evaluate the results you discovered with the mapegy software</li>
-            <li>- prepare presentations for top management </li>
-            <li>- provide ratings of patents with additional indicators such as</li>
-            <li>- Technology Trading</li>
-            <li>- Technology Sourcing</li>
+            <li style="list-style: circle">help you evaluate the results you discovered with our software,</li>
+            <li style="list-style: circle">assist you with the preparation of presentations, </li>
+            <li style="list-style: circle">prepare customized studies, and</li>
+            <li style="list-style: circle">provide you with other relevant services, such as Technology Trading or Sourcing.</li>
         </ul>
 
     </div>
@@ -27,11 +26,7 @@
 
     <div class="small-dashed-separator"></div>
     <a id="Case-Studies" class="anchor" id="top"></a>
-    <div class="home-title small-width consulting-title-decoration">Services</div>
-
-    <p>
-        We provide software and consulting for technology decision makers – no matter which line of business or field of technology you deal with:
-    </p>
+    <div class="home-title small-width consulting-title-decoration">Case Studies</div>    
 
     <div>
         <div class="case-study-box">
@@ -41,7 +36,7 @@
             <div class="title">Innovation Management</div>
             <div class="slogan">Making your company more innovative.</div>
 
-            <a href="" style="top: 58px;left: 10px;" class="case-study-link">Download Case Study</a>
+            <a href="mailto:info@mapegy.com" style="top: 58px;left: 10px;" class="case-study-link">Download Study</a>
         </div>
         <div class="case-study-box">
             <div class="img img2">
@@ -50,7 +45,7 @@
             <div class="title">Human Resources</div>
             <div class="slogan" style="width: 250px;">Finding the experts you need.</div>
 
-            <a href="" style="top: 76px;left: 10px;" class="case-study-link">Download Case Study</a>
+            <a href="mailto:info@mapegy.com" style="top: 76px;left: 10px;" class="case-study-link">Download Study</a>
         </div>
         <div class="case-study-box" style="margin-right: 0px;">
             <div class="img img3">
@@ -59,7 +54,7 @@
             <div class="title" style="width: 280px;">Future & Trend Studies Research Funding Investments</div>
             <div class="slogan" style="width: 280px;">Providing you with customized insights into today's vast world of information.</div>
 
-            <a href="" style="top: 30px;left: 25px;" class="case-study-link">Download Case Study</a>
+            <a href="mailto:info@mapegy.com" style="top: 30px;left: 25px;" class="case-study-link">Download Study</a>
         </div>
     </div>
 
@@ -68,7 +63,7 @@
     <div class="small-dashed-separator"></div>
 
     <div class="contact-us-box">
-        <p>Do you want to know <strong>how</strong> we can <strong>help</strong> your <strong>business</strong>?</p>    
+        <p>How can we <strong>help</strong> your <strong>business</strong>?</p>    
         <a href="mailto:sperr@mapegy.com" class="consulting-contact-link">Contact us</a>
     </div>
 </div>

@@ -112,6 +112,8 @@
                 <li><a href="<?php echo base_url(); ?>career">Career</a></li>
                 <li class="menu-separator">|</li>
                 <li><a href="<?php echo base_url(); ?>news">News</a></li>
+                <li class="menu-separator">|</li>
+                <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
             </ul>
         </div>
 
@@ -119,7 +121,7 @@
 
         <div style="clear: both;height: 66px;"></div>
         <a id="banner" class="anchor" id="top"></a>
-        <div id="">
+        <div class="banner-line" id="">
             <div id="slider1_container" style="position: relative; margin: 0 auto;
                  top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
                 <!-- Loading Screen -->
@@ -171,10 +173,9 @@
         </div>
 
         <div id="home-benefits-section">
-            <div class="benefit"><span>Intuitive</span></div>
-            <div class="benefit"><span>Smart</span></div>
-            <div class="benefit"><span>Transparent</span></div>
-            <div class="benefit" style="margin-right:0px;"><span>Efficient</span></div>
+            <div class="benefit"><span>Minimize risks by accessing all relevant, global information</span></div>
+            <div class="benefit"><span>Have facts and figures at your fingertips before anyone else</span></div>
+            <div class="benefit" style="margin-right: 0px;"><span>Enjoy superior, intuitive visualizations</span></div>
 
             <div class="home-section-navigation">
                 <a href="#banner" class="nav-item"></a>
@@ -183,16 +184,17 @@
             </div>
         </div>
 
-        <div class="wide-dashed-separator"></div>
+        
 
         <div id="container">
             <div id="wrapper">
-
+<div class="small-dashed-separator"></div>
                 <!------ START About Mapegy --------------------------------->
                 <a id="About-Mapegy" class="anchor" id="top"></a>
                 <div id="" class="home-title">About mapegy</div>
                 <p class="home-section">
-                    Challenged by the current information overload and dynamic global markets, you need crucial facts and figures on technology push and market pull fast and efficiently.
+                    mapegy provides top insights from global innovation and technology data.
+We offer the most powerful and intuitive tools to measure and track innovation, competition and technology trends
                 </p>
 
                 <!------ END About Mapegy --------------------------------->
@@ -226,7 +228,7 @@
                                     <div class="quotes">
                                         <img src="<?php echo static_url(); ?>files/quotes/<?php echo $quote['logo']; ?>" width="250" height="53" />
                                         <div class="quote-words">
-                                            “<?php echo $quote['description']; ?>”
+                                            <?php echo $quote['description']; ?>
 
                                             <span class="author">
                                                 <?php echo $quote['author']; ?>
@@ -291,7 +293,7 @@
                         foreach ($active_events as $event) {
                             ?>
                             <div class="meet-us-box">
-                                <a href="<?php echo base_url(); ?>events"><img src="<?php echo static_url(); ?>files/events/<?php echo $event['image']; ?>" width="77" /></a>
+                                <a href="<?php echo base_url(); ?>events"><img src="<?php echo static_url(); ?>files/events/<?php echo $event['image']; ?>" style="width: 77px;height: 50px;" /></a>
 
                                 <p class="meet-us-short-brief">	
                                     <a href="<?php echo base_url(); ?>events" class="meet-us-title"><?php echo date('d M, Y', strtotime($event['date'])); ?></a>                    
@@ -332,7 +334,7 @@
 
 
                 <div class="contact-us-box">
-                    Did we <strong>arouse</strong> your <strong>interest</strong>?
+                    Interested?
                     <a href="<?php echo site_url('contact'); ?>" class="contact-us-link">Contact us</a>
                 </div>
 
@@ -362,7 +364,7 @@
                     <li class="footer-menu-separator">|</li>
                     <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>legal-policy">Legal Policy</a></li>                    
+                    <li><a href="<?php echo base_url(); ?>Imprint">Imprint</a></li>                    
                 </ul>
 
                 <div style="clear: left;height: 20px;"></div>

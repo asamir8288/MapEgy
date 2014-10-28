@@ -33,7 +33,7 @@
 }
 
 #header #top-menu {
-    width: 450px;
+    width: 475px;
     margin:  0 auto!important;
     float: none!important;
     right: 0px!important;
@@ -175,12 +175,14 @@ top: -25px!important;*/
     float: left;
     position: relative;
     top: 60px;
-    margin-right: 144px;
+    margin-right: 48px;
+    width: 260px;
+    font-size: 14px;
 }
 
 #home-benefits-section .benefit span{
     color: #000;
-    font-size: 28px;
+    font-size: 20px;
     display: block;
     position: relative;
     left: 39px;
@@ -614,10 +616,10 @@ top: -25px!important;*/
 
 .expert {
     width: 288px;
-    height: 390px;
+    height: 512px;
     display: inline-block;
-    margin-top: 20px;
-    border-bottom: 2px solid #016fc6;
+    margin-top: 15px;
+    /*border-bottom: 2px solid #016fc6;*/
     vertical-align: top;
     
 }
@@ -951,16 +953,26 @@ top: -25px!important;*/
 }
 
 .offer-item{
-    background-image: URL(../images/main-arrow.png);
-    background-repeat: no-repeat;
+    display: inline-block!important;
+    width: 270px;
     min-height: 49px;
     display: block;
-    padding-left: 50px;
     font-size: 20px;
     color: #000;
     margin-top: 30px;
     margin-bottom: 30px;
     padding-top: 10px;
+}
+.offer-icon{
+    background-image: URL(../images/main-arrow.png);
+    background-repeat: no-repeat;
+    height: 49px;
+    display: inline-block;
+    width: 50px;   
+    position: relative;
+    top: 13px;
+    margin-left: 20px;
+    margin-right: 40px;
 }
 
 /*
@@ -1263,6 +1275,7 @@ top: -25px!important;*/
     padding: 3px 30px 8px 30px;
     position: relative;
     width: 200px;
+    margin-left: 25px;
 }
 .case-study-link:hover{
     background-color: #006fc7;
@@ -1321,7 +1334,7 @@ top: -25px!important;*/
     position: relative;
     right: 20px;
     text-decoration: none;
-    top: -56px;
+    top: -37px;
 }
 .consulting .consulting-contact-link:hover {
     background-color: #006fc7;
@@ -1502,9 +1515,12 @@ a.anchor{display: block; position: relative; top: -50px; visibility: hidden;}
     vertical-align: text-bottom;
     color: #000;
     width: 270px;
-    height: 171px;
+    height: 400px;
 }
 .inner-desc:hover{	
     opacity: 0.8;
     filter:alpha(opacity = 80);	
+}
+.banner-line{
+    border-bottom: 1px solid #CCC;
 }

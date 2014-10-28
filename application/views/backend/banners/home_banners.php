@@ -42,7 +42,7 @@
                         <?php } ?>
                     </td>
                     <td>
-                        <a href="<?php echo site_url('admin/banner/delete_banner/' . $banner['id']); ?>"><?php echo lang('banner_delete'); ?></a>
+                        <a href="<?php echo site_url('admin/banner/delete_banner/' . $banner['id'] . '/' . $banner_page); ?>"><?php echo lang('banner_delete'); ?></a>
                     </td>        
                 </tr>
             </table>

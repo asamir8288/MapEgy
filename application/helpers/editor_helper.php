@@ -3,18 +3,18 @@
 function load_editor($element, $value = '') {
 
     $CI = get_instance();
-    $CI->ckeditor->basePath = base_url() . 'application/plugins/ckeditor/';
+    $CI->ckeditor->basePath = static_url() . 'application/plugins/ckeditor/';
     $CI->ckeditor->ToolbarSet = 'Advanced';
     $ckeconfig = array(
         'width' => "700px",
         'height' => '400px',    
         'enterMode' => 'ENTER_BR',
-        'filebrowserBrowseUrl' => base_url() . 'ckfinder/ckfinder.html',
-        'filebrowserImageBrowseUrl' => base_url() . 'ckfinder/ckfinder.html?type=Images',
-        'filebrowserFlashBrowseUrl' => base_url() . 'ckfinder/ckfinder.html?type=Flash',
-        'filebrowserUploadUrl' => base_url() . 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
-        'filebrowserImageUploadUrl' => base_url() . 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
-        'filebrowserFlashUploadUrl' => base_url() . 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+        'filebrowserBrowseUrl' => static_url() . 'ckfinder/ckfinder.html',
+        'filebrowserImageBrowseUrl' => static_url() . 'ckfinder/ckfinder.html?type=Images',
+        'filebrowserFlashBrowseUrl' => static_url() . 'ckfinder/ckfinder.html?type=Flash',
+        'filebrowserUploadUrl' => static_url() . 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+        'filebrowserImageUploadUrl' => static_url() . 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+        'filebrowserFlashUploadUrl' => static_url() . 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
     );
 
     return $CI->ckeditor->editor($element, $value, $ckeconfig);
@@ -22,7 +22,7 @@ function load_editor($element, $value = '') {
 
 function load_file_finder($path) {
     ?>
-<script type="text/javascript" src="<?php echo base_url() ?>ckfinder/ckfinder.js"></script>
+<script type="text/javascript" src="<?php echo static_url() ?>ckfinder/ckfinder.js"></script>
     <script type="text/javascript">
 
         function BrowseServer()

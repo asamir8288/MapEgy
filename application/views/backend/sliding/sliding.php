@@ -76,7 +76,7 @@
                     <a class="active-inactive-link" href="<?php echo base_url() . 'admin/home/convert_status/' . $client['id'] . '/' . $banner_page; ?>"><img title="Set at homepage" src="<?php echo static_url(); ?>layout/images/inactive.png" /></a>
                 <?php } ?>
                 <a href="<?php echo base_url(); ?>admin/home/delete_logo/<?php echo $client['id']; ?>" class="delete_logo">Delete</a>
-                <img src="<?php echo base_url(); ?>files/banners/<?php echo $client['file_name']; ?>" style="max-width: 210px;" />
+                <img src="<?php echo static_url(); ?>files/banners/<?php echo $client['file_name']; ?>" style="max-width: 210px;max-height: 126px;" />
             </li>
             <?php
             $i++;

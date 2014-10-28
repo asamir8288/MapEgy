@@ -17,6 +17,7 @@ class Contact extends CI_Controller {
     }
 
     public function index() {
+        $this->data['menu'] = array(0,0,0,0,0,0,1);
         $this->data['page_title'] = 'Contact Us';
         $this->data['map_banner'] = TRUE;
 

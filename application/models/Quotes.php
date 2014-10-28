@@ -57,6 +57,7 @@ class Quotes extends BaseQuotes
                     ->update('Quotes b')
                     ->set('b.description', '?', $data['description'])
                     ->set('b.author', '?', $data['author'])
+                    ->set('b.title', '?', $data['title'])
                     ->set('b.logo', '?', $errors['news_image'])
                     ->set('b.is_active', '?', $is_active)
                     ->set('b.set_at_homepage', '?', $set_at_homepage)

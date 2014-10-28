@@ -36,7 +36,8 @@ class Our_experts extends My_Controller {
         redirect('admin/our_experts');
     }
 
-    public function add_edit_expert($expert_id = '') {               
+    public function add_edit_expert($expert_id = '') {    
+        
         /*
          * Declare the variables when updating and adding Experts
          */

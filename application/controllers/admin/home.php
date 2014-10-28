@@ -217,5 +217,12 @@ class Home extends My_Controller {
 
         redirect('admin/home/quotes');
     }
+    
+    public function delete_quote($quote_id){
+        $q = new Quotes();
+        $q->deleteQuote($quote_id);
+        
+        redirect('admin/home/quotes');
+    }
 
 }

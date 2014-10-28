@@ -1,6 +1,6 @@
 <script type="text/javascript" language="javascript">
-    $(document).ready(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
+    $(document).ready(function () {
+        $('a[href*=#]:not([href=#])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -15,7 +15,7 @@
     });
 </script>
 <div class="contact-person">
-    <img src="<?php echo static_url(); ?>layout/images/career-advisor.png" />
+    <img src="<?php echo static_url(); ?>layout/images/career-advisor.jpg" />
     <span class="adviosr-title">Dr. rer. nat. Matthias</span>
     <span class="adviosr-job-title">Data Analysis and Visualization</span>
 
@@ -24,11 +24,12 @@
 
 <div class="job-main-brief">
     <p>
-        Do you want to be a part of a growing dynamic startup and work in a fast-paced environment? Do you work independently, flexibly and efficiently?
+        mapegy offers a thriving environment where people are inspired to be and give their best. We want to become better day-by-day, individually and as a team.
     </p>
     <p>
-        Get to know Berlin's hottest Technology Intelligence Startup and
-        JOIN OUR TEAM!
+         Do you want to be a part of a growing company and a fast-paced environment? <br />
+         Do you work independently, flexibly and efficiently?<br />
+         Get to know us, Berlin's hottest Technology Intelligence Startup!
     </p>
 
     <a id="Open-Vacancies" class="anchor" id="top"></a>
@@ -48,19 +49,19 @@
 
     <?php if ($job['pdf']) {
         ?>
-    <div class="download-job-offer"><?php echo $job['pdf_title'];?>: <a href="<?php echo site_url('job/download_file/' . $job['id']); ?>"><img style="position: relative;top: 9px;" src="<?php echo static_url()?>layout/images/pdf-icon.png" /></a></div>
+        <div class="download-job-offer"><?php echo $job['pdf_title']; ?>: <a href="<?php echo site_url('job/download_file/' . $job['id']); ?>"><img style="position: relative;top: 9px;" src="<?php echo static_url() ?>layout/images/pdf-icon.png" /></a></div>
     <?php } ?>
 <?php } ?>
-        
+
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         // hide #back-top first
         $("#back-top").hide();
 
         // fade in #back-top
-        $(function() {
-            $(window).scroll(function() {
+        $(function () {
+            $(window).scroll(function () {
                 if ($(this).scrollTop() > 100) {
                     $('#back-top').fadeIn();
                 } else {
@@ -69,7 +70,7 @@
             });
 
             // scroll body to 0px on click
-            $('#back-top a').click(function() {
+            $('#back-top a').click(function () {
                 $('body,html').animate({
                     scrollTop: 0
                 }, 800);

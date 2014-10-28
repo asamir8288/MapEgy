@@ -44,7 +44,7 @@ foreach ($active_news as $news) {
         }
         ?>
         <div class="event_box" <?php echo $style; ?>>
-            <div class="img-box"><a href="<?php echo base_url(); ?>events"><img src="<?php echo static_url() . 'files/events/' . $event['image']; ?>" /></a></div>
+            <div class="img-box"><a href="<?php echo base_url(); ?>events"><img src="<?php echo static_url() . 'files/events/' . $event['image']; ?>" style="width: 77px;height: 50px;" /></a></div>
             <div class="event-content">
                 <div class="event-date"><a href="<?php echo base_url(); ?>events" style="text-decoration: none;"><?php echo date('d M Y', strtotime($event['date'])); ?></a></div>
                 <div class="event-date"><a href="<?php echo base_url(); ?>events" style="text-decoration: none;"><?php echo $event['title']; ?></a></div>

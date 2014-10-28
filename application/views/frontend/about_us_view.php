@@ -7,9 +7,9 @@
 <!------ START About Mapegy --------------------------------->
 
 <p class="inside-horizontal-section first">
-    As a Big Data and Visual Analytics company, we provide software and consulting to support strategic decisions of high-tech companies.
+    As a Berlin-based Big Data and Visual Analytics company, we provide top insights from global innovation dynamics at your fingertips.
     <br /><br />
-    Our customers need facts on technology push and technology acceptance fast and efficiently. These facts are contained in millions upon millions of globally available documents generated during the technology life-cycle, such as patents, technology news or posts in social networks.
+    We are a team of more than 15 smart entrepreneurs from all over the world - sharing a passion for digital intelligence and making our customers more successful.
 
 </p>                
 <!------ END About Mapegy --------------------------------->
@@ -24,8 +24,8 @@
     <?php foreach ($experts as $expert) { ?>
         <div class="expert">
             <div style="position: relative;">
-                <img src="<?php echo static_url() . 'files/experts/' . $expert['photo']; ?>" width="288" height="191" />
-                
+                <img src="<?php echo static_url() . 'files/experts/' . $expert['photo']; ?>" width="288" height="420" />
+                <div class="inner-desc"><?php echo $expert['biographies']?></div>
             </div>
             
             <div class="expert-name"><?php echo $expert['name']; ?></div>
@@ -42,13 +42,13 @@
                     <a target="_blank" href="<?php echo $expert['twitter']; ?>"><img src="<?php echo static_url(); ?>layout/images/twitter.png" width="18" height="14" /></a>
                 <?php } ?>
                 <?php if ($expert['facebook']) { ?>
-                    <a target="_blank" href="<?php echo $expert['facebook']; ?>"><img src="<?php echo static_url(); ?>layout/images/facebook.png" width="10" height="17" /></a>                  
+                    <a target="_blank" href="mailto:<?php echo $expert['facebook']; ?>"><img src="<?php echo static_url(); ?>layout/images/email.png" width="16" height="12" /></a>                  
                 <?php } ?>
             </div>
             
             <div style="clear: both;margin-top: 30px;padding: 10px;display: block;">
                 
-                <?php echo $expert['biographies']?>
+                
             </div>
         </div>
     <?php } ?>
@@ -57,6 +57,10 @@
 </div>
 
 <!------ END Our Experts --------------------------------->
+
+<p class="inside-horizontal-section" style="margin-bottom: 20px;">
+    With our customers, partners and suppliers we are a winning team that creates mutual and enduring value.
+</p>
 
 <!------ START Clients --------------------------------->
 <a id="Clients" class="anchor" id="top"></a>
@@ -106,7 +110,7 @@
                     <div class="quotes">
                         <img src="<?php echo static_url(); ?>files/quotes/<?php echo $quote['logo']; ?>" width="250" height="53" />
                         <div class="quote-words">
-                            “<?php echo $quote['description']; ?>”
+                            <?php echo $quote['description']; ?>
 
                             <span class="author">
                                 <?php echo $quote['author']; ?>
@@ -132,7 +136,7 @@
 <div class="small-dashed-separator" style="width: 50%;"></div>
 
 <div class="contact-us-box">
-    Did we <strong>arouse</strong> your <strong>interest</strong>?
+    Interested?
     <a href="<?php echo site_url('contact'); ?>" class="contact-us-link">Contact us</a>
 </div>
 

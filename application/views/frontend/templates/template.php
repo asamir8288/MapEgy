@@ -14,10 +14,10 @@
 
         <?php if (isset($inside_banner)) { ?>
             <style type="text/css">
-                #inside-banner {
-                    background-image: URL(<?php echo $inside_banner; ?>);
+                #inside-banner img {
                     display: block;
-                    height: 285px;
+                    height: auto!important;
+                    width: 100%;
                     background-repeat: no-repeat;
                     background-position: center;
                     margin: 0 auto;
@@ -69,6 +69,8 @@
                 <li><a <?php echo (isset($menu) && $menu[4]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>career">Career</a></li>
                 <li class="menu-separator">|</li>
                 <li><a <?php echo (isset($menu) && $menu[5]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>news">News</a></li>
+                <li class="menu-separator">|</li>
+                <li><a <?php echo (isset($menu) && $menu[6]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>contact">Contact</a></li>
             </ul>
         </div>
 
@@ -78,7 +80,7 @@
 
         <?php if (isset($inside_banner)) { ?>
             <div id="inside-banner">
-
+                <img src="<?php echo $inside_banner;?>" style="width: 100%; height: 285px" />
             </div>
         <?php } elseif (isset($map_banner)) { ?>
             <!--<div id="map_canvas"></div>-->
@@ -122,7 +124,7 @@
                     <li class="footer-menu-separator">|</li>
                     <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>legal-policy">Legal Policy</a></li>                    
+                    <li><a href="<?php echo base_url(); ?>Imprint">Imprint</a></li>                    
                 </ul>
 
                 <div style="clear: left;height: 20px;"></div>

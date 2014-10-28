@@ -40,7 +40,7 @@
                         <a href="<?php echo $expert['twitter']; ?>"><img src="<?php echo static_url(); ?>layout/images/twitter.png" width="18" height="14" /></a>
                     <?php } ?>
                     <?php if ($expert['facebook']) { ?>
-                        <a href="<?php echo $expert['facebook']; ?>"><img src="<?php echo static_url(); ?>layout/images/facebook.png" width="10" height="17" /></a>                  
+                        <a href="<?php echo $expert['facebook']; ?>"><img src="<?php echo static_url(); ?>layout/images/email.png" width="16" height="12" /></a>                  
                     <?php } ?>
                 </td>        
                 <td>

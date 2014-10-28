@@ -35,7 +35,7 @@
 <div class="small-dashed-separator"></div>
 
 <div class="contact-us-box">
-    Did we <strong>arouse</strong> your <strong>interest</strong>?
+    Interested?
     <a href="mailto:wagner@mapegy.com" class="contact-us-link">Contact us</a>
 </div>
 
