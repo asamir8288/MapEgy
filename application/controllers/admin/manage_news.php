@@ -24,7 +24,7 @@ class Manage_news extends My_Controller {
         $this->template->add_js('layout/js/admin/jquery-sortable.js');
         $this->template->add_js('layout/js/admin/sorting_items.js');
         
-        $this->data['activeNews'] = NewsTable::getActiveNews();
+        $this->data['activeNews'] = NewsTable::getActiveNews(FALSE, '', false, $this->data['lang_id']);
         $this->template->write_view('content', 'backend/news/list_news', $this->data);
         $this->template->render();
     }
@@ -69,6 +69,7 @@ class Manage_news extends My_Controller {
         if ($this->input->post('submit')) {
 
             $n = new News();
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             if ($news_id) {
                 $_POST['id'] = $news_id;

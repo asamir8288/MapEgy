@@ -23,6 +23,7 @@ class PressClipping extends BasePressClipping {
             }
 
             $c = new PressClipping();
+            $c->lang_id = $data['lang_id'];
             $c->date = $data['date'];
             $c->title = $data['title'];
             $c->description = $data['description'];

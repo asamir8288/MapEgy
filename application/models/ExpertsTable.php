@@ -25,11 +25,12 @@ class ExpertsTable extends Doctrine_Table {
                         ->fetchOne();
     }
 
-    public static function getAllActiveExperts($active_only = true) {
+    public static function getAllActiveExperts($active_only = true, $lang_id = 1) {
         $q = Doctrine_Query::create()
                 ->select('e.*')
                 ->from('Experts e')
-                ->where('e.deleted=0');
+                ->where('e.deleted=0')
+                ->andWhere('e.lang_id =?', $lang_id);
         if ($active_only) {
             $q = $q->andWhere('e.hide=?', FALSE);
         }

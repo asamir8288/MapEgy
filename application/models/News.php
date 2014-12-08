@@ -23,6 +23,7 @@ class News extends BaseNews {
             }
 
             $n = new News();
+            $n->lang_id = $data['lang_id'];
             $n->title = $data['title'];
             $n->author = $data['author'];
             $n->teaser = $data['teaser'];

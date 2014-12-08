@@ -36,7 +36,7 @@
     <?php echo form_open('contact/index'); ?>
     <ul id="contact-form">
         <li>
-            <label for="iam">I'm <span class="star">*</span></label>
+            <label for="iam"><?php echo lang('contact_iam');?> <span class="star">*</span></label>
             <select name="iam" class="select">
                 <?php foreach($options as $option) { ?>
                 <option value="<?php echo $option['contact_option'];?>"><?php echo $option['contact_option'];?></option>
@@ -44,7 +44,7 @@
             </select>
         </li>
         <li>
-            <label for="title">Title <span class="star">*</span></label>
+            <label for="title"><?php echo lang('contact_title');?> <span class="star">*</span></label>
             <select name="title" class="select" style="width: 100px;">
                 <option value="Mr.">Mr.</option>
                 <option value="Mrs.">Mrs.</option>
@@ -53,31 +53,31 @@
             </select>
         </li>        
         <li>
-            <label for="surname">Surname <span class="star">*</span></label>
+            <label for="surname"><?php echo lang('contact_surname');?> <span class="star">*</span></label>
             <input type="text" name="surname" id="surname" class="txt" >
         </li>
         <li>
-            <label for="given_name">Given Name <span class="star">*</span></label>
+            <label for="given_name"><?php echo lang('contact_given_name');?> <span class="star">*</span></label>
             <input type="text" name="given_name" id="given_name" class="txt" >
         </li>
         <li>
-            <label for="email">Email <span class="star">*</span></label>
+            <label for="email"><?php echo lang('contact_email');?> <span class="star">*</span></label>
             <input type="text" name="email" id="email" class="txt" >
         </li>
         <li>
-            <label for="phone">Phone</label>
+            <label for="phone"><?php echo lang('contact_phone');?></label>
             <input type="text" name="phone" id="phone" class="txt">
         </li>
         <li>
-            <label for="company">Company</label>
+            <label for="company"><?php echo lang('contact_company');?></label>
             <input type="text" name="company" id="company" class="txt">
         </li>
         <li>
-            <label for="function">Function</label>
+            <label for="function"><?php echo lang('contact_function');?></label>
             <input type="text" name="function" id="function" class="txt" >
         </li>
         <li>
-            <label for="message">Message <span class="star">*</span></label>
+            <label for="message"><?php echo lang('contact_message');?> <span class="star">*</span></label>
             <textarea name="message" id="message" cols="50" rows="6" class="textarea"></textarea>            
         </li>
         <li>
@@ -105,8 +105,6 @@
         <a href="http://www.mapegy.com">http://www.mapegy.com</a><br /><br />
 
         HRB 140747, AG Berlin-Charlottenburg<br /><br />
-
-        Geschäftsführung: <b>Dr.-Ing. Peter Walde</b><br />
 
     </div>
 </div>

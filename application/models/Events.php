@@ -23,6 +23,7 @@ class Events extends BaseEvents {
             }
 
             $e = new Events();
+            $e->lang_id = $data['lang_id'];
             $e->title = $data['title'];
             $e->date = date('ymdHis', strtotime($data['date']));
             $e->summary = $data['summary'];

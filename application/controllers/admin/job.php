@@ -24,7 +24,7 @@ class job extends My_Controller {
         $this->template->add_js('layout/js/admin/jquery-sortable.js');
         $this->template->add_js('layout/js/admin/sorting_items.js');
         
-        $this->data['jobs'] = CareersTable::getAllActiveJobs(FALSE);
+        $this->data['jobs'] = CareersTable::getAllActiveJobs(FALSE, $this->data['lang_id']);
         
         $this->template->write_view('content', 'backend/careers/list_jobs', $this->data);
         $this->template->render();
@@ -58,9 +58,11 @@ class job extends My_Controller {
             $this->data['post_url'] = 'admin/job/add_edit_job';
             $this->data['submit_btn'] = lang('job_add');
         }
-
+        
         if ($this->input->post('submit')) {
+             
             $j = new Careers();
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             if ($job_id) {
                 $_POST['id'] = $job_id;
@@ -89,8 +91,13 @@ class job extends My_Controller {
         }
     }
 
-    public function delete_job() {
-        
+    public function delete_job($job_id) {
+        if($job_id){
+            $j = new Careers();
+            $j->deleteJob($job_id);
+            
+            redirect('admin/job');
+        }
     }
     
     public function change_job_status($job_id) {

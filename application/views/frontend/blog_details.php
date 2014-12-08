@@ -32,7 +32,7 @@
         </div>
 
         <div class="twitter" style="position: relative;display: inline-block;left: 3px;">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo base_url(); ?>news/blog/details/<?php echo $blog_details['id']; ?>" data-text="the data you want to tweet using it" data-via="mapegy">Tweet</a>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo base_url(); ?>news/blog/details/<?php echo $blog_details['id']; ?>" data-text="<?php echo $blog_details['title']; ?>" data-via="mapegy">Tweet</a>
             <script>!function (d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
                     if (!d.getElementById(id)) {

@@ -24,6 +24,7 @@ class Experts extends BaseExperts {
             }
 
             $e = new Experts();
+            $e->lang_id = $data['lang_id'];
             $e->name = $data['name'];
             $e->title = $data['title'];
             $e->photo = $errors['photo'];

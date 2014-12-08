@@ -83,7 +83,7 @@ $config['language']	= 'en-us';
 | The array below hold languages values for localization.
 |
 */
-$config['lang_list']    = array('en-us' => 'English', 'ar-eg'=> 'العـربية');
+$config['lang_list']    = array('en-us' => 'English', 'de-ch'=> 'deutsch');
 
 /*
 |--------------------------------------------------------------------------

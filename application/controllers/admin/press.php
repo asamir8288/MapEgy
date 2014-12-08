@@ -15,7 +15,7 @@ class Press extends My_Controller {
     var $data = array();
 
     function __construct() {
-        parent::__construct();
+        parent::__construct();        
     }
 
     public function index() {
@@ -30,6 +30,7 @@ class Press extends My_Controller {
 
         if ($this->input->post('submit')) {
             $_POST['page_id'] = $page_id;
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             $p = new StaticPages();
             $p->updatepress($_POST);
@@ -42,7 +43,7 @@ class Press extends My_Controller {
          */
         $this->template->add_js('layout/js/jquery-1.9.1.min.js');
 
-        $this->data['data'] = StaticPagesTable::getOne($page_id);
+        $this->data['data'] = StaticPagesTable::getOne($page_id, $this->data['lang_id']);
 
         $this->data['navigator'] = 'Home > ' . lang('media_update');
         $this->data['page_title'] = lang('media_update');
@@ -58,6 +59,7 @@ class Press extends My_Controller {
 
         if ($this->input->post('submit')) {
             $_POST['page_id'] = $page_id;
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             $p = new StaticPages();
             $p->updatepress($_POST);
@@ -74,7 +76,7 @@ class Press extends My_Controller {
         $this->data['post_url'] = 'admin/press/company_profile';
         $this->data['submit_btn'] = lang('company_profile_update');
 
-        $this->data['data'] = StaticPagesTable::getOne($page_id);
+        $this->data['data'] = StaticPagesTable::getOne($page_id, $this->data['lang_id']);
 
         $this->template->write_view('content', 'backend/presses/_company_profile', $this->data);
         $this->template->render();
@@ -85,6 +87,7 @@ class Press extends My_Controller {
 
         if ($this->input->post('submit')) {
             $_POST['page_id'] = $page_id;
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             $p = new StaticPages();
             $p->updatepress($_POST);
@@ -101,7 +104,7 @@ class Press extends My_Controller {
         $this->data['post_url'] = 'admin/press/management_biographies';
         $this->data['submit_btn'] = lang('management_biographies_update');
 
-        $this->data['data'] = StaticPagesTable::getOne($page_id);
+        $this->data['data'] = StaticPagesTable::getOne($page_id, $this->data['lang_id']);
 
         $this->template->write_view('content', 'backend/presses/_management_biographies', $this->data);
         $this->template->render();
@@ -115,7 +118,7 @@ class Press extends My_Controller {
         $this->template->add_js('layout/js/admin/jquery-sortable.js');
         $this->template->add_js('layout/js/admin/sorting_items.js');
 
-        $this->data['activeClipping'] = PressClippingTable::getAllActivePressClippings(FALSE);
+        $this->data['activeClipping'] = PressClippingTable::getAllActivePressClippings(FALSE, $this->data['lang_id']);
         $this->template->write_view('content', 'backend/presses/list_clipping', $this->data);
         $this->template->render();
     }
@@ -155,6 +158,7 @@ class Press extends My_Controller {
         if ($this->input->post('submit')) {
 
             $c = new PressClipping();
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             if ($clipping_id) {
                 $_POST['id'] = $clipping_id;
@@ -195,15 +199,21 @@ class Press extends My_Controller {
         $this->data['page_title'] = lang('contact_person_page_title');
 
         $this->data['post_url'] = 'admin/press/contact_person';
+        
+        if($this->data['lang_id'] == 1){
+            $id = 2;
+        }else{
+            $id = 4;
+        }
 
         if ($this->input->post('submit')) {
             $e = new ConsultingExpert();
-            $e->updateConsultingExpert($_POST, 2);
+            $e->updateConsultingExpert($_POST, $id);
 
             redirect('admin/press/contact_person');
         }
 
-        $this->data['data'] = ConsultingExpertTable::getOne(2);
+        $this->data['data'] = ConsultingExpertTable::getOne($id);
 
         $this->template->write_view('content', 'backend/presses/add_edit_contact_person', $this->data);
         $this->template->render();

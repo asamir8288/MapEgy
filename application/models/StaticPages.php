@@ -23,6 +23,7 @@ class StaticPages extends BaseStaticPages {
                     ->set('p.description', '?', $data['description'])                   
                     ->set('p.updated_at', '?', date('ymdHis'))
                     ->where('p.page_id =?', $data['page_id'])
+                    ->andWhere('lang_id =?', $data['lang_id'])
                     ->execute();
 
             return $errors;

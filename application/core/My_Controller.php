@@ -26,7 +26,6 @@ class My_Controller extends CI_Controller {
         }else{
             $this->data['lang_id'] = 2;
         }
-        
         $this->template->set_template('admin');
     }
 }

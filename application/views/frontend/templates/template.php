@@ -54,23 +54,30 @@
                 <a class="twitter-header" target="_blank" href="https://twitter.com/mapegy"></a>
                 <a class="facebook-header" target="_blank" href="https://www.facebook.com/mapegy"></a> 
                 <div class="top-small-separator">|</div>
-                <a class="en-lang-header" target="_blank" href=""></a>                
+                <?php
+                $lang_code = $this->session->userdata('lang_code');
+                $lang_class = 'de-lang-header';
+                if ($lang_code != 'en-us') {
+                    $lang_class = 'en-lang-header';
+                }
+                ?>
+                <a class="<?php echo $lang_class;?>" href="<?php echo base_url('switch-language'); ?>"></a>                
             </div>
 
             <ul id="top-menu">
-                <li><a <?php echo (isset($menu) && $menu[0]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>product">Product</a></li>
+                <li><a <?php echo (isset($menu) && $menu[0]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>product"><?php echo lang('header_product'); ?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[1]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>service">Services</a></li>
+                <li><a <?php echo (isset($menu) && $menu[1]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>service"><?php echo lang('header_services'); ?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[2]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>about-us">About</a></li>
+                <li><a <?php echo (isset($menu) && $menu[2]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>about-us"><?php echo lang('header_about'); ?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[3]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>press">Press</a></li>
+                <li><a <?php echo (isset($menu) && $menu[3]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>press"><?php echo lang('header_press'); ?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[4]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>career">Career</a></li>
+                <li><a <?php echo (isset($menu) && $menu[4]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>career"><?php echo lang('header_career'); ?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[5]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>news">News</a></li>
+                <li><a <?php echo (isset($menu) && $menu[5]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>news"><?php echo lang('header_news'); ?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[6]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>contact">Contact</a></li>
+                <li><a <?php echo (isset($menu) && $menu[6]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>contact"><?php echo lang('header_contact'); ?></a></li>
             </ul>
         </div>
 
@@ -80,7 +87,7 @@
 
         <?php if (isset($inside_banner)) { ?>
             <div id="inside-banner">
-                <img src="<?php echo $inside_banner;?>" style="width: 100%; height: 285px" />
+                <img src="<?php echo $inside_banner; ?>" style="width: 100%; height: 285px" />
             </div>
         <?php } elseif (isset($map_banner)) { ?>
             <!--<div id="map_canvas"></div>-->
@@ -108,23 +115,23 @@
         <div id="footer">
             <div class="wrapper">
                 <ul class="menu">
-                    <li><a href="<?php echo base_url(); ?>">Home</a></li>
+                    <li><a href="<?php echo base_url(); ?>"><?php echo lang('footer_home'); ?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>product">Product</a></li>
+                    <li><a href="<?php echo base_url(); ?>product"><?php echo lang('footer_product'); ?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>service">Services</a></li>
+                    <li><a href="<?php echo base_url(); ?>service"><?php echo lang('footer_product_services'); ?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
+                    <li><a href="<?php echo base_url(); ?>about-us"><?php echo lang('footer_product_about'); ?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>press">Press</a></li>
+                    <li><a href="<?php echo base_url(); ?>press"><?php echo lang('footer_product_press'); ?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>career">Career</a></li>
+                    <li><a href="<?php echo base_url(); ?>career"><?php echo lang('footer_product_career'); ?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>news">News</a></li>
+                    <li><a href="<?php echo base_url(); ?>news"><?php echo lang('footer_product_news'); ?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
+                    <li><a href="<?php echo base_url(); ?>contact"><?php echo lang('footer_product_contact'); ?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>Imprint">Imprint</a></li>                    
+                    <li><a href="<?php echo base_url(); ?>Imprint"><?php echo lang('footer_product_imprint'); ?></a></li>                    
                 </ul>
 
                 <div style="clear: left;height: 20px;"></div>
@@ -139,30 +146,30 @@
                 <div style="clear: left;height: 15px;"></div>
 
                 <ul class="sub-menu-box" style="margin-left: 20px;">
-                    <li><a href="<?php echo base_url(); ?>product#Target-Group">Target Groups</a></li>
-                    <li><a href="<?php echo base_url(); ?>product#Features">Features</a></li>
-                    <li><a href="<?php echo base_url(); ?>product#Benefits">Benefits</a></li>
+                    <li><a href="<?php echo base_url(); ?>product#Target-Group"><?php echo lang('footer_product_target_groups'); ?></a></li>
+                    <li><a href="<?php echo base_url(); ?>product#Features"><?php echo lang('footer_product_features'); ?></a></li>
+                    <li><a href="<?php echo base_url(); ?>product#Benefits"><?php echo lang('footer_product_benefits'); ?></a></li>
                 </ul>
                 <ul class="sub-menu-box">
-                    <li><a href="<?php echo base_url(); ?>service#Case-Studies">Download Case Studies</a></li>                    
+                    <li><a href="<?php echo base_url(); ?>service#Case-Studies"><?php echo lang('footer_product_services_case_studies'); ?></a></li>                    
                 </ul>
                 <ul class="sub-menu-box" style="margin-left: 44px;">
-                    <li><a href="<?php echo base_url(); ?>about-us#Our-Experts">Our Experts</a></li>
-                    <li><a href="<?php echo base_url(); ?>about-us#Clients">Clients</a></li>
-                    <li><a href="<?php echo base_url(); ?>about-us#Partners">Partners</a></li>
+                    <li><a href="<?php echo base_url(); ?>about-us#Our-Experts"><?php echo lang('footer_product_about_experts'); ?></a></li>
+                    <li><a href="<?php echo base_url(); ?>about-us#Clients"><?php echo lang('footer_product_about_clients'); ?></a></li>
+                    <li><a href="<?php echo base_url(); ?>about-us#Partners"><?php echo lang('footer_product_about_partners'); ?></a></li>
                 </ul>
                 <ul class="sub-menu-box" style="margin-left: 18px;">
-                    <li><a href="<?php echo base_url(); ?>press#Company-Profile">Company Profile</a></li>
-                    <li><a href="<?php echo base_url(); ?>press#Management-Biographies">Management Biographies</a></li>
-                    <li><a href="<?php echo base_url(); ?>press#Press-Clipping">Press Clipping</a></li>
+                    <li><a href="<?php echo base_url(); ?>press#Company-Profile"><?php echo lang('footer_product_press_comp_profile'); ?></a></li>
+                    <li><a href="<?php echo base_url(); ?>press#Management-Biographies"><?php echo lang('footer_product_press_biographies'); ?></a></li>
+                    <li><a href="<?php echo base_url(); ?>press#Press-Clipping"><?php echo lang('footer_product_press_clipping'); ?></a></li>
                 </ul>
                 <ul class="sub-menu-box" style="width: 100px;">
-                    <li><a href="<?php echo base_url(); ?>career#Open-Vacancies">Open Vacancies</a></li>
+                    <li><a href="<?php echo base_url(); ?>career#Open-Vacancies"><?php echo lang('footer_product_vacancies'); ?></a></li>
                 </ul>
                 <ul class="sub-menu-box"  style="width: 100px;margin-left: 15px;">
-                    <li><a href="<?php echo base_url(); ?>news#Blog">Blog</a></li>
-                    <li><a href="<?php echo base_url(); ?>news#Meet-us">Meet us</a></li>
-                    <li><a href="<?php echo base_url(); ?>news#Follow-mapegy">Follow mapegy</a></li>
+                    <li><a href="<?php echo base_url(); ?>news#Blog"><?php echo lang('footer_product_news_blog'); ?></a></li>
+                    <li><a href="<?php echo base_url(); ?>news#Meet-us"><?php echo lang('footer_product_news_meet_us'); ?></a></li>
+                    <li><a href="<?php echo base_url(); ?>news#Follow-mapegy"><?php echo lang('footer_product_news_follow_mapegy'); ?></a></li>
                 </ul>
 
                 <div style="clear: left;height: 20px;"></div>

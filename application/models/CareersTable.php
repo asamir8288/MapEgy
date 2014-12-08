@@ -26,11 +26,12 @@ class CareersTable extends Doctrine_Table
                         ->fetchOne();
     }
     
-    public static function getAllActiveJobs($active_only = TRUE) {
+    public static function getAllActiveJobs($active_only = TRUE, $lang_id = 1) {
         $q = Doctrine_Query::create()
                 ->select('c.*')
                 ->from('Careers c')
-                ->where('c.deleted=0');
+                ->where('c.deleted=0')
+                ->andWhere('c.lang_id =?', $lang_id);
         if ($active_only) {
             $q = $q->andWhere('c.active_flag=?', $active_only);
         }

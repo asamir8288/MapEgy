@@ -15,7 +15,7 @@ class Dashboard extends My_Controller{
         parent::__construct();
     }
     
-    public function index() {
+    public function index() {        
         $this->data['navigator'] = 'Home > ...';
         $this->data['is_dashboard'] = TRUE;
         

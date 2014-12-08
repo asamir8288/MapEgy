@@ -14,6 +14,7 @@ class Careers extends BaseCareers {
 
     public function addJob(array $data) {
         $errors = $this->__validateJob($data);
+       
         if ($errors['error_flag']) {
             return $errors;
         } else {
@@ -23,15 +24,16 @@ class Careers extends BaseCareers {
             }
 
             $j = new Careers();
+            $j->lang_id = $data['lang_id'];
             $j->title = $data['title'];
             $j->anchor_url = $data['anchor_url'];
             $j->description = $data['description'];
             $j->pdf_title = $data['pdf_title'];
             $j->pdf = $errors['pdf'];
             $j->active_flag = $activate;
-            $j->created_at = date('ymdHis');
+            $j->create_at = date('ymdHis');
+            $j->deleted = 0;
             $j->save();
-
             return $errors;
         }
     }
@@ -130,4 +132,11 @@ class Careers extends BaseCareers {
         }
     }
 
+    public function deleteJob($job_id){
+        Doctrine_Query::create()
+                    ->update('Careers c')
+                    ->set('c.deleted', '?', true)
+                    ->where('c.id =?', $job_id)
+                    ->execute();
+    }
 }

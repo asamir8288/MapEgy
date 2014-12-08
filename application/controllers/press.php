@@ -16,6 +16,16 @@ class Press extends CI_Controller {
     }
     
     public function index() {
+        $lang_code = $this->session->userdata('lang_code');
+
+        if ($lang_code == 'en-us') {
+            $this->data['lang_id'] = 1;
+            $id= 2;
+        } else {
+            $this->data['lang_id'] = 2;
+            $id= 4;
+        }
+        
         $this->data['menu'] = array(0,0,0,1,0,0,0);
         $this->data['page_title'] = 'Press';
         $this->data['inside_banner'] = static_url() . 'layout/images/press.jpg';
@@ -26,13 +36,13 @@ class Press extends CI_Controller {
          * dynamic is press clipping
          */
         $this->data['press'] = array(
-            'media_contact' => StaticPagesTable::getOne('media_contact'),
-            'company_profile' => StaticPagesTable::getOne('company_profile'),
-            'management_biographies' => StaticPagesTable::getOne('management_biographies')
+            'media_contact' => StaticPagesTable::getOne('media_contact', $this->data['lang_id']),
+            'company_profile' => StaticPagesTable::getOne('company_profile', $this->data['lang_id']),
+            'management_biographies' => StaticPagesTable::getOne('management_biographies', $this->data['lang_id'])
         );
-        $this->data['press_clippings'] = PressClippingTable::getAllActivePressClippings(TRUE);
+        $this->data['press_clippings'] = PressClippingTable::getAllActivePressClippings(TRUE, $this->data['lang_id']);
         
-        $this->data['contact_person'] = ConsultingExpertTable::getOne(2);
+        $this->data['contact_person'] = ConsultingExpertTable::getOne($id);
 
         $this->template->write_view('content', 'frontend/press_view', $this->data);
         $this->template->render();

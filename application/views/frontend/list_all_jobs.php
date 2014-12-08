@@ -16,27 +16,21 @@
 </script>
 <div class="contact-person">
     <img src="<?php echo static_url(); ?>layout/images/career-advisor.jpg" />
-    <span class="adviosr-title">Dr. rer. nat. Matthias</span>
-    <span class="adviosr-job-title">Data Analysis and Visualization</span>
+    <span class="adviosr-title">James Gardner</span>
+    <span class="adviosr-job-title">Executive Assistant</span>
 
-    <a href="mailto:start@mapegy.com" class="apply-now">Apply Now</a>
+    <a href="mailto:start@mapegy.com" class="apply-now" style="padding: 4px 51px 7px 51px;"><?php echo lang('career_apply_now_btn');?></a>
 </div>
 
 <div class="job-main-brief">
-    <p>
-        mapegy offers a thriving environment where people are inspired to be and give their best. We want to become better day-by-day, individually and as a team.
-    </p>
-    <p>
-         Do you want to be a part of a growing company and a fast-paced environment? <br />
-         Do you work independently, flexibly and efficiently?<br />
-         Get to know us, Berlin's hottest Technology Intelligence Startup!
-    </p>
+    <?php echo lang('career_intro');?>
 
     <a id="Open-Vacancies" class="anchor" id="top"></a>
-    <div id="" class="our-open-vacancies">Our open vacancies:</div>
+    <div id="" class="our-open-vacancies"><?php echo lang('career_headline_vacancies');?>:</div>
+
     <ul class="job-list">
         <?php foreach ($jobs as $job) { ?>
-            <li><a href="#<?php echo $job['anchor_url']; ?>">- <?php echo $job['title']; ?></a></li>
+            <li style="list-style: disc;"><a href="#<?php echo $job['anchor_url']; ?>"><?php echo $job['title']; ?></a></li>
         <?php } ?>
     </ul>
 </div>
@@ -45,7 +39,7 @@
     <div class="small-dashed-separator job-separator-aligment"></div>
     <a style="top: -70px;" id="<?php echo $job['anchor_url']; ?>" class="anchor" id="top"></a>
     <div id="" class="job-title"><?php echo $job['title']; ?></div>
-    <div class="job-description"><?php echo nl2br($job['description']); ?></div>
+    <div class="job-description"><?php echo $job['description']; ?></div>
 
     <?php if ($job['pdf']) {
         ?>

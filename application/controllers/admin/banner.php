@@ -20,6 +20,7 @@ class Banner extends My_Controller {
     public function home_banners() {
         if ($this->input->post('submit')) {
             $_POST['displaying_place'] = 1;
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             $b = new Banners();
             $b->addBanner($_POST);
@@ -37,7 +38,7 @@ class Banner extends My_Controller {
         $this->template->add_js('layout/js/admin/jquery-sortable.js');
         $this->template->add_js('layout/js/admin/sorting_items.js');
 
-        $this->data['activeBanners'] = BannersTable::getActiveBanners(1, FALSE, 'ASC');
+        $this->data['activeBanners'] = BannersTable::getActiveBanners(1, FALSE, 'ASC', FALSE, $this->data['lang_id']);
         $this->template->write_view('content', 'backend/banners/home_banners', $this->data);
         $this->template->render();
     }
@@ -52,6 +53,7 @@ class Banner extends My_Controller {
     public function product_banners() {
         if ($this->input->post('submit')) {
             $_POST['displaying_place'] = 2;
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             $b = new Banners();
             $b->addBanner($_POST);
@@ -69,7 +71,7 @@ class Banner extends My_Controller {
         $this->template->add_js('layout/js/admin/jquery-sortable.js');
         $this->template->add_js('layout/js/admin/sorting_items.js');
 
-        $this->data['activeBanners'] = BannersTable::getActiveBanners(2, FALSE, 'ASC');
+        $this->data['activeBanners'] = BannersTable::getActiveBanners(2, FALSE, 'ASC', FALSE, $this->data['lang_id']);
         $this->template->write_view('content', 'backend/banners/home_banners', $this->data);
         $this->template->render();
     }
@@ -106,6 +108,8 @@ class Banner extends My_Controller {
         
         if($page == 'product'){
             $page = 'product_banners';
+        }else{
+            $page = 'home_banners';
         }
 
         redirect('admin/banner/'. $page);

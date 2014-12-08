@@ -262,3 +262,34 @@ body {
     top: 2px;
     margin-left: 5px;
 }
+
+.de-lang-header{
+    background-image: URL(../images/de.jpg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: right;
+    right: 80px;
+    top: -22px;
+    background-position: 0 0;
+    position: relative;
+}
+.de-lang-header:hover{
+    background-position: 0 -16px;
+}
+.en-lang-header{
+    background-image: URL(../images/en.jpg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: right;
+    right: 80px;
+    top: -22px;
+    background-position: 0 0;
+    position: relative;
+}
+.en-lang-header:hover{
+    background-position: 0 -16px;
+}

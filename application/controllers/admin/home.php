@@ -20,6 +20,7 @@ class Home extends My_Controller {
     public function clients() {
         if ($this->input->post('submit')) {
             $_POST['displaying_place'] = 3;
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             $b = new Banners();
             $b->addBanner($_POST);
@@ -36,7 +37,7 @@ class Home extends My_Controller {
         $this->data['submit_url'] = 'admin/home/sorting_clients';
         $this->template->add_js('layout/js/admin/jquery-sortable.js');
 
-        $this->data['clients'] = BannersTable::getActiveBanners(3, FALSE, 'ASC');
+        $this->data['clients'] = BannersTable::getActiveBanners(3, FALSE, 'ASC', false, $this->data['lang_id']);
 
         $this->template->write_view('content', 'backend/sliding/sliding', $this->data);
         $this->template->render();
@@ -52,6 +53,7 @@ class Home extends My_Controller {
     public function partners() {
         if ($this->input->post('submit')) {
             $_POST['displaying_place'] = 4;
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             $b = new Banners();
             $b->addBanner($_POST);
@@ -68,7 +70,7 @@ class Home extends My_Controller {
         $this->data['submit_url'] = 'admin/home/sorting_partners';
         $this->template->add_js('layout/js/admin/jquery-sortable.js');
 
-        $this->data['clients'] = BannersTable::getActiveBanners(4, FALSE, 'ASC');
+        $this->data['clients'] = BannersTable::getActiveBanners(4, FALSE, 'ASC', FALSE, $this->data['lang_id']);
 
         $this->template->write_view('content', 'backend/sliding/sliding', $this->data);
         $this->template->render();
@@ -102,7 +104,7 @@ class Home extends My_Controller {
 
         $this->data['banner_page'] = 'quotes';
 
-        $this->data['activeQuotes'] = QuotesTable::getActiveQuotes();
+        $this->data['activeQuotes'] = QuotesTable::getActiveQuotes(false, FALSE, false, $this->data['lang_id']);
         $this->template->write_view('content', 'backend/quotes/list_quotes', $this->data);
         $this->template->render();
     }
@@ -139,6 +141,7 @@ class Home extends My_Controller {
         if ($this->input->post('submit')) {
 
             $b = new Quotes();
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             if ($quote_id) {
                 $_POST['id'] = $quote_id;

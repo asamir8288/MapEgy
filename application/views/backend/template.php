@@ -24,10 +24,19 @@
 
                     if ($loggedin) {
                         ?>
-                    <li><a style="position: relative;right: 20px;" href="<?php echo site_url('admin/login/logout'); ?>"><?php echo lang('logout'); ?></a></li>
+                        <li><a style="position: relative;right: 20px;" href="<?php echo site_url('admin/login/logout'); ?>"><?php echo lang('logout'); ?></a></li>
                     <?php } ?>
                 </ul>
             </div>
+
+            <?php
+            $lang_code = $this->session->userdata('lang_code');
+            $lang_class = 'en-lang-header';
+            if ($lang_code != 'en-us') {
+                $lang_class = 'de-lang-header';
+            }
+            ?>
+            <a class="<?php echo $lang_class; ?>" href="<?php echo base_url('switch-language'); ?>"></a>  
         </div>
 
         <!-- Start Wrapper  -->
@@ -46,12 +55,12 @@
             <!-- Here we are going to set the icons of the top Menu if the current page is not the Dashboard -->
             <?php if (!isset($is_dashboard)) { ?>
                 <div id="inside-menu">
-                    <a href="<?php echo site_url('admin/dashboard');?>" class="dashboard"></a>
-                    <a href="<?php echo site_url('admin/banner/home_banners');?>" class="home-banners"></a>
-                    <a href="<?php echo site_url('admin/banner/product_banners');?>" class="home"></a>
+                    <a href="<?php echo site_url('admin/dashboard'); ?>" class="dashboard"></a>
+                    <a href="<?php echo site_url('admin/banner/home_banners'); ?>" class="home-banners"></a>
+                    <a href="<?php echo site_url('admin/banner/product_banners'); ?>" class="home"></a>
                     <a href="<?php echo site_url('admin/product'); ?>" class="product"></a>
                     <a href="<?php echo site_url('admin/our_experts'); ?>" class="about"></a>
-                    <a href="<?php echo site_url('admin/press');?>" class="press"></a>
+                    <a href="<?php echo site_url('admin/press'); ?>" class="press"></a>
                     <a href="<?php echo site_url('admin/job'); ?>" class="careers"></a>
                     <a href="<?php echo site_url('admin/manage_news'); ?>" class="blog"></a>
                     <a href="<?php echo site_url('admin/event'); ?>" class="events"></a>

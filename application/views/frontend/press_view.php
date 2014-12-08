@@ -22,7 +22,7 @@
         <span class="adviosr-job-title"><?php echo $contact_person['job_title']; ?></span>
         <div class="contact-tel"><?php echo $contact_person['tel']; ?></div>
 
-        <a href="mailto:start@mapegy.com" class="contact-link">Contact Me</a>
+        <a href="mailto:wagner@mapegy.com" class="contact-link">Contact Me</a>
     </div>
 </div>
 
@@ -34,9 +34,15 @@
 
 <div class="small-dashed-separator"></div>
 
-<div class="contact-us-box">
-    Interested?
-    <a href="mailto:wagner@mapegy.com" class="contact-us-link">Contact us</a>
+<?php
+$style_width = 'width: 440px;';
+if ($lang_id != 1) {
+    $style_width = 'width: 540px;';
+}
+?>
+<div class="contact-us-box" style="<?php echo $style_width;?>">
+    <?php echo lang('about_cta');?>
+    <a href="mailto:wagner@mapegy.com" class="contact-us-link"><?php echo lang('about_cta_btn');?></a>
 </div>
 
 <div style="height: 70px;display: block;"></div>

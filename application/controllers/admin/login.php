@@ -19,7 +19,9 @@ class Login extends My_Controller {
     }
 
     public function index() {
+//        var_dump($_POST);exit;
         if($this->input->post('submit')){
+            
             $username = $this->input->post('username');
             $password = $this->input->post('password');
             

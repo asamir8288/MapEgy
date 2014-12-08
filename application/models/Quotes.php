@@ -26,6 +26,7 @@ class Quotes extends BaseQuotes
                 $set_at_homepage = true;
             }
             $b = new Quotes();
+            $b->lang_id = $data['lang_id'];
             $b->description = $data['description'];
             $b->author = $data['author'];
             $b->logo = $errors['news_image'];

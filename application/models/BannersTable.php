@@ -25,11 +25,12 @@ class BannersTable extends Doctrine_Table {
                         ->fetchOne();
     }
 
-    public static function getActiveBanners($banner_place = 1 , $is_active = TRUE, $order = 'DESC', $set_at_homepage = false) {
+    public static function getActiveBanners($banner_place = 1 , $is_active = TRUE, $order = 'DESC', $set_at_homepage = false, $lang_id = 1) {
         $q = Doctrine_Query::create()
                 ->select('b.*')
                 ->from('Banners b')
-                ->where('b.displaying_place=?', $banner_place);
+                ->where('b.displaying_place=?', $banner_place)
+                ->andWhere('b.lang_id =?', $lang_id);
         if ($is_active) {
             $q = $q->andWhere('b.is_active=?', $is_active);
         }

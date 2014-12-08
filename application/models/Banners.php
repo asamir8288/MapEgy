@@ -27,6 +27,7 @@ class Banners extends BaseBanners {
             }
 
             $b = new Banners();
+            $b->lang_id = $data['lang_id'];
             $b->file_name = $errors['file_name'];
             $b->displaying_place = $data['displaying_place'];
             $b->is_active = $is_active;

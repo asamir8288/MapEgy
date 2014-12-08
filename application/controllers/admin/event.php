@@ -23,7 +23,7 @@ class Event extends My_Controller {
         $this->template->add_js('layout/js/admin/jquery-sortable.js');
         $this->template->add_js('layout/js/admin/sorting_items.js');
         
-        $this->data['activeEvents'] = EventsTable::getActiveEvents();
+        $this->data['activeEvents'] = EventsTable::getActiveEvents(FALSE, $this->data['lang_id']);
         $this->template->write_view('content', 'backend/events/list_events', $this->data);
         $this->template->render();
     }
@@ -63,6 +63,7 @@ class Event extends My_Controller {
         if ($this->input->post('submit')) {
 
             $e = new Events();
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             if ($event_id) {
                 $_POST['id'] = $event_id;

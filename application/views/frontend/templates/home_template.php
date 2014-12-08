@@ -13,7 +13,7 @@
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/jssor.core.js"></script>
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/jssor.utils.js"></script>
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/jssor.slider.js"></script>
-        <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/banner-slider.js"></script>
+        <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/banner-slider_home.js"></script>
         <script type="text/javascript" src="<?php echo static_url(); ?>layout/js/jquery.carouFredSel-6.2.1.js"></script>
 
         <style type="text/css">
@@ -97,23 +97,30 @@
                 <a class="twitter-header" target="_blank" href="https://twitter.com/mapegy"></a>
                 <a class="facebook-header" target="_blank" href="https://www.facebook.com/mapegy"></a> 
                 <div class="top-small-separator">|</div>
-                <a class="en-lang-header" target="_blank" href=""></a>                
+                <?php
+                $lang_code = $this->session->userdata('lang_code');
+                $lang_class = 'de-lang-header';
+                if ($lang_code != 'en-us') {
+                    $lang_class = 'en-lang-header';
+                }
+                ?>
+                <a class="<?php echo $lang_class;?>" href="<?php echo base_url('switch-language'); ?>"></a>                  
             </div>
 
             <ul id="top-menu">
-                <li><a href="<?php echo base_url(); ?>product">Product</a></li>
+                <li><a class="" href="<?php echo base_url(); ?>product"><?php echo lang('header_product');?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url(); ?>service">Services</a></li>
+                <li><a href="<?php echo base_url(); ?>service"><?php echo lang('header_services');?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
+                <li><a href="<?php echo base_url(); ?>about-us"><?php echo lang('header_about');?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url(); ?>press">Press</a></li>
+                <li><a href="<?php echo base_url(); ?>press"><?php echo lang('header_press');?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url(); ?>career">Career</a></li>
+                <li><a href="<?php echo base_url(); ?>career"><?php echo lang('header_career');?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url(); ?>news">News</a></li>
+                <li><a href="<?php echo base_url(); ?>news"><?php echo lang('header_news');?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
+                <li><a href="<?php echo base_url(); ?>contact"><?php echo lang('header_contact');?></a></li>
             </ul>
         </div>
 
@@ -172,10 +179,10 @@
             </div>
         </div>
 
-        <div id="home-benefits-section">
-            <div class="benefit"><span>Minimize risks by accessing all relevant, global information</span></div>
-            <div class="benefit"><span>Have facts and figures at your fingertips before anyone else</span></div>
-            <div class="benefit" style="margin-right: 0px;"><span>Enjoy superior, intuitive visualizations</span></div>
+        <div id="home-benefits-section" style="margin-bottom: 10px;">
+            <div class="benefit"><span><?php echo lang('home_Bullet_point_1');?></span></div>
+            <div class="benefit"><span><?php echo lang('home_Bullet_point_2');?></span></div>
+            <div class="benefit" style="margin-right: 0px;"><span><?php echo lang('home_Bullet_point_3');?></span></div>
 
             <div class="home-section-navigation">
                 <a href="#banner" class="nav-item"></a>
@@ -191,10 +198,9 @@
 <div class="small-dashed-separator"></div>
                 <!------ START About Mapegy --------------------------------->
                 <a id="About-Mapegy" class="anchor" id="top"></a>
-                <div id="" class="home-title">About mapegy</div>
+                <div id="" class="home-title"><?php echo lang('home_headline_about_us');?></div>
                 <p class="home-section">
-                    mapegy provides top insights from global innovation and technology data.
-We offer the most powerful and intuitive tools to measure and track innovation, competition and technology trends
+                   <?php echo lang('home_about_mapegy');?>
                 </p>
 
                 <!------ END About Mapegy --------------------------------->
@@ -202,7 +208,7 @@ We offer the most powerful and intuitive tools to measure and track innovation, 
                 <!------ START Clients --------------------------------->
 
                 <div class="small-dashed-separator"></div>
-                <div id="Clients" class="home-title small-width">Clients</div>
+                <div id="Clients" class="home-title small-width"><?php echo lang('home_clients');?></div>
                 <div class="list_carousel">
                     <ul id="foo2">
                         <?php foreach ($activeClients as $client) { ?>
@@ -219,7 +225,7 @@ We offer the most powerful and intuitive tools to measure and track innovation, 
                 <!------ START Quotes --------------------------------->
 
                 <div class="small-dashed-separator" style="margin-top: 40px;"></div>
-                <div class="home-title small-width">Quotes</div>
+                <div class="home-title small-width"><?php echo lang('home_quotes');?></div>
                 <div class="home-section">
                     <div class="list_carousel1" style="margin-left: 5px;">
                         <ul id="foo3">
@@ -334,8 +340,8 @@ We offer the most powerful and intuitive tools to measure and track innovation, 
 
 
                 <div class="contact-us-box">
-                    Interested?
-                    <a href="<?php echo site_url('contact'); ?>" class="contact-us-link">Contact us</a>
+                    <?php echo lang('about_cta');?>
+                    <a href="<?php echo site_url('contact'); ?>" class="contact-us-link"><?php echo lang('about_cta_btn');?></a>
                 </div>
 
                 <div style="height: 100px;display: block;"></div>
@@ -348,23 +354,23 @@ We offer the most powerful and intuitive tools to measure and track innovation, 
         <div id="footer">
             <div class="wrapper">
                 <ul class="menu">
-                    <li><a href="<?php echo base_url(); ?>">Home</a></li>
+                    <li><a href="<?php echo base_url(); ?>"><?php echo lang('footer_home');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>product">Product</a></li>
+                    <li><a href="<?php echo base_url(); ?>product"><?php echo lang('footer_product');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>service">Services</a></li>
+                    <li><a href="<?php echo base_url(); ?>service"><?php echo lang('footer_product_services');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
+                    <li><a href="<?php echo base_url(); ?>about-us"><?php echo lang('footer_product_about');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>press">Press</a></li>
+                    <li><a href="<?php echo base_url(); ?>press"><?php echo lang('footer_product_press');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>career">Career</a></li>
+                    <li><a href="<?php echo base_url(); ?>career"><?php echo lang('footer_product_career');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>news">News</a></li>
+                    <li><a href="<?php echo base_url(); ?>news"><?php echo lang('footer_product_news');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
+                    <li><a href="<?php echo base_url(); ?>contact"><?php echo lang('footer_product_contact');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>Imprint">Imprint</a></li>                    
+                    <li><a href="<?php echo base_url(); ?>Imprint"><?php echo lang('footer_product_imprint');?></a></li>                    
                 </ul>
 
                 <div style="clear: left;height: 20px;"></div>
@@ -379,30 +385,30 @@ We offer the most powerful and intuitive tools to measure and track innovation, 
                 <div style="clear: left;height: 15px;"></div>
 
                 <ul class="sub-menu-box" style="margin-left: 20px;">
-                    <li><a href="<?php echo base_url(); ?>product#Target-Group">Target Groups</a></li>
-                    <li><a href="<?php echo base_url(); ?>product#Features">Features</a></li>
-                    <li><a href="<?php echo base_url(); ?>product#Benefits">Benefits</a></li>
+                    <li><a href="<?php echo base_url(); ?>product#Target-Group"><?php echo lang('footer_product_target_groups');?></a></li>
+                    <li><a href="<?php echo base_url(); ?>product#Features"><?php echo lang('footer_product_features');?></a></li>
+                    <li><a href="<?php echo base_url(); ?>product#Benefits"><?php echo lang('footer_product_benefits');?></a></li>
                 </ul>
                 <ul class="sub-menu-box">
-                    <li><a href="<?php echo base_url(); ?>service#Case-Studies">Download Case Studies</a></li>                    
+                    <li><a href="<?php echo base_url(); ?>service#Case-Studies"><?php echo lang('footer_product_services_case_studies');?></a></li>                    
                 </ul>
                 <ul class="sub-menu-box" style="margin-left: 44px;">
-                    <li><a href="<?php echo base_url(); ?>about-us#Our-Experts">Our Experts</a></li>
-                    <li><a href="<?php echo base_url(); ?>about-us#Clients">Clients</a></li>
-                    <li><a href="<?php echo base_url(); ?>about-us#Partners">Partners</a></li>
+                    <li><a href="<?php echo base_url(); ?>about-us#Our-Experts"><?php echo lang('footer_product_about_experts');?></a></li>
+                    <li><a href="<?php echo base_url(); ?>about-us#Clients"><?php echo lang('footer_product_about_clients');?></a></li>
+                    <li><a href="<?php echo base_url(); ?>about-us#Partners"><?php echo lang('footer_product_about_partners');?></a></li>
                 </ul>
                 <ul class="sub-menu-box" style="margin-left: 18px;">
-                    <li><a href="<?php echo base_url(); ?>press#Company-Profile">Company Profile</a></li>
-                    <li><a href="<?php echo base_url(); ?>press#Management-Biographies">Management Biographies</a></li>
-                    <li><a href="<?php echo base_url(); ?>press#Press-Clipping">Press Clipping</a></li>
+                    <li><a href="<?php echo base_url(); ?>press#Company-Profile"><?php echo lang('footer_product_press_comp_profile');?></a></li>
+                    <li><a href="<?php echo base_url(); ?>press#Management-Biographies"><?php echo lang('footer_product_press_biographies');?></a></li>
+                    <li><a href="<?php echo base_url(); ?>press#Press-Clipping"><?php echo lang('footer_product_press_clipping');?></a></li>
                 </ul>
                 <ul class="sub-menu-box" style="width: 100px;">
-                    <li><a href="<?php echo base_url(); ?>career#Open-Vacancies">Open Vacancies</a></li>
+                    <li><a href="<?php echo base_url(); ?>career#Open-Vacancies"><?php echo lang('footer_product_vacancies');?></a></li>
                 </ul>
                 <ul class="sub-menu-box"  style="width: 100px;margin-left: 15px;">
-                    <li><a href="<?php echo base_url(); ?>news#Blog">Blog</a></li>
-                    <li><a href="<?php echo base_url(); ?>news#Meet-us">Meet us</a></li>
-                    <li><a href="<?php echo base_url(); ?>news#Follow-mapegy">Follow mapegy</a></li>
+                    <li><a href="<?php echo base_url(); ?>news#Blog"><?php echo lang('footer_product_news_blog');?></a></li>
+                    <li><a href="<?php echo base_url(); ?>news#Meet-us"><?php echo lang('footer_product_news_meet_us');?></a></li>
+                    <li><a href="<?php echo base_url(); ?>news#Follow-mapegy"><?php echo lang('footer_product_news_follow_mapegy');?></a></li>
                 </ul>
 
                 <div style="clear: left;height: 20px;"></div>

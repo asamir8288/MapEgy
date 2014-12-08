@@ -18,15 +18,23 @@ class About_us extends CI_Controller {
     }
 
     public function index() {
+        $lang_code = $this->session->userdata('lang_code');
+
+        if ($lang_code == 'en-us') {
+            $this->data['lang_id'] = 1;
+        } else {
+            $this->data['lang_id'] = 2;
+        }
+        
         $this->data['menu'] = array(0,0,1,0,0,0,0);
         $this->data['page_title'] = 'About Us';
         $this->data['inside_banner'] = static_url() . 'layout/images/banner3.jpg';
         
-        $this->data['experts'] = ExpertsTable::getAllActiveExperts();
+        $this->data['experts'] = ExpertsTable::getAllActiveExperts(TRUE, $this->data['lang_id']);
         
-        $this->data['activeClients'] = BannersTable::getActiveBanners(3, TRUE, 'ASC');
-        $this->data['activePartners'] = BannersTable::getActiveBanners(4, TRUE, 'ASC');
-        $this->data['activeQuotes'] = QuotesTable::getActiveQuotes(TRUE);
+        $this->data['activeClients'] = BannersTable::getActiveBanners(3, TRUE, 'ASC', FALSE, $this->data['lang_id']);
+        $this->data['activePartners'] = BannersTable::getActiveBanners(4, TRUE, 'ASC', FALSE, $this->data['lang_id']);
+        $this->data['activeQuotes'] = QuotesTable::getActiveQuotes(TRUE, FALSE, FALSE, $this->data['lang_id']);
         
         $this->template->add_js('layout/js/jquery.carouFredSel-6.2.1.js');
         $this->template->add_css('layout/css/home_scroll_plugin.css');

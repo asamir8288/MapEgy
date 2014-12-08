@@ -16,7 +16,10 @@ class ConsultingExpertTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('ConsultingExpert');
     }
-    
+    /*
+     * ID #1 for consulting and #2 for contact person in press page
+     * ID #3 for consulting and #4 for contact person in press page (German version)
+     */
     public static function getOne($id= 1) { // ID #1 for consulting and #2 for contact person in press page
         return Doctrine_Query::create()
                 ->select('e.*')

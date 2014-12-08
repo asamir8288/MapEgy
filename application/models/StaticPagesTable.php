@@ -17,11 +17,12 @@ class StaticPagesTable extends Doctrine_Table
         return Doctrine_Core::getTable('StaticPages');
     }
     
-    public static function getOne($page_id) {
+    public static function getOne($page_id, $lang_id = 1) {
         return Doctrine_Query::create()
                 ->select('p.*')
                 ->from('StaticPages p')
                 ->where('p.page_id =?', $page_id)
+                ->andWhere('p.lang_id =?', $lang_id)
                 ->setHydrationMode(Doctrine::HYDRATE_ARRAY)
                 ->fetchOne();
     }

@@ -25,11 +25,12 @@ class QuotesTable extends Doctrine_Table {
                         ->fetchOne();
     }
 
-    public static function getActiveQuotes($is_active = false, $limit = FALSE, $set_at_homepage = false) {
+    public static function getActiveQuotes($is_active = false, $limit = FALSE, $set_at_homepage = false, $lang_id =1) {
         $q = Doctrine_Query::create()
                 ->select('q.*')
                 ->from('Quotes q')
-                ->where('q.deleted =?', FALSE);
+                ->where('q.deleted =?', FALSE)
+                ->andWhere('q.lang_id =?', $lang_id);
         if ($is_active) {
             $q = $q->andWhere('q.is_active=?', TRUE);
         }

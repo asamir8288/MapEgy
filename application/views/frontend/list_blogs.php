@@ -12,3 +12,5 @@
         <div><?php echo substring($news['teaser'], $news['alias_url'], 'news/blog/details', 25); ?></div>
     </div>
 <?php } ?>
+
+<div style="clear: both;height: 20px;"></div>

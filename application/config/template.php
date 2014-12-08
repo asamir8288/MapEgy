@@ -103,6 +103,17 @@ $template['admin']['parser'] = 'parser';
 $template['admin']['parser_method'] = 'parse';
 $template['admin']['parse_template'] = FALSE;
 
-
+/*
+ * Mobile Version
+ */
+$template['mobile']['template'] = 'mobile/template';
+$template['mobile']['regions'] = array(
+   'header',
+   'content',
+   'footer',
+);
+$template['mobile']['parser'] = 'parser';
+$template['mobile']['parser_method'] = 'parse';
+$template['mobile']['parse_template'] = FALSE;
 /* End of file template.php */
 /* Location: ./system/application/config/template.php */

@@ -19,6 +19,7 @@ class ProductFeature extends BaseProductFeature {
         } else {
 
             $f = new ProductFeature();
+            $f->lang_id = $data['lang_id'];
             $f->description = $data['description'];
             $f->image = $errors['feature_image'];
             $f->created_at = date('ymdHis');

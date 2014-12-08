@@ -26,11 +26,12 @@ class ProductFeatureTable extends Doctrine_Table
                         ->fetchOne();
     }
 
-    public static function getActiveFeature($limit = FALSE) {
+    public static function getActiveFeature($limit = FALSE, $lang_id = 1) {
         $q = Doctrine_Query::create()
                 ->select('f.*')
                 ->from('ProductFeature f')
-                ->where('f.deleted =?', FALSE);
+                ->where('f.deleted =?', FALSE)
+                ->andWhere('f.lang_id=?', $lang_id);
         if ($limit) {
             $q = $q->limit($limit);
         }

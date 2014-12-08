@@ -25,11 +25,12 @@ class NewsTable extends Doctrine_Table {
                         ->fetchOne();
     }
 
-    public static function getActiveNews($limit = FALSE, $excepted_id = '', $show_in_homepage = false) {
+    public static function getActiveNews($limit = FALSE, $excepted_id = '', $show_in_homepage = false, $lang_id = 1) {
         $q = Doctrine_Query::create()
                 ->select('n.*')
                 ->from('News n')
-                ->where('n.deleted =?', FALSE);
+                ->where('n.deleted =?', FALSE)
+                ->andWhere('n.lang_id =?', $lang_id);
         if ($excepted_id) {
             $q = $q->andWhere('n.id !=?', intval($excepted_id));
         }
@@ -55,11 +56,12 @@ class NewsTable extends Doctrine_Table {
                         ->fetchOne();
     }
 
-    public static function getNewsCount() {
+    public static function getNewsCount($lang_id = 1) {
         return Doctrine_Query::create()
                         ->select('count(n.id) as count')
                         ->from('News n')
                         ->where('n.deleted =?', FALSE)
+                ->andWhere('n.lang_id =?', $lang_id)
                         ->setHydrationMode(Doctrine::HYDRATE_SINGLE_SCALAR)
                         ->fetchOne();
     }

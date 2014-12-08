@@ -21,6 +21,7 @@ class Legal_policy extends My_Controller{
 
         if ($this->input->post('submit')) {
             $_POST['page_id'] = $page_id;
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             $p = new StaticPages();
             $p->updatepress($_POST);
@@ -33,7 +34,7 @@ class Legal_policy extends My_Controller{
          */
         $this->template->add_js('layout/js/jquery-1.9.1.min.js');
 
-        $this->data['data'] = StaticPagesTable::getOne($page_id);
+        $this->data['data'] = StaticPagesTable::getOne($page_id, $this->data['lang_id']);
 
         $this->data['navigator'] = 'Home > ' . lang('legal_policy_update');
         $this->data['page_title'] = lang('legal_policy_update');

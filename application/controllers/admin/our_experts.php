@@ -24,7 +24,7 @@ class Our_experts extends My_Controller {
         $this->template->add_js('layout/js/admin/jquery-sortable.js');
         $this->template->add_js('layout/js/admin/sorting_items.js');
         
-        $this->data['experts'] = ExpertsTable::getAllActiveExperts(FALSE);
+        $this->data['experts'] = ExpertsTable::getAllActiveExperts(FALSE, $this->data['lang_id']);
         $this->template->write_view('content', 'backend/experts/list_experts', $this->data);
         $this->template->render();
     }
@@ -56,6 +56,8 @@ class Our_experts extends My_Controller {
 
         if ($this->input->post('submit')) {
             $e = new Experts();
+            
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             if ($expert_id) {
                 $_POST['id'] = $expert_id;

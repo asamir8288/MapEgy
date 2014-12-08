@@ -1,4 +1,4 @@
-<?php echo form_open(''); ?>
+<?php echo form_open('index.php/admin/login'); ?>
 <ul id="form_list">
     <li class="field-group">
         <label class="form-label" for="username"><?php echo lang('login_username');?> :</label>

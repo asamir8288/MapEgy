@@ -18,7 +18,7 @@ function upload_file($folder_name, array $allowed_types, $max_size) {
     $config['upload_path'] = './files/' . $folder_name . '/';
     $config['allowed_types'] = implode("|", $allowed_types);
     $config['max_size'] = $max_size;
-    $config['encrypt_name'] = TRUE;    
+//    $config['encrypt_name'] = TRUE;    
     $CI->load->library('upload', $config);
 
     if (!$CI->upload->do_upload()) {

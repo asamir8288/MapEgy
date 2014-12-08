@@ -23,7 +23,7 @@ class Product extends My_Controller {
         $this->template->add_js('layout/js/admin/jquery-sortable.js');
         $this->template->add_js('layout/js/admin/sorting_items.js');
         
-        $this->data['activeFeatures'] = ProductFeatureTable::getActiveFeature();
+        $this->data['activeFeatures'] = ProductFeatureTable::getActiveFeature(FALSE, $this->data['lang_id']);
         $this->template->write_view('content', 'backend/products/list_features', $this->data);
         $this->template->render();
     }
@@ -35,7 +35,7 @@ class Product extends My_Controller {
         redirect('admin/product');
     }
 
-    public function add_edit_feature($feature_id = '') {
+    public function add_edit_feature($feature_id = '') {        
         /*
          * Required Javascript for TinyMCE component
          */
@@ -60,6 +60,7 @@ class Product extends My_Controller {
         if ($this->input->post('submit')) {
 
             $f = new ProductFeature();
+            $_POST['lang_id'] = $this->data['lang_id'];
 
             if ($feature_id) {
                 $_POST['id'] = $feature_id;

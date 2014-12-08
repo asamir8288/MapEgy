@@ -14,10 +14,10 @@ class ACL {
 
     function is_allowed() {
         $CI = & get_instance();
-        $loggedin = $CI->session->userdata('is_login');
+        $loggedin = $CI->session->userdata('is_login');        
 
         if ($loggedin && $CI->uri->segment(1) == 'admin' && $CI->uri->segment(2) == '') {
-            redirect('admin/static_page/about_halalate');
+            redirect('admin/dashboard');
         } else if ($CI->uri->segment(1) == 'admin' && $CI->uri->segment(2) == '') {
             redirect('admin/login');
         }else if(!$loggedin && $CI->uri->segment(1) == 'admin' && $CI->uri->segment(2) != '' && $CI->uri->segment(2) != 'login'){

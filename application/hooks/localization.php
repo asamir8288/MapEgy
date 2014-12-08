@@ -21,11 +21,11 @@ Class Localization {
         // Lang set in URL via ?lang=something
         if (!empty($_GET['lang'])) {
             $lang = substr($_GET['lang'], 0, 5);            
-        }
+        }        
         // Lang has already been set and is stored in a session
         elseif ($CI->session->userdata('lang_code')) {
             $lang = $CI->session->userdata('lang_code');
-        }
+        }        
 
         // If no language has been worked out - or it is not supported - use the default
         if (empty($lang) or !in_array($lang, array_keys($CI->config->item('lang_list')))) {

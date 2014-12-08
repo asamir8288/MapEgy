@@ -1,0 +1,1 @@
+<?php echo $legal_policy['description'];?>
