@@ -14,7 +14,7 @@ if (!defined('BASEPATH'))
  */
 class My_Controller extends CI_Controller {
     
-    var $data = array();
+    var $data = array();    
     
     public function __construct() {
         parent::__construct();        

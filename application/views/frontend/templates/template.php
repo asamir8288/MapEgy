@@ -2,6 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <?php 
+            $lang_code = $this->session->userdata('lang_code');
+            $lang_id = 1;
+            if($lang_code != 'en-us'){
+                $lang_id = 2;
+            }
+        ?>
+        <?php echo print_meta_data($lang_id); ?>
         <title>mapegy :: <?php echo (isset($page_title)) ? $page_title : ''; ?></title>
 
         <link rel="shortcut icon" type="image/png" href="<?php echo static_url(); ?>layout/images/fav-icon.ico"/>
@@ -64,7 +72,8 @@
 
     <body>
         <div id="header">
-            <a href="<?php echo base_url(); ?>" class="logo"></a>       
+            <?php $lang_code = $this->session->userdata('lang_code'); ?>
+            <a href="<?php echo base_url(). (($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_HOME) : get_routed_url1(URL_PREFIX_EN_HOME)); ?>" class="logo"></a>       
 
             <div id="social-links">
                 <a class="xing-header" target="_blank" href="https://www.xing.com/companies/mapegy.com"></a>
@@ -73,7 +82,7 @@
                 <a class="facebook-header" target="_blank" href="https://www.facebook.com/mapegy"></a> 
                 <div class="top-small-separator">|</div>
                 <?php
-                $lang_code = $this->session->userdata('lang_code');
+                
                 $lang_class = 'de-lang-header';
                 if ($lang_code != 'en-us') {
                     $lang_class = 'en-lang-header';
@@ -83,19 +92,19 @@
             </div>
 
             <ul id="top-menu">
-                <li><a <?php echo (isset($menu) && $menu[0]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>product"><?php echo lang('header_product'); ?></a></li>
+                <li><a <?php echo (isset($menu) && $menu[0]) ? 'class="active"' : ''; ?> href="<?php echo base_url() . (($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_PRODUCT) :get_routed_url1(URL_PREFIX_EN_PRODUCT)); ?>"><?php echo lang('header_product'); ?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[1]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>service"><?php echo lang('header_services'); ?></a></li>
+                <li><a <?php echo (isset($menu) && $menu[1]) ? 'class="active"' : ''; ?> href="<?php echo base_url() . (($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_SERVICES) :get_routed_url1(URL_PREFIX_EN_SERVICES)); ?>"><?php echo lang('header_services'); ?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[2]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>about-us"><?php echo lang('header_about'); ?></a></li>
+                <li><a <?php echo (isset($menu) && $menu[2]) ? 'class="active"' : ''; ?> href="<?php echo base_url() . (($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_ABOUT) :get_routed_url1(URL_PREFIX_EN_ABOUT)); ?>"><?php echo lang('header_about'); ?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[3]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>press"><?php echo lang('header_press'); ?></a></li>
+                <li><a <?php echo (isset($menu) && $menu[3]) ? 'class="active"' : ''; ?> href="<?php echo base_url() . (($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_PRESS) :get_routed_url1(URL_PREFIX_EN_PRESS)); ?>"><?php echo lang('header_press'); ?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[4]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>career"><?php echo lang('header_career'); ?></a></li>
+                <li><a <?php echo (isset($menu) && $menu[4]) ? 'class="active"' : ''; ?> href="<?php echo base_url() . (($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_CAREER) :get_routed_url1(URL_PREFIX_EN_CAREER)); ?>"><?php echo lang('header_career'); ?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[5]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>news"><?php echo lang('header_news'); ?></a></li>
+                <li><a <?php echo (isset($menu) && $menu[5]) ? 'class="active"' : ''; ?> href="<?php echo base_url() . (($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_NEWS) :get_routed_url1(URL_PREFIX_EN_NEWS)); ?>"><?php echo lang('header_news'); ?></a></li>
                 <li class="menu-separator">|</li>
-                <li><a <?php echo (isset($menu) && $menu[6]) ? 'class="active"' : ''; ?> href="<?php echo base_url(); ?>contact"><?php echo lang('header_contact'); ?></a></li>
+                <li><a <?php echo (isset($menu) && $menu[6]) ? 'class="active"' : ''; ?> href="<?php echo base_url() . ($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_CONTACT) :get_routed_url1(URL_PREFIX_EN_CONTACT); ?>"><?php echo lang('header_contact'); ?></a></li>
             </ul>
         </div>
 
@@ -133,23 +142,23 @@
         <div id="footer">
             <div class="wrapper">
                 <ul class="menu">
-                    <li><a href="<?php echo base_url(); ?>"><?php echo lang('footer_home'); ?></a></li>
+                    <li><a href="<?php echo base_url(); ?>"><?php echo lang('footer_home');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>product"><?php echo lang('footer_product'); ?></a></li>
+                    <li><a href="<?php echo base_url() . (($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_PRODUCT) :get_routed_url1(URL_PREFIX_EN_PRODUCT)); ?>"><?php echo lang('footer_product');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>service"><?php echo lang('footer_product_services'); ?></a></li>
+                    <li><a href="<?php echo base_url() . (($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_SERVICES) :get_routed_url1(URL_PREFIX_EN_SERVICES)); ?>"><?php echo lang('footer_product_services');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>about-us"><?php echo lang('footer_product_about'); ?></a></li>
+                    <li><a href="<?php echo base_url() . (($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_ABOUT) :get_routed_url1(URL_PREFIX_EN_ABOUT)); ?>"><?php echo lang('footer_product_about');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>press"><?php echo lang('footer_product_press'); ?></a></li>
+                    <li><a href="<?php echo base_url() . (($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_PRESS) :get_routed_url1(URL_PREFIX_EN_PRESS)); ?>"><?php echo lang('footer_product_press');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>career"><?php echo lang('footer_product_career'); ?></a></li>
+                    <li><a href="<?php echo base_url() . (($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_CAREER) :get_routed_url1(URL_PREFIX_EN_CAREER)); ?>"><?php echo lang('footer_product_career');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>news"><?php echo lang('footer_product_news'); ?></a></li>
+                    <li><a href="<?php echo base_url() . (($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_NEWS) :get_routed_url1(URL_PREFIX_EN_NEWS)); ?>"><?php echo lang('footer_product_news');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>contact"><?php echo lang('footer_product_contact'); ?></a></li>
+                    <li><a href="<?php echo base_url() . ($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_CONTACT) :get_routed_url1(URL_PREFIX_EN_CONTACT); ?>"><?php echo lang('footer_product_contact');?></a></li>
                     <li class="footer-menu-separator">|</li>
-                    <li><a href="<?php echo base_url(); ?>Imprint"><?php echo lang('footer_product_imprint'); ?></a></li>                    
+                    <li><a href="<?php echo base_url() . ($lang_code == 'en-us') ? get_routed_url(URL_PREFIX_EN_IMPRINT) :get_routed_url1(URL_PREFIX_EN_IMPRINT); ?>"><?php echo lang('footer_product_imprint');?></a></li>                    
                 </ul>
 
                 <div style="clear: left;height: 20px;"></div>

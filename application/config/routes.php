@@ -38,6 +38,8 @@
 |
 */
 
+global $route;
+global $route1;
 $route['default_controller'] = "home";
 $route['404_override'] = '';
 
@@ -49,6 +51,9 @@ $route['events'] = 'news_section/list_all_events';
 $route['news/blogs'] = 'news_section/blogs';
 $route['switch-language'] = 'change_lang/switch_lang';
 $route['news/blog/details/(:any)'] = 'news_section/blog_details/$1';
+
+//include auto genrated routes
+require_once 'application/config/auto_routes.php';
 
 
 /* End of file routes.php */

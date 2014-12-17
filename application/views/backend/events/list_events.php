@@ -1,4 +1,5 @@
 <a href="<?php echo base_url(); ?>admin/event/add_edit_event" class="new-link"><?php echo lang('event_add_new_event'); ?></a>
+<a href="<?php echo base_url() . 'admin/urls_seo?guide=events'?>" class="new-link">URL and SEO</a>
 
 <table cellpadding="0" cellspacing="0">
     <tr>

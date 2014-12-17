@@ -1,3 +1,5 @@
+<a href="<?php echo base_url() . 'admin/urls_seo?guide=imprint'?>" class="new-link">URL and SEO</a>
+
 <?php echo form_open($post_url); ?>
 <ul id="form_list">
     <li>

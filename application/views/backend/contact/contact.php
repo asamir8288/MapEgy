@@ -1,3 +1,7 @@
+<div>
+    <a href="<?php echo base_url() . 'admin/urls_seo?guide=contact'?>" class="new-link">URL and SEO</a>
+</div>
+
 <div id="dashboard-menu" style="text-align: center;">
     <a href="<?php echo site_url('admin/contact/export_contacts'); ?>" class="contacts"></a>
     <a href="<?php echo site_url('admin/contact/contacts_with_newsletter'); ?>" class="contacts"></a>

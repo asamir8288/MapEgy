@@ -1,4 +1,5 @@
 <a href="<?php echo base_url(); ?>admin/manage_news/add_edit_news" class="new-link"><?php echo lang('news_add_new_news'); ?></a>
+<a href="<?php echo base_url() . 'admin/urls_seo?guide=news'?>" class="new-link">URL and SEO</a>
 
 <table cellpadding="0" cellspacing="0">
     <tr>

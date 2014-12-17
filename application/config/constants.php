@@ -36,6 +36,19 @@ define('FOPEN_READ_WRITE_CREATE',				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 define('ROUTS_ITEM_TEMPLATE','$route["%s"]        ="%s";');
+define('ROUTS_ITEM_TEMPLATE1','$route1["%s"]        ="%s";');
+
+define('URL_PREFIX_EN_PRODUCT', 'product/index');
+define('URL_PREFIX_EN_SERVICES', 'service/index');
+define('URL_PREFIX_EN_ABOUT', 'about_us/index');
+define('URL_PREFIX_EN_PRESS', 'press/index');
+define('URL_PREFIX_EN_CAREER', 'job/index');
+define('URL_PREFIX_EN_NEWS', 'news_section/index');
+define('URL_PREFIX_EN_CONTACT', 'contact/index');
+define('URL_PREFIX_EN_IMPRINT', 'imprint');
+define('URL_PREFIX_EN_EVENTS', 'news_section/list_all_events');
+define('URL_PREFIX_EN_HOME', 'home/index');
+
 
 
 /* End of file constants.php */

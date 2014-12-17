@@ -32,7 +32,7 @@
             <?php
             $lang_code = $this->session->userdata('lang_code');
             $lang_class = 'en-lang-header';
-            if ($lang_code != 'en-us') {
+            if ($lang_code == 'en-us') {
                 $lang_class = 'de-lang-header';
             }
             ?>

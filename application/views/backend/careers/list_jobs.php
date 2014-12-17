@@ -1,4 +1,5 @@
 <a href="<?php echo base_url(); ?>admin/job/add_edit_job" class="new-link"><?php echo lang('job_add_new_job'); ?></a>
+<a href="<?php echo base_url() . 'admin/urls_seo?guide=career'?>" class="new-link">URL and SEO</a>
 
 <table cellpadding="0" cellspacing="0">
     <tr>

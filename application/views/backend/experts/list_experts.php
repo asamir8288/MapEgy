@@ -1,4 +1,5 @@
 <a href="<?php echo base_url(); ?>admin/our_experts/add_edit_expert" class="new-link"><?php echo lang('expert_add_new_expert'); ?></a>
+<a href="<?php echo base_url() . 'admin/urls_seo?guide=about'?>" class="new-link">URL and SEO</a>
 
 
 <table cellpadding="0" cellspacing="0">

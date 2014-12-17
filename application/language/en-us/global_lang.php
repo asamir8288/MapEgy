@@ -49,4 +49,10 @@ $lang['footer_product_news_meet_us'] = 'Meet us';
 $lang['footer_product_news_follow_mapegy'] = 'Follow mapegy';
 $lang['footer_product_contact'] = 'Contact';
 $lang['footer_product_imprint'] = 'Imprint';
+
+$lang['url_routed']                     ='Page URL';
+$lang['url_meta_keywords']              ='Page meta keywords';
+$lang['url_meta_title']                 ='Page meta title';
+$lang['url_page_title']                 ='Page title';
+$lang['url_meta_description']           ='Page meta description';
 ?>

@@ -1,5 +1,4 @@
 <?php
-
 // Connection Component Binding
 Doctrine_Manager::getInstance()->bindComponent('Experts', 'default');
 
@@ -29,148 +28,149 @@ Doctrine_Manager::getInstance()->bindComponent('Experts', 'default');
  * @author     ##NAME## <##EMAIL##>
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
-abstract class BaseExperts extends Doctrine_Record {
-
-    public function setTableDefinition() {
+abstract class BaseExperts extends Doctrine_Record
+{
+    public function setTableDefinition()
+    {
         $this->setTableName('experts');
         $this->hasColumn('id', 'integer', 4, array(
-            'type' => 'integer',
-            'length' => 4,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => true,
-            'autoincrement' => true,
-        ));
+             'type' => 'integer',
+             'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => true,
+             'autoincrement' => true,
+             ));
         $this->hasColumn('lang_id', 'integer', 4, array(
-            'type' => 'integer',
-            'length' => 4,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'default' => '1',
-            'notnull' => true,
-            'autoincrement' => false,
-        ));
+             'type' => 'integer',
+             'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'default' => '1',
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('name', 'string', 150, array(
-            'type' => 'string',
-            'length' => 150,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => false,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'length' => 150,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('title', 'string', 255, array(
-            'type' => 'string',
-            'length' => 255,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => false,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('photo', 'string', 100, array(
-            'type' => 'string',
-            'length' => 100,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => false,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'length' => 100,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('germany_social', 'string', 255, array(
-            'type' => 'string',
-            'length' => 255,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => false,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('linkedin', 'string', 255, array(
-            'type' => 'string',
-            'length' => 255,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => false,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('facebook', 'string', 255, array(
-            'type' => 'string',
-            'length' => 255,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => false,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('twitter', 'string', 255, array(
-            'type' => 'string',
-            'length' => 255,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => false,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('hide', 'integer', 1, array(
-            'type' => 'integer',
-            'length' => 1,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => false,
-            'autoincrement' => false,
-        ));
+             'type' => 'integer',
+             'length' => 1,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('biographies', 'string', 500, array(
-            'type' => 'string',
-            'length' => 500,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => true,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'length' => 500,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('created_at', 'timestamp', null, array(
-            'type' => 'timestamp',
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => false,
-            'autoincrement' => false,
-        ));
+             'type' => 'timestamp',
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('updated_at', 'timestamp', null, array(
-            'type' => 'timestamp',
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => false,
-            'autoincrement' => false,
-        ));
+             'type' => 'timestamp',
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('deleted', 'integer', 1, array(
-            'type' => 'integer',
-            'length' => 1,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => false,
-            'default' => '0',
-            'autoincrement' => false,
-        ));
+             'type' => 'integer',
+             'length' => 1,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('order_flag', 'integer', 4, array(
-            'type' => 'integer',
-            'length' => 4,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => true,
-            'autoincrement' => false,
-        ));
+             'type' => 'integer',
+             'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
     }
 
-    public function setUp() {
+    public function setUp()
+    {
         parent::setUp();
+        
     }
-
 }

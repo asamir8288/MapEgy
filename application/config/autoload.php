@@ -68,7 +68,7 @@ $autoload['libraries'] = array('template', 'session', 'form_validation', 'ckedit
 | (file, language, cookie, text, url, form) ...
 */
 
-$autoload['helper'] = array('doctrine', 'url', 'form', 'language', 'localization', 'upload', 'general', 'editor', 'security', 'email_sender', 'validator');
+$autoload['helper'] = array('doctrine', 'url', 'form', 'language', 'localization', 'upload', 'general', 'editor', 'security', 'email_sender', 'validator', 'url2');
 
 
 /*

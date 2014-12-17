@@ -1,3 +1,7 @@
+<?php if($this->uri->segment(3) == 'home_banners') {?>
+<a href="<?php echo base_url() . 'admin/urls_seo?guide=home'?>" class="new-link">URL and SEO</a>
+<?php } ?>
+
 <?php echo form_open_multipart($post_url); ?>
 <ul id="form_list">
     <li>

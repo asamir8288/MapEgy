@@ -1,4 +1,5 @@
 <a href="<?php echo base_url(); ?>admin/product/add_edit_feature" class="new-link"><?php echo lang('feature_add_new_feature'); ?></a>
+<a href="<?php echo base_url() . 'admin/urls_seo?guide=product'?>" class="new-link">URL and SEO</a>
 
 <?php echo form_open($submit_url); ?>
 <table cellpadding="0" cellspacing="0">

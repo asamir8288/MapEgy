@@ -21,7 +21,14 @@ class Legal_policy extends CI_Controller {
         $this->data['page_title'] = lang('page_title');
         $this->data['inside_banner'] = static_url() . 'layout/images/inside-banner.png';
         
-        $this->data['legal_policy'] = StaticPagesTable::getOne('legal_policy');
+        $lang_code = $this->session->userdata('lang_code');
+        if ($lang_code == 'en-us') {
+            $this->data['lang_id'] = 1;
+        } else {
+            $this->data['lang_id'] = 2;
+        }
+        
+        $this->data['legal_policy'] = StaticPagesTable::getOne('legal_policy', $this->data['lang_id']);
         
         $this->template->add_js('layout/js/jquery.carouFredSel-6.2.1.js');
         $this->template->add_css('layout/css/home_scroll_plugin.css');

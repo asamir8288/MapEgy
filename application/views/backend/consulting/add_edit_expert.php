@@ -1,3 +1,5 @@
+<a href="<?php echo base_url() . 'admin/urls_seo?guide=service'?>" class="new-link">URL and SEO</a>
+
 <?php echo form_open_multipart($post_url); ?>
 <ul id="form_list">
     <li>
