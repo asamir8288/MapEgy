@@ -17,21 +17,23 @@ class ContactsTable extends Doctrine_Table
         return Doctrine_Core::getTable('Contacts');
     }
     
-    public static function getAllContacts() {
+    public static function getAllContacts($lang_id = 1) {
         return Doctrine_Query::create()
                 ->select('c.*')
                 ->from('Contacts c')
                 ->where('c.deleted=0')
+//                ->andWhere('c.lang_id=?', $lang_id)
                 ->setHydrationMode(Doctrine::HYDRATE_ARRAY)
                 ->execute();
     }
     
-    public static function getNewsletterContacts() {
+    public static function getNewsletterContacts($lang_id = 1) {
         return Doctrine_Query::create()
                 ->select('c.*')
                 ->from('Contacts c')
                 ->where('c.deleted=0')
-                ->where('c.newsletter=1')
+                ->andWhere('c.newsletter=1')
+//                ->andWhere('c.lang_id=?', $lang_id)
                 ->setHydrationMode(Doctrine::HYDRATE_ARRAY)
                 ->execute();
     }

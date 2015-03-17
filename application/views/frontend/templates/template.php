@@ -88,7 +88,7 @@
                     $lang_class = 'en-lang-header';
                 }
                 ?>
-                <a class="<?php echo $lang_class; ?>" href="<?php echo base_url('switch-language'); ?>"></a>                
+                <a class="<?php echo $lang_class; ?>" href="<?php echo base_url('switch-language') . '?page=' . getOppositeLang($lang_id); ?>"></a>
             </div>
 
             <ul id="top-menu">
@@ -172,7 +172,7 @@
 
                 <div style="clear: left;height: 15px;"></div>
 
-                <ul class="sub-menu-box" style="margin-left: 20px;">
+                <ul class="sub-menu-box" style="margin-left: 44px;">
                     <li><a href="<?php echo base_url(); ?>product#Target-Group"><?php echo lang('footer_product_target_groups'); ?></a></li>
                     <li><a href="<?php echo base_url(); ?>product#Features"><?php echo lang('footer_product_features'); ?></a></li>
                     <li><a href="<?php echo base_url(); ?>product#Benefits"><?php echo lang('footer_product_benefits'); ?></a></li>
@@ -180,20 +180,20 @@
                 <ul class="sub-menu-box">
                     <li><a href="<?php echo base_url(); ?>service#Case-Studies"><?php echo lang('footer_product_services_case_studies'); ?></a></li>                    
                 </ul>
-                <ul class="sub-menu-box" style="margin-left: 44px;">
+                <ul class="sub-menu-box" style="margin-left: 34px;">
                     <li><a href="<?php echo base_url(); ?>about-us#Our-Experts"><?php echo lang('footer_product_about_experts'); ?></a></li>
                     <li><a href="<?php echo base_url(); ?>about-us#Clients"><?php echo lang('footer_product_about_clients'); ?></a></li>
                     <li><a href="<?php echo base_url(); ?>about-us#Partners"><?php echo lang('footer_product_about_partners'); ?></a></li>
                 </ul>
-                <ul class="sub-menu-box" style="margin-left: 18px;">
+                <ul class="sub-menu-box" style="margin-left: 7px;">
                     <li><a href="<?php echo base_url(); ?>press#Company-Profile"><?php echo lang('footer_product_press_comp_profile'); ?></a></li>
                     <li><a href="<?php echo base_url(); ?>press#Management-Biographies"><?php echo lang('footer_product_press_biographies'); ?></a></li>
                     <li><a href="<?php echo base_url(); ?>press#Press-Clipping"><?php echo lang('footer_product_press_clipping'); ?></a></li>
                 </ul>
-                <ul class="sub-menu-box" style="width: 100px;">
+                <ul class="sub-menu-box" style="width: 100px;margin-left: -4px;">
                     <li><a href="<?php echo base_url(); ?>career#Open-Vacancies"><?php echo lang('footer_product_vacancies'); ?></a></li>
                 </ul>
-                <ul class="sub-menu-box"  style="width: 100px;margin-left: 15px;">
+                <ul class="sub-menu-box"  style="width: 100px;margin-left: 13px;">
                     <li><a href="<?php echo base_url(); ?>news#Blog"><?php echo lang('footer_product_news_blog'); ?></a></li>
                     <li><a href="<?php echo base_url(); ?>news#Meet-us"><?php echo lang('footer_product_news_meet_us'); ?></a></li>
                     <li><a href="<?php echo base_url(); ?>news#Follow-mapegy"><?php echo lang('footer_product_news_follow_mapegy'); ?></a></li>

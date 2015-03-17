@@ -22,7 +22,7 @@
         <span class="adviosr-job-title"><?php echo $contact_person['job_title']; ?></span>
         <div class="contact-tel"><?php echo $contact_person['tel']; ?></div>
 
-        <a href="mailto:wagner@mapegy.com" class="contact-link">Contact Me</a>
+        <a href="mailto:wagner@mapegy.com" class="static-contact-link">Contact Me</a>
     </div>
 </div>
 

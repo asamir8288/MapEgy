@@ -18,6 +18,7 @@ class ContactList extends BaseContactList {
             return $errors;
         } else {
             $o = new ContactList();
+            $o->lang_id = $data['lang_id'];
             $o->contact_option = $data['contact_option'];
             $o->created_at = date('ymdHis');
             $o->save();

@@ -25,11 +25,12 @@ class ContactListTable extends Doctrine_Table {
                         ->fetchOne();
     }
 
-    public static function getAllOptions() {
+    public static function getAllOptions($lang_id = 1) {
         $q = Doctrine_Query::create()
                 ->select('c.*')
                 ->from('ContactList c')
                 ->where('c.deleted=0')
+                ->andWhere('c.lang_id=?', $lang_id)
                 ->setHydrationMode(Doctrine::HYDRATE_ARRAY)
                 ->orderBy('c.order_flag ASC')
                 ->execute();

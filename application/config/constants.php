@@ -45,7 +45,7 @@ define('URL_PREFIX_EN_PRESS', 'press/index');
 define('URL_PREFIX_EN_CAREER', 'job/index');
 define('URL_PREFIX_EN_NEWS', 'news_section/index');
 define('URL_PREFIX_EN_CONTACT', 'contact/index');
-define('URL_PREFIX_EN_IMPRINT', 'imprint');
+define('URL_PREFIX_EN_IMPRINT', 'legal_policy/index');
 define('URL_PREFIX_EN_EVENTS', 'news_section/list_all_events');
 define('URL_PREFIX_EN_HOME', 'home/index');
 

@@ -22,7 +22,7 @@ $lang['fontend_service_bullet_title_2'] = 'unterstützen Sie bei der Vorbereitun
 $lang['fontend_service_bullet_title_3'] = 'bereiten kundenspezifische Studien vor und';
 $lang['fontend_service_bullet_title_4'] = 'bieten Ihnen weitere maßgebliche Unterstützung z.B. beim Technology Trading oder Sourcing an.';
 
-$lang['fontend_service_cta'] = '<p>Wie können wir <strong>helfen</strong>?</p>';
+$lang['fontend_service_cta'] = 'Wie können wir <strong>helfen</strong>?';
 $lang['fontend_service_cta_btn'] = 'Kontaktieren Sie uns';
 
 $lang['fontend_service_innovation'] = 'Innovations management';

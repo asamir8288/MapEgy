@@ -46,10 +46,10 @@
         <li>
             <label for="title"><?php echo lang('contact_title');?> <span class="star">*</span></label>
             <select name="title" class="select" style="width: 100px;">
-                <option value="Mr.">Mr.</option>
-                <option value="Mrs.">Mrs.</option>
-                <option value="Dr.">Dr.</option>
-                <option value="Prof.">Prof.</option>
+                <option value="Mr."><?php echo lang('contact_mr');?></option>
+                <option value="Mrs."><?php echo lang('contact_mrs');?></option>
+                <option value="Dr."><?php echo lang('contact_dr');?></option>
+                <option value="Prof."><?php echo lang('contact_prof');?></option>
             </select>
         </li>        
         <li>

@@ -23,9 +23,9 @@
 }
 
 #header .logo {
-    background-image: url(../images/mapegy-logo.png);
-    width: 132px;
-    height: 53px;
+    background-image: url(../images/mapegy_logo.png);
+    width: 134px;
+    height: 52px;
     display: inline-block;
     position: relative;
     left: 20px;
@@ -33,7 +33,7 @@
 }
 
 #header #top-menu {
-    width: 485px;
+    width: 560px;
     margin:  0 auto!important;
     float: none!important;
     right: 0px!important;
@@ -59,7 +59,7 @@ top: -25px!important;*/
 }
 #header #top-menu li a {
     color: #000;
-    font-size: 16px;
+    font-size: 15px;
     text-decoration: none;
 }
 #header #top-menu li a:hover {
@@ -503,7 +503,8 @@ top: -25px!important;*/
 
 #footer .menu{
     list-style: none;
-    width: 700px;
+    width: 750px;
+    text-align: center;
     margin: 0 auto;
     padding-top: 15px;
 }
@@ -515,13 +516,14 @@ top: -25px!important;*/
 #footer .menu .footer-menu-separator{
     color: #033964;
     font-size: 16px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 7px;
+    margin-right: 7px;
 }
 
 #footer .menu li a{
     color: #FFF;
-    text-decoration: none;	
+    text-decoration: none;
+    font-size: 13px!important;
 }
 #footer .menu li a:hover{
     color: #99b9d3;
@@ -558,7 +560,7 @@ top: -25px!important;*/
     background-image:url(../images/footer-dash-link-1.png);
     width: 167px;
     height: 58px;
-    margin-left: 20px;
+    margin-left: 60px;
 }
 .dashed-link-2{
     background-image: url(../images/footer-dash-link-2.png);
@@ -570,25 +572,25 @@ top: -25px!important;*/
     background-image: url(../images/footer-dash-link-3.png);
     width: 28px;
     height: 57px;
-    margin-left: 69px!important;
+    margin-left: 60px!important;
 }
 .dashed-link-4{
     background-image: url(../images/footer-dash-link-4.png);
     width: 65px;
     height: 57px;
-    margin-left: 66px!important;
+    margin-left: 54px!important;
 }
 .dashed-link-5{
     background-image: url(../images/footer-dash-link-5.png);
     width: 124px;
     height: 57px;
-    margin-left: 9px!important;
+    margin-left: 4px!important;
 }
 .dashed-link-6{
     background-image: url(../images/footer-dash-link-6.png);
     width: 165px;
     height: 57px;
-    margin-left: -52px!important;
+    margin-left: -55px!important;
 }
 
 .footer-legal-policy-link {
@@ -763,7 +765,7 @@ top: -25px!important;*/
 .news_blog_box {
     width: 271px;
     display: inline-block;
-    margin: 11px 10px;
+    margin: 11px 5px;
     vertical-align: top;
 }
 
@@ -1206,6 +1208,23 @@ top: -25px!important;*/
 .contact-link:hover {
     background-color: #006fc7;
 }
+.static-contact-link {
+    color: #FFF;
+    background-color: #ffc000;
+    font-size: 25px;
+    margin-top: 20px;
+    text-decoration: none;
+    text-align: center;
+    width: 220px;
+    padding-top: 4px;
+    padding-bottom: 7px;
+    position: relative;
+    top: 0px;
+    display: block;
+}
+.static-contact-link:hover {
+    background-color: #006fc7;
+}
 
 .consulting-title-decoration {
     font-size: 26px;
@@ -1291,7 +1310,6 @@ top: -25px!important;*/
 }
 
 .our_consulting_experts {
-    text-transform: capitalize;
     color: #1075c9;
     font-size: 26px;
     display: block;
@@ -1313,8 +1331,8 @@ top: -25px!important;*/
     width: 768px;
     display: block;
     background-color: #f0f0f0;
-    margin: 0 auto;
-    text-align: left;
+    text-align: center;
+    margin: 0 auto;    
     font-size: 38px;
     border: 1px solid #e6e6e6;
     padding: 11px;
@@ -1340,14 +1358,13 @@ top: -25px!important;*/
     background-color: #ffc000;
     color: #fff;
     display: inline-block;
-    float: right;
     font-size: 30px;
-    margin-left: 35px;
+    margin-left: 45px;
     padding: 0 30px 2px;
     position: relative;
     right: 20px;
     text-decoration: none;
-    top: -40px;
+    top: -2px;
 }
 .consulting .consulting-contact-link:hover {
     background-color: #006fc7;

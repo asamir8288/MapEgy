@@ -19,7 +19,7 @@
     <span class="adviosr-title">James Gardner</span>
     <span class="adviosr-job-title">Executive Assistant</span>
 
-    <a href="mailto:start@mapegy.com" class="apply-now" style="padding: 4px 51px 7px 51px;"><?php echo lang('career_apply_now_btn');?></a>
+    <a href="mailto:start@mapegy.com" class="apply-now" style="padding: 4px 2px 7px 2px;text-align: center;"><?php echo lang('career_apply_now_btn');?></a>
 </div>
 
 <div class="job-main-brief">

@@ -20,6 +20,7 @@ class Contact extends MY_Controller {
     public function index($id = '') {
         if ($this->input->post('submit')) {
             $c = new ContactList();
+            $_POST['lang_id'] = $this->data['lang_id'];
             if ($id) {
                 $_POST['id'] = $id;
                 $c->updateOption($_POST);
@@ -46,7 +47,7 @@ class Contact extends MY_Controller {
         $this->template->add_js('layout/js/admin/jquery-sortable.js');
         $this->template->add_js('layout/js/admin/sorting_items.js');
 
-        $this->data['options'] = ContactListTable::getAllOptions();
+        $this->data['options'] = ContactListTable::getAllOptions($this->data['lang_id']);
 
         $this->template->write_view('content', 'backend/contact/contact', $this->data);
         $this->template->render();

@@ -51,5 +51,10 @@ $lang['footer_product_news_meet_us'] = 'Meet us';
 $lang['footer_product_news_follow_mapegy'] = 'Follow mapegy';
 $lang['footer_product_contact'] = 'Contact';
 $lang['footer_product_imprint'] = 'Imprint';
+
+$lang['contact_mr'] = 'Mr.';
+$lang['contact_mrs'] = 'Mrs.';
+$lang['contact_dr'] = 'Dr.';
+$lang['contact_prof'] = 'Prof.';
 ?>
 

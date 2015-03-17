@@ -196,4 +196,35 @@ function get_static_url($uri = '') {
     $CI = get_instance();
     return $CI->config->item('base_static_url') . trim($uri, '/');
 }
+
+function getOppositeLang($lang_id = 1) {
+    if ($lang_id == 1) {
+        $lang_id = 2;
+    } else {
+        $lang_id = 1;
+    }
+    global $route;
+    $CI = get_instance();
+    $uri_string = '';
+    $url = '';
+    if (isset($route[$CI->uri->uri_string])) {
+        $uri_string = $CI->uri->uri_string;
+    } elseif (isset($route[trim($CI->uri->uri_string, '/')])) {
+        $uri_string = trim($CI->uri->uri_string, '/');
+    } elseif (isset($route[$CI->uri->uri_string . '/'])) {
+        $uri_string = $CI->uri->uri_string . '/';
+    }
+    if ($uri_string || implode('/', $CI->uri->rsegments) == 'home/index') {
+        if ($uri_string) {
+            $url = UrlsTable::getOneByOriginalURL($route[$uri_string], $lang_id);
+        } else {
+            $url = UrlsTable::getOneByOriginalURL($route[$uri_string], $lang_id);
+        }
+    }
+    if ($url) {
+        return $url['u_url_routed'];
+    } else {
+        return '';
+    }
+}
 ?>

@@ -40,7 +40,7 @@ $lang['front_product_this_makes_us_unique_3_2'] = 'you gain access to complex da
 $lang['contact_btn'] = 'Contact us';
 
 $lang['fontend_service_intro'] = 'We provide software and consulting for technology decision makers – no matter which line of business or field of technology you deal with.';
-$lang['fontend_service_bullet_title'] = 'We And Our Partners';
+$lang['fontend_service_bullet_title'] = 'We and our partners';
 $lang['fontend_service_bullet_title_1'] = 'help you evaluate the results you discovered with our software,';
 $lang['fontend_service_bullet_title_2'] = 'assist you with the preparation of presentations,';
 $lang['fontend_service_bullet_title_3'] = 'prepare customized studies, and';

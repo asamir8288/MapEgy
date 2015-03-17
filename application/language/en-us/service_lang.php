@@ -16,7 +16,7 @@ $lang['logout'] = 'Logout';
 $lang['left_contact_us'] = 'Contact us';
 
 $lang['fontend_service_intro'] = 'We provide software and consulting for technology decision makers – no matter which line of business or field of technology you deal with.';
-$lang['fontend_service_bullet_title'] = 'We And Our Partners';
+$lang['fontend_service_bullet_title'] = 'We and our partners';
 $lang['fontend_service_bullet_title_1'] = 'help you evaluate the results you discovered with our software,';
 $lang['fontend_service_bullet_title_2'] = 'assist you with the preparation of presentations,';
 $lang['fontend_service_bullet_title_3'] = 'prepare customized studies, and';
@@ -29,7 +29,7 @@ $lang['fontend_service_finding_experts'] = 'Finding the experts you need.';
 $lang['fontend_service_future'] = 'Future & Trend Studies Research Funding Investments';
 $lang['fontend_service_information'] = 'Providing you with customized insights into today\'s vast world of information.';
 
-$lang['fontend_service_cta'] = '<p>How can we <strong>help</strong> your <strong>business</strong>?</p>';
+$lang['fontend_service_cta'] = 'How can we <strong>help</strong> your <strong>business</strong>?';
 $lang['fontend_service_cta_btn'] = 'Contact us';
 
 $lang['header_product'] = 'Product';

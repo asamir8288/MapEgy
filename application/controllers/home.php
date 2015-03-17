@@ -22,7 +22,7 @@ class Home extends CI_Controller {
             redirect(site_url() . 'mobile');
     }
 
-    public function index() {
+    public function index() {        
         $this->template->set_template('home_template');
 
         $lang_code = $this->session->userdata('lang_code');

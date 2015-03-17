@@ -12,8 +12,8 @@ $lang['left_contact_us'] = 'Kontakt';
 
 $lang['contact_iam'] = 'Ich bin';
 $lang['contact_title'] = 'Anrede';
-$lang['contact_surname'] = 'Vorname';
-$lang['contact_given_name'] = 'Name';
+$lang['contact_surname'] = 'Name';
+$lang['contact_given_name'] = 'Vorname';
 $lang['contact_email'] = 'E-Mail';
 $lang['contact_phone'] = 'Telefon';
 $lang['contact_company'] = 'Unternehmen';

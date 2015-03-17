@@ -26,7 +26,7 @@ $lang['logout'] = 'Logout';
 
 $lang['left_contact_us'] = 'Kontakt';
 
-$lang['home_Bullet_point_1'] = '<strong>Minimieren</strong> Sie Ihre Risiken durch den Zugriff auf alle relevanten globalen Innovationsdaten';
+$lang['home_Bullet_point_1'] = '<strong>Minimieren</strong> Sie Risiken durch Zugriff auf globale Innovationsdaten';
 $lang['home_Bullet_point_2'] = '<strong>Erschließen</strong> Sie Zahlen und Fakten vor allen Anderen';
 $lang['home_Bullet_point_3'] = '<strong>Genießen</strong> Sie einzigartige intuitive Visualisierungen';
 

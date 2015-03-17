@@ -1,5 +1,4 @@
 <?php
-
 // Connection Component Binding
 Doctrine_Manager::getInstance()->bindComponent('Urls', 'default');
 
@@ -23,93 +22,94 @@ Doctrine_Manager::getInstance()->bindComponent('Urls', 'default');
  * @author     ##NAME## <##EMAIL##>
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
-abstract class BaseUrls extends Doctrine_Record {
-
-    public function setTableDefinition() {
+abstract class BaseUrls extends Doctrine_Record
+{
+    public function setTableDefinition()
+    {
         $this->setTableName('urls');
         $this->hasColumn('url_id', 'integer', 4, array(
-            'type' => 'integer',
-            'length' => 4,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => true,
-            'autoincrement' => true,
-        ));
+             'type' => 'integer',
+             'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => true,
+             'autoincrement' => true,
+             ));
         $this->hasColumn('lang_id', 'integer', 4, array(
-            'type' => 'integer',
-            'length' => 4,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => true,
-            'default' => '1',
-            'autoincrement' => false,
-        ));
+             'type' => 'integer',
+             'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('guid_id', 'string', 100, array(
-            'type' => 'string',
-            'length' => 100,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => true,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'length' => 100,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('url_routed', 'string', 255, array(
-            'type' => 'string',
-            'length' => 255,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => true,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('url_original', 'string', 250, array(
-            'type' => 'string',
-            'length' => 250,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => true,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'length' => 250,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('url_meta_keywords', 'string', null, array(
-            'type' => 'string',
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => true,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('url_meta_description', 'string', null, array(
-            'type' => 'string',
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => true,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('url_meta_title', 'string', 500, array(
-            'type' => 'string',
-            'length' => 500,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => true,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'length' => 500,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('url_page_title', 'string', 255, array(
-            'type' => 'string',
-            'length' => 255,
-            'fixed' => false,
-            'unsigned' => false,
-            'primary' => false,
-            'notnull' => true,
-            'autoincrement' => false,
-        ));
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
     }
 
-    public function setUp() {
+    public function setUp()
+    {
         parent::setUp();
+        
     }
-
 }

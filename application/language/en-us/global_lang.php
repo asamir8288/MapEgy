@@ -55,4 +55,9 @@ $lang['url_meta_keywords']              ='Page meta keywords';
 $lang['url_meta_title']                 ='Page meta title';
 $lang['url_page_title']                 ='Page title';
 $lang['url_meta_description']           ='Page meta description';
+
+$lang['contact_mr'] = 'Mr.';
+$lang['contact_mrs'] = 'Mrs.';
+$lang['contact_dr'] = 'Dr.';
+$lang['contact_prof'] = 'Prof.';
 ?>

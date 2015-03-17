@@ -22,7 +22,7 @@ $lang['left_contact_us'] = 'Kontakt';
 
 $lang['header_product'] = 'Produkt';
 $lang['header_services'] = 'Service';
-$lang['header_about'] = 'Über';
+$lang['header_about'] = 'Über uns';
 $lang['header_press'] = 'Presse';
 $lang['header_career'] = 'Karriere';
 $lang['header_news'] = 'News';
@@ -35,7 +35,7 @@ $lang['footer_product_features'] = 'Features';
 $lang['footer_product_benefits'] = 'Vorteile';
 $lang['footer_product_services'] = 'Service';
 $lang['footer_product_services_case_studies'] = 'Download Case Studies';
-$lang['footer_product_about'] = 'Über';
+$lang['footer_product_about'] = 'Über uns';
 $lang['footer_product_about_experts'] = 'Unsere Experten';
 $lang['footer_product_about_clients'] = 'Kunden';
 $lang['footer_product_about_partners'] = 'Partner';
@@ -57,4 +57,9 @@ $lang['url_meta_keywords']              ='Page meta keywords';
 $lang['url_meta_title']                 ='Page meta title';
 $lang['url_page_title']                 ='Page title';
 $lang['url_meta_description']           ='Page meta description';
+
+$lang['contact_mr'] = 'Herr';
+$lang['contact_mrs'] = 'Frau';
+$lang['contact_dr'] = 'Dr.';
+$lang['contact_prof'] = 'Prof.';
 ?>

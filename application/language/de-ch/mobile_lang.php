@@ -3,7 +3,7 @@
 $lang['home'] = 'Home';
 $lang['product'] = 'Produkt';
 $lang['services'] = 'Service';
-$lang['about'] = 'Über';
+$lang['about'] = 'Über uns';
 $lang['press'] = 'Presse';
 $lang['career'] = 'Karriere';
 $lang['news'] = 'News';
@@ -14,7 +14,7 @@ $lang['home_about_mapegy'] = 'mapegy versorgt Sie mit den wichtigsten Erkenntnis
 $lang['home_clients'] = 'Kunden';
 $lang['home_quotes'] = 'Zitate';
 
-$lang['home_Bullet_point_1'] = '<strong>Minimieren</strong> Sie Ihre Risiken durch den Zugriff auf alle relevanten globalen Innovationsdaten';
+$lang['home_Bullet_point_1'] = '<strong>Minimieren</strong> Sie Risiken durch Zugriff auf globale Innovationsdaten';
 $lang['home_Bullet_point_2'] = '<strong>Erschließen</strong> Erschließen Sie Zahlen und Fakten vor allen Anderen';
 $lang['home_Bullet_point_3'] = '<strong>Genießen</strong> Genießen Sie einzigartige intuitive Visualisierungen';
 

@@ -1,6 +1,6 @@
 <?php
 
-function send_email($email, $subject, $body, $from = 'ahmed@dominosmedia.com') {
+function send_email($email, $subject, $body, $from = 'office@mapegy.com') {
 
     $CI = & get_instance();
     $CI->load->library('email');
@@ -34,7 +34,7 @@ function send_email($email, $subject, $body, $from = 'ahmed@dominosmedia.com') {
                         ' . $body . '
                     </p>
                 </div>
-                <p style="font-size: 13px; font-style: italic;">Thanks &amp; Best Regards, <br />
+                <p style="font-size: 14px; font-style: italic;">Thanks &amp; Best Regards, <br />
                 mapegy Team</p>
             </div>
             <div style="width: 600px; height: 30px;">

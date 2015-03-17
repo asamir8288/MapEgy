@@ -12,19 +12,25 @@
  * @author asamir
  */
 class Change_lang extends CI_Controller {
+
     function __construct() {
         parent::__construct();
     }
-    
+
     public function switch_lang() {
         $lang_code = $this->session->userdata('lang_code');
 
         if ($lang_code == 'en-us') {
-            $this->session->set_userdata('lang_code',  'de-ch');
+            $this->session->set_userdata('lang_code', 'de-ch');
         } else {
-            $this->session->set_userdata('lang_code',  'en-us');
-        }
+            $this->session->set_userdata('lang_code', 'en-us');
+        }       
         
-        redirect($_SERVER['HTTP_REFERER']);
+        if(isset($_GET['page'])){
+            redirect(base_url() . $_GET['page']);
+        }else{
+            redirect($_SERVER['HTTP_REFERER']);
+        }
     }
+
 }

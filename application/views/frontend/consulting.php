@@ -18,7 +18,7 @@
         <span class="adviosr-job-title"><?php echo $consulting['job_title']; ?></span>
         <div class="contact-tel"><?php echo $consulting['tel']; ?></div>
 
-        <a href="mailto:sperr@mapegy.com" class="contact-link">Contact me</a>
+        <a href="mailto:sperr@mapegy.com" class="static-contact-link">Contact me</a>
     </div>
 
 
@@ -72,7 +72,7 @@
 
     <div class="small-dashed-separator"></div>
 
-    <div class="contact-us-box" style="width: 735px;">
+    <div class="contact-us-box" style="">
         <?php echo lang('fontend_service_cta');?>    
         <a href="mailto:sperr@mapegy.com" class="consulting-contact-link"><?php echo lang('fontend_service_cta_btn');?></a>
     </div>
